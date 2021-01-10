@@ -15,4 +15,4 @@ An asymmetric tower defense mobile game using Unity framework
 
 ## git-lfs storage @ AWS
 
-git-lfsAll media file changes in the dev branch is automatically pushed to AWS S3 Storage, all the media file extensions are defined inside .gitattributes
+All media file defined inside .gitattributes is automatically pushed to AWS S3 Storage 
