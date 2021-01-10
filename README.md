@@ -15,4 +15,5 @@ An asymmetric tower defense mobile game using Unity framework
 
 ## git-lfs storage @ AWS
 
-All media file defined inside .gitattributes is automatically pushed to AWS S3 Storage 
+All media filed are defined inside .gitattributes will automatically push to AWS S3 Storage. 
+User name and password is stored inside OneNote->BasicInfo.
