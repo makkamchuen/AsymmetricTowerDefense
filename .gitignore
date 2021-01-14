@@ -73,11 +73,8 @@ crashlytics-build.properties
 ## Official FMOD .gitnore
 ## https://fmod.com/resources/documentation-unity?version=2.0&page=user-guide.html#using-source-control
 
-# ASDF
+# Ignore Plugins FMOD because large, we do manual install
 /[Aa]ssets/Plugins/FMOD/*
-
-# Never ignore DLLs in the FMOD subfolder.
-!/[Aa]ssets/Plugins/FMOD/**/*.dll
 
 # Don't ignore images and gizmos used by FMOD in the Unity Editor.
 !/[Aa]ssets/Gizmos/FMOD/*
@@ -97,5 +94,4 @@ crashlytics-build.properties
 # Log files can be ignored.
 fmod.log
 fmod_editor.log
-
 #End of FMOD .gitnore
