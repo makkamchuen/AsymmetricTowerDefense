@@ -5,6 +5,14 @@ An asymmetric tower defense mobile game using Unity framework
 
 1. Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Git LFS](https://git-lfs.github.com/).
 2. Clone the repo using this command - `git clone https://github.com/makkamchuen/AsymmetricTowerDefense.git`
+3. Open Project
+4. Download fmodstudio20107.unitypackage (link in OneNote > BasicInfo > FMOD link)
+5. Double click and import
+6. Go to Navigation bar > FMOD Edit Settings
+7. In the Inspector, choose `Multiple Platform Build`
+8. Under `Build Path`, choose `AssetsFMOD` folder
+9. `git reset --hard`
+10. Hit play and make sure everything runs without error in console
 
 ## Check-in your code
 
