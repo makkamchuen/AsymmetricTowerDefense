@@ -95,3 +95,9 @@ crashlytics-build.properties
 fmod.log
 fmod_editor.log
 #End of FMOD .gitnore
+
+# Mac
+.DS_Store
+
+# Rider
+.idea
