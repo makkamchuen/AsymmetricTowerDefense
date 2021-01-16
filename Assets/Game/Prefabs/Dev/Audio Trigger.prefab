@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3303083336560793762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390806580954710112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters: []
+  TriggerEvent: 0
 --- !u!1001 &1340017381921259213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11,11 +26,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Audio Trigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 2958968392362763228, guid: 76ba514e84b8e1242ae5abf8f7ac789f,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8241659590694101346, guid: 76ba514e84b8e1242ae5abf8f7ac789f,
         type: 3}
@@ -74,3 +84,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76ba514e84b8e1242ae5abf8f7ac789f, type: 3}
+--- !u!1 &1390806580954710112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 132171755825872557, guid: 76ba514e84b8e1242ae5abf8f7ac789f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1340017381921259213}
+  m_PrefabAsset: {fileID: 0}
