@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41273f8285034e188697eedca17ae770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 917128146}
+  hero: {fileID: 1161058591}
 --- !u!1 &620520832
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,20 +555,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b445534aec5491a9a38b1a38b1f8dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 917128146}
+  hero: {fileID: 1161058591}
 --- !u!1 &917128141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 439631517619637886, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
     type: 3}
   m_PrefabInstance: {fileID: 1344930601}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &917128146 stripped
+--- !u!114 &1161058591 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 439631517619637887, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
+  m_CorrespondingSourceObject: {fileID: 5560345447147953689, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
     type: 3}
   m_PrefabInstance: {fileID: 1344930601}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917128141}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4385bdebacba234bbe56fda7c15b0fc, type: 3}
@@ -739,12 +739,12 @@ PrefabInstance:
     - target: {fileID: 439631517619638147, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 439631517619638147, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.38268343
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 439631517619638147, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
         type: 3}
@@ -759,7 +759,7 @@ PrefabInstance:
     - target: {fileID: 439631517619638147, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 439631517619638147, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
         type: 3}
@@ -770,6 +770,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491298702934938014, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
+        type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491298702934938014, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73aaaa2112cd9fe47b5a415afd8f56ff, type: 3}
