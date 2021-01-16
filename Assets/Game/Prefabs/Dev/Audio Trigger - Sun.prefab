@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 0.08418809, y: 0.12628213, z: 0.08418809}
   m_Children: []
   m_Father: {fileID: 1494231251778232112}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3008887561892214450
 SpriteRenderer:
@@ -91,7 +91,12 @@ PrefabInstance:
     - target: {fileID: 1390806580954710112, guid: 24750aa83d1f8f84897899b56c2f025f,
         type: 3}
       propertyPath: m_Name
-      value: Audio Trigger Variant
+      value: Audio Trigger - Sun
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303083336560793762, guid: 24750aa83d1f8f84897899b56c2f025f,
+        type: 3}
+      propertyPath: Emitters.Array.size
+      value: 232
       objectReference: {fileID: 0}
     - target: {fileID: 6987602066763980719, guid: 24750aa83d1f8f84897899b56c2f025f,
         type: 3}

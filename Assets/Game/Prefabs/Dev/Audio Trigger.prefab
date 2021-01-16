@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Emitters: []
-  TriggerEvent: 0
+  Emitters:
+  - Target: {fileID: 0}
+    Params: []
+  TriggerEvent: 3
 --- !u!1001 &1340017381921259213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40,7 +42,7 @@ PrefabInstance:
     - target: {fileID: 8241659590694101346, guid: 76ba514e84b8e1242ae5abf8f7ac789f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.969
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8241659590694101346, guid: 76ba514e84b8e1242ae5abf8f7ac789f,
         type: 3}
