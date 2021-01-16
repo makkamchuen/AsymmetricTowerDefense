@@ -109,8 +109,12 @@ public class HeroScriptToAnimate : MonoBehaviour
         agent.SetDestination(hit.position);
     }
 
-    private void RestrictRotation()
+    public void RestrictRotation()
     {
+        if (_isFacingRight) { GetComponent<SpriteRenderer>().flipX = false; }
+        else { GetComponent<SpriteRenderer>().flipX = true; }
+
+        /*
         Quaternion newTransformRotation = transform.rotation;
         transform.rotation = new Quaternion(
             newTransformRotation.x,
@@ -118,5 +122,6 @@ public class HeroScriptToAnimate : MonoBehaviour
             newTransformRotation.z,
             newTransformRotation.w
         );
+        */
     }
 }
