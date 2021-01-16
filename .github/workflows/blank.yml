@@ -1,0 +1,37 @@
+name: Actions 😎
+on:
+  pull_request: {}
+  push: { branches: [dev] }
+env:
+  UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+  UNITY_EMAIL: ${{ secrets.UNITY_USER }}
+  UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+jobs:
+  build:
+    name: Build my project ✨
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+      # Cache
+      - uses: actions/cache@v1.1.0
+        with:
+          path: Library
+          key: Library
+      # Test
+      - name: Run tests
+        uses: webbertakken/unity-test-runner@v2.0-alpha-2
+      # Build
+      - name: Build project
+        uses: webbertakken/unity-builder@v2.0-alpha-6
+        with:
+          targetPlatform: Android
+          allowDirtyBuild: true
+      # Output
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Build
+          path: /home/runner/work/AsymmetricTowerDefense/AsymmetricTowerDefense/build
