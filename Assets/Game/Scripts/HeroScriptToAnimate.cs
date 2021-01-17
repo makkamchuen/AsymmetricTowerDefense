@@ -21,8 +21,9 @@ public class HeroScriptToAnimate : MonoBehaviour
 
     private void Update()
     {
-        // var movement = Input.GetAxis("Horizontal");
-        // transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
+         var movement = Input.GetAxis("Horizontal");
+         
+         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * movementSpeed;
         CheckOnMobileTouch();
         CheckOnRightClick();
         if (Input.GetKeyDown(KeyCode.Q))
