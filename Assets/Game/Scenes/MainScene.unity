@@ -423,9 +423,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 917128141}
-<<<<<<< HEAD
-  _offset: {x: 0, y: 1.5, z: -2}
-=======
 --- !u!1 &707076047
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +556,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hero: {fileID: 1161058591}
->>>>>>> dev
 --- !u!1 &917128141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 439631517619637886, guid: 73aaaa2112cd9fe47b5a415afd8f56ff,
