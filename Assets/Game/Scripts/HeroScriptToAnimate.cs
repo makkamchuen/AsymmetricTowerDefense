@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using TouchPhase = UnityEngine.TouchPhase;
@@ -6,11 +7,15 @@ using TouchPhase = UnityEngine.TouchPhase;
 public class HeroScriptToAnimate : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    [SerializeField] private float movementSpeed = 1;
-    [SerializeField] private bool hasWeapon = false;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private LayerMask layerMask;
+
     private Camera _mainCamera;
+    private bool _isFacingRight;
+
+    private static readonly int HeroDead = Animator.StringToHash("HeroDead");
+    private static readonly int HasWeapon = Animator.StringToHash("HasWeapon");
+    private static readonly int HeroAttack = Animator.StringToHash("HeroAttack");
 
     // Use this for initialization
     private void Start()
@@ -28,19 +33,38 @@ public class HeroScriptToAnimate : MonoBehaviour
         CheckOnRightClick();
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            animator.SetBool("HasWeapon", !animator.GetBool("HasWeapon"));
+            EquipWeapon();
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && animator.GetBool("HasWeapon"))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            animator.SetTrigger("HeroAttack");
+            Attack();
         }
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            animator.SetTrigger("HeroDead");
+            SetDeath();
         }
-        RestrictHeroRotation();
+
+        RestrictRotation();
+    }
+
+    public void EquipWeapon()
+    {
+        animator.SetBool(HasWeapon, !animator.GetBool(HasWeapon));
+    }
+
+    public void Attack()
+    {
+        if (animator.GetBool(HasWeapon))
+        {
+            animator.SetTrigger(HeroAttack);
+        }
+    }
+
+    private void SetDeath()
+    {
+        animator.SetTrigger(HeroDead);
     }
 
     private void CheckOnMobileTouch()
@@ -49,11 +73,13 @@ public class HeroScriptToAnimate : MonoBehaviour
         {
             return;
         }
+
         Ray ray = _mainCamera.ScreenPointToRay(Input.touches[0].position);
         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
         {
             return;
         }
+
         MoveHero(hit.point);
     }
 
@@ -63,11 +89,14 @@ public class HeroScriptToAnimate : MonoBehaviour
         {
             return;
         }
+
         Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
         {
             return;
         }
+
+        _isFacingRight = hit.point.x > this.transform.position.x;
         MoveHero(hit.point);
     }
 
@@ -77,17 +106,23 @@ public class HeroScriptToAnimate : MonoBehaviour
         {
             return;
         }
+
         agent.SetDestination(hit.position);
     }
-    
-    private void RestrictHeroRotation()
+
+    public void RestrictRotation()
     {
-        Quaternion transformRotation = transform.rotation;
+        if (_isFacingRight) { GetComponent<SpriteRenderer>().flipX = false; }
+        else { GetComponent<SpriteRenderer>().flipX = true; }
+
+        /*
+        Quaternion newTransformRotation = transform.rotation;
         transform.rotation = new Quaternion(
-            transformRotation.x,
-            transformRotation.y >= 0 ? 0f : -180f,
-            transformRotation.z,
-            transformRotation.w
+            newTransformRotation.x,
+            _isFacingRight ? 0f : -180f,
+            newTransformRotation.z,
+            newTransformRotation.w
         );
+        */
     }
 }
