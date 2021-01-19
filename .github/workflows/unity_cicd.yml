@@ -23,13 +23,15 @@ jobs:
       - name: Run tests
         uses: webbertakken/unity-test-runner@v2.0-alpha-2
       # Build
-      - name: Build project
-        uses: webbertakken/unity-builder@v2.0-alpha-6
+      - uses: yukiarrr/unity-build-action@v0.6.1
         with:
-          targetPlatform: Android
-          allowDirtyBuild: true
+          unity-version: 2019.4.17f1
+          unity-username: ${{ secrets.UNITY_USER }}
+          unity-password: ${{ secrets.UNITY_PASSWORD }}
+          unity-serial: ${{ secrets.UNITY_SERIAL }}
+          build-target: Android
       # Output
       - uses: actions/upload-artifact@v1
         with:
           name: Build
-          path: /home/runner/work/AsymmetricTowerDefense/AsymmetricTowerDefense/build
+          path: Output
