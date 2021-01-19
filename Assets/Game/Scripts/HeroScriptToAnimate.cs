@@ -9,23 +9,29 @@ public class HeroScriptToAnimate : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private Rigidbody rigidBody;
 
     private Camera _mainCamera;
     private bool _isFacingRight;
+    private Vector3 _lastPos;
 
     private static readonly int HeroDead = Animator.StringToHash("HeroDead");
     private static readonly int HasWeapon = Animator.StringToHash("HasWeapon");
     private static readonly int HeroAttack = Animator.StringToHash("HeroAttack");
+    private static readonly int IsMoving = Animator.StringToHash("IsMoving");
 
     // Use this for initialization
     private void Start()
     {
         animator = GetComponent<Animator>();
+        rigidBody = this.transform.parent.GetComponent<Rigidbody>();
         _mainCamera = Camera.main;
+        _lastPos = this.transform.parent.transform.position;
     }
 
     private void Update()
     {
+        var curPos = this.transform.parent.transform.position;
         // var movement = Input.GetAxis("Horizontal");
         // transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
         CheckOnMobileTouch();
@@ -33,16 +39,23 @@ public class HeroScriptToAnimate : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             EquipWeapon();
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
+        }else if (Input.GetKeyDown(KeyCode.R))
         {
             Attack();
-        }
-
-        if (Input.GetKeyDown(KeyCode.X))
+        }else if (Input.GetKeyDown(KeyCode.X))
         {
             SetDeath();
+        }else if(curPos != _lastPos){
+        /* There is an issue with the rigidBody velocity calculation
+        }else if (rigidBody.velocity.sqrMagnitude != 0){
+            animator.SetBool(IsMoving, true);
+        }
+        Below is the workaround soln which need some more work later
+        */
+            _lastPos = curPos;
+            animator.SetBool(IsMoving, true);
+        }else{
+            animator.SetBool(IsMoving, false);
         }
 
         RestrictRotation();

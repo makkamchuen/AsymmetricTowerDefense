@@ -1,7 +1,7 @@
 name: Unity CICD 😎
 on:
   pull_request: {}
-  push: { branches: [dev] }
+  push: { branches: [test] }
 env:
   UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
   UNITY_EMAIL: ${{ secrets.UNITY_USER }}
