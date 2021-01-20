@@ -1,8 +1,8 @@
 name: Unity CICD Actions 😎
 
 on:
-  pull_request: { branches: [dev] }
-  push: { branches: [main] }
+  pull_request: { branches: [test] }
+  push: { branches: [test] }
 
 env:
   UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
