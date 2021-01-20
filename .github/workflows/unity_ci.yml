@@ -21,7 +21,6 @@ jobs:
           - 2019.4.17f1
         targetPlatform:
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
-          - WebGL # WebGL.
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
