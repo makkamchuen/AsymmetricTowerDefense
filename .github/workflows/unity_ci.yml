@@ -1,8 +1,10 @@
 name: Unity CICD Actions 😎
 
 on:
-  pull_request: { branches: [test] }
-  push: { branches: [test] }
+  push:
+  pull_request: 
+    branches:
+      - test
 
 env:
   UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
@@ -35,17 +37,6 @@ jobs:
           restore-keys: |
             Library-${{ matrix.projectPath }}-
             Library-
-      - name: Run tests
-        uses: webbertakken/unity-test-runner@v2.0-alpha-2
-        id: testRunner
-        with:
-          projectPath: ${{ matrix.projectPath }}
-          unityVersion: ${{ matrix.unityVersion }}
-      - name: Upload test result artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: Test results (all modes)
-          path: ${{ steps.testRunner.outputs.artifactsPath }}
       - name: Build unity project
         uses: webbertakken/unity-builder@v2.0-alpha-6
         with:
