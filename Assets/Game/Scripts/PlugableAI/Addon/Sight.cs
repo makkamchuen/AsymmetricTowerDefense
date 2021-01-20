@@ -1,11 +1,12 @@
 using System;
+using Cinemachine;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "PluggableAI/Addon/Sight"), Serializable]
 public class Sight: ScriptableObject
 {
   [SerializeField] private float radius;
-  [TagSelector, SerializeField] private string targetTag;
+  [TagField, SerializeField] private string targetTag;
 
   public bool SearchTarget(StateController controller)
   {
