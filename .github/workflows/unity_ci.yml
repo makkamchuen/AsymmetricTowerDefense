@@ -1,7 +1,6 @@
 name: Unity CICD Actions 😎
 
 on:
-  push:
   pull_request: 
     branches:
       - test
@@ -38,7 +37,7 @@ jobs:
             Library-${{ matrix.projectPath }}-
             Library-
       - name: Build unity project
-        uses: webbertakken/unity-builder@v2.0-alpha-6
+        uses: webbertakken/unity-builder@v0.10
         with:
           projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
