@@ -15,3 +15,8 @@ An asymmetric tower defense mobile game using Unity framework
 
 ## git-lfs 
 1. git-lfs has migrated to github with 50GB of storage
+
+## Recommanded IDE for Window
+1. Download [Visual Studio Community 2019](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16)
+2. Download the Developer pack for [.Net Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net471-developer-pack-offline-installer)
+3. Update the VSC 2019 as your prefer code editor in Unity. `Edit->Preferences->External Tool`
