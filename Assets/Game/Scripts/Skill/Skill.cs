@@ -1,18 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Skill : MonoBehaviour
+﻿public class Skill: ActorActionComponent
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  public SkillData skillData;
+  public float colddown;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  private void Start()
+  {
+    
+  }
+  
+  public void Tick()
+  {
+    
+  }
 }

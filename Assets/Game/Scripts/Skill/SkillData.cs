@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SkillData : MonoBehaviour
+public class SkillData : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Cast(Actor user, Vector3 destination)
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool InRange(Actor user, Actor targetActor)
     {
-        
+        return true;
     }
 }
