@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class StateController : MonoBehaviour {
@@ -14,7 +11,7 @@ public class StateController : MonoBehaviour {
   [HideInInspector] public GameObject target;
   [HideInInspector] public float stateTimeElapsed;
 
-  private bool aiActive;
+  private bool isEnable;
 
   private void Start() 
   {
