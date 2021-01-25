@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-[CreateAssetMenu (menuName = "PluggableAI/Addon/PatrolPattern/Generic")]
+[CreateAssetMenu (menuName = "AI/PatrolPattern/Generic")]
 public class GenericPatrolPattern : PatrolPattern
 {
   [SerializeField] private float minMoveDistance;
@@ -12,19 +12,18 @@ public class GenericPatrolPattern : PatrolPattern
   [SerializeField] private float minIdleSec;
   [SerializeField] private float maxIdleSec;
   
-  public override void Move(StateController controller)
+  public override void Move(Mover mover)
   {
-    Travel(controller);
+    Travel(mover);
   }
 
-  private void Travel(StateController controller) // Idle not Implemented
+  private void Travel(Mover mover) // Idle not Implemented
   {
     float idleSec = Random.Range(minIdleSec, maxIdleSec); 
     NavMeshHit hit;
-    if (NavMesh.SamplePosition(GenerateOffset() + controller.transform.position, out hit, maxMoveDistance, 1))
+    if (NavMesh.SamplePosition(GenerateOffset() + mover.transform.position, out hit, maxMoveDistance, 1))
     {
-      controller.navMeshAgent.destination = hit.position;
-      controller.navMeshAgent.isStopped = false;
+      mover.MoveTo(hit.position);
     }
   }
 

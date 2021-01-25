@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class AI : Actor
 {
-  public Actor target;
+  [HideInInspector] public Actor target;
   public Sight[] sights;
+
+  protected override void Start()
+  {
+    base.Start();
+    target = this;
+  }
 }

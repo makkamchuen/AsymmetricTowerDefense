@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ActionScheduler : MonoBehaviour
 {
-    IAction currentAction;
+    [HideInInspector] public IAction currentAction = null;
 
     public void StartAction(IAction action)
     {

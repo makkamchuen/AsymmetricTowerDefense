@@ -4,16 +4,16 @@ using UnityEngine;
 public class Actor : MonoBehaviour
 {
   public Stats baseStats;
-  public float currentHealth;
+  [HideInInspector] public float currentHealth;
   public Skill attack;
-  public Status status = new Status();
+  [HideInInspector] public Status status = new Status();
 
-  private void Start()
+  protected virtual void Start()
   {
     currentHealth = baseStats.maxHealth;
   }
 
-  private void hit(float damage)
+  public void Hit(float damage)
   {
     
   }
