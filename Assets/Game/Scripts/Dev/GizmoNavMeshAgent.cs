@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace ATD.Dev
 {
-    public class GizmoMeshFilter : MonoBehaviour
+    public class GizmoNavMeshAgent : MonoBehaviour
     {
         void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireMesh(GetComponent<MeshFilter>().sharedMesh, transform.position, Quaternion.identity, transform.lossyScale);
+            Gizmos.DrawWireSphere(transform.position, GetComponent<NavMeshAgent>().radius);
         }
     }
 }

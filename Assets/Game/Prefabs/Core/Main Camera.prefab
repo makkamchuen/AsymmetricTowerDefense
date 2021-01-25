@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  _offset: {x: 0, y: 10, z: -10}
+  _offset: {x: 0, y: 5, z: -5}
 --- !u!114 &5674900665288002814
 MonoBehaviour:
   m_ObjectHideFlags: 0

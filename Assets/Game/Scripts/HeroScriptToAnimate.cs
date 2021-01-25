@@ -10,6 +10,7 @@ public class HeroScriptToAnimate : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private Rigidbody rigidBody;
+    [SerializeField] private float yOffset;
 
     private Camera _mainCamera;
     private bool _isFacingRight;
@@ -39,22 +40,28 @@ public class HeroScriptToAnimate : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             EquipWeapon();
-        }else if (Input.GetKeyDown(KeyCode.R))
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
         {
             Attack();
-        }else if (Input.GetKeyDown(KeyCode.X))
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
         {
             SetDeath();
-        }else if(curPos != _lastPos){
-        /* There is an issue with the rigidBody velocity calculation
-        }else if (rigidBody.velocity.sqrMagnitude != 0){
-            animator.SetBool(IsMoving, true);
         }
-        Below is the workaround soln which need some more work later
-        */
+        else if (curPos != _lastPos)
+        {
+            /* There is an issue with the rigidBody velocity calculation
+            }else if (rigidBody.velocity.sqrMagnitude != 0){
+                animator.SetBool(IsMoving, true);
+            }
+            Below is the workaround soln which need some more work later
+            */
             _lastPos = curPos;
             animator.SetBool(IsMoving, true);
-        }else{
+        }
+        else
+        {
             animator.SetBool(IsMoving, false);
         }
 
