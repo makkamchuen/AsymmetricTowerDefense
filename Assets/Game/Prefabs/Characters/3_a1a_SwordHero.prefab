@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1218646900792688126, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: hitSound
+      value: event:/SFX/CharacterHit/SwordHeroHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218646900792688126, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: weaponSound
+      value: event:/SFX/Attack/SwordWoosh
+      objectReference: {fileID: 0}
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 4739405972078143302, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: m_Name
-      value: 3a1_SwordHero
+      value: 3_a1a_SwordHero
       objectReference: {fileID: 0}
     - target: {fileID: 5772725660081991603, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}

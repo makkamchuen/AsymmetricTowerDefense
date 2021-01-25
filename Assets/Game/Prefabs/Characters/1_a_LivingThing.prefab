@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2481517165713504493}
   - component: {fileID: 7379840971926831180}
   - component: {fileID: 5764272642138527577}
+  - component: {fileID: 7946945614469764118}
   m_Layer: 0
   m_Name: Renderer
   m_TagString: Untagged
@@ -101,6 +102,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7946945614469764118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217116542402004354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d0d442bd90d6d40a4b256b69414323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound: 
+  weaponSound: 
+  hitSound: 
+  dieSound: 
 --- !u!1 &6784629499759058860
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +132,7 @@ GameObject:
   - component: {fileID: 6358583617448628736}
   - component: {fileID: 6358583616697971788}
   m_Layer: 0
-  m_Name: LivingThing
+  m_Name: 1_a_LivingThing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
