@@ -9,7 +9,7 @@ public class HeroScriptToAnimate : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private LayerMask layerMask;
-    [SerializeField] private Rigidbody rigidBody;
+    // [SerializeField] private Rigidbody rigidBody;
     [SerializeField] private float yOffset;
 
     private Camera _mainCamera;
@@ -25,7 +25,7 @@ public class HeroScriptToAnimate : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        rigidBody = this.transform.parent.GetComponent<Rigidbody>();
+        // rigidBody = this.transform.parent.GetComponent<Rigidbody>();
         _mainCamera = Camera.main;
         _lastPos = this.transform.parent.transform.position;
     }
