@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class Mover : ActorActionComponent, IAction
+public class Mover : ActorActionComponent
 {
 
-    NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
 
-    private void Start()
+    protected override void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        base.Start();
+        // navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -22,7 +23,7 @@ public class Mover : ActorActionComponent, IAction
         navMeshAgent.isStopped = false;
     }
 
-    public void Cancel()
+    public override void Cancel()
     {
         navMeshAgent.isStopped = true;
     }

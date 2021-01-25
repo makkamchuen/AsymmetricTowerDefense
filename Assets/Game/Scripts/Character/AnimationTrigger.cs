@@ -1,4 +1,4 @@
-﻿public enum Animation
+﻿public enum AnimationTrigger
 {
   Move,
   Idle,

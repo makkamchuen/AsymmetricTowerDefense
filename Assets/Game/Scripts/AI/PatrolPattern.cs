@@ -5,5 +5,5 @@ using UnityEngine;
 
 public abstract class PatrolPattern : ScriptableObject
 {
-  public abstract void Move (StateController controller);
+  public abstract void Move (Mover mover);
 }

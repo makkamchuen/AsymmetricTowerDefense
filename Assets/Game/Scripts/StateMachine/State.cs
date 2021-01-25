@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "PluggableAI/State")]
+[CreateAssetMenu (menuName = "StateMachine/State")]
 public class State : ScriptableObject 
 {
 
@@ -12,14 +12,14 @@ public class State : ScriptableObject
 
   public void UpdateState(StateController controller)
   {
-    DoActions (controller);
+    DoActions (controller.ai);
     CheckTransitions (controller);
   }
 
-  private void DoActions(StateController controller)
+  private void DoActions(AI ai)
   {
     for (int i = 0; i < actions.Length; i++) {
-      actions [i].Act (controller);
+      actions [i].Act (ai);
     }
   }
 
