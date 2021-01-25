@@ -6,24 +6,14 @@ namespace ATD.Dev
 {
     public class GizmoBox : MonoBehaviour
     {
-        public ColorChoice dropDown = new ColorChoice();
-
-        public enum ColorChoice
-        {
-            Red,
-            Green,
-            Blue,
-            Yellow,
-            White,
-            Black,
-        }
-
-        Vector3 boxSize;
+        BoxCollider box;
+        Vector3 boxPos;
         void OnDrawGizmos()
         {
-            boxSize = GetComponent<BoxCollider>().size;
+            box = GetComponent<BoxCollider>();
+            boxPos = new Vector3(box.transform.position.x + box.center.x, box.transform.position.y + box.center.y, box.transform.position.z + box.center.z);
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireCube(transform.position, boxSize);
+            Gizmos.DrawWireCube(boxPos, box.size);
         }
     }
 }
