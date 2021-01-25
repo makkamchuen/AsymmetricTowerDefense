@@ -1,33 +1,46 @@
 using System;
+using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Addon/Sight"), Serializable]
+[CreateAssetMenu(menuName = "AI/Sight"), Serializable]
 public class Sight: ScriptableObject
 {
   [SerializeField] private float radius;
-  [TagField, SerializeField] private string targetTag;
+  [SerializeField] private Priority priority;
+  [TagField, SerializeField] private string[] targetTags;
 
-  public bool SearchTarget(StateController controller)
+  public bool SearchTarget(AI ai)
   {
     bool found = false;
-    Collider[] colliders = Physics.OverlapSphere(controller.transform.position, radius);
-    foreach (Collider collider in colliders) // may be move logic out to Decision?
+    bool sameTag = false;
+    Collider[] colliders = Physics.OverlapSphere(ai.transform.position, radius);
+    foreach (Collider collider in colliders)
     {
-      if (collider.CompareTag(targetTag) 
-          && Compare(collider.gameObject, controller.gameObject, controller)
-          )
+      foreach (string tag in targetTags)
       {
-        controller.target = collider.gameObject;
+        if (collider.CompareTag(tag))
+        {
+          sameTag = true;
+          break;
+        }
+      }
+      if (!sameTag)
+      {
+        continue;
+      }
+      sameTag = false;
+      Actor target = collider.GetComponent<Actor>();
+      if (ai.target == ai || priority.Compare(ai, ai.target, target))
+      {
+        ai.target = target;
         found = true;
-        break;
       }
     }
+    if (!found)
+    {
+      ai.target = ai;
+    }
     return found;
-  }
-
-  private bool Compare(GameObject candidate, GameObject original, StateController controller)
-  {
-    return true;
   }
 }

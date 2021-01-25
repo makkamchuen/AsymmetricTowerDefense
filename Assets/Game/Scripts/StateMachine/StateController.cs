@@ -1,26 +1,27 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class StateController : MonoBehaviour {
 
   public State currentState;
-  public Stats stats;
+  [HideInInspector] public AI ai;
   public State remainInState;
-
-  [HideInInspector] public NavMeshAgent navMeshAgent;
-  [HideInInspector] public GameObject target;
+  public bool isEnable = true;
+  
   [HideInInspector] public float stateTimeElapsed;
 
-  private bool isEnable;
-
-  private void Start() 
+  private void Start()
   {
-    navMeshAgent = GetComponent<NavMeshAgent> ();
+    ai = GetComponent<AI>();
   }
 
   void Update()
   {
-    currentState.UpdateState (this);
+    if (isEnable)
+    {
+      currentState.UpdateState(this);
+    }
   }
 
   public void TransitionToState(State nextState)
@@ -30,13 +31,6 @@ public class StateController : MonoBehaviour {
       currentState = nextState;
       OnExitState ();
     }
-  }
-
-  private void OnDrawGizmos()
-  {
-    Gizmos.color = currentState.sceneGizmoColor;
-    Gizmos.DrawWireSphere (this.transform.position, 8);
-    Gizmos.DrawWireSphere (this.transform.position, 5);
   }
 
   public bool CheckIfCountDownElapsed(float duration)

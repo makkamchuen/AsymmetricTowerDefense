@@ -1,10 +1,13 @@
-﻿public class Minion : AI
-{
-    public Mover mover;
-    public PatrolPattern PatrolPattern;
+﻿using UnityEngine;
 
-    private void Start()
+public class Minion : AI
+{
+    [HideInInspector] public Mover mover;
+    public PatrolPattern patrolPattern;
+
+    protected override void Start()
     {
+        base.Start();
         mover = GetComponent<Mover>();
     }
 }

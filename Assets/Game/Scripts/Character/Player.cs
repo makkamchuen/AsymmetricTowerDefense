@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Player : Actor
 {
-    public Mover mover;
-    public Skill[] skills;
+    [HideInInspector] public Mover mover;
+    [HideInInspector] public Skill[] skills;
     
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         mover = GetComponent<Mover>();
     }
 }
