@@ -6,10 +6,12 @@ namespace ATD.Dev
 {
     public class GizmoMeshFilter : MonoBehaviour
     {
+        MeshFilter meshFilter;
         void OnDrawGizmos()
         {
+            meshFilter = GetComponent<MeshFilter>();
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireMesh(GetComponent<MeshFilter>().sharedMesh, transform.position, Quaternion.identity, transform.lossyScale);
+            Gizmos.DrawWireMesh(meshFilter.sharedMesh, transform.position, transform.rotation, transform.lossyScale);
         }
     }
 }
