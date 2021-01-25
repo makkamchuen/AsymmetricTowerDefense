@@ -16,10 +16,10 @@ public class HeroScriptToAnimate : MonoBehaviour
     private bool _isFacingRight;
     private Vector3 _lastPos;
 
-    private static readonly int HeroDead = Animator.StringToHash("HeroDead");
-    private static readonly int HasWeapon = Animator.StringToHash("HasWeapon");
-    private static readonly int HeroAttack = Animator.StringToHash("HeroAttack");
-    private static readonly int IsMoving = Animator.StringToHash("IsMoving");
+    private static readonly int doDead = Animator.StringToHash("Dead");
+    private static readonly int doAttack = Animator.StringToHash("Attack");
+    private static readonly int doRun = Animator.StringToHash("Run");
+    // private static readonly int Weapon = Animator.StringToHash("Weapon");
 
     // Use this for initialization
     private void Start()
@@ -37,11 +37,11 @@ public class HeroScriptToAnimate : MonoBehaviour
         // transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
         CheckOnMobileTouch();
         CheckOnRightClick();
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            EquipWeapon();
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
+        // if (Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     EquipWeapon();
+        // }
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Attack();
         }
@@ -58,32 +58,29 @@ public class HeroScriptToAnimate : MonoBehaviour
             Below is the workaround soln which need some more work later
             */
             _lastPos = curPos;
-            animator.SetBool(IsMoving, true);
+            animator.SetBool(doRun, true);
         }
         else
         {
-            animator.SetBool(IsMoving, false);
+            animator.SetBool(doRun, false);
         }
 
         RestrictRotation();
     }
 
-    public void EquipWeapon()
-    {
-        animator.SetBool(HasWeapon, !animator.GetBool(HasWeapon));
-    }
+    // public void EquipWeapon()
+    // {
+    //     animator.SetBool(Weapon, !animator.GetBool(Weapon));
+    // }
 
     public void Attack()
     {
-        if (animator.GetBool(HasWeapon))
-        {
-            animator.SetTrigger(HeroAttack);
-        }
+        animator.SetTrigger(doAttack);
     }
 
     private void SetDeath()
     {
-        animator.SetTrigger(HeroDead);
+        animator.SetTrigger(doDead);
     }
 
     private void CheckOnMobileTouch()
@@ -114,7 +111,6 @@ public class HeroScriptToAnimate : MonoBehaviour
         {
             return;
         }
-
         _isFacingRight = hit.point.x > this.transform.position.x;
         MoveHero(hit.point);
     }

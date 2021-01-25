@@ -32,7 +32,7 @@ MonoBehaviour:
   agent: {fileID: 5178051151269185720}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   yOffset: 0
 --- !u!1001 &2297425192849471722
 PrefabInstance:
@@ -104,7 +104,7 @@ PrefabInstance:
     - target: {fileID: 6784629499759058860, guid: 5fb68e9523b3f5448aa042d85e449951,
         type: 3}
       propertyPath: m_Name
-      value: 02-Player
+      value: 2a_Player
       objectReference: {fileID: 0}
     - target: {fileID: 6784629499759058860, guid: 5fb68e9523b3f5448aa042d85e449951,
         type: 3}
