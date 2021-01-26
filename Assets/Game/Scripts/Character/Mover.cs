@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class Mover : ActorActionComponent
@@ -9,38 +8,19 @@ public class Mover : ActorActionComponent
     private SpriteRenderer _spriteRenderer;
     private Vector3 _lastPos;
     
-    private static readonly int doDead = Animator.StringToHash("Dead");
-    private static readonly int doAttack = Animator.StringToHash("Attack");
-    private static readonly int doRun = Animator.StringToHash("Run");
+    
 
-    protected void Start()
+    protected override void Start()
     {
         base.Start();
         // navMeshAgent = GetComponent<NavMeshAgent>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _lastPos = this.transform.parent.transform.position;
     }
 
     private void Update()
     {
-        Vector3 curPos = this.transform.parent.transform.position;
-        if (curPos != _lastPos)
-        {
-            /* There is an issue with the rigidBody velocity calculation
-            }else if (rigidBody.velocity.sqrMagnitude != 0){
-                animator.SetBool(IsMoving, true);
-            }
-            Below is the workaround soln which need some more work later
-            */
-            _lastPos = curPos;
-            GetAnimator().SetBool(doRun, true);
-        }
-        else
-        {
-            GetAnimator().SetBool(doRun, false);
-        }
-
         RestrictRotation();
+        UpdateAction();
         navMeshAgent.enabled = GetActor().GetCurrentHealth() > 0;
     }
 
@@ -51,6 +31,11 @@ public class Mover : ActorActionComponent
 
     public void MoveTo(Vector3 destination)
     {
+        if (!GetActor().GetStatus().Moveable())
+        {
+            return;
+        }
+        GetAnimator().SetBool(AnimationTrigger.run, true);
         if (!NavMesh.SamplePosition(destination, out NavMeshHit hit, Mathf.Infinity, NavMesh.AllAreas))
         {
             return;
@@ -58,15 +43,28 @@ public class Mover : ActorActionComponent
         _isFacingRight = hit.position.x > this.transform.position.x;
         navMeshAgent.destination = hit.position;
         navMeshAgent.isStopped = false;
+        GetActionScheduler().StartAction(this);
     }
 
     private void RestrictRotation()
     {
         _spriteRenderer.flipX = !_isFacingRight;
     }
+    
+    private void UpdateAction()
+    {
+        if (GetActionScheduler().GetCurrentAction() is Mover mover && 
+            mover == this &&
+            navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+        {
+            GetActionScheduler().CancelCurrentAction();
+        } 
+    }
 
     public override void Cancel()
     {
+        
+        GetAnimator().SetBool(AnimationTrigger.run, false);
         navMeshAgent.isStopped = true;
     }
 }
