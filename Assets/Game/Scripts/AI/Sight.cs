@@ -30,7 +30,7 @@ public class Sight: ScriptableObject
         continue;
       }
       sameTag = false;
-      Actor target = collider.GetComponent<Actor>();
+      Actor target = collider.GetComponentInChildren<Actor>();
       if (ai.GetTargetActor() == ai || priority.Compare(ai, ai.GetTargetActor(), target))
       {
         ai.SetTargetActor(target);

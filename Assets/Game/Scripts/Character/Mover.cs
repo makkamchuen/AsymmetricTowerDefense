@@ -63,7 +63,6 @@ public class Mover : ActorActionComponent
 
     public override void Cancel()
     {
-        
         GetAnimator().SetBool(AnimationTrigger.run, false);
         navMeshAgent.isStopped = true;
     }

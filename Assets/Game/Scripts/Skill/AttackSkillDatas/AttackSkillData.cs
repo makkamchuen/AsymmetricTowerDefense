@@ -1,9 +1,11 @@
+using System;
 using Cinemachine;
+using UnityEngine;
 
 public abstract class AttackSkillData : SkillData
 {
-  private float damage;
-  [TagField] private string[] _targetTags;
+  [SerializeField] private float damage;
+  [TagField, SerializeField] private string[] _targetTags;
   
   protected float GetDamage()
   {
