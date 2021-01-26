@@ -2,10 +2,9 @@
 
 public class Skill: ActorActionComponent
 {
-  public SkillData skillData;
-  [HideInInspector] public float cooldown;
-
-
+  [SerializeField] private SkillData skillData;
+  private float _cooldown;
+  
   protected override void Start()
   {
     base.Start();
@@ -13,12 +12,12 @@ public class Skill: ActorActionComponent
 
   private void Update()
   {
-    if (cooldown != 0)
+    if (_cooldown != 0)
     {
-      cooldown -= Time.deltaTime;
-      if (cooldown < 0)
+      _cooldown -= Time.deltaTime;
+      if (_cooldown < 0)
       {
-        cooldown = 0;
+        _cooldown = 0;
       }
     }
   }
@@ -28,19 +27,19 @@ public class Skill: ActorActionComponent
     GetAnimator().SetTrigger("HeroAttack");
     GetActionScheduler().StartAction(this);
     skillData.Cast(GetActor(), destination);
-    cooldown = skillData.cooldown;
+    _cooldown = skillData.GetCoolDown();
   }
   
   public bool CanHit(Actor target)
   {
-    return cooldown == 0 && skillData.InRange(GetActor(), target);
+    return _cooldown == 0 && skillData.InRange(GetActor(), target);
   }
 
   public override void Cancel()
   {
     
   }
-  
+
   // void OnDrawGizmos()
   // { 
   //   Gizmos.color = Color.red;

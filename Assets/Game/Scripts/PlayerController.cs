@@ -5,7 +5,7 @@ using TouchPhase = UnityEngine.TouchPhase;
 
 public class PlayerController : MonoBehaviour
 {
-    [HideInInspector] public Player target;
+    private Player _target;
     [SerializeField] private LayerMask layerMask;
 
     private Camera _mainCamera;
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        target = GetComponent<Player>();
+        _target = GetComponent<Player>();
         _mainCamera = Camera.main;
     }
 
@@ -69,6 +69,6 @@ public class PlayerController : MonoBehaviour
 
     private void MoveTo(Vector3 position)
     {
-        target.GetMover().MoveTo(position);
+        _target.GetMover().MoveTo(position);
     }
 }
