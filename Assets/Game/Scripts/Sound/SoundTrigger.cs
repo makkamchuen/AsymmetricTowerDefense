@@ -6,7 +6,7 @@ public class SoundTrigger : MonoBehaviour
 {
     [SerializeField][FMODUnity.EventRef] private string attackSound;
     [SerializeField][FMODUnity.EventRef] private string weaponSound;
-    [SerializeField][FMODUnity.EventRef] private string impactSound;
+    [SerializeField][FMODUnity.EventRef] private string hitSound;
     [SerializeField][FMODUnity.EventRef] private string dieSound;
 
     public void PlayAttackSound()
@@ -19,9 +19,9 @@ public class SoundTrigger : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot(weaponSound);
     }
 
-    public void PlayImpactSound()
+    public void PlayHitSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(impactSound);
+        FMODUnity.RuntimeManager.PlayOneShot(hitSound);
     }
 
     public void PlayDieSound()
