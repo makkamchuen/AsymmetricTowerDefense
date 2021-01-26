@@ -21,6 +21,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+    - target: {fileID: 1218646900792688126, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: hitSound
+      value: event:/SFX/CharacterHit/SwordHeroHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218646900792688126, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: weaponSound
+      value: event:/SFX/Attack/SwordWoosh
       objectReference: {fileID: 0}
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
