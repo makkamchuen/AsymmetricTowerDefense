@@ -24,7 +24,7 @@ public class Skill: ActorActionComponent
 
   public void Cast(Vector3 destination)
   {
-    GetAnimator().SetTrigger("HeroAttack");
+    GetAnimator().SetTrigger(AnimationTrigger.attack);
     GetActionScheduler().StartAction(this);
     skillData.Cast(GetActor(), destination);
     _cooldown = skillData.GetCoolDown();
@@ -32,18 +32,18 @@ public class Skill: ActorActionComponent
   
   public bool CanHit(Actor target)
   {
-    return _cooldown == 0 && skillData.InRange(GetActor(), target);
+    return _cooldown == 0;
   }
 
   public override void Cancel()
   {
-    
+    GetAnimator().SetBool(AnimationTrigger.attack, false);
   }
 
   // void OnDrawGizmos()
   // { 
   //   Gizmos.color = Color.red;
-  //   Gizmos.DrawWireCube( actor.transform.position + new Vector3(actor.GetComponent<SpriteRenderer>().flipX? 0.25f * -1 : 0.25f, 0, 0), 
-  //     new Vector3(0.5f, actor.transform.localScale.y, 0.5f));
+  //   Gizmos.DrawWireCube( transform.position + new Vector3(GetComponent<SpriteRenderer>().flipX? 0.25f * -1 : 0.25f, 0, 0), 
+  //     new Vector3(0.5f, transform.localScale.y, 0.5f));
   // }
 }

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1fd61ef7434432184f54830eedaa95a, type: 3}
-  m_Name: HeroMinionPatrolPattern
+  m_Script: {fileID: 11500000, guid: 8dc87918e45914cb8b114d4e5536adc2, type: 3}
+  m_Name: AttackState
   m_EditorClassIdentifier: 
-  minMoveDistance: 2
-  maxMoveDistance: 3
-  minIdleSec: 0
-  maxIdleSec: 1
+  actions:
+  - {fileID: 11400000, guid: 19b17033bb10f4121af9575b83a6d27e, type: 2}
+  transitions: []
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

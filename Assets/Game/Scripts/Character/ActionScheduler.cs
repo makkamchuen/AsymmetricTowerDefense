@@ -17,4 +17,9 @@ public class ActionScheduler : MonoBehaviour
     {
         StartAction(null);
     }
+
+    public IAction GetCurrentAction()
+    {
+        return _currentAction;
+    }
 }
