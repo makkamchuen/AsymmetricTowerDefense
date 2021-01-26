@@ -3,7 +3,7 @@
 [CreateAssetMenu (menuName = "Skill/Summon")]
 public class SummonSkillData : SkillData
 {
-    public Actor actor;
+    [SerializeField] private Actor actor;
 
     public override void Cast(Actor user, Vector3 destination)
     {

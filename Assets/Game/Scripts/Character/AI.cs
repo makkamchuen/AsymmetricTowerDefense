@@ -4,12 +4,27 @@ using UnityEngine;
 
 public class AI : Actor
 {
-  [HideInInspector] public Actor target;
-  public Sight[] sights;
+  private Actor _target;
+  [SerializeField] private Sight[] sights;
 
   protected override void Start()
   {
     base.Start();
-    target = this;
+    _target = this;
+  }
+
+  public Actor GetTargetActor()
+  {
+    return _target;
+  }
+
+  public void SetTargetActor(Actor target)
+  {
+    _target = target;
+  }
+
+  public Sight[] GetSights()
+  {
+    return sights;
   }
 }

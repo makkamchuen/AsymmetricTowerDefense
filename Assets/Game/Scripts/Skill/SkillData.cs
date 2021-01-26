@@ -2,7 +2,12 @@
 
 public abstract class SkillData : ScriptableObject
 {
-    public float cooldown;
+    [SerializeField] private float _cooldown;
     public abstract void Cast(Actor user, Vector3 destination);
     public abstract bool InRange(Actor user, Actor targetActor);
+    
+    public float GetCoolDown()
+    {
+        return _cooldown;
+    }
 }

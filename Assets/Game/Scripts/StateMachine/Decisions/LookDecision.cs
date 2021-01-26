@@ -5,13 +5,13 @@ public class LookDecision : Decision {
 
   public override bool Decide(StateController controller)
   {
-    bool targetVisible = Look(controller.ai);
+    bool targetVisible = Look(controller.target);
     return targetVisible;
   }
 
   private bool Look(AI ai)
   {
-    foreach (Sight sight in ai.sights)
+    foreach (Sight sight in ai.GetSights())
     {
       if (sight.SearchTarget(ai))
       {

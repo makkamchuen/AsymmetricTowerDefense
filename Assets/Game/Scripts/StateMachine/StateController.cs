@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class StateController : MonoBehaviour {
 
   public State currentState;
-  [HideInInspector] public AI ai;
+  [HideInInspector] public AI target;
   public State remainInState;
   public bool isEnable = true;
   
@@ -13,7 +13,7 @@ public class StateController : MonoBehaviour {
 
   private void Start()
   {
-    ai = GetComponent<AI>();
+    target = GetComponent<AI>();
   }
 
   void Update()

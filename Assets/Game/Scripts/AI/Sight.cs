@@ -31,15 +31,15 @@ public class Sight: ScriptableObject
       }
       sameTag = false;
       Actor target = collider.GetComponent<Actor>();
-      if (ai.target == ai || priority.Compare(ai, ai.target, target))
+      if (ai.GetTargetActor() == ai || priority.Compare(ai, ai.GetTargetActor(), target))
       {
-        ai.target = target;
+        ai.SetTargetActor(target);
         found = true;
       }
     }
     if (!found)
     {
-      ai.target = ai;
+      ai.SetTargetActor(ai);
     }
     return found;
   }

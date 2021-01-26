@@ -2,6 +2,16 @@ using Cinemachine;
 
 public abstract class AttackSkillData : SkillData
 {
-  public float damage;
-  [TagField] public string[] targetTags;
+  private float damage;
+  [TagField] private string[] _targetTags;
+  
+  protected float GetDamage()
+  {
+    return damage;
+  }
+
+  protected string[] GetTargetTags()
+  {
+    return _targetTags;
+  }
 }

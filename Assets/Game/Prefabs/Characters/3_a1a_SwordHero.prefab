@@ -7,6 +7,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3747370998263778104, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190413995143458182, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 643830653201909248}
+    - target: {fileID: 4190413995143458182, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
     - target: {fileID: 1218646900792688126, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: hitSound
@@ -25,7 +39,7 @@ PrefabInstance:
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.32
       objectReference: {fileID: 0}
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
@@ -35,7 +49,7 @@ PrefabInstance:
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -7.43
       objectReference: {fileID: 0}
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
@@ -82,6 +96,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 7465213538c3c3d4ba51ac66c5acdf00, type: 2}
+    - target: {fileID: 5879838514407037274, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8757370739180566694, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: m_Sprite
@@ -93,5 +112,16 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9134763546753715397, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2888dd6ff85a8f4bac047de292bdaa0, type: 3}
+--- !u!95 &643830653201909248 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5772725660081991603, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6409624983305431475}
+  m_PrefabAsset: {fileID: 0}

@@ -2,12 +2,22 @@
 
 public class Minion : AI
 {
-    [HideInInspector] public Mover mover;
-    public PatrolPattern patrolPattern;
+    private Mover _mover;
+    [SerializeField] private PatrolPattern _patrolPattern;
 
     protected override void Start()
     {
         base.Start();
-        mover = GetComponent<Mover>();
+        _mover = GetComponent<Mover>();
+    }
+
+    public Mover GetMover()
+    {
+        return _mover;
+    }
+
+    public PatrolPattern GetPatrolPattern()
+    {
+        return _patrolPattern;
     }
 }

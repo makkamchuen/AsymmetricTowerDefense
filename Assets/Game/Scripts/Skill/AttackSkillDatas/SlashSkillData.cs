@@ -17,7 +17,7 @@ public class SlashSkillData : AttackSkillData
       new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
     foreach (Collider collider in colliders)
     {
-      foreach (string tag in targetTags)
+      foreach (string tag in GetTargetTags())
       {
         if (collider.CompareTag(tag))
         {
@@ -30,7 +30,7 @@ public class SlashSkillData : AttackSkillData
         continue;
       }
       sameTag = false;
-      collider.GetComponent<Actor>().Hit(damage);
+      collider.GetComponent<Actor>().Hit(GetDamage());
     }
   }
 

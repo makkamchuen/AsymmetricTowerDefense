@@ -8604,12 +8604,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1128309467}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &660858895 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 7309526120123191576, guid: c5ce113d662375847963f9f42aedc089,
-    type: 3}
-  m_PrefabInstance: {fileID: 1128309467}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &670071551
 GameObject:
   m_ObjectHideFlags: 0

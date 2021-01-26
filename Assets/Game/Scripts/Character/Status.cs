@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Status
 {
-    public bool controllable;
+    private bool _controllable;
 
     public Status()
     {
-        controllable = true;
+        _controllable = true;
     }
 }
