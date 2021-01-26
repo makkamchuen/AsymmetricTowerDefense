@@ -29,10 +29,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
-  currentHealth: 0
   attack: {fileID: 5879838514407037274}
-  mover: {fileID: 0}
-  skills: []
 --- !u!114 &4190413995143458182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,11 +42,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8884f6bba80d404baf218629ae7bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  actionScheduler: {fileID: 0}
-  actor: {fileID: 0}
   navMeshAgent: {fileID: 5178051151269185720}
-  isFacingRight: 0
+  animator: {fileID: 5772725660081991603}
 --- !u!114 &5879838514407037274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,27 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c423d03128c47538f4295ca5e5444f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  actionScheduler: {fileID: 0}
-  actor: {fileID: 0}
   skillData: {fileID: 11400000, guid: 7c5271aeeade546a9855105cac032086, type: 2}
-  cooldown: 0
---- !u!114 &9134763546753715397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5306852813513489768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fa8118508704839974d8f321960b0a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &6958765420604302007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +69,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f6aed37f13e410a9fe8eda8ad13596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9134763546753715397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306852813513489768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa8118508704839974d8f321960b0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &2297425192849471722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -189,6 +178,12 @@ NavMeshAgent:
 --- !u!1 &5306852813513489768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6217116542402004354, guid: 5fb68e9523b3f5448aa042d85e449951,
+    type: 3}
+  m_PrefabInstance: {fileID: 2297425192849471722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5772725660081991603 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5764272642138527577, guid: 5fb68e9523b3f5448aa042d85e449951,
     type: 3}
   m_PrefabInstance: {fileID: 2297425192849471722}
   m_PrefabAsset: {fileID: 0}

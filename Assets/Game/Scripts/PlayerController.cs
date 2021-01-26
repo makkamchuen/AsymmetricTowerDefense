@@ -32,9 +32,8 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
-        // target.attack.Cast();
+        // _target.GetAttackSkill().Cast();
     }
-    
 
     private void CheckOnMobileTouch()
     {
