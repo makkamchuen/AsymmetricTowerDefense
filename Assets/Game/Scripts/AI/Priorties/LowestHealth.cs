@@ -5,6 +5,6 @@ public class LowestHealth : Priority
 {
     public override Actor Compare(Actor source, Actor target1, Actor target2)
     {
-        return target1.currentHealth <= target2.currentHealth ? target1 : target2;
+        return target1.GetCurrentHealth() <= target2.GetCurrentHealth() ? target1 : target2;
     }
 }

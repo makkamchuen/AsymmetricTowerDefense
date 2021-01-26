@@ -15,6 +15,6 @@ public class ChaseAction : Action
 
   private void Chase(Minion minion)
   {
-    minion.mover.MoveTo(minion.target.transform.position);
+    minion.GetMover().MoveTo(minion.GetTargetActor().transform.position);
   }
 }

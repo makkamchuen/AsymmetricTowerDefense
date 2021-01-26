@@ -25,15 +25,15 @@ public class Skill: ActorActionComponent
 
   public void Cast(Vector3 destination)
   {
-    actionScheduler.StartAction(this);
-    skillData.Cast(actor, destination);
+    GetAnimator().SetTrigger("HeroAttack");
+    GetActionScheduler().StartAction(this);
+    skillData.Cast(GetActor(), destination);
     cooldown = skillData.cooldown;
   }
   
   public bool CanHit(Actor target)
   {
-    animator.SetTrigger("HeroAttack");
-    return cooldown == 0 && skillData.InRange(actor, target);
+    return cooldown == 0 && skillData.InRange(GetActor(), target);
   }
 
   public override void Cancel()

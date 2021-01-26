@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class ActionScheduler : MonoBehaviour
 {
-    [HideInInspector] public IAction currentAction = null;
+    private IAction _currentAction = null;
 
     public void StartAction(IAction action)
     {
-        if (currentAction == action) return;
-        if (currentAction != null)
-        {
-            currentAction.Cancel();
-        }
-        currentAction = action;
+        if (_currentAction == action) return;
+        _currentAction?.Cancel();
+        _currentAction = action;
     }
 
     public void CancelCurrentAction()

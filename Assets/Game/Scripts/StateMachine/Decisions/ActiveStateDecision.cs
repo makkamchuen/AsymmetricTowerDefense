@@ -7,10 +7,10 @@ public class ActiveStateDecision : Decision
 {
   public override bool Decide (StateController controller)
   {
-    if (controller.ai.target == controller.ai)
+    if (controller.target.GetTargetActor() == controller.target)
     {
       return false;
     }
-    return controller.ai.target.currentHealth > 0;
+    return controller.target.GetTargetActor().GetCurrentHealth() > 0;
   }
 }

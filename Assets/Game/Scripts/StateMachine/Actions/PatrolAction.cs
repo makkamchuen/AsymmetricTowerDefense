@@ -15,10 +15,10 @@ public class PatrolAction : Action
 
   private void Patrol(Minion minion)
   {
-    if (minion.mover.navMeshAgent.remainingDistance <= minion.mover.navMeshAgent.stoppingDistance
-        && !minion.mover.navMeshAgent.pathPending)
+    if (minion.GetMover().GetNavMeshAgent().remainingDistance <= minion.GetMover().GetNavMeshAgent().stoppingDistance
+        && !minion.GetMover().GetNavMeshAgent().pathPending)
     {
-      minion.patrolPattern.Move(minion.mover);
+      minion.GetPatrolPattern().Move(minion.GetMover());
     }
   }
 }

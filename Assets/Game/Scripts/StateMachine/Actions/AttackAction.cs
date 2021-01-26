@@ -12,9 +12,9 @@ public class AttackAction : Action
 
   private void Attack(AI ai)
   {
-    if (ai.attack.CanHit(ai.target)) 
+    if (ai.GetAttackSkill().CanHit(ai.GetTargetActor())) 
     {
-      ai.attack.Cast(ai.target.transform.position);
+      ai.GetAttackSkill().Cast(ai.GetTargetActor().transform.position);
     }
   }
 }
