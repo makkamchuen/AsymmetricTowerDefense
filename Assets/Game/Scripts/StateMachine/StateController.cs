@@ -43,4 +43,13 @@ public class StateController : MonoBehaviour {
   {
     stateTimeElapsed = 0;
   }
+
+  private void OnDrawGizmos()
+  {
+    if (currentState != null) 
+    {
+      Gizmos.color = currentState.sceneGizmoColor;
+      Gizmos.DrawCube(transform.position, new Vector3(0.2f, 0.2f, 0.2f));
+    }
+  }
 }

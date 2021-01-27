@@ -24,15 +24,19 @@ public class Skill: ActorActionComponent
 
   public void Cast(Vector3 destination)
   {
-    GetAnimator().SetTrigger(AnimationTrigger.attack);
+    if (_cooldown != 0)
+    {
+      return;
+    }
     GetActionScheduler().StartAction(this);
+    GetAnimator().SetTrigger(AnimationTrigger.attack);
     skillData.Cast(GetActor(), destination);
     _cooldown = skillData.GetCoolDown();
   }
   
   public bool CanHit(Actor target)
   {
-    return _cooldown == 0;
+    return skillData.InRange(GetActor(), target);
   }
 
   public override void Cancel()
@@ -40,10 +44,10 @@ public class Skill: ActorActionComponent
     GetAnimator().SetBool(AnimationTrigger.attack, false);
   }
 
-  // void OnDrawGizmos()
-  // { 
-  //   Gizmos.color = Color.red;
-  //   Gizmos.DrawWireCube( transform.position + new Vector3(GetComponent<SpriteRenderer>().flipX? 0.25f * -1 : 0.25f, 0, 0), 
-  //     new Vector3(0.5f, transform.localScale.y, 0.5f));
-  // }
+  void OnDrawGizmos()
+  { 
+    Gizmos.color = Color.red;
+    Gizmos.DrawWireCube( transform.position + new Vector3(GetComponent<SpriteRenderer>().flipX? 0.25f * -1 : 0.25f, 0, 0), 
+      new Vector3(0.5f, transform.localScale.y, 0.5f));
+  }
 }

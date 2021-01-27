@@ -16,7 +16,7 @@ public class Actor : MonoBehaviour
 
   public void Hit(float damage)
   {
-    
+    Debug.Log(this);
   }
 
   public float GetCurrentHealth()
