@@ -8,13 +8,12 @@ public class Mover : ActorActionComponent
     private SpriteRenderer _spriteRenderer;
     private Vector3 _lastPos;
     
-    
-
     protected override void Start()
     {
         base.Start();
         // navMeshAgent = GetComponent<NavMeshAgent>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        GetAnimator().SetBool(AnimationTrigger.run, false);
     }
 
     private void Update()
@@ -60,7 +59,7 @@ public class Mover : ActorActionComponent
             GetActionScheduler().CancelCurrentAction();
         } 
     }
-
+    
     public override void Cancel()
     {
         GetAnimator().SetBool(AnimationTrigger.run, false);
