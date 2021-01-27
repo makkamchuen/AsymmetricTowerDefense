@@ -40,6 +40,6 @@ public class SlashSkillData : AttackSkillData
     Collider[] colliders = Physics.OverlapBox(
       user.transform.position + new Vector3(user.GetComponent<SpriteRenderer>().flipX? xOffset * -1 : xOffset, 0, 0), 
       new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
-    return colliders.Contains(targetActor.GetComponent<Collider>());
+    return colliders.Contains(targetActor.GetComponentInParent<Collider>());
   }
 }
