@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: HeroMinionStats
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthRegenPerSecond: 0
+  healthRegenPerSecond: 1
   movementSpeed: 10
   attackDamage: 10

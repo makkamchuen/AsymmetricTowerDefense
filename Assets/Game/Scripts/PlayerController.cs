@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        CheckOnMobileTouch();
+        // CheckOnMobileTouch();
         CheckOnRightClick();
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -30,26 +30,31 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Attack()
+    private void Attack()
     {
-        // _target.GetAttackSkill().Cast();
-    }
-
-    private void CheckOnMobileTouch()
-    {
-        if (Input.touchCount <= 0 || Input.touches[0].phase != TouchPhase.Began)
-        {
-            return;
-        }
-
-        Ray ray = _mainCamera.ScreenPointToRay(Input.touches[0].position);
+        Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
         {
             return;
         }
-
-        MoveTo(hit.point);
+        _target.GetAttackSkill().Cast(hit.point);
     }
+
+    // private void CheckOnMobileTouch()
+    // {
+    //     if (Input.touchCount <= 0 || Input.touches[0].phase != TouchPhase.Began)
+    //     {
+    //         return;
+    //     }
+    //
+    //     Ray ray = _mainCamera.ScreenPointToRay(Input.touches[0].position);
+    //     if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
+    //     {
+    //         return;
+    //     }
+    //
+    //     MoveTo(hit.point);
+    // }
 
     private void CheckOnRightClick()
     {
