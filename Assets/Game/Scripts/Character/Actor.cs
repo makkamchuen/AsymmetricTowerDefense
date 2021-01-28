@@ -5,6 +5,8 @@ public class Actor : MonoBehaviour
 {
   [SerializeField] private Stats baseStats;
   [SerializeField] private Skill attack;
+  [SerializeField] private Animator animator;
+  [SerializeField] private ActionScheduler actionScheduler;
   private float _currentHealth;
   private Status _status;
 
@@ -16,7 +18,13 @@ public class Actor : MonoBehaviour
 
   public void Hit(float damage)
   {
-    Debug.Log(this);
+    actionScheduler.CancelCurrentAction();
+    _currentHealth -= damage;
+    animator.SetTrigger(AnimationTrigger.hurt);
+    if (_currentHealth <= 0)
+    {
+      animator.SetBool(AnimationTrigger.dead, true);
+    }
   }
 
   public float GetCurrentHealth()
