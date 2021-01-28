@@ -11,6 +11,6 @@ public class ActiveStateDecision : Decision
     {
       return false;
     }
-    return controller.target.GetTargetActor().GetCurrentHealth() > 0;
+    return controller.target.GetTargetActor().GetHealth().GetCurrentHealth() > 0;
   }
 }

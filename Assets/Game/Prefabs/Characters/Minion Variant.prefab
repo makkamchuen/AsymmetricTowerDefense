@@ -31,9 +31,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
   attack: {fileID: 2795055750792969942}
+  _health: {fileID: 0}
   sights:
   - {fileID: 11400000, guid: c00d44e6abc3b4fae853f30fb2755b35, type: 2}
   _patrolPattern: {fileID: 11400000, guid: a53d765cc49374f22a286dddf7121588, type: 2}
+--- !u!114 &5510681130564504081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4537045775632947940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3431996259331378751
 PrefabInstance:
   m_ObjectHideFlags: 0

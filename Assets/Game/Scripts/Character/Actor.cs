@@ -5,31 +5,13 @@ public class Actor : MonoBehaviour
 {
   [SerializeField] private Stats baseStats;
   [SerializeField] private Skill attack;
-  [SerializeField] private Animator animator;
-  [SerializeField] private ActionScheduler actionScheduler;
-  private float _currentHealth;
+  [SerializeField] private Health _health;
   private Status _status;
 
   protected virtual void Start()
   {
-    _currentHealth = baseStats.maxHealth;
     _status = new Status();
-  }
-
-  public void Hit(float damage)
-  {
-    actionScheduler.CancelCurrentAction();
-    _currentHealth -= damage;
-    animator.SetTrigger(AnimationTrigger.hurt);
-    if (_currentHealth <= 0)
-    {
-      animator.SetBool(AnimationTrigger.dead, true);
-    }
-  }
-
-  public float GetCurrentHealth()
-  {
-    return _currentHealth;
+    _health = GetComponent<Health>();
   }
 
   public Skill GetAttackSkill()
@@ -40,5 +22,15 @@ public class Actor : MonoBehaviour
   public Status GetStatus()
   {
     return _status;
+  }
+  
+  public Stats GetBaseStats()
+  {
+    return baseStats;
+  }
+  
+  public Health GetHealth()
+  {
+    return _health;
   }
 }

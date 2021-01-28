@@ -20,7 +20,7 @@ public class Mover : ActorActionComponent
     {
         RestrictRotation();
         UpdateAction();
-        navMeshAgent.enabled = GetActor().GetCurrentHealth() > 0;
+        navMeshAgent.enabled = GetActor().GetHealth().GetCurrentHealth() > 0;
     }
 
     public NavMeshAgent GetNavMeshAgent()

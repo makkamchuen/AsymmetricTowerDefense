@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HeroMinionSlash
   m_EditorClassIdentifier: 
   _cooldown: 1
+  _channelTime: 0.3
   damage: 10
   _targetTags:
   - Player
