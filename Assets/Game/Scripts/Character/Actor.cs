@@ -5,7 +5,7 @@ public class Actor : MonoBehaviour
 {
   [SerializeField] private Stats baseStats;
   [SerializeField] private Skill attack;
-  [SerializeField] private Health _health;
+  private Health _health;
   private Status _status;
 
   protected virtual void Start()

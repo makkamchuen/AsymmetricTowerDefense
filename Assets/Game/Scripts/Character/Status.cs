@@ -19,4 +19,11 @@ public class Status
     {
         return _moveable;
     }
+
+    public void SetDeadStatus()
+    {
+        _controllable = false;
+        _attackable = false;
+        _moveable = false;
+    }
 }
