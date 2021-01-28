@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7379840971926831180}
   - component: {fileID: 5764272642138527577}
   - component: {fileID: 7946945614469764118}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 9109163453373953343}
   - component: {fileID: 6358583617448628736}
   - component: {fileID: 6358583616697971788}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 1_a_LivingThing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
