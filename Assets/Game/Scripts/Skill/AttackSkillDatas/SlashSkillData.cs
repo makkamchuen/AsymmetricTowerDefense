@@ -30,7 +30,7 @@ public class SlashSkillData : AttackSkillData
         continue;
       }
       sameTag = false;
-      collider.GetComponentInChildren<Actor>().Hit(GetDamage());
+      collider.GetComponentInChildren<Health>().Hit(GetDamage() + user.GetBaseStats().attackDamage);
     }
   }
 

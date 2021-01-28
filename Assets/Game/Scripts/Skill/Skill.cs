@@ -4,6 +4,8 @@ public class Skill: ActorActionComponent
 {
   [SerializeField] private SkillData skillData;
   private float _cooldown;
+  private float _channelTime;
+  private Vector3 _destination;
   
   protected override void Start()
   {
@@ -15,9 +17,19 @@ public class Skill: ActorActionComponent
     if (_cooldown != 0)
     {
       _cooldown -= Time.deltaTime;
-      if (_cooldown < 0)
+      if (_cooldown <= 0)
       {
         _cooldown = 0;
+      }
+    }
+
+    if (_channelTime != 0)
+    {
+      _channelTime -= Time.deltaTime;
+      if (_channelTime <= 0)
+      {
+        skillData.Cast(GetActor(), _destination);
+        _channelTime = 0;
       }
     }
   }
@@ -30,8 +42,9 @@ public class Skill: ActorActionComponent
     }
     GetActionScheduler().StartAction(this);
     GetAnimator().SetTrigger(AnimationTrigger.attack);
-    skillData.Cast(GetActor(), destination);
     _cooldown = skillData.GetCoolDown();
+    _channelTime = skillData.GetChannelTime();
+    _destination = destination;
   }
   
   public bool CanHit(Actor target)
