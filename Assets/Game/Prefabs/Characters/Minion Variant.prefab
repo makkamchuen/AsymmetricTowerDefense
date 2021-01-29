@@ -121,12 +121,12 @@ PrefabInstance:
     - target: {fileID: 2979323647151392079, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: hitSound
-      value: event:/SFX/CharacterHit/SwordHeroHit
+      value: event:/SFX/Character/Hurt/SwordHeroHurt
       objectReference: {fileID: 0}
     - target: {fileID: 2979323647151392079, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: weaponSound
-      value: event:/SFX/Attack/SwordWoosh
+      value: event:/SFX/Weapon/Sword
       objectReference: {fileID: 0}
     - target: {fileID: 4142089111582532710, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}

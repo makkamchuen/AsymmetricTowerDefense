@@ -205,6 +205,31 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8190676511364410620, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: dead
+      value: event:/SFX/Character/Dead/SwordHeroDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190676511364410620, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: hurt
+      value: event:/SFX/Character/Hurt/SwordHeroHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190676511364410620, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: weapon
+      value: event:/SFX/Weapon/Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190676511364410620, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: hitSound
+      value: event:/SFX/Character/Hurt/SwordHeroHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190676511364410620, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: weaponSound
+      value: event:/SFX/Weapon/Sword
+      objectReference: {fileID: 0}
     - target: {fileID: 8757370739180566694, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: m_Sprite

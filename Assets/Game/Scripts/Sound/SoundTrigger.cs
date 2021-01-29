@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class SoundTrigger : MonoBehaviour
 {
-    [SerializeField][FMODUnity.EventRef] private string attackSound;
-    [SerializeField][FMODUnity.EventRef] private string weaponSound;
-    [SerializeField][FMODUnity.EventRef] private string hitSound;
-    [SerializeField][FMODUnity.EventRef] private string dieSound;
+    [SerializeField][FMODUnity.EventRef] private string attack;
+    [SerializeField][FMODUnity.EventRef] private string weapon;
+    [SerializeField][FMODUnity.EventRef] private string hurt;
+    [SerializeField][FMODUnity.EventRef] private string dead;
 
     public void PlayAttackSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(attackSound);
+        FMODUnity.RuntimeManager.PlayOneShot(attack);
     }
 
     public void PlayWeaponSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(weaponSound);
+        FMODUnity.RuntimeManager.PlayOneShot(weapon);
     }
 
-    public void PlayHitSound()
+    public void PlayHurtSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(hitSound);
+        FMODUnity.RuntimeManager.PlayOneShot(hurt);
     }
 
-    public void PlayDieSound()
+    public void PlayDeadSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(dieSound);
+        FMODUnity.RuntimeManager.PlayOneShot(dead);
     }
 }
