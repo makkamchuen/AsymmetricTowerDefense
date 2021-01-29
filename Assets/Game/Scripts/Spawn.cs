@@ -6,21 +6,21 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] 
-    Sprite sprite;
+    [SerializeField] Sprite sprite;
+    [SerializeField][FMODUnity.EventRef] string spawnSound;
+    public string shortcut;
+    public GameObject prefab;
 
     private bool mouseEntered;
     private bool canSpawn;
     private Texture2D cursor;
-    public string shortcut;
-    public GameObject prefab;
     private Plane plane = new Plane(Vector3.up, 0);
 
     void Start()
     {
-        
         cursor = sprite.texture;
     }
+
     void Update()
     {
         float distance;
@@ -31,11 +31,12 @@ public class Spawn : MonoBehaviour
             GameObject newInstance = PoolManager.Spawn(prefab);
 
             newInstance.transform.position = ray.GetPoint(distance);
+            FMODUnity.RuntimeManager.PlayOneShotAttached(spawnSound, newInstance);
         }
-            
+
         canSpawn = Input.GetKey(shortcut) && mouseEntered;
         if (canSpawn)
-            Cursor.SetCursor (cursor, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         else
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }

@@ -88,7 +88,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.083333336
-    functionName: PlayHitSound
+    functionName: PlayHurtSound
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 86d0d442bd90d6d40a4b256b69414323,
       type: 3}
