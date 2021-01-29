@@ -12,7 +12,7 @@ public abstract class ActorActionComponent : MonoBehaviour, IAction
 
   protected virtual void Start()
   {
-    _animator = GetComponent<Animator>();
+    _animator = GetComponentInChildren<Animator>();
     _actionScheduler = GetComponent<ActionScheduler>();
     _actor = GetComponent<Actor>();
   }
