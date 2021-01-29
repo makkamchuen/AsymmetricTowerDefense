@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fd61ef7434432184f54830eedaa95a, type: 3}
   m_Name: HeroMinionPatrolPattern
   m_EditorClassIdentifier: 
-  minMoveDistance: 1
-  maxMoveDistance: 2
+  minMoveDistance: 2
+  maxMoveDistance: 3
   minIdleSec: 0
   maxIdleSec: 1

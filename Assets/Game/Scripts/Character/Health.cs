@@ -41,7 +41,7 @@ public class Health : ActorActionComponent
     if (!_isDead && _currentHealth <= 0)
     {
       GetAnimator().SetBool(AnimationTrigger.dead, true);
-      GetComponentInParent<Collider>().enabled = false;
+      GetComponent<Collider>().enabled = false;
       GetActor().GetStatus().SetDeadStatus();
       _isDead = true;
     }

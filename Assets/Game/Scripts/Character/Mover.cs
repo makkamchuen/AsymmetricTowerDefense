@@ -3,22 +3,17 @@ using UnityEngine.AI;
 
 public class Mover : ActorActionComponent
 {
-    [SerializeField] private NavMeshAgent navMeshAgent;
-    private bool _isFacingRight;
-    private SpriteRenderer _spriteRenderer;
-    private Vector3 _lastPos;
+    private NavMeshAgent navMeshAgent;
     
     protected override void Start()
     {
         base.Start();
-        // navMeshAgent = GetComponent<NavMeshAgent>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
         GetAnimator().SetBool(AnimationTrigger.run, false);
     }
 
     private void Update()
     {
-        RestrictRotation();
         UpdateAction();
         navMeshAgent.enabled = GetActor().GetHealth().GetCurrentHealth() > 0;
     }
@@ -34,26 +29,23 @@ public class Mover : ActorActionComponent
         {
             return;
         }
-        GetAnimator().SetBool(AnimationTrigger.run, true);
+
         if (!NavMesh.SamplePosition(destination, out NavMeshHit hit, Mathf.Infinity, NavMesh.AllAreas))
         {
             return;
         }
-        _isFacingRight = hit.position.x > this.transform.position.x;
+        GetAnimator().SetBool(AnimationTrigger.run, true);
+        GetActor().SetIsFacingRight(hit.position.x > transform.position.x);
         navMeshAgent.destination = hit.position;
         navMeshAgent.isStopped = false;
         GetActionScheduler().StartAction(this);
     }
 
-    private void RestrictRotation()
-    {
-        _spriteRenderer.flipX = !_isFacingRight;
-    }
-    
     private void UpdateAction()
     {
         if (GetActionScheduler().GetCurrentAction() is Mover mover && 
             mover == this &&
+            !navMeshAgent.pathPending &&
             navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
         {
             GetActionScheduler().CancelCurrentAction();
