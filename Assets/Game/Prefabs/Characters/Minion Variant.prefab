@@ -53,6 +53,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1575240131399358537, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: skillData
+      value: 
+      objectReference: {fileID: 11400000, guid: c49e78483cd554019a65fbb2906c1baa,
+        type: 2}
     - target: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_Name
@@ -112,6 +118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247205917157253387, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_Speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2247205917157253387, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
