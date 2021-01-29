@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class SoundTrigger : MonoBehaviour
 {
-    [SerializeField][FMODUnity.EventRef] private string attack;
-    [SerializeField][FMODUnity.EventRef] private string weapon;
-    [SerializeField][FMODUnity.EventRef] private string hurt;
-    [SerializeField][FMODUnity.EventRef] private string dead;
+    [SerializeField][FMODUnity.EventRef] string spawn;
+    [SerializeField][FMODUnity.EventRef] string attack;
+    [SerializeField][FMODUnity.EventRef] string weapon;
+    [SerializeField][FMODUnity.EventRef] string hurt;
+    [SerializeField][FMODUnity.EventRef] string dead;
+
+    public void PlaySpawnSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(spawn);
+    }
 
     public void PlayAttackSound()
     {
@@ -28,4 +34,5 @@ public class SoundTrigger : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(dead);
     }
+
 }

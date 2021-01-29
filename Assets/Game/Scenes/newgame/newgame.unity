@@ -2590,6 +2590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 718a0e719a84c41aa89cdefa1ba36538, type: 3}
+  spawnSound: event:/SFX/Character/Spawn/TowerSpawn
   shortcut: t
   prefab: {fileID: 2751151623452151826, guid: b165f8e28f6c13c4ba6d1b8d68ea4f4d, type: 3}
 --- !u!1 &156250303
