@@ -22595,7 +22595,8 @@ PrefabInstance:
       propertyPath: rigidBody
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7850576690789917323, guid: c5ce113d662375847963f9f42aedc089, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5ce113d662375847963f9f42aedc089, type: 3}
 --- !u!4 &1128309468 stripped
 Transform:
@@ -37352,16 +37353,6 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3499098491814866740, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
-        type: 3}
-      propertyPath: m_ObstacleAvoidanceType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3499098491814866740, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
-        type: 3}
-      propertyPath: m_AutoTraverseOffMeshLink
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3933517156626202826, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
         type: 3}
       propertyPath: m_Name
@@ -37422,5 +37413,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1326811992648206597, guid: e8e8d72fa7a1e4656b81f97b1645b6f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8e8d72fa7a1e4656b81f97b1645b6f6, type: 3}
