@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6358583615992934482, guid: 5fb68e9523b3f5448aa042d85e449951,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6784629499759058513, guid: 5fb68e9523b3f5448aa042d85e449951,
         type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +70,17 @@ PrefabInstance:
     - target: {fileID: 6784629499759058860, guid: 5fb68e9523b3f5448aa042d85e449951,
         type: 3}
       propertyPath: m_Name
-      value: 01_LivingThing
+      value: 2_a2_NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109163453373953343, guid: 5fb68e9523b3f5448aa042d85e449951,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.81103784
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109163453373953343, guid: 5fb68e9523b3f5448aa042d85e449951,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.40551892
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fb68e9523b3f5448aa042d85e449951, type: 3}

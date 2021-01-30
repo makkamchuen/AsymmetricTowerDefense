@@ -7,7 +7,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8245503363102740900}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.225, y: 0.5, z: 0.35}
@@ -39,6 +39,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 731206601690392065, guid: f770baff5e532774cab03c3de0e01ba0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 731206602348643411, guid: f770baff5e532774cab03c3de0e01ba0,
         type: 3}
@@ -113,12 +118,17 @@ PrefabInstance:
     - target: {fileID: 881621471687846829, guid: f770baff5e532774cab03c3de0e01ba0,
         type: 3}
       propertyPath: m_Name
-      value: 3_a2_c_Tower
+      value: 3_a2c_Tower
       objectReference: {fileID: 0}
     - target: {fileID: 881621471687846829, guid: f770baff5e532774cab03c3de0e01ba0,
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 881621471687846829, guid: f770baff5e532774cab03c3de0e01ba0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3202553557632598334, guid: f770baff5e532774cab03c3de0e01ba0,
         type: 3}
@@ -129,6 +139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202553557632598334, guid: f770baff5e532774cab03c3de0e01ba0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3202553557632598334, guid: f770baff5e532774cab03c3de0e01ba0,
         type: 3}
