@@ -5,6 +5,7 @@ public class Actor : MonoBehaviour
 {
   [SerializeField] private Stats baseStats;
   [SerializeField] private Skill attack;
+  [SerializeField] private string weapon;
   private SpriteRenderer _spriteRenderer;
   private Health _health;
   private Status _status;
@@ -47,6 +48,11 @@ public class Actor : MonoBehaviour
     return _health;
   }
 
+  public string GetWeapon()
+  {
+    return weapon;
+  }
+  
   public void SetIsFacingRight(bool isFacing)
   {
     _isFacingRight = isFacing;
