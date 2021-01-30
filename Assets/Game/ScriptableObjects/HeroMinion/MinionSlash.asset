@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c62d2ca45e34fe093b742d85904663, type: 3}
-  m_Name: HeroMinionSummonSkill
+  m_Script: {fileID: 11500000, guid: 2a9633cfe46c4ee0814b533f0bf5b0ac, type: 3}
+  m_Name: MinionSlash
   m_EditorClassIdentifier: 
-  _cooldown: 3
-  _channelTime: 0.1
-  _gameObject: {fileID: 3933517156626202826, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
-    type: 3}
+  _cooldown: 2
+  _channelTime: 0.3
+  attackInfo:
+    damage: 10
+    _targetTags:
+    - Player
+  hitBoxHeight: 0.5
+  hitBoxWidth: 0.5

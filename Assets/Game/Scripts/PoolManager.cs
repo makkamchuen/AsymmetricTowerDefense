@@ -19,16 +19,17 @@ namespace Game.Scripts
             ActivePrefabIdsDictionary.Clear();
         }
 
-        public static GameObject Spawn(GameObject prefab)
+        public static GameObject Spawn(GameObject prefab, Vector3 position)
         {
             string prefabId = prefab.GetInstanceID().ToString();
             GameObject instance = GetPrefabFromPool(prefabId);
             if (instance == null)
             {
-                instance = Instantiate(prefab);
+                instance = Instantiate(prefab, position, Quaternion.identity);
                 instance.name = prefab.name + Time.time;
             }
 
+            instance.transform.position = position;
             MarkPrefabAsActive(instance, prefabId);
             return instance;
         }
