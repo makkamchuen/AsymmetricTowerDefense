@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1fd61ef7434432184f54830eedaa95a, type: 3}
-  m_Name: HeroMinionPatrolPattern
+  m_Script: {fileID: 11500000, guid: 19c62d2ca45e34fe093b742d85904663, type: 3}
+  m_Name: MinionSummonSkill
   m_EditorClassIdentifier: 
-  minMoveDistance: 2
-  maxMoveDistance: 3
-  minIdleSec: 0
-  maxIdleSec: 1
+  _cooldown: 3
+  _channelTime: 0.1
+  _gameObject: {fileID: 3933517156626202826, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
+    type: 3}

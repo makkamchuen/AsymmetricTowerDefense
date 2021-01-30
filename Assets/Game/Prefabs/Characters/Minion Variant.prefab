@@ -58,7 +58,7 @@ PrefabInstance:
         type: 3}
       propertyPath: skillData
       value: 
-      objectReference: {fileID: 11400000, guid: c49e78483cd554019a65fbb2906c1baa,
+      objectReference: {fileID: 11400000, guid: 5272fd1bf755448ccbd87d88037132c9,
         type: 2}
     - target: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}

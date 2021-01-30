@@ -1,36 +1,28 @@
 
+using System;
 using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu (menuName = "Skill/Attack/Slash")]
-public class SlashSkillData : AttackSkillData
+public class SlashSkillData : SkillData
 {
+  public AttackInfo attackInfo;
   public float hitBoxHeight;
   public float hitBoxWidth;
-  
+
   public override void Cast(Actor user, Vector3 destination)
   {
     float xOffset = hitBoxWidth / 2;
-    bool sameTag = false;
     Collider[] colliders = Physics.OverlapBox(
       user.transform.position + new Vector3(user.GetComponentInChildren<SpriteRenderer>().flipX? xOffset * -1 : xOffset, 0, 0), 
       new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
     foreach (Collider collider in colliders)
     {
-      foreach (string tag in GetTargetTags())
-      {
-        if (collider.CompareTag(tag))
-        {
-          sameTag = true;
-          break;
-        }
-      }
-      if (!sameTag)
+      if (!attackInfo.IsTarget(collider.tag))
       {
         continue;
       }
-      sameTag = false;
-      collider.GetComponent<Health>().Hit(GetDamage() + user.GetBaseStats().attackDamage);
+      collider.GetComponent<Health>().Hit(attackInfo.GetDamage() + user.GetBaseStats().attackDamage);
     }
   }
 
@@ -38,7 +30,7 @@ public class SlashSkillData : AttackSkillData
   {
     float xOffset = hitBoxWidth / 2;
     Collider[] colliders = Physics.OverlapBox(
-      user.transform.position + new Vector3(user.GetComponentInChildren<SpriteRenderer>().flipX? xOffset * -1 : xOffset, 0, 0), 
+      user.transform.position + new Vector3(user.GetSpriteRender().flipX? xOffset * -1 : xOffset, 0, 0), 
       new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
     return colliders.Contains(targetActor.GetComponent<Collider>());
   }

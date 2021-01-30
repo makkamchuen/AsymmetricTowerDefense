@@ -8,7 +8,7 @@ public class SummonSkillData : SkillData
 
     public override void Cast(Actor user, Vector3 destination)
     {
-        GameObject gameObject = PoolManager.Spawn(_gameObject, user.transform.position);
+        GameObject gameObject = PoolManager.Spawn(_gameObject, destination);
         gameObject.transform.LookAt(destination);
     }
 
