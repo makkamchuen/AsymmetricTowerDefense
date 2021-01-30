@@ -37,7 +37,7 @@ public class Skill: ActorActionComponent
 
   public void Cast(Vector3 destination)
   {
-    if (_cooldown != 0)
+    if (_cooldown != 0 || !GetActor().GetStatus().Attackable())
     {
       return;
     }
