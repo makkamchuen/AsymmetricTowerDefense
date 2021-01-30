@@ -16,8 +16,7 @@ namespace Game.Scripts
         {
             for (int i = 0; i < numOfTreasures; i++)
             {
-                GameObject treasure = PoolManager.Spawn(treasurePrefab);
-                treasure.transform.position = Utils.GetRandomPoint();
+                GameObject treasure = PoolManager.Spawn(treasurePrefab, Utils.GetRandomPoint());
             }
         }
 
