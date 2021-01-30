@@ -1,3 +1,4 @@
+using Game.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -77,7 +78,15 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        MoveTo(hit.point);
+
+        if (hit.collider.CompareTag($"Treasure"))
+        {
+            PoolManager.Despawn(hit.collider.gameObject);
+        }
+        else
+        {
+            MoveTo(hit.point);
+        }
     }
 
     private void MoveTo(Vector3 position)
