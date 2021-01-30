@@ -22180,6 +22180,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 783659280}
     m_Modifications:
+    - target: {fileID: 1575240131399358537, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: skillData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b403f3c8f6ad4032b881d21a8dc909e,
+        type: 2}
     - target: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_Name
@@ -22244,6 +22250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142089111582532710, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4142089111582532710, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
@@ -36938,6 +36949,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minion
       objectReference: {fileID: 0}
+    - target: {fileID: 3933517156626202826, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Minion
+      objectReference: {fileID: 0}
     - target: {fileID: 3933517156626202935, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
         type: 3}
       propertyPath: m_RootOrder
@@ -36993,6 +37009,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4214391680693245558, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
+        type: 3}
+      propertyPath: skillData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c5271aeeade546a9855105cac032086,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 1326811992648206597, guid: e8e8d72fa7a1e4656b81f97b1645b6f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8e8d72fa7a1e4656b81f97b1645b6f6, type: 3}

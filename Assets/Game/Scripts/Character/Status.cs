@@ -19,6 +19,16 @@ public class Status
     {
         return _moveable;
     }
+    
+    public bool Attackable()
+    {
+        return _attackable;
+    }
+
+    public bool Controllable()
+    {
+        return _controllable;
+    }
 
     public void SetDeadStatus()
     {

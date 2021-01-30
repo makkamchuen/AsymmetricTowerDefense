@@ -18,7 +18,7 @@ public class StateController : MonoBehaviour {
 
   void Update()
   {
-    if (isEnable)
+    if (isEnable && target.GetStatus().Controllable())
     {
       currentState.UpdateState(this);
     }

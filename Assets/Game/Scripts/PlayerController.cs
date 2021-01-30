@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using UnityEngine.PlayerLoop;
 using TouchPhase = UnityEngine.TouchPhase;
 
 public class PlayerController : MonoBehaviour
@@ -20,13 +21,21 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // CheckOnMobileTouch();
+        if (_target.GetStatus().Controllable())
+        {
+            CheckControl();
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+        }
+    }
+
+    private void CheckControl()
+    {
         CheckOnRightClick();
         if (Input.GetKeyDown(KeyCode.R))
         {
             Attack();
-        }
-        else if (Input.GetKeyDown(KeyCode.X))
-        {
         }
     }
 
