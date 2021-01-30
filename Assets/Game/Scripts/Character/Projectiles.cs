@@ -1,40 +1,60 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Game.Scripts;
 using UnityEngine;
 
 public class Projectiles: MonoBehaviour
 {
-    [SerializeField] GameObject target;
+    private GameObject target;
 
-    [SerializeField] float force = 20f; //fake Value
-    [SerializeField] float reachableDistance = 10f; //fake Value
-    [SerializeField] float distanceTravelled = 0f;
-    [SerializeField] float speed = 1f; //fake Value
-    [SerializeField] Vector3 direction;
+    [SerializeField] private float damage = 20f; //fake Value
+    [SerializeField] private float reachableDistance = 10f; //fake Value
+    private float distanceTravelled = 0f;
+    [SerializeField] private float speed = 1f; //fake Value
+    private Vector3 direction;
+    private HashSet<string> _targetTags;
+    // [SerializeField] private Vector3 direction;
     // Start is called before the first frame update
-    void Start()
+    // void Start()
+    // {
+    //     
+    // }
+
+    public void InitDirection(Vector3 v3)
     {
-        
+        Debug.Log(v3);
+        direction = v3;
     }
 
-    void initDirection(Vector3 v3)
+    public void AddDamage(float value)
     {
-        //direction = new Vector3(v3);
+        damage += value;
     }
 
-    void initDirection(float x, float y, float z)
+    public float GetRange()
     {
-        direction = new Vector3(x, y, z);
-
+        return reachableDistance;
     }
+
+    public void SetTargets(HashSet<string> targetTags)
+    {
+        _targetTags = targetTags;
+    }
+    //
+    // void initDirection(float x, float y, float z)
+    // {
+    //     direction = new Vector3(x, y, z);
+    //
+    // }
 
     // Update is called once per frame
     void Update()
     {
         // should it follow moving object?
+        // Nah
         if (distanceTravelled >= reachableDistance)
         {
-            Destroy(this.gameObject);
+            PoolManager.Despawn(this.gameObject);
         }
         else
         {
@@ -44,24 +64,23 @@ public class Projectiles: MonoBehaviour
 
     }
 
-    public void SetTarget(GameObject target)
-    {
-        this.target = target;
-
-        //get direction from target
-    }
+    // public void SetTarget(GameObject target)
+    // {
+    //     this.target = target;
+    //
+    //     //get direction from target
+    // }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        Actor otherActor = other.GetComponent<Actor>();
-
-        if (otherActor != null)
+        if (_targetTags.Contains(other.tag))
         {
-            if (!otherActor.GetHealth().GetIsDead())
+            Actor otherActor = other.GetComponent<Actor>();
+            if (otherActor != null && !otherActor.GetHealth().GetIsDead())
             {
-                otherActor.GetHealth().Hit(force);
-
+                otherActor.GetHealth().Hit(damage);
+                PoolManager.Despawn(this.gameObject);
                 // do I have to destory it here or Actor.Update will do it
                 //if (otherActor.GetHealth().GetCurrentHealth() <= 0)
                 //{
@@ -69,7 +88,7 @@ public class Projectiles: MonoBehaviour
                 //}
             }
         }
-        Destroy(this.gameObject);
+        
     }
 
     //private void OnCollisionEnter(Collision collision) //do I need this
