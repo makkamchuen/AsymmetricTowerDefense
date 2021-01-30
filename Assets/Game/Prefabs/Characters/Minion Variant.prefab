@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
   attack: {fileID: 4214391680693245558}
+  weapon: 
   sights:
   - {fileID: 11400000, guid: c00d44e6abc3b4fae853f30fb2755b35, type: 2}
   _patrolPattern: {fileID: 11400000, guid: a53d765cc49374f22a286dddf7121588, type: 2}
@@ -64,6 +65,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minion Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_TagString
+      value: Minion
+      objectReference: {fileID: 0}
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_RootOrder
@@ -72,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
@@ -82,7 +88,7 @@ PrefabInstance:
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}

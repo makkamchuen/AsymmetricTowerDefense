@@ -28,9 +28,8 @@ public class Spawn : MonoBehaviour
 
         if (canSpawn && !Input.GetKey(shortcut) && plane.Raycast(ray, out distance))
         {
-            GameObject newInstance = PoolManager.Spawn(prefab);
-
-            newInstance.transform.position = ray.GetPoint(distance);
+            GameObject newInstance = PoolManager.Spawn(prefab, ray.GetPoint(distance));
+            
             FMODUnity.RuntimeManager.PlayOneShotAttached(spawnSound, newInstance);
         }
 
