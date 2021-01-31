@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Game.Scripts;
 using UnityEngine;
@@ -10,19 +11,20 @@ public class Projectiles: MonoBehaviour
     [SerializeField] private float damage = 20f; //fake Value
     [SerializeField] private float reachableDistance = 10f; //fake Value
     private float distanceTravelled = 0f;
+    [SerializeField] private bool faceRight = true;
+    private SpriteRenderer _spriteRenderer;
     [SerializeField] private float speed = 1f; //fake Value
     private Vector3 direction;
     private HashSet<string> _targetTags;
-    // [SerializeField] private Vector3 direction;
-    // Start is called before the first frame update
-    // void Start()
-    // {
-    //     
-    // }
+    private bool _isFacingRight = false;
+
+    private void Start()
+    {
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
 
     public void InitDirection(Vector3 v3)
     {
-        Debug.Log(v3);
         direction = v3;
     }
 
@@ -61,7 +63,9 @@ public class Projectiles: MonoBehaviour
             transform.Translate(direction / speed * Time.deltaTime);
             distanceTravelled += speed * Time.deltaTime;
         }
-
+        
+        RestrictRotation();
+        
     }
 
     // public void SetTarget(GameObject target)
@@ -111,4 +115,9 @@ public class Projectiles: MonoBehaviour
     //    }
     //    Destroy(this.gameObject);
     //}
+    
+    private void RestrictRotation()
+    {
+        _spriteRenderer.flipX = faceRight? !_isFacingRight: _isFacingRight;
+    }
 }
