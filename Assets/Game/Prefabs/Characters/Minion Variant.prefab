@@ -15,6 +15,7 @@ MonoBehaviour:
   baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
   attack: {fileID: 4214391680693245558}
   weapon: 
+  faceRight: 1
   sights:
   - {fileID: 11400000, guid: c00d44e6abc3b4fae853f30fb2755b35, type: 2}
   _patrolPattern: {fileID: 11400000, guid: a53d765cc49374f22a286dddf7121588, type: 2}
@@ -165,6 +166,11 @@ PrefabInstance:
     - target: {fileID: 4452140354269660986, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: healthBarFollowCharacter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367580200256100, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5393367581470950364, guid: c5ce113d662375847963f9f42aedc089,
