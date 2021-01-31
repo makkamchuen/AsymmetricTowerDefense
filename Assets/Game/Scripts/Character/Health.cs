@@ -5,6 +5,8 @@ public class Health : ActorActionComponent
 {
   private float _currentHealth;
   private bool _isDead;
+  public bool healthBarFollowCharacter = true;
+
   public HealthBar healthBar;
 
   private void Awake()
@@ -22,6 +24,8 @@ public class Health : ActorActionComponent
 
   private void Update()
   {
+    if (healthBarFollowCharacter) 
+      healthBar.transform.position = Camera.main.WorldToScreenPoint(GetActor().transform.position);
   }
 
   private void RegenerateHealth()
