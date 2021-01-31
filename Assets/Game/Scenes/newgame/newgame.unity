@@ -11792,7 +11792,7 @@ Transform:
   m_Children:
   - {fileID: 1028923426}
   m_Father: {fileID: 783659280}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!23 &451373884
 MeshRenderer:
@@ -16803,6 +16803,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &776194518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3933517156626202935, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2263830024089638288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &776346668
 GameObject:
   m_ObjectHideFlags: 0
@@ -16997,9 +17003,9 @@ Transform:
   - {fileID: 1128309468}
   - {fileID: 1033644508}
   - {fileID: 283636595}
-  - {fileID: 451373883}
-  - {fileID: 1442276176}
+  - {fileID: 776194518}
   - {fileID: 2053937959}
+  - {fileID: 451373883}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20627,11 +20633,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 783659280}
     m_Modifications:
-    - target: {fileID: 4896544722103708045, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 36817cbbd2e05f047bac41dd7b40fb3c, type: 2}
     - target: {fileID: 5921409440072016005, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: m_RootOrder
@@ -20640,7 +20641,7 @@ PrefabInstance:
     - target: {fileID: 5921409440072016005, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.39
+      value: 3.616
       objectReference: {fileID: 0}
     - target: {fileID: 5921409440072016005, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
@@ -20691,11 +20692,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Thanatos
-      objectReference: {fileID: 0}
-    - target: {fileID: 7665333641902816920, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe, type: 3}
@@ -24076,6 +24072,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minion Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933517156626202826, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3933517156626202935, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
         type: 3}
@@ -31019,7 +31020,7 @@ RectTransform:
   - {fileID: 316697734}
   - {fileID: 1814411676}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -37725,6 +37726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minion
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933517156626202826, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3933517156626202826, guid: e8e8d72fa7a1e4656b81f97b1645b6f6,
         type: 3}
