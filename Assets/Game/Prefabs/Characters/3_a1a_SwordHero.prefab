@@ -54,6 +54,7 @@ MonoBehaviour:
   baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
   attack: {fileID: 1575240131399358537}
   weapon: 
+  faceRight: 1
 --- !u!114 &6352508521684343308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 3_a1a_SwordHero
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739405972078143302, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5772725660081991603, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}

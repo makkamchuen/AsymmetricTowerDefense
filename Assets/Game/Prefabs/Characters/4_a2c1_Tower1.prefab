@@ -1,5 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2569232058751389115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751151623452151826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c423d03128c47538f4295ca5e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: f99fb83a1c7ea1e41ae985dbe9bdf321, type: 2}
+--- !u!114 &3175755023194602215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751151623452151826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bf53c4dc75a441686a278e879c6367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats: {fileID: 11400000, guid: f294c2134f90f4a478eb72f4bf8a08b0, type: 2}
+  attack: {fileID: 2569232058751389115}
+  weapon: 
+  faceRight: 1
+  sights:
+  - {fileID: 11400000, guid: 11008631076124b4bbbedd97aa1b8d7f, type: 2}
+--- !u!114 &3561563449645674234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751151623452151826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32d897a7d9f2490f96f385f301f73db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 11400000, guid: 8e049bfb9f1e8bb4c8443bb8e4382467, type: 2}
+  target: {fileID: 0}
+  remainInState: {fileID: 11400000, guid: 061da9034edb84c1287ca2f2e4112e91, type: 2}
+  isEnable: 1
+  stateTimeElapsed: 0
+--- !u!114 &4908759769910666783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751151623452151826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarFollowCharacter: 1
+  healthBar: {fileID: 8485157211698207877}
+--- !u!114 &5252263633272455135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751151623452151826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f6aed37f13e410a9fe8eda8ad13596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6071947737947816374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,6 +212,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8245503363102740900, guid: 83f2891dea593734dbb43289feab0007,
+        type: 3}
+      propertyPath: m_TagString
+      value: Minion
+      objectReference: {fileID: 0}
     - target: {fileID: 8391344195354361434, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_Radius
@@ -145,3 +224,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83f2891dea593734dbb43289feab0007, type: 3}
+--- !u!1 &2751151623452151826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8245503363102740900, guid: 83f2891dea593734dbb43289feab0007,
+    type: 3}
+  m_PrefabInstance: {fileID: 6071947737947816374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8485157211698207877 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2414687836021218611, guid: 83f2891dea593734dbb43289feab0007,
+    type: 3}
+  m_PrefabInstance: {fileID: 6071947737947816374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309a1f2dce3f7411a801478fac81174f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
