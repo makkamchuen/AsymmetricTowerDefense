@@ -50,7 +50,7 @@ public class Health : ActorActionComponent
     {
       GetAnimator().SetBool(AnimationTrigger.dead, true);
       GetActor().GetCollider().enabled = false;
-      GetActor().GetStatus().SetDeadStatus();
+      GetActor().GetStatus().SetGameFinishStatus();
       _isDead = true;
     }
   }

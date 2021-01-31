@@ -3,7 +3,7 @@ using Game.Scripts;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "Skill/Shoot"), InitializeOnLoad]
+[CreateAssetMenu (menuName = "Skill/Shoot")]
 public class ShootSkillData : SkillData
 {
   [SerializeField] private GameObject _gameObject;

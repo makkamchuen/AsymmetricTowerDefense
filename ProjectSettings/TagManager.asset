@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Minion
   - Treasure
+  - StartButton
   layers:
   - Default
   - TransparentFX
