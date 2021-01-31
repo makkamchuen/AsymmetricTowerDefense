@@ -16,9 +16,12 @@ namespace Game.Scripts
         [SerializeField] private GameObject gameStatusDisplay;
         [SerializeField] private TMP_Text gameStatusText;
         [SerializeField] private Button playAgainButton;
+        [SerializeField] private SkillData[] spawnSkills;
+        private float[] cooldown;
 
         private void Start()
         {
+            cooldown = new float[spawnSkills.Length];
             player.gameObject.SetActive(true);
             SpawnTreasure();
             playAgainButton.onClick.AddListener(StartGame);
@@ -43,8 +46,25 @@ namespace Game.Scripts
             {
                 EndGame("Game Over!");
             }
+
+            for (int i = 0; i < cooldown.Length; i += 1)
+            {
+                if (cooldown[i] == 0)
+                {
+                    spawnSkills[i].Cast(null, Utils.GetRandomPoint());
+                    cooldown[i] = spawnSkills[i].GetCoolDown();
+                }
+                else
+                {
+                    cooldown[i] -= Time.deltaTime;
+                    if (cooldown[i] <= 0)
+                    {
+                        cooldown[i] = 0;
+                    }
+                }
+            }
         }
-        
+
         private void StartGame()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

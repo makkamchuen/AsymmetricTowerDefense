@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "Skill/Attack/Slash")]
+[CreateAssetMenu (menuName = "Skill/Slash")]
 public class SlashSkillData : SkillData
 {
   public AttackInfo attackInfo;
