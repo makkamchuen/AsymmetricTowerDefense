@@ -17,6 +17,35 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: baseStats
+      value: 
+      objectReference: {fileID: 11400000, guid: a72bb9a37000640699093e0f1d2121ae,
+        type: 2}
+    - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: faceRight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: _patrolPattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 9248185945b0c461abdc42ecada75003,
+        type: 2}
+    - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: sights.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 09421ab2e639147eabbcdf95ba844df6,
+        type: 2}
+    - target: {fileID: 3085107734071753817, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: skillData
+      value: 
+      objectReference: {fileID: 11400000, guid: 99cb997a3c1014fdb81976a17d33d5ae,
+        type: 2}
     - target: {fileID: 3349223059961038393, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -110,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 5921409440072016248, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: m_Name
-      value: 4_a2a1_Thanatos
+      value: 5_a2a1a_Bear
       objectReference: {fileID: 0}
     - target: {fileID: 7665333641902816920, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
@@ -118,6 +147,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5e4e47f1283283c43bb5907a6037903b,
         type: 3}
+    - target: {fileID: 8241857745800023019, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8241857745800023019, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: m_Enabled

@@ -23713,6 +23713,8 @@ MonoBehaviour:
   spawnSkills:
   - {fileID: 11400000, guid: 1b32d25af6c484308ae42f0cd22c8efa, type: 2}
   - {fileID: 11400000, guid: 818a8766cdd1941b0b1aaf2407215ffd, type: 2}
+  - {fileID: 11400000, guid: d59fe1dd793444667875939615dd15e3, type: 2}
+  - {fileID: 11400000, guid: 57d87452a1a794e56b5f629df04e137a, type: 2}
 --- !u!1 &1184767200
 GameObject:
   m_ObjectHideFlags: 0
