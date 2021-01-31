@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     private float timeRemaining;
     private bool timerIsRunning = false;
     private FMODUnity.StudioEventEmitter fmodEvent;
+    private bool stopTimer = false;
 
     private Text timerDisplay;
     private void Start()
@@ -23,6 +24,8 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
+        if (stopTimer) return;
+        
         if (timerIsRunning)
         {
             if (timeRemaining > 0)
@@ -58,6 +61,11 @@ public class Timer : MonoBehaviour
     protected virtual void OnCountCompleted() //protected virtual method
     {
         CountCompleted?.Invoke();
+    }
+
+    public void StopTimer()
+    {
+        stopTimer = true;
     }
 }
 
