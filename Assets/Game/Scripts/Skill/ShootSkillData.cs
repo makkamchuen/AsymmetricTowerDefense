@@ -17,7 +17,7 @@ public class ShootSkillData : SkillData
 
   public override void Cast(Actor user, Vector3 destination)
   {
-    GameObject gameObject = PoolManager.Spawn(_gameObject, user.transform.position);
+    GameObject gameObject = Instantiate(_gameObject, user.transform.position, Quaternion.identity);
     Projectiles projectiles = gameObject.GetComponent<Projectiles>();
     projectiles.InitDirection((destination - user.transform.position).normalized);
     projectiles.SetTargets(_attackInfo.GetTargetSet());

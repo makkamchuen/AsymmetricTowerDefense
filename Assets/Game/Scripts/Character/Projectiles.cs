@@ -56,7 +56,7 @@ public class Projectiles: MonoBehaviour
         // Nah
         if (distanceTravelled >= reachableDistance)
         {
-            PoolManager.Despawn(this.gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -84,7 +84,7 @@ public class Projectiles: MonoBehaviour
             if (otherActor != null && !otherActor.GetHealth().GetIsDead())
             {
                 otherActor.GetHealth().Hit(damage);
-                PoolManager.Despawn(this.gameObject);
+                Destroy(this.gameObject);
                 // do I have to destory it here or Actor.Update will do it
                 //if (otherActor.GetHealth().GetCurrentHealth() <= 0)
                 //{
