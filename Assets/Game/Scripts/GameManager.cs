@@ -18,13 +18,19 @@ namespace Game.Scripts
         [SerializeField] private Button playAgainButton;
         [SerializeField] private SkillData[] spawnSkills;
         private float[] cooldown;
-
+        private Timer timer;
         private void Start()
         {
             cooldown = new float[spawnSkills.Length];
             player.gameObject.SetActive(true);
             SpawnTreasure();
             playAgainButton.onClick.AddListener(StartGame);
+            timer = GameObject.Find("Timer").GetComponent(typeof(Timer)) as Timer;
+            timer.CountCompleted += () =>
+            {
+                EndGame("Time's up!");
+            };
+
         }
 
         private void SpawnTreasure()
@@ -80,6 +86,7 @@ namespace Game.Scripts
             }
             player.GetStatus().SetGameFinishStatus();
             gameStatusText.SetText(statusText);
+            timer.StopTimer();
         }
     }
 }
