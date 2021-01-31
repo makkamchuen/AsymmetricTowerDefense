@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarFollowCharacter: 1
   healthBar: {fileID: 0}
 --- !u!114 &8220241514419659115
 MonoBehaviour:
@@ -93,6 +94,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 368328804061911217, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: dead
+      value: event:/SFX/Character/Dead/ThanatosDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 368328804061911217, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: hurt
+      value: event:/SFX/Character/Hurt/ThanatosHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 368328804061911217, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: weapon
+      value: event:/SFX/Weapon/Scythe
+      objectReference: {fileID: 0}
     - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
       propertyPath: m_Size.x
