@@ -7,8 +7,10 @@ using TouchPhase = UnityEngine.TouchPhase;
 
 public class PlayerController : MonoBehaviour
 {
-    private Player _target;
     [SerializeField] private LayerMask layerMask;
+    
+    private Player _target;
+    private int _numOTreasuresCollected;
 
     private Camera _mainCamera;
 
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         _target = GetComponent<Player>();
         _mainCamera = Camera.main;
+        _numOTreasuresCollected = 0;
     }
 
     private void Update()
@@ -81,6 +84,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider.CompareTag($"Treasure"))
         {
+            _target.IncrementTreasureCollected();
             PoolManager.Despawn(hit.collider.gameObject);
         }
         else
