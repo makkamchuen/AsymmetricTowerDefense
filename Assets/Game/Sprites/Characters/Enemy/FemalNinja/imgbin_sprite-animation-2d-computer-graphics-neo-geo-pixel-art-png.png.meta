@@ -1,0 +1,2084 @@
+fileFormatVersion: 2
+guid: e26c21ef0bc8e5e458bfc5ea381d59be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1020239624769918846
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_0
+  - first:
+      213: 6218351942100975900
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_1
+  - first:
+      213: 2102062682315962444
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_2
+  - first:
+      213: -1183738503305024618
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_3
+  - first:
+      213: 934486034870345155
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_4
+  - first:
+      213: -4343566874748212734
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_5
+  - first:
+      213: -2558713959663719370
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_6
+  - first:
+      213: -2890380322025466373
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_7
+  - first:
+      213: -8749710952714114156
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_8
+  - first:
+      213: -4532718976051390389
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_9
+  - first:
+      213: -3133328796515831295
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_10
+  - first:
+      213: 3182263702415513826
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_11
+  - first:
+      213: 6905022669238604290
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_12
+  - first:
+      213: -8855172625600596557
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_13
+  - first:
+      213: 926661701970893639
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_14
+  - first:
+      213: 3393654371058876887
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_15
+  - first:
+      213: 2850924590521329292
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_16
+  - first:
+      213: -1105823163037269219
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_17
+  - first:
+      213: -914946274900038117
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_18
+  - first:
+      213: -7722710357048858350
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_19
+  - first:
+      213: 1982832759848472003
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_20
+  - first:
+      213: -2362420652350302508
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_21
+  - first:
+      213: -5226742334915159644
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_22
+  - first:
+      213: -517413880954003357
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_23
+  - first:
+      213: -3643497152054485677
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_24
+  - first:
+      213: 3727180851618379954
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_25
+  - first:
+      213: -3417958870212219423
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_26
+  - first:
+      213: -90844010249361435
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_27
+  - first:
+      213: -1842222486454851088
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_28
+  - first:
+      213: -5395336004753121143
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_29
+  - first:
+      213: 1874127738021233914
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_30
+  - first:
+      213: 7830074011574580953
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_31
+  - first:
+      213: -8662195542674773678
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_32
+  - first:
+      213: -5533148030291572800
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_33
+  - first:
+      213: 9086572783073888091
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_34
+  - first:
+      213: -2164718749999656582
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_35
+  - first:
+      213: 7651003831880916606
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_36
+  - first:
+      213: -5247611587738652173
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_37
+  - first:
+      213: 7094334052182489061
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_38
+  - first:
+      213: 3491954052875781175
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_39
+  - first:
+      213: -6445855104088656561
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_40
+  - first:
+      213: -4752725718721215450
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_41
+  - first:
+      213: -1000416935378344816
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_42
+  - first:
+      213: 3808694192316334963
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_43
+  - first:
+      213: -2556476669160314582
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_44
+  - first:
+      213: -4586238608249425787
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_45
+  - first:
+      213: -7551018790407773241
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_46
+  - first:
+      213: -5824651956995689464
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_47
+  - first:
+      213: 8175346304893731996
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_48
+  - first:
+      213: -7147985829009553690
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_49
+  - first:
+      213: 8910732038329869659
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_50
+  - first:
+      213: -7125699706843954050
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_51
+  - first:
+      213: 7142836561415238942
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_52
+  - first:
+      213: -9164936510295520369
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_53
+  - first:
+      213: 294601312523127407
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_54
+  - first:
+      213: -6198165942266092640
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_55
+  - first:
+      213: 1362368196077494524
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_56
+  - first:
+      213: -8829329983450623861
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_57
+  - first:
+      213: -8543700945799724668
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_58
+  - first:
+      213: 1366057766991586932
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_59
+  - first:
+      213: 3562876344539369141
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_60
+  - first:
+      213: 7917577594097453100
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_61
+  - first:
+      213: -4125989553828635394
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_62
+  - first:
+      213: 5098709397360413793
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_63
+  - first:
+      213: -2053735924918099659
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_64
+  - first:
+      213: 1840952620714040904
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_65
+  - first:
+      213: 634959348318779572
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_66
+  - first:
+      213: 332114174340070022
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_67
+  - first:
+      213: -1090328929443040145
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_68
+  - first:
+      213: 2002197980292906068
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_69
+  - first:
+      213: 8101707099140042809
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_70
+  - first:
+      213: -2924635685081103055
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_71
+  - first:
+      213: 323830432236917999
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_72
+  - first:
+      213: -7167716041085880728
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_73
+  - first:
+      213: 6734957808501317066
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_74
+  - first:
+      213: 5804589116863213084
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_75
+  - first:
+      213: 561802301229815623
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_76
+  - first:
+      213: 7449053656024440571
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_77
+  - first:
+      213: -1668752314704203402
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_78
+  - first:
+      213: -7264778883240022957
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_79
+  - first:
+      213: 2886105834457704080
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_80
+  - first:
+      213: -7363359963101639892
+    second: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_81
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e775034888e982e00800000000000000
+      internalID: 1020239624769918846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c110a4525260c4650800000000000000
+      internalID: 6218351942100975900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c483c035fd60c2d10800000000000000
+      internalID: 2102062682315962444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b2d8b5a14829fe0800000000000000
+      internalID: -1183738503305024618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd920cf816f7fc00800000000000000
+      internalID: 934486034870345155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20aaa7cc0fc88b3c0800000000000000
+      internalID: -4343566874748212734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c2968d53f9d7cd0800000000000000
+      internalID: -2558713959663719370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf594e7396e43e7d0800000000000000
+      internalID: -2890380322025466373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b61281f38c29680800000000000000
+      internalID: -8749710952714114156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48d8cd4b1c8811c0800000000000000
+      internalID: -4532718976051390389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102fb278f0e2484d0800000000000000
+      internalID: -3133328796515831295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8981c1afba92c20800000000000000
+      internalID: 3182263702415513826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2029cf5888193df50800000000000000
+      internalID: 6905022669238604290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5305ae96b1c1580800000000000000
+      internalID: -8855172625600596557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b1fe488e92cdc00800000000000000
+      internalID: 926661701970893639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_15
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d18a6d8baea81f20800000000000000
+      internalID: 3393654371058876887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_16
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86237b6fc4809720800000000000000
+      internalID: 2850924590521329292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13c3ce21b357a0f0800000000000000
+      internalID: -1105823163037269219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e2408e5357d43f0800000000000000
+      internalID: -914946274900038117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2196fd0d8db63d490800000000000000
+      internalID: -7722710357048858350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_20
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd86cbb3ef648b10800000000000000
+      internalID: 1982832759848472003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d61d9eeeeef63fd0800000000000000
+      internalID: -2362420652350302508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9d2e2f981e677b0800000000000000
+      internalID: -5226742334915159644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36061ef01d6c1d8f0800000000000000
+      internalID: -517413880954003357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d15afe4a2bf6dc0800000000000000
+      internalID: -3643497152054485677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8f952bc3b99b330800000000000000
+      internalID: 3727180851618379954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edea144488f090d0800000000000000
+      internalID: -3417958870212219423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_27
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e76d1f9ad14dbef0800000000000000
+      internalID: -90844010249361435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f92f99b86c1f66e0800000000000000
+      internalID: -1842222486454851088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_29
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980a0d84d7aef15b0800000000000000
+      internalID: -5395336004753121143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af446788f3d320a10800000000000000
+      internalID: 1874127738021233914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6bbe8f3d20aac60800000000000000
+      internalID: 7830074011574580953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259e5e75c03b9c780800000000000000
+      internalID: -8662195542674773678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c781dcae2f4633b0800000000000000
+      internalID: -5533148030291572800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b570ad0bdcdf91e70800000000000000
+      internalID: 9086572783073888091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_35
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7194ab14cf55f1e0800000000000000
+      internalID: -2164718749999656582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e1a66c273dd2a60800000000000000
+      internalID: 7651003831880916606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_37
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f13d91601dbc27b0800000000000000
+      internalID: -5247611587738652173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e77b4aab33247260800000000000000
+      internalID: 7094334052182489061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_39
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73485adb5b9e57030800000000000000
+      internalID: 3491954052875781175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4538273fe8bb86a0800000000000000
+      internalID: -6445855104088656561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62442ccc32dea0eb0800000000000000
+      internalID: -4752725718721215450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_42
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0942d73091ecd12f0800000000000000
+      internalID: -1000416935378344816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_43
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373cb1740333bd430800000000000000
+      internalID: 3808694192316334963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_44
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a292022a302958cd0800000000000000
+      internalID: -2556476669160314582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_45
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5807c14e8486a50c0800000000000000
+      internalID: -4586238608249425787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3e179ca64653790800000000000000
+      internalID: -7551018790407773241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_47
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804fcfac7edaa2fa0800000000000000
+      internalID: -5824651956995689464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c944ef2462aa47170800000000000000
+      internalID: 8175346304893731996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_49
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e60c5a92c04dcc90800000000000000
+      internalID: -7147985829009553690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_50
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b552859e39749ab70800000000000000
+      internalID: 8910732038329869659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_51
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e740675cedd6c1d90800000000000000
+      internalID: -7125699706843954050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_52
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15f3db1204702360800000000000000
+      internalID: 7142836561415238942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_53
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8bc3d24dca9fc080800000000000000
+      internalID: -9164936510295520369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a0e473552a61400800000000000000
+      internalID: 294601312523127407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_55
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a32e403ae0bbf9a0800000000000000
+      internalID: -6198165942266092640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf02d7cf7aa18e210800000000000000
+      internalID: 1362368196077494524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_57
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8058bbe82be77580800000000000000
+      internalID: -8829329983450623861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_58
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481407a914dae6980800000000000000
+      internalID: -8543700945799724668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_59
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47662382d4635f210800000000000000
+      internalID: 1366057766991586932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_60
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be49ee8821e17130800000000000000
+      internalID: 3562876344539369141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_61
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2845c96fd2e0ed60800000000000000
+      internalID: 7917577594097453100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc52197c5a8db6c0800000000000000
+      internalID: -4125989553828635394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_63
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c0d9ace2142c640800000000000000
+      internalID: 5098709397360413793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_64
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5316cc4be0aaf73e0800000000000000
+      internalID: -2053735924918099659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_65
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e1cfd97a06c8910800000000000000
+      internalID: 1840952620714040904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_66
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8ba53c924dfc800800000000000000
+      internalID: 634959348318779572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_67
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a796af418eb9400800000000000000
+      internalID: 332114174340070022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_68
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6437309d9f5ed0f0800000000000000
+      internalID: -1090328929443040145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_69
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45cfc59747c39cb10800000000000000
+      internalID: 2002197980292906068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_70
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930b0869eab0f6070800000000000000
+      internalID: 8101707099140042809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_71
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1354f4df65b9967d0800000000000000
+      internalID: -2924635685081103055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe451f8ff0a7e7400800000000000000
+      internalID: 323830432236917999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_73
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866f430ac38278c90800000000000000
+      internalID: -7167716041085880728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_74
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdd6f88170677d50800000000000000
+      internalID: 6734957808501317066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_75
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1eeab93c0b0e8050800000000000000
+      internalID: 5804589116863213084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_76
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747dcc6673cebc700800000000000000
+      internalID: 561802301229815623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_77
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe592855da506760800000000000000
+      internalID: 7449053656024440571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_78
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671f1f77c9667d8e0800000000000000
+      internalID: -1668752314704203402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_79
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c28bc98125e2b90800000000000000
+      internalID: -7264778883240022957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_80
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096a80717f18d0820800000000000000
+      internalID: 2886105834457704080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-animation-2d-computer-graphics-neo-geo-pixel-art-png_81
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b4ef5502710d990800000000000000
+      internalID: -7363359963101639892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e65ea5a1b7c2ca74786dde09bfffb595
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
