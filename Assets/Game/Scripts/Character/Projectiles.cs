@@ -26,6 +26,10 @@ public class Projectiles: MonoBehaviour
     public void InitDirection(Vector3 v3)
     {
         direction = v3;
+        if (direction.x > 0)
+        {
+            _isFacingRight = true;
+        }
     }
 
     public void AddDamage(float value)
