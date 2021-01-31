@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.Win32.SafeHandles;
 using TMPro;
 using UnityEngine;
@@ -30,14 +31,13 @@ namespace Game.Scripts
             {
                 EndGame("Time's up!");
             };
-
         }
 
         private void SpawnTreasure()
         {
-            for (int i = 0; i < numOfTotalTreasures * 3; i++)
+            for (int i = 0; i < Math.Floor(numOfTotalTreasures * 1.5); i++)
             {
-                PoolManager.Spawn(treasurePrefab, Utils.GetRandomPoint());
+                PoolManager.Spawn(treasurePrefab, Utils.GetTreasureRandomPoint());
             }
         }
     
