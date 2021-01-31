@@ -37,6 +37,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarFollowCharacter: 1
+  healthBar: {fileID: 5393367580200256098}
 --- !u!114 &4968707543312438198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
   attack: {fileID: 1575240131399358537}
+  weapon: 
 --- !u!114 &6352508521684343308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +208,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6973742914265469344, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8190676511364410620, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: dead
@@ -265,3 +273,15 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 6409624983305431475}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5393367580200256098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1309026640853101521, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6409624983305431475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309a1f2dce3f7411a801478fac81174f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
