@@ -14,7 +14,7 @@ public class SlashSkillData : SkillData
   {
     float xOffset = hitBoxWidth / 2;
     Collider[] colliders = Physics.OverlapBox(
-      user.transform.position + new Vector3(user.GetComponentInChildren<SpriteRenderer>().flipX? xOffset * -1 : xOffset, 0, 0), 
+      user.transform.position + new Vector3(user.GetSpriteRender().flipX? xOffset * -1 : xOffset, 0, 0), 
       new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
     foreach (Collider collider in colliders)
     {
@@ -32,6 +32,6 @@ public class SlashSkillData : SkillData
     Collider[] colliders = Physics.OverlapBox(
       user.transform.position + new Vector3(user.GetSpriteRender().flipX? xOffset * -1 : xOffset, 0, 0), 
       new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
-    return colliders.Contains(targetActor.GetComponent<Collider>());
+    return colliders.Contains(targetActor.GetCollider());
   }
 }
