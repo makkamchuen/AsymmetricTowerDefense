@@ -140,10 +140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf9b06f7cdbcf54d97d971963a294de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  reachableDistance: 10
+  damage: 5
+  reachableDistance: 7
   faceRight: 1
-  speed: 1
+  speed: 0.5
 --- !u!114 &6369346231474532924
 MonoBehaviour:
   m_ObjectHideFlags: 0

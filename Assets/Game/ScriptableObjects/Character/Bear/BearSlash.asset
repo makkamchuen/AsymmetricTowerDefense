@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: BearSlash
   m_EditorClassIdentifier: 
   _cooldown: 2
-  _channelTime: 0.2
+  _channelTime: 0.0001
   attackInfo:
     damage: 10
     _targetTags:
     - Player
-  hitBoxHeight: 0.5
-  hitBoxWidth: 0.5
+  hitBoxHeight: 0.25
+  hitBoxWidth: 0.3
