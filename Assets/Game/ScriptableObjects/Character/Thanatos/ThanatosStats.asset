@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d497aef48a924ef885e53ce6794bb99, type: 3}
   m_Name: ThanatosStats
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthRegenPerSecond: 10
-  movementSpeed: 1
-  attackDamage: 5
+  maxHealth: 30
+  healthRegenPerSecond: 0
+  movementSpeed: 1.5
+  attackDamage: 20

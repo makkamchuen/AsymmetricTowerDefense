@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9633cfe46c4ee0814b533f0bf5b0ac, type: 3}
   m_Name: HeroSlash
   m_EditorClassIdentifier: 
-  _cooldown: 1
-  _channelTime: 0.3
+  _cooldown: 0.5
+  _channelTime: 0.15
   attackInfo:
-    damage: 10
+    damage: 0
     _targetTags:
     - Minion
   hitBoxHeight: 0.5
