@@ -1,37 +1,63 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Game.Scripts;
 using UnityEngine;
 
 public class Projectiles: MonoBehaviour
 {
-    [SerializeField] GameObject target;
+    private GameObject target;
 
-    [SerializeField] float force = 20f; //fake Value
-    [SerializeField] float reachableDistance = 10f; //fake Value
-    [SerializeField] float distanceTravelled = 0f;
-    [SerializeField] float speed = 1f; //fake Value
-    [SerializeField] Vector3 direction;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float damage = 20f; //fake Value
+    [SerializeField] private float reachableDistance = 10f; //fake Value
+    private float distanceTravelled = 0f;
+    [SerializeField] private bool faceRight = true;
+    private SpriteRenderer _spriteRenderer;
+    [SerializeField] private float speed = 1f; //fake Value
+    private Vector3 direction;
+    private HashSet<string> _targetTags;
+    private bool _isFacingRight = false;
+
+    private void Start()
     {
-        
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    void initDirection(Vector3 v3)
+    public void InitDirection(Vector3 v3)
     {
-        //direction = new Vector3(v3);
+        direction = v3;
+        if (direction.x > 0)
+        {
+            _isFacingRight = true;
+        }
     }
 
-    void initDirection(float x, float y, float z)
+    public void AddDamage(float value)
     {
-        direction = new Vector3(x, y, z);
-
+        damage += value;
     }
+
+    public float GetRange()
+    {
+        return reachableDistance;
+    }
+
+    public void SetTargets(HashSet<string> targetTags)
+    {
+        _targetTags = targetTags;
+    }
+    //
+    // void initDirection(float x, float y, float z)
+    // {
+    //     direction = new Vector3(x, y, z);
+    //
+    // }
 
     // Update is called once per frame
     void Update()
     {
         // should it follow moving object?
+        // Nah
         if (distanceTravelled >= reachableDistance)
         {
             Destroy(this.gameObject);
@@ -41,27 +67,28 @@ public class Projectiles: MonoBehaviour
             transform.Translate(direction / speed * Time.deltaTime);
             distanceTravelled += speed * Time.deltaTime;
         }
-
+        
+        RestrictRotation();
+        
     }
 
-    public void SetTarget(GameObject target)
-    {
-        this.target = target;
-
-        //get direction from target
-    }
+    // public void SetTarget(GameObject target)
+    // {
+    //     this.target = target;
+    //
+    //     //get direction from target
+    // }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        Actor otherActor = other.GetComponent<Actor>();
-
-        if (otherActor != null)
+        if (_targetTags.Contains(other.tag))
         {
-            if (!otherActor.GetHealth().GetIsDead())
+            Actor otherActor = other.GetComponent<Actor>();
+            if (otherActor != null && !otherActor.GetHealth().GetIsDead())
             {
-                otherActor.GetHealth().Hit(force);
-
+                otherActor.GetHealth().Hit(damage);
+                Destroy(this.gameObject);
                 // do I have to destory it here or Actor.Update will do it
                 //if (otherActor.GetHealth().GetCurrentHealth() <= 0)
                 //{
@@ -69,7 +96,7 @@ public class Projectiles: MonoBehaviour
                 //}
             }
         }
-        Destroy(this.gameObject);
+        
     }
 
     //private void OnCollisionEnter(Collision collision) //do I need this
@@ -92,4 +119,9 @@ public class Projectiles: MonoBehaviour
     //    }
     //    Destroy(this.gameObject);
     //}
+    
+    private void RestrictRotation()
+    {
+        _spriteRenderer.flipX = faceRight? !_isFacingRight: _isFacingRight;
+    }
 }

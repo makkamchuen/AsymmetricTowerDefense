@@ -1,0 +1,1652 @@
+fileFormatVersion: 2
+guid: c1b4ee2313697f54eb0a52d852ece8ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2918158385249964603
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_0
+  - first:
+      213: -2000529615613956476
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_1
+  - first:
+      213: 5815543576129451938
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_2
+  - first:
+      213: 1905911962035733131
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_3
+  - first:
+      213: -1216203241594641133
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_4
+  - first:
+      213: -8509035794225443319
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_5
+  - first:
+      213: -7439019846740945392
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_6
+  - first:
+      213: -6219240497922595955
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_7
+  - first:
+      213: -2192697189068167729
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_8
+  - first:
+      213: -9043702509436403155
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_9
+  - first:
+      213: 5457838444530084496
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_10
+  - first:
+      213: 8690320003127478570
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_11
+  - first:
+      213: -7224622759166142020
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_12
+  - first:
+      213: -1669237339057479094
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_13
+  - first:
+      213: -9091494583573099473
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_14
+  - first:
+      213: 2267238507039845934
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_15
+  - first:
+      213: 7733490525367011023
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_16
+  - first:
+      213: -3015475219182494229
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_17
+  - first:
+      213: -8497464452081865890
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_18
+  - first:
+      213: 1639172280745350647
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_19
+  - first:
+      213: 8246789152528301613
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_20
+  - first:
+      213: -6429245876035990932
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_21
+  - first:
+      213: -693313328470825570
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_22
+  - first:
+      213: 5787697205043459996
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_23
+  - first:
+      213: -2269174141327861290
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_24
+  - first:
+      213: 6774919056291310371
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_25
+  - first:
+      213: 6422041615823479416
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_26
+  - first:
+      213: 5441759341473752878
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_27
+  - first:
+      213: -1350351535178704962
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_28
+  - first:
+      213: 6286401845248377806
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_29
+  - first:
+      213: 5079250484480665030
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_30
+  - first:
+      213: 7715681927479801382
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_31
+  - first:
+      213: 5493209731548690692
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_32
+  - first:
+      213: -3021502869045558689
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_33
+  - first:
+      213: -5079514303023567782
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_34
+  - first:
+      213: 8931089189429633108
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_35
+  - first:
+      213: 5737399194091031828
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_36
+  - first:
+      213: 1623737427523576576
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_37
+  - first:
+      213: 2564198988502546362
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_38
+  - first:
+      213: 6173890217726560024
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_39
+  - first:
+      213: -1097758935878474839
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_40
+  - first:
+      213: -8220261044135804229
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_41
+  - first:
+      213: -980009998496465102
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_42
+  - first:
+      213: 808373047071835002
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_43
+  - first:
+      213: -6716540642654014981
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_44
+  - first:
+      213: 2186491689190338045
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_45
+  - first:
+      213: 2190379828103926584
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_46
+  - first:
+      213: 3755279913143113068
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_47
+  - first:
+      213: 6875320298213013175
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_48
+  - first:
+      213: -4600077459461478785
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_49
+  - first:
+      213: 3084165872957452176
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_50
+  - first:
+      213: 318926962991677455
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_51
+  - first:
+      213: -890799008840526378
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_52
+  - first:
+      213: 1942978513059446676
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_53
+  - first:
+      213: -3456309773157217658
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_54
+  - first:
+      213: 3914901032941391475
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_55
+  - first:
+      213: 8376413014858852544
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_56
+  - first:
+      213: -441156173840881519
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_57
+  - first:
+      213: -2697487070544247987
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_58
+  - first:
+      213: 4866302673716968590
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_59
+  - first:
+      213: 7003270470990113976
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_60
+  - first:
+      213: 7743374361484060519
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_61
+  - first:
+      213: -5737980355894854143
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_62
+  - first:
+      213: -591362845949239832
+    second: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd29d0e86e9087d0800000000000000
+      internalID: -2918158385249964603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e6ea2f9e0bc34e0800000000000000
+      internalID: -2000529615613956476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a730070216f4b050800000000000000
+      internalID: 5815543576129451938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82ce4ed4d8237a10800000000000000
+      internalID: 1905911962035733131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315a212789d2f1fe0800000000000000
+      internalID: -1216203241594641133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ecb182705d9e980800000000000000
+      internalID: -8509035794225443319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016dcedecda43c890800000000000000
+      internalID: -7439019846740945392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83a994d7b1d0b9a0800000000000000
+      internalID: -6219240497922595955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc528912689f191e0800000000000000
+      internalID: -2192697189068167729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d220cb6bb705e7280800000000000000
+      internalID: -9043702509436403155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09aafaff5232ebb40800000000000000
+      internalID: 5457838444530084496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2982e2eff73a9870800000000000000
+      internalID: 8690320003127478570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb913b3d0ebfcbb90800000000000000
+      internalID: -7224622759166142020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4229afeb7da5d8e0800000000000000
+      internalID: -1669237339057479094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cccb458d584d180800000000000000
+      internalID: -9091494583573099473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e6239e869d67f10800000000000000
+      internalID: 2267238507039845934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc68956b8a0e25b60800000000000000
+      internalID: 7733490525367011023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed52abc341e626d0800000000000000
+      internalID: -3015475219182494229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ba6223a11f21a80800000000000000
+      internalID: -8497464452081865890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f55e7f21828fb610800000000000000
+      internalID: 1639172280745350647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e7ef57a0b727270800000000000000
+      internalID: 8246789152528301613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6aca3970fab6c6a0800000000000000
+      internalID: -6429245876035990932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95e37a733bd066f0800000000000000
+      internalID: -693313328470825570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97f22681f7025050800000000000000
+      internalID: 5787697205043459996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d996ac14264280e0800000000000000
+      internalID: -2269174141327861290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ba4449cf8550e50800000000000000
+      internalID: 6774919056291310371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8722febf2dcaf1950800000000000000
+      internalID: 6422041615823479416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27e4b51a43058b40800000000000000
+      internalID: 5441759341473752878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb715c7ee66924de0800000000000000
+      internalID: -1350351535178704962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3c365eb29cd3750800000000000000
+      internalID: 6286401845248377806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_30
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c563b4976f1d7640800000000000000
+      internalID: 5079250484480665030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_31
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626b55765db931b60800000000000000
+      internalID: 7715681927479801382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409bda5852dcb3c40800000000000000
+      internalID: 5493209731548690692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_33
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5247b236277116d0800000000000000
+      internalID: -3021502869045558689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ca3c067a0f189b0800000000000000
+      internalID: -5079514303023567782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_35
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450e8418c4a91fb70800000000000000
+      internalID: 8931089189429633108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d88624b265f9f40800000000000000
+      internalID: 5737399194091031828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_37
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003ac00669ca88610800000000000000
+      internalID: 1623737427523576576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_38
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab73c13f46dd59320800000000000000
+      internalID: 2564198988502546362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_39
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817c9dd31701ea550800000000000000
+      internalID: 6173890217726560024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3e3f1601af3c0f0800000000000000
+      internalID: -1097758935878474839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_41
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2cd471224cbed80800000000000000
+      internalID: -8220261044135804229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_42
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f7943491e4662f0800000000000000
+      internalID: -980009998496465102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_43
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7387bcd00be73b00800000000000000
+      internalID: 808373047071835002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_44
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1322b0fdd0ac2a0800000000000000
+      internalID: -6716540642654014981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_45
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfda8865b9af75e10800000000000000
+      internalID: 2186491689190338045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_46
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833d05939dac56e10800000000000000
+      internalID: 2190379828103926584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_47
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c651e074f2f6d1430800000000000000
+      internalID: 3755279913143113068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6f40c526b0a6f50800000000000000
+      internalID: 6875320298213013175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7664814ced3920c0800000000000000
+      internalID: -4600077459461478785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_50
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fe20655882dca20800000000000000
+      internalID: 3084165872957452176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_51
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00c962126e0d6400800000000000000
+      internalID: 318926962991677455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_52
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d55ac7650f33a3f0800000000000000
+      internalID: -890799008840526378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_53
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fff1dc9a8d6fa10800000000000000
+      internalID: 1942978513059446676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_54
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ac049d298b800d0800000000000000
+      internalID: -3456309773157217658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_55
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e08475fb5845630800000000000000
+      internalID: 3914901032941391475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8ee92c14ffe3470800000000000000
+      internalID: 8376413014858852544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_57
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1986eb71cc2b0e9f0800000000000000
+      internalID: -441156173840881519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_58
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43400e1dc9909ad0800000000000000
+      internalID: -2697487070544247987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_59
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cfe6cbf74988340800000000000000
+      internalID: 4866302673716968590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_60
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc2951736d903160800000000000000
+      internalID: 7003270470990113976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_61
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767ef13a4fdf57b60800000000000000
+      internalID: 7743374361484060519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_62
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10eb7b674499e50b0800000000000000
+      internalID: -5737980355894854143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imgbin_sprite-2d-computer-graphics-animation-unity-two-dimensional-space-png_63
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edd4d1ff9e0bc7f0800000000000000
+      internalID: -591362845949239832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5645d89f2f5630c4ab3c7413becb39a7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

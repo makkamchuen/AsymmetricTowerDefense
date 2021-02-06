@@ -12,27 +12,27 @@ public class SoundTrigger : MonoBehaviour
 
     public void PlaySpawnSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(spawn);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(spawn, gameObject);
     }
 
     public void PlayAttackSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(attack);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(attack, gameObject);
     }
 
     public void PlayWeaponSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(weapon);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(weapon, gameObject);
     }
 
     public void PlayHurtSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(hurt);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(hurt, gameObject);
     }
 
     public void PlayDeadSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(dead);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(dead, gameObject);
     }
 
 }

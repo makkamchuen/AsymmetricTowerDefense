@@ -30,7 +30,7 @@ public class Status
         return _controllable;
     }
 
-    public void SetDeadStatus()
+    public void SetGameFinishStatus()
     {
         _controllable = false;
         _attackable = false;

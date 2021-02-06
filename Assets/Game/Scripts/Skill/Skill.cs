@@ -54,6 +54,11 @@ public class Skill: ActorActionComponent
     return skillData.InRange(GetActor(), target);
   }
 
+  public bool OnCoolDown()
+  {
+    return _cooldown != 0;
+  }
+
   public override void Cancel()
   {
     _channelTime = 0;

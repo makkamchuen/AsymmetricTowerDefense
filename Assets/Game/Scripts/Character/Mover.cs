@@ -9,6 +9,7 @@ public class Mover : ActorActionComponent
     {
         base.Start();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.speed = GetActor().GetBaseStats().movementSpeed;
         GetAnimator().SetBool(AnimationTrigger.run, false);
     }
 

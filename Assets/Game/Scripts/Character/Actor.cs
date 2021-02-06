@@ -5,7 +5,10 @@ public class Actor : MonoBehaviour
 {
   [SerializeField] private Stats baseStats;
   [SerializeField] private Skill attack;
+  [SerializeField] private string weapon;
+  [SerializeField] private bool faceRight = true;
   private SpriteRenderer _spriteRenderer;
+  private Collider _collider;
   private Health _health;
   private Status _status;
   private bool _isFacingRight = false;
@@ -13,6 +16,7 @@ public class Actor : MonoBehaviour
   protected virtual void Start()
   {
     _status = new Status();
+    _collider = GetComponent<Collider>();
     _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     _health = GetComponent<Health>();
   }
@@ -46,7 +50,17 @@ public class Actor : MonoBehaviour
   {
     return _health;
   }
+  
+  public Collider GetCollider()
+  {
+    return _collider;
+  }
 
+  public string GetWeapon()
+  {
+    return weapon;
+  }
+  
   public void SetIsFacingRight(bool isFacing)
   {
     _isFacingRight = isFacing;
@@ -54,6 +68,6 @@ public class Actor : MonoBehaviour
   
   private void RestrictRotation()
   {
-    _spriteRenderer.flipX = !_isFacingRight;
+    _spriteRenderer.flipX = faceRight? !_isFacingRight: _isFacingRight;
   }
 }

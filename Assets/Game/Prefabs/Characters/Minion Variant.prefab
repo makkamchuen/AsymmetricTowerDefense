@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
   attack: {fileID: 4214391680693245558}
+  weapon: 
+  faceRight: 1
   sights:
   - {fileID: 11400000, guid: c00d44e6abc3b4fae853f30fb2755b35, type: 2}
   _patrolPattern: {fileID: 11400000, guid: a53d765cc49374f22a286dddf7121588, type: 2}
@@ -29,6 +31,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarFollowCharacter: 1
+  healthBar: {fileID: 0}
 --- !u!114 &8949354085807478392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,12 +61,17 @@ PrefabInstance:
         type: 3}
       propertyPath: skillData
       value: 
-      objectReference: {fileID: 11400000, guid: c49e78483cd554019a65fbb2906c1baa,
+      objectReference: {fileID: 11400000, guid: 5272fd1bf755448ccbd87d88037132c9,
         type: 2}
     - target: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_Name
       value: Minion Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_TagString
+      value: Minion
       objectReference: {fileID: 0}
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
@@ -72,7 +81,7 @@ PrefabInstance:
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
@@ -82,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
@@ -149,6 +158,36 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4452140354269660986, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 7312140826968804445}
+    - target: {fileID: 4452140354269660986, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: healthBarFollowCharacter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367580200256100, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367581470950364, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367581470950364, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352508521684343308, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 7312140826968804445}
     - target: {fileID: 8961205030512662125, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: rigidBody
@@ -176,5 +215,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65c423d03128c47538f4295ca5e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7312140826968804445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5393367580200256098, guid: c5ce113d662375847963f9f42aedc089,
+    type: 3}
+  m_PrefabInstance: {fileID: 3431996259331378751}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309a1f2dce3f7411a801478fac81174f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
