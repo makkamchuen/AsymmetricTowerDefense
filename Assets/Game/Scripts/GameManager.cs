@@ -40,7 +40,7 @@ namespace Game.Scripts
                 PoolManager.Spawn(treasurePrefab, Utils.GetTreasureRandomPoint());
             }
         }
-    
+
         private void Update()
         {
             treasureText.SetText(player.GetNumOfTreasureCollected() + " / " + numOfTotalTreasures);
