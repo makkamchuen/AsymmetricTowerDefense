@@ -12,10 +12,5 @@ public class SpriteCheckInObstacle : MonoBehaviour
         hitColliders = Physics.OverlapBox(transform.position, transform.localScale / 10, Quaternion.identity, 1 << 8);
 
         if (hitColliders.Length == 0) { Destroy(gameObject); }
-
-        // for (int i = 0; i < hitColliders.Length; ++i)
-        // {
-        //     if (hitColliders[i] == null)
-        // }
     }
 }

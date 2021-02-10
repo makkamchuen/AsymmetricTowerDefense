@@ -6162,34 +6162,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685648cca1b09c0438b4623bf63f2398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forestSizeX: 60
-  forestSizeZ: 40
+  forestSizeX: 70
+  forestSizeZ: 60
   xOffset: -10
   zOffset: -12
   elementSpacing: 1
-  density: 1.76
+  generalDensity: 3
   elements:
-  - name: Tree
-    density: 1
-    prefabs:
-    - {fileID: 2199596975817960289, guid: 17e686329f026e64dbacfe2ac44789d5, type: 3}
-    - {fileID: 1658412381339073195, guid: 88acda6788f4a8d4dbbfa3238708f8d9, type: 3}
-  - name: Stone
-    density: 2
-    prefabs:
-    - {fileID: 1147966333371572940, guid: 8ec375e22c0ec9c4f8299e891bc50003, type: 3}
-    - {fileID: 946556186271806912, guid: 4b2636b7b2be11f44969c00322086436, type: 3}
-    - {fileID: 5075093534848468310, guid: 8d66326a12132cf40b6f9e1f8ea52f83, type: 3}
   - name: Grass
-    density: 6
+    density: 51
     prefabs:
     - {fileID: 3510575936785389832, guid: 928fb9a0ade79aa44b01eaaae1b39abb, type: 3}
     - {fileID: 6139271895279758759, guid: 5fe0155fb17458345a35566de80aac7a, type: 3}
     - {fileID: 5677473297702225643, guid: cae4ccd80d34e7e4abdad34aace04b9f, type: 3}
     - {fileID: 7491853790875672625, guid: 5119ce316d5b700469ec79b9e76487dc, type: 3}
     - {fileID: 3894206162543653614, guid: d93b1b27dde0e1348aac10c4bd7b6b95, type: 3}
+  - name: Stone
+    density: 20
+    prefabs:
+    - {fileID: 1147966333371572940, guid: 8ec375e22c0ec9c4f8299e891bc50003, type: 3}
+    - {fileID: 946556186271806912, guid: 4b2636b7b2be11f44969c00322086436, type: 3}
+    - {fileID: 5075093534848468310, guid: 8d66326a12132cf40b6f9e1f8ea52f83, type: 3}
+  - name: Tree
+    density: 10
+    prefabs:
+    - {fileID: 2199596975817960289, guid: 17e686329f026e64dbacfe2ac44789d5, type: 3}
+    - {fileID: 1658412381339073195, guid: 88acda6788f4a8d4dbbfa3238708f8d9, type: 3}
   - name: Stuff
-    density: 2
+    density: 10
     prefabs:
     - {fileID: 616700790815353664, guid: 6f774d5b7142f5e47bea3ce9bf1e6ed7, type: 3}
     - {fileID: 2832290454934157495, guid: ab4c6e3d7e5376c4c92e8d51e8764d19, type: 3}
@@ -7421,12 +7421,12 @@ PrefabInstance:
     - target: {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673,
         type: 3}
       propertyPath: _offset.y
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673,
         type: 3}
       propertyPath: _offset.z
-      value: -7
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 5674900665288002812, guid: 82669b9a30b3e77479c2763b02fdb673,
         type: 3}

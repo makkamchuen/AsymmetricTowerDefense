@@ -11,9 +11,10 @@ public class RandomSprite : MonoBehaviour
     public int zOffset = 0;
     public int elementSpacing = 3; // The spacing between element placements. Basically grid size.
     [Range(0.1f, 3)]
-    public float density = 1;
+    public float generalDensity = 1;
 
     public Element[] elements;
+    private bool flip = false;
 
     private void Start()
     {
@@ -32,17 +33,17 @@ public class RandomSprite : MonoBehaviour
                         if (element.CanPlace())
                         {
                             // Add random elements to element placement.
-                            Vector3 position = new Vector3((x / density + xOffset), 0f, (z / density + zOffset));
+                            Vector3 position = new Vector3((x / generalDensity + xOffset), 0f, (z / generalDensity + zOffset));
                             Vector3 offset = new Vector3(Random.Range(-0.75f, 0.75f), 0f, Random.Range(-0.75f, 0.75f));
-                            Vector3 rotation = new Vector3(Random.Range(0, 5f), Random.Range(0, 360f), Random.Range(0, 5f));
-                            Vector3 scale = transform.lossyScale * Random.Range(0.9f, 1.1f);
+                            // Vector3 rotation = new Vector3(45f, Random.Range(0, 360f), Range(0, 1f));
+                            Vector3 scale = transform.localScale * Random.Range(0.8f, 1.2f);
 
                             // Instantiate and place element in world.
                             GameObject newElement = Instantiate(element.GetRandom());
                             newElement.transform.SetParent(transform);
                             newElement.transform.position = position + offset;
-                            // newElement.transform.eulerAngles = rotation;
                             newElement.transform.localScale = scale;
+                            if (Random.value >.5f) { newElement.GetComponentInChildren<SpriteRenderer>().flipX = true; }
 
                             // Break out of this for loop to ensure we don't place another element at this position.
                             break;
@@ -58,7 +59,7 @@ public class RandomSprite : MonoBehaviour
 public class Element
 {
     public string name;
-    [Range(1, 10)]
+    [Range(0, 100)]
     public int density;
 
     public GameObject[] prefabs;
@@ -67,7 +68,7 @@ public class Element
     {
         // Validation check to see if element can be placed. More detailed calculations can go here, such as checking perlin noise.
 
-        if (Random.Range(0, 10) < density)
+        if (Random.Range(0, 100) < density)
             return true;
         else
             return false;
