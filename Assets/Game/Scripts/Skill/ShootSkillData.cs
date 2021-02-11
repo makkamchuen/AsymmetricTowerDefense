@@ -24,7 +24,7 @@ public class ShootSkillData : SkillData
     projectiles.AddDamage(user.GetBaseStats().attackDamage + _attackInfo.GetDamage());
   }
 
-  public override bool InRange(Actor user, Actor targetActor)
+  public override bool CanApply(Actor user, Actor targetActor)
   {
     return Vector3.Distance(user.transform.position, targetActor.transform.position) <= _projectiles.GetRange() - 1;;
   }

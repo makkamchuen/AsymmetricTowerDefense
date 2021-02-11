@@ -41,6 +41,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a630d77e3421d4b52b747752a7983b8d,
         type: 2}
+    - target: {fileID: 3085107734071753817, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: skillDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a630d77e3421d4b52b747752a7983b8d,
+        type: 2}
     - target: {fileID: 3349223059961038393, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: m_LocalScale.x
