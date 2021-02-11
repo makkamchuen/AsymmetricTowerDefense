@@ -16,3 +16,5 @@ MonoBehaviour:
   _channelTime: 0.1
   _gameObject: {fileID: 8174531637764744893, guid: f4061a10a6672e146a8f2ceb90b33c3b,
     type: 3}
+  spawnSize: 3
+  reachableDistance: 3

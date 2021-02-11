@@ -26,7 +26,7 @@ public class SlashSkillData : SkillData
     }
   }
 
-  public override bool InRange(Actor user, Actor targetActor)
+  public override bool CanApply(Actor user, Actor targetActor)
   {
     float xOffset = hitBoxWidth / 2;
     Collider[] colliders = Physics.OverlapBox(

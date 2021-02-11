@@ -6545,11 +6545,19 @@ MonoBehaviour:
   gameStatusDisplay: {fileID: 162929651}
   gameStatusText: {fileID: 1085923504}
   playAgainButton: {fileID: 1706832632}
-  spawnSkills:
-  - {fileID: 11400000, guid: 1b32d25af6c484308ae42f0cd22c8efa, type: 2}
-  - {fileID: 11400000, guid: 818a8766cdd1941b0b1aaf2407215ffd, type: 2}
-  - {fileID: 11400000, guid: d59fe1dd793444667875939615dd15e3, type: 2}
-  - {fileID: 11400000, guid: 57d87452a1a794e56b5f629df04e137a, type: 2}
+  spawnContents:
+  - prefab: {fileID: 8174531637764744893, guid: f4061a10a6672e146a8f2ceb90b33c3b,
+      type: 3}
+    cooldown: 75
+  - prefab: {fileID: 5921409440072016248, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+      type: 3}
+    cooldown: 5
+  - prefab: {fileID: 3898241103061954999, guid: 17b71caa6f848b54eaff79d3ca85a463,
+      type: 3}
+    cooldown: 5
+  - prefab: {fileID: 2751151623452151826, guid: b165f8e28f6c13c4ba6d1b8d68ea4f4d,
+      type: 3}
+    cooldown: 8
 --- !u!1 &1358456546
 GameObject:
   m_ObjectHideFlags: 0
