@@ -1,19 +1,25 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using Game.Scripts.Skill;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class Skill: ActorActionComponent
 {
   [SerializeField] private SkillData[] skillDatas;
+  private List<SkillData> skillDataList;
   private float _cooldown;
   private float _channelTime;
   private Vector3 _destination;
   private SkillData skillDataToUse;
-  [SerializeField] private SkillData skillData;
+  private int[] castCount;
   
   protected override void Start()
   {
     base.Start();
     skillDataToUse = skillDatas[0];
+    skillDataList = new List<SkillData>();
+    skillDataList.AddRange(skillDatas);
+    castCount = new int[skillDatas.Length];
   }
 
   private void Update()
@@ -34,6 +40,8 @@ public class Skill: ActorActionComponent
       if (_channelTime <= 0)
       {
         skillDataToUse.Cast(GetActor(), _destination);
+        int index = skillDataList.IndexOf(skillDataToUse);
+        castCount[index]++;
         _channelTime = 0;
       }
     }
@@ -55,15 +63,31 @@ public class Skill: ActorActionComponent
 
   public bool CanHit(Actor target)
   {
-    if (CanHitTarget(target)) return true;
+    
+    if (CanHitTarget(target) && !ReachSkillMaxCount()) return true;
     foreach (var skillData in skillDatas)
     {
       skillDataToUse = skillData;
-      if (CanHitTarget(target)) return true;
+      if (CanHitTarget(target) && !ReachSkillMaxCount()) return true;
     }
 
     skillDataToUse = null;
     return false;
+  }
+
+  private bool ReachSkillMaxCount()
+  {
+    if (skillDataToUse is IMaxCastApply)
+    {
+      IMaxCastApply skillDataToUseWithMaxCount = skillDataToUse as IMaxCastApply;
+      int index = skillDataList.IndexOf(skillDataToUse);
+      if (castCount[index] >= skillDataToUseWithMaxCount.GetMaxNumberOfCast())
+      {
+        return true;
+      }
+    }
+    return false;
+
   }
 
   public bool OnCoolDown()
