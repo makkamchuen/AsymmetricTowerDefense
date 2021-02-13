@@ -53,7 +53,7 @@ public class MeshGenerator : MonoBehaviour {
             uvs[i] = new Vector2(percentX,percentY);
         }
         mesh.uv = uvs;
-        CreateWallMesh ();
+        // CreateWallMesh ();
     }
 
     void CreateWallMesh() {

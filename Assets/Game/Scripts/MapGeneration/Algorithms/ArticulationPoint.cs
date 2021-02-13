@@ -56,6 +56,8 @@ public class ArticulationPoint : MapGenerator
             }
         }
         Backtrack(new Coordinate(endCol, endRow), dfsPath);
+        _mapManager.CreatePassage(ScaledCoordinateToOriginal(new Coordinate(-1, startRow)), ScaledCoordinateToOriginal(new Coordinate(startCol, startRow)));
+        _mapManager.CreatePassage(ScaledCoordinateToOriginal(new Coordinate(width, endRow)), ScaledCoordinateToOriginal(new Coordinate(endCol, endRow)));
     }
     
     private int GetPathLength(Coordinate current, Dictionary<Coordinate, Coordinate> dfsPath)
