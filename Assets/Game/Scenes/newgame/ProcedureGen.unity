@@ -132,6 +132,16 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
+      objectReference: {fileID: 544662244}
+    - target: {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673,
+        type: 3}
+      propertyPath: _offset.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673,
+        type: 3}
+      propertyPath: _offset.z
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 5674900665288002812, guid: 82669b9a30b3e77479c2763b02fdb673,
         type: 3}
@@ -193,8 +203,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82669b9a30b3e77479c2763b02fdb673, type: 3}
 --- !u!1 &505289687
 GameObject:
@@ -288,6 +297,12 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &544662244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
+    type: 3}
+  m_PrefabInstance: {fileID: 1970848832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &613430375
 GameObject:
   m_ObjectHideFlags: 0
@@ -5669,7 +5684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685648cca1b09c0438b4623bf63f2398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forestSizeX: 70
+  forestSizeX: 90
   forestSizeZ: 60
   xOffset: -10
   zOffset: -12
