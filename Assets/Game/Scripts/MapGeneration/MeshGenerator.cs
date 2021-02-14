@@ -11,15 +11,19 @@ public class MeshGenerator : MonoBehaviour {
     private List<Vector3> vertices;
     private List<int> triangles;
 
+    public bool is2D;
+
     private Dictionary<int,List<Triangle>> triangleDictionary = new Dictionary<int, List<Triangle>> ();
     private List<List<int>> outlines = new List<List<int>> ();
     private HashSet<int> checkedVertices = new HashSet<int>();
 
     private MeshFilter _meshFilter;
+    private MeshCollider _meshCollider;
 
     private void Start()
     {
         _meshFilter = GetComponent<MeshFilter>();
+        _meshCollider = GetComponent<MeshCollider>();
     }
 
     public void GenerateMesh(int[,] map, float squareSize) {
@@ -54,6 +58,8 @@ public class MeshGenerator : MonoBehaviour {
         }
         mesh.uv = uvs;
         // CreateWallMesh ();
+        // MeshCollider wallCollider = gameObject.AddComponent<MeshCollider> ();
+        // wallCollider.sharedMesh = _meshFilter.mesh;
     }
 
     void CreateWallMesh() {
@@ -85,9 +91,30 @@ public class MeshGenerator : MonoBehaviour {
         wallMesh.vertices = wallVertices.ToArray ();
         wallMesh.triangles = wallTriangles.ToArray ();
         walls.mesh = wallMesh;
-        
+
         MeshCollider wallCollider = walls.gameObject.AddComponent<MeshCollider> ();
         wallCollider.sharedMesh = wallMesh;
+    }
+
+    void Generate2DColliders() {
+
+        EdgeCollider2D[] currentColliders = gameObject.GetComponents<EdgeCollider2D> ();
+        for (int i = 0; i < currentColliders.Length; i++) {
+            Destroy(currentColliders[i]);
+        }
+
+        CalculateMeshOutlines ();
+
+        foreach (List<int> outline in outlines) {
+            EdgeCollider2D edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
+            Vector2[] edgePoints = new Vector2[outline.Count];
+
+            for (int i =0; i < outline.Count; i ++) {
+                edgePoints[i] = new Vector2(vertices[outline[i]].x,vertices[outline[i]].z);
+            }
+            edgeCollider.points = edgePoints;
+        }
+
     }
 
     void TriangulateSquare(Square square) {
