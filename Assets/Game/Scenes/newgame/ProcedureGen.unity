@@ -5507,7 +5507,6 @@ MonoBehaviour:
   seed: 
   useRandomSeed: 1
   mapGenerator: {fileID: 1261917446}
-  _filler: {fileID: 0}
   _wallHeight: 2
 --- !u!114 &1261917442
 MonoBehaviour:
@@ -5527,7 +5526,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
