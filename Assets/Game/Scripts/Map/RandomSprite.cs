@@ -18,6 +18,11 @@ public class RandomSprite : MonoBehaviour
 
     private void Start()
     {
+        
+    }
+
+    public void placeSprite()
+    {
         // Loop through all the positions within our forest boundary.
         for (int x = 0; x < forestSizeX; x += elementSpacing)
         {

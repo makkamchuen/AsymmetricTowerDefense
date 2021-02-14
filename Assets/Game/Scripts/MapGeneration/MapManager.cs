@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 public class MapManager : MonoBehaviour 
 {
 
     public int width; // n
     public int height; // m
-    public float centerX;
-    public float centerZ;
     public float unit;
     public int smoothness; // k
     public int pathRadius; // r
@@ -22,13 +23,27 @@ public class MapManager : MonoBehaviour
     public MapGenerator mapGenerator;
 
     [HideInInspector] public int[,] map;
-    // private EnvironmentGenerator _environmentGenerator;
     private MeshGenerator meshGen;
+    private RandomSprite _randomSprite;
+    private GameObject _filler;
+    private List<GameObject> _fillers;
+    [SerializeField] private float _wallHeight;
+    private NavMeshSurface _navMeshSurface;
     
     void Start()
     {
-        // _environmentGenerator = GetComponent<EnvironmentGenerator>();
         meshGen = GetComponent<MeshGenerator>();
+        _randomSprite = GetComponent<RandomSprite>();
+        InitFiller();
+        _fillers = new List<GameObject>();
+        _navMeshSurface = GetComponent<NavMeshSurface>();
+    }
+
+    private void InitFiller()
+    {
+        _filler = new GameObject {layer = 8};
+        _filler.AddComponent<BoxCollider>();
+        _filler.GetComponent<BoxCollider>().size = new Vector3(unit, _wallHeight, unit);
     }
 
     void Update() 
@@ -45,14 +60,71 @@ public class MapManager : MonoBehaviour
         {
             seed = Time.time.ToString();
         }
-        // _environmentGenerator.ResetEnvironment();
+        DestroyColliders();
         mapGenerator.GenerateMap(width, height, new System.Random(seed.GetHashCode()));
         for (int i = 0; i < smoothness; i += 1)
         {
             SmoothMap();
         }
         // _environmentGenerator.BuildEnvironment(map, unit, centerX, centerZ);
-        meshGen.GenerateMesh(map, unit);
+        meshGen.GenerateMesh(GetInversedMap(), unit);
+        SetUpColliders();
+        _randomSprite.placeSprite();
+        if (_navMeshSurface.navMeshData == null)
+        {
+            _navMeshSurface.BuildNavMesh();
+        }
+        else
+        {
+            _navMeshSurface.UpdateNavMesh(_navMeshSurface.navMeshData);
+        }
+    }
+
+    private int[,] GetInversedMap()
+    {
+        int[,] inversedMap = new int[width, height];
+        for (int x = 0; x < width; x ++) 
+        {
+            for (int y = 0; y < height; y ++) 
+            {
+                inversedMap[x, y] = map[x, y] == 1? 0: 1;
+            }
+        }
+        return inversedMap;
+    }
+
+    public void RebakeNavMesh()
+    {
+        
+    }
+
+    public void DestroyColliders()
+    {
+        foreach (GameObject filler in _fillers)
+        {
+            Destroy(filler);
+        }
+    }
+
+    private void SetUpColliders()
+    {
+        if (map != null) 
+        {
+            for (int x = 0; x < width; x ++) 
+            {
+                for (int y = 0; y < height; y ++) 
+                {
+                    if (map[x, y] == 1)
+                    {
+                        Vector3 pos = new Vector3((-width / 2 + x) * unit, 0, (-height / 2 + y) * unit);
+                        GameObject filler = Instantiate(_filler, transform.position + pos, Quaternion.identity);
+                        filler.transform.SetParent(transform);
+                        _fillers.Add(filler);
+                        GameObjectUtility.SetNavMeshArea(filler, 1);
+                    }
+                }
+            }
+        }
     }
 
     void SmoothMap() // O(nm)
@@ -193,7 +265,7 @@ public class MapManager : MonoBehaviour
                 for (int y = 0; y < height; y ++) 
                 {
                     Gizmos.color = (map[x,y] == 1)? Color.blue:Color.green;
-                    Vector3 pos = new Vector3((-width/2 + x) * unit  + centerX,0, (-height/2 + y) * unit + centerZ);
+                    Vector3 pos = new Vector3((-width/2 + x) * unit + transform.position.x,0, (-height/2 + y) * unit + transform.position.z);
                     Gizmos.DrawCube(pos,new Vector3(unit, 0, unit));
                 }
             }
