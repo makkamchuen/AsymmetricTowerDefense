@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Game.Scripts.Skill;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,6 +13,7 @@ public class Skill: ActorActionComponent
   private Vector3 _destination;
   private SkillData skillDataToUse;
   private int[] castCount;
+  private float minimunSkillDistance;
   
   protected override void Start()
   {
@@ -20,6 +22,7 @@ public class Skill: ActorActionComponent
     skillDataList = new List<SkillData>();
     skillDataList.AddRange(skillDatas);
     castCount = new int[skillDatas.Length];
+    minimunSkillDistance = skillDataList.Min(skillData => skillData.GetMinDistance());
   }
 
   private void Update()
@@ -71,7 +74,7 @@ public class Skill: ActorActionComponent
       if (CanHitTarget(target) && !ReachSkillMaxCount()) return true;
     }
 
-    skillDataToUse = null;
+    skillDataToUse = skillDataList[0];
     return false;
   }
 
@@ -113,6 +116,14 @@ public class Skill: ActorActionComponent
   {
     return skillDataToUse && skillDataToUse.CanApply(GetActor(), target);
   }
+
+  //determine if the distance is too close and no skill can hit that close distance
+  public bool IsTooCloseToHit(Actor user, Actor targetActor)
+  {
+    var distance = Vector3.Distance(user.transform.position, targetActor.transform.position);
+    return distance < minimunSkillDistance;
+  }
+  
 
 }
 

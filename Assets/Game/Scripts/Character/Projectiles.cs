@@ -9,7 +9,8 @@ public class Projectiles: MonoBehaviour
     private GameObject target;
 
     [SerializeField] private float damage = 20f; //fake Value
-    [SerializeField] private float reachableDistance = 10f; //fake Value
+    [SerializeField] private float maxDistance = 7f; //fake Value
+    [SerializeField] private float minDistance = 3f;
     private float distanceTravelled = 0f;
     [SerializeField] private bool faceRight = true;
     private SpriteRenderer _spriteRenderer;
@@ -37,9 +38,14 @@ public class Projectiles: MonoBehaviour
         damage += value;
     }
 
-    public float GetRange()
+    public float GetMinDistance()
     {
-        return reachableDistance;
+        return minDistance;
+    }
+
+    public float GetMaxDistance()
+    {
+        return maxDistance;
     }
 
     public void SetTargets(HashSet<string> targetTags)
@@ -58,7 +64,7 @@ public class Projectiles: MonoBehaviour
     {
         // should it follow moving object?
         // Nah
-        if (distanceTravelled >= reachableDistance)
+        if (distanceTravelled >= maxDistance)
         {
             Destroy(this.gameObject);
         }

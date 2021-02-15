@@ -26,6 +26,14 @@ public class ShootSkillData : SkillData
 
   public override bool CanApply(Actor user, Actor targetActor)
   {
-    return Vector3.Distance(user.transform.position, targetActor.transform.position) <= _projectiles.GetRange() - 1;;
+    var distance = Vector3.Distance(user.transform.position, targetActor.transform.position) + 1;
+    return distance <= _projectiles.GetMaxDistance() && distance >= _projectiles.GetMinDistance();
   }
+  
+
+  public override float GetMinDistance()
+  {
+    return _projectiles.GetMinDistance();
+  }
+
 }
