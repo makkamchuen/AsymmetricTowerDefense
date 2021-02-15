@@ -28,8 +28,12 @@ public class StateController : MonoBehaviour {
   {
     if (nextState != remainInState) 
     {
+
+      if (currentState)
+        currentState.OnExit(this);
       currentState = nextState;
       OnExitState ();
+      nextState.OnEnter(this);
     }
   }
 

@@ -16,6 +16,14 @@ public class State : ScriptableObject
     CheckTransitions (controller);
   }
 
+  public virtual void OnEnter(StateController controller)
+  {
+  }
+
+  public virtual void OnExit(StateController controller)
+  {
+  }
+
   private void DoActions(AI ai)
   {
     for (int i = 0; i < actions.Length; i++) {
