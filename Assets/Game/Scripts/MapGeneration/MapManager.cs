@@ -14,8 +14,8 @@ public class MapManager : MonoBehaviour
     public float unit;
     public int smoothness; // k
     public int pathRadius; // r
-    public int minSeaSize;
-    public int minIslandSize;
+    // public int minSeaSize;
+    // public int minIslandSize;
 
     public string seed;
     public bool useRandomSeed;
@@ -25,26 +25,26 @@ public class MapManager : MonoBehaviour
     [HideInInspector] public int[,] map;
     private MeshGenerator meshGen;
     private RandomSprite _randomSprite;
-    private GameObject _filler;
-    private List<GameObject> _fillers;
-    [SerializeField] private float _wallHeight;
+    // private GameObject _filler;
+    // private List<GameObject> _fillers;
+    // [SerializeField] private float _wallHeight;
     private NavMeshSurface _navMeshSurface;
     
     void Start()
     {
         meshGen = GetComponent<MeshGenerator>();
         _randomSprite = GetComponent<RandomSprite>();
-        InitFiller();
-        _fillers = new List<GameObject>();
+        // InitFiller();
+        // _fillers = new List<GameObject>();
         _navMeshSurface = GetComponent<NavMeshSurface>();
     }
 
-    private void InitFiller()
-    {
-        _filler = new GameObject {layer = 8};
-        _filler.AddComponent<BoxCollider>();
-        _filler.GetComponent<BoxCollider>().size = new Vector3(unit, _wallHeight, unit);
-    }
+    // private void InitFiller()
+    // {
+    //     _filler = new GameObject {layer = 8};
+    //     _filler.AddComponent<BoxCollider>();
+    //     _filler.GetComponent<BoxCollider>().size = new Vector3(unit, _wallHeight, unit);
+    // }
 
     void Update() 
     {
@@ -60,15 +60,14 @@ public class MapManager : MonoBehaviour
         {
             seed = Time.time.ToString();
         }
-        DestroyColliders();
+        // DestroyColliders();
         mapGenerator.GenerateMap(width, height, new System.Random(seed.GetHashCode()));
         for (int i = 0; i < smoothness; i += 1)
         {
             SmoothMap();
         }
-        // _environmentGenerator.BuildEnvironment(map, unit, centerX, centerZ);
         meshGen.GenerateMesh(GetInversedMap(), unit);
-        SetUpColliders();
+        // SetUpColliders();
         _randomSprite.placeSprite();
         if (_navMeshSurface.navMeshData == null)
         {
@@ -98,34 +97,34 @@ public class MapManager : MonoBehaviour
         
     }
 
-    public void DestroyColliders()
-    {
-        foreach (GameObject filler in _fillers)
-        {
-            Destroy(filler);
-        }
-    }
+    // public void DestroyColliders()
+    // {
+    //     foreach (GameObject filler in _fillers)
+    //     {
+    //         Destroy(filler);
+    //     }
+    // }
 
-    private void SetUpColliders()
-    {
-        if (map != null) 
-        {
-            for (int x = 0; x < width; x ++) 
-            {
-                for (int y = 0; y < height; y ++) 
-                {
-                    if (map[x, y] == 1)
-                    {
-                        Vector3 pos = new Vector3((-width / 2 + x) * unit, 0, (-height / 2 + y) * unit);
-                        GameObject filler = Instantiate(_filler, transform.position + pos, Quaternion.identity);
-                        filler.transform.SetParent(transform);
-                        _fillers.Add(filler);
-                        GameObjectUtility.SetNavMeshArea(filler, 1);
-                    }
-                }
-            }
-        }
-    }
+    // private void SetUpColliders()
+    // {
+    //     if (map != null) 
+    //     {
+    //         for (int x = 0; x < width; x ++) 
+    //         {
+    //             for (int y = 0; y < height; y ++) 
+    //             {
+    //                 if (map[x, y] == 1)
+    //                 {
+    //                     Vector3 pos = new Vector3((-width / 2 + x) * unit, 0, (-height / 2 + y) * unit);
+    //                     GameObject filler = Instantiate(_filler, transform.position + pos, Quaternion.identity);
+    //                     filler.transform.SetParent(transform);
+    //                     _fillers.Add(filler);
+    //                     GameObjectUtility.SetNavMeshArea(filler, 1);
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     void SmoothMap() // O(nm)
     {
