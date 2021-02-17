@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   maxDistance: 4
-  minDistance: 1.5
+  minDistance: 2
   faceRight: 1
   speed: 0.5
 --- !u!114 &6369346231474532924
