@@ -11,7 +11,7 @@ public class MeshGenerator : MonoBehaviour {
     private List<Vector3> vertices;
     private List<int> triangles;
 
-    public bool is2D;
+    // public bool is2D;
 
     private Dictionary<int,List<Triangle>> triangleDictionary = new Dictionary<int, List<Triangle>> ();
     private List<List<int>> outlines = new List<List<int>> ();
