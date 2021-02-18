@@ -10,6 +10,7 @@ public class SlashSkillData : SkillData
   public float hitBoxWidth;
 
   [SerializeField] GameObject hitEffect = null;
+  [SerializeField][FMODUnity.EventRef] string hitSound;
 
   public override void Cast(Actor user, Vector3 destination)
   {
@@ -23,7 +24,7 @@ public class SlashSkillData : SkillData
       {
         continue;
       }
-      collider.GetComponent<Health>().Hit(attackInfo.GetDamage() + user.GetBaseStats().attackDamage, hitEffect);
+      collider.GetComponent<Health>().Hit(attackInfo.GetDamage() + user.GetBaseStats().attackDamage, hitEffect, hitSound);
     }
   }
 

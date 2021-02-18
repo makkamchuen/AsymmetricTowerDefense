@@ -147,6 +147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 5_a2a1b_Ninja
       objectReference: {fileID: 0}
+    - target: {fileID: 7080770187652557506, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: weapon
+      value: event:/SFX/Weapon/Bow
+      objectReference: {fileID: 0}
     - target: {fileID: 7665333641902816920, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: m_Sprite

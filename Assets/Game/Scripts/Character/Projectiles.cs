@@ -14,6 +14,7 @@ public class Projectiles : MonoBehaviour
     [SerializeField] private bool faceRight = true;
     [SerializeField] private float speed = 1f; //fake Value
     [SerializeField] GameObject hitEffect = null;
+    [SerializeField][FMODUnity.EventRef] string hitSound;
 
     private float distanceTravelled = 0f;
     private SpriteRenderer _spriteRenderer;
@@ -94,7 +95,7 @@ public class Projectiles : MonoBehaviour
             Actor otherActor = other.GetComponent<Actor>();
             if (otherActor != null && !otherActor.GetHealth().GetIsDead())
             {
-                otherActor.GetHealth().Hit(damage, hitEffect);
+                otherActor.GetHealth().Hit(damage, hitEffect, hitSound);
                 Destroy(this.gameObject);
                 // do I have to destory it here or Actor.Update will do it
                 //if (otherActor.GetHealth().GetCurrentHealth() <= 0)

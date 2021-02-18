@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillDatas:
   - {fileID: 11400000, guid: f99fb83a1c7ea1e41ae985dbe9bdf321, type: 2}
-  skillData: {fileID: 11400000, guid: f99fb83a1c7ea1e41ae985dbe9bdf321, type: 2}
 --- !u!114 &3175755023194602215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 0}
   healthBarFollowCharacter: 1
   healthBar: {fileID: 8485157211698207877}
 --- !u!114 &5252263633272455135
@@ -127,6 +127,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756656507734514206, guid: 83f2891dea593734dbb43289feab0007,
+        type: 3}
+      propertyPath: dead
+      value: event:/SFX/Character/Dead/TowerDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756656507734514206, guid: 83f2891dea593734dbb43289feab0007,
+        type: 3}
+      propertyPath: hurt
+      value: event:/SFX/Character/Hurt/TowerHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756656507734514206, guid: 83f2891dea593734dbb43289feab0007,
+        type: 3}
+      propertyPath: weapon
+      value: event:/SFX/Weapon/Bow
       objectReference: {fileID: 0}
     - target: {fileID: 5341347539726880324, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}

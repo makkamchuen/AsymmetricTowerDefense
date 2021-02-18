@@ -148,6 +148,7 @@ MonoBehaviour:
   speed: 0.5
   hitEffect: {fileID: 2101981354061728712, guid: 7db453d4635b41e4ab2cab303edcd845,
     type: 3}
+  hitSound: event:/SFX/WeaponImpact/ArrowImpact
 --- !u!114 &6369346231474532924
 MonoBehaviour:
   m_ObjectHideFlags: 0

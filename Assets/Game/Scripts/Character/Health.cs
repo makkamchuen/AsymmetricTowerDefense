@@ -40,13 +40,17 @@ public class Health : ActorActionComponent
     UpdateHealthBar();
   }
 
-  public void Hit(float damage, GameObject hitEffect)
+  public void Hit(float damage, GameObject hitEffect, string hitSound)
   {
     GetActionScheduler().StartAction(this);
     _currentHealth -= damage;
     _currentHealth = Math.Max(_currentHealth, 0);
     UpdateHealthBar();
-    if (hitEffect != null) { Instantiate(hitEffect, transform.position, transform.rotation); }
+    if (hitEffect != null)
+    {
+      Instantiate(hitEffect, transform.position, transform.rotation);
+      FMODUnity.RuntimeManager.PlayOneShotAttached(hitSound, gameObject);
+    }
     GetAnimator().SetTrigger(AnimationTrigger.hurt);
     if (!_isDead && _currentHealth <= 0)
     {
