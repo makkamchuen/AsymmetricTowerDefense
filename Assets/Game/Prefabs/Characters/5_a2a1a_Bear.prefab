@@ -48,6 +48,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 3085107734071753817, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
+      propertyPath: skillDatas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085107734071753817, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
       propertyPath: skillDatas.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 99cb997a3c1014fdb81976a17d33d5ae,
@@ -146,6 +151,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 5_a2a1a_Bear
+      objectReference: {fileID: 0}
+    - target: {fileID: 7080770187652557506, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: dead
+      value: event:/SFX/Character/Hurt/BearHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 7080770187652557506, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: hurt
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7665333641902816920, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}

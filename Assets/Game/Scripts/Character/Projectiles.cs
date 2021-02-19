@@ -4,17 +4,20 @@ using System.Collections.Generic;
 using Game.Scripts;
 using UnityEngine;
 
-public class Projectiles: MonoBehaviour
+public class Projectiles : MonoBehaviour
 {
     private GameObject target;
 
     [SerializeField] private float damage = 20f; //fake Value
     [SerializeField] private float maxDistance = 7f; //fake Value
     [SerializeField] private float minDistance = 3f;
-    private float distanceTravelled = 0f;
     [SerializeField] private bool faceRight = true;
-    private SpriteRenderer _spriteRenderer;
     [SerializeField] private float speed = 1f; //fake Value
+    [SerializeField] GameObject hitEffect = null;
+    [SerializeField][FMODUnity.EventRef] string hitSound;
+
+    private float distanceTravelled = 0f;
+    private SpriteRenderer _spriteRenderer;
     private Vector3 direction;
     private HashSet<string> _targetTags;
     private bool _isFacingRight = false;
@@ -73,9 +76,9 @@ public class Projectiles: MonoBehaviour
             transform.Translate(direction / speed * Time.deltaTime);
             distanceTravelled += speed * Time.deltaTime;
         }
-        
+
         RestrictRotation();
-        
+
     }
 
     // public void SetTarget(GameObject target)
@@ -85,7 +88,6 @@ public class Projectiles: MonoBehaviour
     //     //get direction from target
     // }
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (_targetTags.Contains(other.tag))
@@ -93,7 +95,7 @@ public class Projectiles: MonoBehaviour
             Actor otherActor = other.GetComponent<Actor>();
             if (otherActor != null && !otherActor.GetHealth().GetIsDead())
             {
-                otherActor.GetHealth().Hit(damage);
+                otherActor.GetHealth().Hit(damage, hitEffect, hitSound);
                 Destroy(this.gameObject);
                 // do I have to destory it here or Actor.Update will do it
                 //if (otherActor.GetHealth().GetCurrentHealth() <= 0)
@@ -102,7 +104,7 @@ public class Projectiles: MonoBehaviour
                 //}
             }
         }
-        
+
     }
 
     //private void OnCollisionEnter(Collision collision) //do I need this
@@ -115,7 +117,6 @@ public class Projectiles: MonoBehaviour
     //        {
     //            otherActor.Hit(projectileHit);
 
-
     //            // do I have to destory it here or Actor.Update will do it
     //            if (otherActor.GetCurrentHealth() < 0)
     //            {
@@ -125,9 +126,9 @@ public class Projectiles: MonoBehaviour
     //    }
     //    Destroy(this.gameObject);
     //}
-    
+
     private void RestrictRotation()
     {
-        _spriteRenderer.flipX = faceRight? !_isFacingRight: _isFacingRight;
+        _spriteRenderer.flipX = faceRight?!_isFacingRight : _isFacingRight;
     }
 }

@@ -3,17 +3,18 @@ using UnityEngine;
 
 public class Health : ActorActionComponent
 {
+  [SerializeField] GameObject hitEffect = null;
+  public bool healthBarFollowCharacter = true;
+  public HealthBar healthBar;
+
   private float _currentHealth;
   private bool _isDead;
-  public bool healthBarFollowCharacter = true;
-
-  public HealthBar healthBar;
 
   private void Awake()
   {
     InvokeRepeating(nameof(RegenerateHealth), 0.0f, 1.0f);
   }
-  
+
   protected override void Start()
   {
     base.Start();
@@ -24,7 +25,7 @@ public class Health : ActorActionComponent
 
   private void Update()
   {
-    if (healthBarFollowCharacter) 
+    if (healthBarFollowCharacter)
       healthBar.transform.position = Camera.main.WorldToScreenPoint(GetActor().transform.position);
   }
 
@@ -39,12 +40,17 @@ public class Health : ActorActionComponent
     UpdateHealthBar();
   }
 
-  public void Hit(float damage)
+  public void Hit(float damage, GameObject hitEffect, string hitSound)
   {
     GetActionScheduler().StartAction(this);
     _currentHealth -= damage;
     _currentHealth = Math.Max(_currentHealth, 0);
     UpdateHealthBar();
+    if (hitEffect != null)
+    {
+      Instantiate(hitEffect, transform.position, transform.rotation);
+      FMODUnity.RuntimeManager.PlayOneShotAttached(hitSound, gameObject);
+    }
     GetAnimator().SetTrigger(AnimationTrigger.hurt);
     if (!_isDead && _currentHealth <= 0)
     {
@@ -64,7 +70,7 @@ public class Health : ActorActionComponent
   {
     return _isDead;
   }
-  
+
   public override void Cancel()
   {
     GetAnimator().SetBool(AnimationTrigger.hurt, false);
@@ -77,7 +83,7 @@ public class Health : ActorActionComponent
       healthBar.SetHealth(_currentHealth);
     }
   }
-  
+
   private void SetMaxHealth()
   {
     if (healthBar)
