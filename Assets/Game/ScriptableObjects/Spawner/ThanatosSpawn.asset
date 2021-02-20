@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cooldown: 5
   _channelTime: 0.1
-  _gameObject: {fileID: 5921409440072016248, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+  _gameObject: {fileID: 5921409440072016248, guid: f0f7b51b50ce547dfb3e84bc0451acd5,
     type: 3}
-  spawnSize: 3
+  maxNumOfCast: 3
   reachableDistance: 3
