@@ -321,10 +321,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41961041cf85d4522a897205426670da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 718a0e719a84c41aa89cdefa1ba36538, type: 3}
-  spawnSound: event:/SFX/Character/Spawn/TowerSpawn
-  shortcut: t
-  prefab: {fileID: 2751151623452151826, guid: b165f8e28f6c13c4ba6d1b8d68ea4f4d, type: 3}
+  spawnContents:
+  - sprite: {fileID: 21300000, guid: e9855418368b81d4bb31bb9b2c6dfcb6, type: 3}
+    spawnSound: 
+    shortcut: t
+    prefab: {fileID: 5921409440072016248, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+      type: 3}
+  - sprite: {fileID: 21300000, guid: 5e4e47f1283283c43bb5907a6037903b, type: 3}
+    spawnSound: 
+    shortcut: b
+    prefab: {fileID: 8174531637764744893, guid: f4061a10a6672e146a8f2ceb90b33c3b,
+      type: 3}
+  - sprite: {fileID: 1020239624769918846, guid: e26c21ef0bc8e5e458bfc5ea381d59be,
+      type: 3}
+    spawnSound: 
+    shortcut: n
+    prefab: {fileID: 3898241103061954999, guid: 17b71caa6f848b54eaff79d3ca85a463,
+      type: 3}
 --- !u!1001 &162929650
 PrefabInstance:
   m_ObjectHideFlags: 0
