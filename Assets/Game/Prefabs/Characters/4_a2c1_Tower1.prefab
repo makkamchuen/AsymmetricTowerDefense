@@ -26,7 +26,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bf53c4dc75a441686a278e879c6367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStats: {fileID: 11400000, guid: f294c2134f90f4a478eb72f4bf8a08b0, type: 2}
+  baseStats:
+    maxHealth: 30
+    healthRegenPerSecond: 1
+    movementSpeed: 0
+    attackDamage: 5
   attack: {fileID: 2569232058751389115}
   weapon: 
   faceRight: 1

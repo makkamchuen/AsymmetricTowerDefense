@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillDatas:
   - {fileID: 11400000, guid: 2b403f3c8f6ad4032b881d21a8dc909e, type: 2}
-  skillData: {fileID: 11400000, guid: 2b403f3c8f6ad4032b881d21a8dc909e, type: 2}
 --- !u!114 &4344467541829664777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,6 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 0}
   healthBarFollowCharacter: 1
   healthBar: {fileID: 5393367580200256098}
 --- !u!114 &4968707543312438198
@@ -53,7 +53,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529faf33545c042ed8b0592948970079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
+  baseStats:
+    maxHealth: 150
+    healthRegenPerSecond: 3.5
+    movementSpeed: 2
+    attackDamage: 10
   attack: {fileID: 1575240131399358537}
   weapon: 
   faceRight: 1

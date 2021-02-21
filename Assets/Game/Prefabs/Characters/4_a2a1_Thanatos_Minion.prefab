@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1572edb52b027456b9b9f59e0a2f4fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStats: {fileID: 11400000, guid: f50229ad9083b46adb8fc3aa7b8fa37c, type: 2}
+  baseStats:
+    maxHealth: 30
+    healthRegenPerSecond: 0
+    movementSpeed: 1.5
+    attackDamage: 20
   attack: {fileID: 3085107734071753817}
   weapon: 
   faceRight: 0
@@ -69,6 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 0}
   healthBarFollowCharacter: 1
   healthBar: {fileID: 126746027211648495}
 --- !u!114 &8220241514419659115

@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Character/Stats"), Serializable]
-public class Stats : ScriptableObject
+[Serializable]
+public class Stats
 {
   public float maxHealth;
   public float healthRegenPerSecond;

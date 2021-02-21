@@ -21,8 +21,7 @@ PrefabInstance:
         type: 3}
       propertyPath: baseStats
       value: 
-      objectReference: {fileID: 11400000, guid: b18782dd7729e40ea950a66994ac502a,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: _patrolPattern
@@ -31,10 +30,30 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
+      propertyPath: baseStats.maxHealth
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
       propertyPath: sights.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 8789795a115ba4320b2b68de7dd5c5bf,
         type: 2}
+    - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: baseStats.attackDamage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: baseStats.movementSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: baseStats.healthRegenPerSecond
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3085107734071753817, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: skillData
