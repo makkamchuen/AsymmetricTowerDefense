@@ -15,4 +15,4 @@ MonoBehaviour:
   maxHealth: 30
   healthRegenPerSecond: 0
   movementSpeed: 1.5
-  attackDamage: 20
+  attackDamage: 15
