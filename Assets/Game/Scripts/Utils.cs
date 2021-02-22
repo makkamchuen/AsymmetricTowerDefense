@@ -30,6 +30,20 @@ namespace Game.Scripts
             return Vector3.zero;
         }
         
+        public static Vector3 GetRandomPoint(Vector3 center, float minDist, float maxDist)
+        {
+            for (int i = 0; i < 300; i++)
+            {
+                Vector3 randomPoint = center + Random.insideUnitSphere * Random.Range(minDist, maxDist);
+                NavMeshHit hit;
+                if (NavMesh.SamplePosition(randomPoint, out hit, 0.01f, NavMesh.AllAreas))
+                {
+                    return hit.position;
+                }
+            }
+            return center;
+        }
+        
         public static Vector3 GetTreasureRandomPoint()
         {
             for (int i = 0; i < 100; i++)

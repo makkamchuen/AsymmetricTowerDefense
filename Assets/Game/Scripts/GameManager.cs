@@ -55,6 +55,9 @@ namespace Game.Scripts
 
             for (int i = 0; i < cooldown.Length; i += 1)
             {
+                if (!spawnContents[i].enabled)
+                    continue;
+                
                 if (cooldown[i] == 0)
                 {
                     GameObject gameObject = PoolManager.Spawn(spawnContents[i].prefab, Utils.GetRandomPoint());
@@ -95,6 +98,7 @@ namespace Game.Scripts
         {
             public GameObject prefab;
             public int cooldown;
+            public bool enabled;
         }
 
     }

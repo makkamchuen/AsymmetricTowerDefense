@@ -19,6 +19,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
+      propertyPath: flee
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c820275afdf14b16aa2f1cc4c5a168e,
+        type: 2}
+    - target: {fileID: 1559250076651423172, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
       propertyPath: baseStats
       value: 
       objectReference: {fileID: 11400000, guid: b18782dd7729e40ea950a66994ac502a,

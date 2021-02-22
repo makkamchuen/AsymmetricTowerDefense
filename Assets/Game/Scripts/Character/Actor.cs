@@ -7,6 +7,7 @@ public class Actor : MonoBehaviour
   [SerializeField] private Skill attack;
   [SerializeField] private string weapon;
   [SerializeField] private bool faceRight = true;
+  [SerializeField] private Flee flee;
   private SpriteRenderer _spriteRenderer;
   private Collider _collider;
   private Health _health;
@@ -29,6 +30,11 @@ public class Actor : MonoBehaviour
   public Skill GetAttackSkill()
   {
     return attack;
+  }
+
+  public Flee GetFlee()
+  {
+    return flee;
   }
 
   public Status GetStatus()
@@ -70,4 +76,5 @@ public class Actor : MonoBehaviour
   {
     _spriteRenderer.flipX = faceRight? !_isFacingRight: _isFacingRight;
   }
+
 }
