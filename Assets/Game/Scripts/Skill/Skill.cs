@@ -9,8 +9,6 @@ public class Skill: ActorActionComponent
   [SerializeField] private SkillData[] skillDatas;
   private List<SkillData> skillDataList;
   private float _cooldown;
-  private float _channelTime;
-  private Vector3 _destination;
   private SkillData skillDataToUse;
   private int[] castCount;
   private float minimunSkillDistance;
@@ -27,7 +25,6 @@ public class Skill: ActorActionComponent
 
   private void Update()
   {
-    if (!skillDataToUse) return;
     if (_cooldown != 0)
     {
       _cooldown -= Time.deltaTime;
@@ -37,20 +34,9 @@ public class Skill: ActorActionComponent
       }
     }
 
-    if (_channelTime != 0)
-    {
-      _channelTime -= Time.deltaTime;
-      if (_channelTime <= 0)
-      {
-        skillDataToUse.Cast(GetActor(), _destination);
-        int index = skillDataList.IndexOf(skillDataToUse);
-        castCount[index]++;
-        _channelTime = 0;
-      }
-    }
   }
 
-  public void Cast(Vector3 destination)
+  public void PlayAttackAnimation(Vector3 destination)
   {
     if (!skillDataToUse || _cooldown != 0 || !GetActor().GetStatus().Attackable())
     {
@@ -60,8 +46,6 @@ public class Skill: ActorActionComponent
     GetActor().SetIsFacingRight(destination.x > transform.position.x);
     GetActionScheduler().StartAction(this);
     _cooldown = skillDataToUse.GetCoolDown();
-    _channelTime = skillDataToUse.GetChannelTime();
-    _destination = destination;
   }
 
   public bool CanHit(Actor target)
@@ -77,7 +61,7 @@ public class Skill: ActorActionComponent
     skillDataToUse = skillDataList[0];
     return false;
   }
-
+  
   private bool ReachSkillMaxCount()
   {
     if (skillDataToUse is IMaxCastApply)
@@ -93,14 +77,9 @@ public class Skill: ActorActionComponent
 
   }
 
-  public bool OnCoolDown()
-  {
-    return _cooldown != 0;
-  }
 
   public override void Cancel()
   {
-    _channelTime = 0;
     GetAnimator().SetBool(AnimationTrigger.attack, false);
   }
 
@@ -123,7 +102,14 @@ public class Skill: ActorActionComponent
     var distance = Vector3.Distance(user.transform.position, targetActor.transform.position);
     return distance < minimunSkillDistance;
   }
-  
+
+  public void CastSkill()
+  {
+    this.skillDataToUse.Cast(this.GetActor());
+    int index = skillDataList.IndexOf(skillDataToUse);
+    castCount[index]++;
+
+  }
 
 }
 

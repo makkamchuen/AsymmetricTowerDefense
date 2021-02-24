@@ -6562,15 +6562,19 @@ MonoBehaviour:
   - prefab: {fileID: 8174531637764744893, guid: f4061a10a6672e146a8f2ceb90b33c3b,
       type: 3}
     cooldown: 75
+    enabled: 1
   - prefab: {fileID: 5921409440072016248, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
       type: 3}
     cooldown: 5
+    enabled: 1
   - prefab: {fileID: 3898241103061954999, guid: 17b71caa6f848b54eaff79d3ca85a463,
       type: 3}
     cooldown: 5
+    enabled: 1
   - prefab: {fileID: 2751151623452151826, guid: b165f8e28f6c13c4ba6d1b8d68ea4f4d,
       type: 3}
     cooldown: 8
+    enabled: 1
 --- !u!1 &1358456546
 GameObject:
   m_ObjectHideFlags: 0

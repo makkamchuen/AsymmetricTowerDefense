@@ -12,7 +12,7 @@ public class SlashSkillData : SkillData
   [SerializeField] GameObject hitEffect = null;
   [SerializeField][FMODUnity.EventRef] string hitSound;
 
-  public override void Cast(Actor user, Vector3 destination)
+  public override void Cast(Actor user)
   {
     float xOffset = hitBoxWidth / 2;
     Collider[] colliders = Physics.OverlapBox(

@@ -23,13 +23,13 @@ AnimationClip:
       value: {fileID: -693313328470825570, guid: c1b4ee2313697f54eb0a52d852ece8ff,
         type: 3}
     - time: 0.083333336
-      value: {fileID: 5787697205043459996, guid: c1b4ee2313697f54eb0a52d852ece8ff,
+      value: {fileID: -693313328470825570, guid: c1b4ee2313697f54eb0a52d852ece8ff,
         type: 3}
     - time: 0.16666667
-      value: {fileID: -2269174141327861290, guid: c1b4ee2313697f54eb0a52d852ece8ff,
+      value: {fileID: -693313328470825570, guid: c1b4ee2313697f54eb0a52d852ece8ff,
         type: 3}
     - time: 0.25
-      value: {fileID: 6774919056291310371, guid: c1b4ee2313697f54eb0a52d852ece8ff,
+      value: {fileID: -693313328470825570, guid: c1b4ee2313697f54eb0a52d852ece8ff,
         type: 3}
     - time: 0.33333334
       value: {fileID: 6422041615823479416, guid: c1b4ee2313697f54eb0a52d852ece8ff,
@@ -69,9 +69,9 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: -693313328470825570, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
-    - {fileID: 5787697205043459996, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
-    - {fileID: -2269174141327861290, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
-    - {fileID: 6774919056291310371, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
+    - {fileID: -693313328470825570, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
+    - {fileID: -693313328470825570, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
+    - {fileID: -693313328470825570, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
     - {fileID: 6422041615823479416, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
     - {fileID: 5441759341473752878, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
     - {fileID: -1350351535178704962, guid: c1b4ee2313697f54eb0a52d852ece8ff, type: 3}
@@ -102,4 +102,12 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.33333334
+    functionName: CastSkill
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 3520cd1ca6e94a84b988edcdea83c164,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
