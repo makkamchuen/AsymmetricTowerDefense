@@ -30,6 +30,7 @@ MonoBehaviour:
   attack: {fileID: 2569232058751389115}
   weapon: 
   faceRight: 1
+  flee: {fileID: 0}
   sights:
   - {fileID: 11400000, guid: 11008631076124b4bbbedd97aa1b8d7f, type: 2}
 --- !u!114 &3561563449645674234
