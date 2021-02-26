@@ -132,6 +132,16 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
+      objectReference: {fileID: 516359371}
+    - target: {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673,
+        type: 3}
+      propertyPath: _offset.y
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673,
+        type: 3}
+      propertyPath: _offset.z
+      value: -500
       objectReference: {fileID: 0}
     - target: {fileID: 5674900665288002812, guid: 82669b9a30b3e77479c2763b02fdb673,
         type: 3}
@@ -193,8 +203,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82669b9a30b3e77479c2763b02fdb673, type: 3}
 --- !u!1 &505289687
 GameObject:
@@ -288,6 +297,12 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &516359371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
+    type: 3}
+  m_PrefabInstance: {fileID: 1970848832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &665770750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5674900665288002812, guid: 82669b9a30b3e77479c2763b02fdb673,
@@ -303,6 +318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 971714904}
+  - component: {fileID: 971714905}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -326,6 +342,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &971714905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971714903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &1014301074
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +416,6 @@ GameObject:
   - component: {fileID: 1261917448}
   - component: {fileID: 1261917447}
   - component: {fileID: 1261917451}
-  - component: {fileID: 1261917442}
   - component: {fileID: 1261917443}
   m_Layer: 8
   m_Name: MapManager
@@ -406,43 +450,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bb5d8840ca541f1b0454de71edc94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 55
-  height: 45
-  unit: 0.5
+  width: 65
+  height: 65
+  unit: 6
   smoothness: 1
   pathRadius: 2
   seed: 
   useRandomSeed: 1
   mapGenerator: {fileID: 1261917446}
---- !u!114 &1261917442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261917439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  _destroyColliderCol: 5
+  _nextMapColliderCol: 60
+  _roadBlockCol: 3
+  _roadBlockHeight: 10
+  _colliderHeight: 10
+  _destroyCollider: {fileID: 5719259104502226948, guid: 100b23c9bcd0948c5a5eafdef8e5618f,
+    type: 3}
+  _nextMapCollider: {fileID: 6175044302971200455, guid: 49aba9d5142ec429091e5a9e36c4daa8,
+    type: 3}
+  _roadBlock: {fileID: 4134873573646573511, guid: f01951526860f4502aee0b7b1f8ff5c0,
+    type: 3}
+  _mapNumber: 0
 --- !u!114 &1261917443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 2769239617970803189, guid: 5c0e57b65282c41f7acd93ee74c66a10, type: 3}
-  halfExtend: 1
+  _halfExtend: 1
 --- !u!114 &1261917446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e75751aee4984a4b8e312301d05ace6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRow: 5
+  startRow: 7
   startCol: 1
   endCol: 9
   endRow: 3
@@ -631,7 +658,7 @@ PrefabInstance:
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.846142
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
@@ -641,7 +668,7 @@ PrefabInstance:
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
@@ -677,6 +704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247205917157253387, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4049925517926955027, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}

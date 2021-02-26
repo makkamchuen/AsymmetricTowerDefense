@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.LWRP;
 using Random = System.Random;
 
 public class ArticulationPoint : MapGenerator
@@ -16,6 +14,21 @@ public class ArticulationPoint : MapGenerator
     protected override void Start()
     {
         base.Start();
+    }
+
+    public override void SetStartRow(int row)
+    {
+        startRow = row / (1 + _mapManager.pathRadius * 2);
+    }
+    
+    public override Coordinate GetEndPoint()
+    {
+        return ScaledCoordinateToOriginal(new Coordinate(endCol, endRow));
+    }
+    
+    public override Coordinate GetStartPoint()
+    {
+        return ScaledCoordinateToOriginal(new Coordinate(startCol, startRow));
     }
 
     public override void GenerateMap(int width, int height, Random pseudoRandom)

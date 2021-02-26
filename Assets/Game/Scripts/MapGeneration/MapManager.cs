@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
-using Random = UnityEngine.Random;
+
 public class MapManager : MonoBehaviour 
 {
 
@@ -21,62 +18,164 @@ public class MapManager : MonoBehaviour
     public bool useRandomSeed;
 
     public MapGenerator mapGenerator;
+    [SerializeField] private int _destroyColliderCol;
+    [SerializeField] private int _nextMapColliderCol;
+    [SerializeField] private int _roadBlockCol;
+    [SerializeField] private int _roadBlockHeight;
 
     [HideInInspector] public int[,] map;
     private MeshGenerator meshGen;
     private RandomSprite _randomSprite;
-    // private GameObject _filler;
-    // private List<GameObject> _fillers;
-    // [SerializeField] private float _wallHeight;
+    [SerializeField] private float _colliderHeight;
     private NavMeshSurface _navMeshSurface;
-    
+    private PlaneBuilder _planeBuilder;
+    [SerializeField] private GameObject _destroyCollider;
+    [SerializeField] private GameObject _nextMapCollider;
+    [SerializeField] private GameObject _roadBlock;
+    private bool _nextMapBuilt = false;
+    private bool _roadBlockPlaced = false;
+    public int mapNumber = 0;
+    private MapManager _previousMap = null;
+    private bool _mapSetted = false;
+    private bool _mapBuilt = false;
+
     void Start()
+    {
+        GetComponents();
+        InitGameObjects();
+    }
+
+    private void GetComponents()
     {
         meshGen = GetComponent<MeshGenerator>();
         _randomSprite = GetComponent<RandomSprite>();
-        // InitFiller();
-        // _fillers = new List<GameObject>();
-        _navMeshSurface = GetComponent<NavMeshSurface>();
+        _planeBuilder = GetComponent<PlaneBuilder>();
+        _navMeshSurface = GetComponentInParent<NavMeshSurface>();
     }
 
-    // private void InitFiller()
-    // {
-    //     _filler = new GameObject {layer = 8};
-    //     _filler.AddComponent<BoxCollider>();
-    //     _filler.GetComponent<BoxCollider>().size = new Vector3(unit, _wallHeight, unit);
-    // }
+    public Vector3 GetExitPoint()
+    {
+        Coordinate exitPoint = mapGenerator.GetEndPoint();
+        return new Vector3((-width / 2 + exitPoint.tileX) * unit + transform.position.x, 0,
+            (-height / 2 + exitPoint.tileY) * unit + transform.position.z);
+    }
+
+    public int GetMapNumber()
+    {
+        return mapNumber;
+    }
+
+    public Vector3 GetSize()
+    {
+        return _planeBuilder.GetSize();
+    }
+
+    public void DestroyPreviousMap()
+    {
+        PlaceRoadBlock();
+        if (mapNumber != 0)
+        {
+            Destroy(_previousMap.gameObject);
+        }
+    }
+    
+    public void SetPreviousMap(MapManager previousMap)
+    {
+        _previousMap = previousMap;
+        mapNumber = previousMap.GetMapNumber() + 1;
+        _mapSetted = true;
+    }
+    
+    public void PlaceRoadBlock()
+    {
+        if (!_roadBlockPlaced)
+        {
+            _roadBlockPlaced = true;
+            GameObject newRoadBlock = Instantiate(
+                _roadBlock, 
+                new Vector3((-width/2 + _roadBlockCol) * unit + transform.position.x, 0, (-height/2 + mapGenerator.GetStartPoint().tileY) * unit + transform.position.z), 
+                Quaternion.identity, 
+                transform
+            );
+        }
+    }
+
+    private void InitGameObjects()
+    {
+        InitDestroyCollider();
+        InitNextMapCollider();
+        InitRoadBlock();
+    }
+
+    private void InitDestroyCollider()
+    {
+        BoxCollider boxCollider = _destroyCollider.GetComponent<BoxCollider>();
+        boxCollider.isTrigger = true;
+        boxCollider.size = new Vector3(unit, _colliderHeight, unit * height);
+    }
+
+    private void InitNextMapCollider()
+    {
+        BoxCollider boxCollider = _nextMapCollider.GetComponent<BoxCollider>();
+        boxCollider.isTrigger = true;
+        boxCollider.size = new Vector3(unit, _colliderHeight, unit * height);
+    }
+
+    private void InitRoadBlock()
+    {
+        NavMeshObstacle navMeshObstacle = _roadBlock.GetComponent<NavMeshObstacle>();
+        navMeshObstacle.carving = true;
+        navMeshObstacle.carveOnlyStationary = true;
+        navMeshObstacle.size = new Vector3(unit, _roadBlockHeight, unit * (pathRadius * 2 + 1));
+    }
+
+    private void PlaceColliders()
+    {
+        GameObject newDestroyCollider = Instantiate(
+            _destroyCollider, 
+            new Vector3((-width/2 + _destroyColliderCol) * unit + transform.position.x, 0,0), 
+            Quaternion.identity, 
+            transform
+        );
+        
+        GameObject newNextMapCollider = Instantiate(
+            _nextMapCollider, 
+            new Vector3((-width/2 + _nextMapColliderCol) * unit + transform.position.x, 0,0), 
+            Quaternion.identity, 
+            transform
+        );
+    }
 
     void Update() 
     {
-        if (Input.GetMouseButtonDown(0)) 
+        if (!_mapBuilt && (_mapSetted || mapNumber == 0))
         {
+            _mapBuilt = true;
             GenerateMap();
         }
     }
 
     public void GenerateMap()
     {
+        _planeBuilder.BuildPlane();
         if (useRandomSeed) 
         {
-            seed = Time.time.ToString();
+            seed = System.DateTime.Now.ToString();
         }
-        // DestroyColliders();
+
+        if (_previousMap != null)
+        {
+            mapGenerator.SetStartRow(_previousMap.mapGenerator.GetEndPoint().tileY);
+        }
         mapGenerator.GenerateMap(width, height, new System.Random(seed.GetHashCode()));
         for (int i = 0; i < smoothness; i += 1)
         {
             SmoothMap();
         }
         meshGen.GenerateMesh(GetInversedMap(), unit);
-        // SetUpColliders();
         _randomSprite.placeSprite();
-        if (_navMeshSurface.navMeshData == null)
-        {
-            _navMeshSurface.BuildNavMesh();
-        }
-        else
-        {
-            _navMeshSurface.UpdateNavMesh(_navMeshSurface.navMeshData);
-        }
+        RebakeNavMesh();
+        PlaceColliders();
     }
 
     private int[,] GetInversedMap()
@@ -94,7 +193,14 @@ public class MapManager : MonoBehaviour
 
     public void RebakeNavMesh()
     {
-        
+        if (_navMeshSurface.navMeshData == null)
+        {
+            _navMeshSurface.BuildNavMesh();
+        }
+        else
+        {
+            _navMeshSurface.UpdateNavMesh(_navMeshSurface.navMeshData);
+        }
     }
 
     // public void DestroyColliders()
@@ -281,9 +387,9 @@ public class MapManager : MonoBehaviour
             }
         }
     }
-
-    public void GatherRegion()
-    {
-        
-    }
+    
+    // public void GatherRegion()
+    // {
+    //     
+    // }
 }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 150
   healthRegenPerSecond: 3.5
-  movementSpeed: 2
+  movementSpeed: 200
   attackDamage: 10
