@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RandomSprite : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class RandomSprite : MonoBehaviour
                         if (element.CanPlace())
                         {
                             // Add random elements to element placement.
-                            Vector3 position = new Vector3((x / generalDensity + xOffset), 0f, (z / generalDensity + zOffset));
+                            Vector3 position = new Vector3((-(float)forestSizeX / 2 + x) / generalDensity + transform.position.x + xOffset, 0f, (-(float)forestSizeZ / 2 + z) / generalDensity + transform.position.z + zOffset);
                             Vector3 offset = new Vector3(Random.Range(-0.75f, 0.75f), 0f, Random.Range(-0.75f, 0.75f));
                             // Vector3 rotation = new Vector3(45f, Random.Range(0, 360f), Range(0, 1f));
                             Vector3 scale = transform.localScale * Random.Range(0.8f, 1.2f);

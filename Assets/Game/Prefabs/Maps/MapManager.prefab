@@ -160,8 +160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestSizeX: 75
   forestSizeZ: 60
-  xOffset: -10
-  zOffset: -12
+  xOffset: 0
+  zOffset: 0
   elementSpacing: 1
   generalDensity: 3
   elements:

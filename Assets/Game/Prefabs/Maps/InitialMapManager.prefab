@@ -68,8 +68,7 @@ MonoBehaviour:
     type: 3}
   _roadBlock: {fileID: 4134873573646573511, guid: f01951526860f4502aee0b7b1f8ff5c0,
     type: 3}
-  _mapNumber: 0
-  _self: {fileID: 6302854082131134944, guid: f68b411cd302f4948888e864e26e4510, type: 3}
+  mapNumber: 0
 --- !u!114 &3299534885468794042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,8 +160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestSizeX: 75
   forestSizeZ: 60
-  xOffset: -10
-  zOffset: -12
+  xOffset: 0
+  zOffset: 0
   elementSpacing: 1
   generalDensity: 3
   elements:

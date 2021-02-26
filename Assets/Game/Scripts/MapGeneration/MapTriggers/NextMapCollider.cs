@@ -24,7 +24,7 @@ public class NextMapCollider : MonoBehaviour
 
     private void BuildNextMap()
     {
-        if (_mapManager.mapNumber >= 4)
+        if (_mapManager.mapNumber >= 3)
         {
             return;
         }
