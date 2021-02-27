@@ -8,4 +8,6 @@ public class Stats : ScriptableObject
   public float healthRegenPerSecond;
   public float movementSpeed;
   public float attackDamage;
+  public int minRewardFromCorpse;
+  public int maxRewardFromCorpse;
 }

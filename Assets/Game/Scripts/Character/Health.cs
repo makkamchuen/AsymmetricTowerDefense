@@ -1,9 +1,12 @@
 using System;
+using Game.Scripts;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Health : ActorActionComponent
 {
   [SerializeField] GameObject hitEffect = null;
+  [SerializeField] private GameObject rewardAfterDeath;
   public bool healthBarFollowCharacter = true;
   public HealthBar healthBar;
 
@@ -57,8 +60,24 @@ public class Health : ActorActionComponent
       GetAnimator().SetBool(AnimationTrigger.dead, true);
       GetActor().GetCollider().enabled = false;
       GetActor().GetStatus().SetGameFinishStatus();
+      SpawnReward();
       _isDead = true;
     }
+  }
+
+  private void SpawnReward()
+  {
+    var baseStats = gameObject.GetComponent<Actor>().GetBaseStats();
+    if (baseStats.minRewardFromCorpse <= baseStats.maxRewardFromCorpse)
+    {
+      var rewardAmount = Random.Range(baseStats.minRewardFromCorpse, baseStats.maxRewardFromCorpse);
+      if (rewardAmount > 0)
+      {
+        GameObject reward = Instantiate(rewardAfterDeath, this.transform.position, Quaternion.identity);
+        reward.GetComponent<Reward>().Amount = rewardAmount;
+      }
+    }
+    
   }
 
   public float GetCurrentHealth()

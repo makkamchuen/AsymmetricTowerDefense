@@ -16,6 +16,7 @@ MonoBehaviour:
   attack: {fileID: 3085107734071753817}
   weapon: 
   faceRight: 0
+  flee: {fileID: 0}
   sights:
   - {fileID: 11400000, guid: cfdb4bf58b11a4aacb02699f14c6933c, type: 2}
   _patrolPattern: {fileID: 11400000, guid: 991b1bce8ca1b40cbb4d740a2fdb739d, type: 2}
@@ -70,6 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 0}
+  rewardAfterDeath: {fileID: 2199941390386381538, guid: 572367d66605fd14e91eb9151819d9cf,
+    type: 3}
   healthBarFollowCharacter: 1
   healthBar: {fileID: 126746027211648495}
 --- !u!114 &8220241514419659115
