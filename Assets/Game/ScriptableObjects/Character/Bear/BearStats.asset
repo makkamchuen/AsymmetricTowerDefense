@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d497aef48a924ef885e53ce6794bb99, type: 3}
   m_Name: BearStats
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 50
   healthRegenPerSecond: 2
   movementSpeed: 2
   attackDamage: 10

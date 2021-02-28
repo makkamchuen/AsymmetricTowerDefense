@@ -8,6 +8,8 @@ TagManager:
   - Treasure
   - StartButton
   - Obstacles
+  - Environment
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Game/Scenes/newgame/ProcedureGen.meta
 guid: 82a6b30b104c441119c6450a15932891
+=======
+guid: e476c69f1912a81419627ec7457fd3ff
+>>>>>>> dev:Assets/Game/ScriptableObjects/Spawn by Shortcut.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

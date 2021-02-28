@@ -15,8 +15,9 @@ public class ShootSkillData : SkillData
     _projectiles = _gameObject.GetComponent<Projectiles>();
   }
 
-  public override void Cast(Actor user, Vector3 destination)
+  public override void Cast(Actor user)
   {
+    var destination = user.GetComponent<AI>().GetTargetActor().transform.position;
     GameObject gameObject = Instantiate(_gameObject, user.transform.position, Quaternion.identity);
     Projectiles projectiles = gameObject.GetComponent<Projectiles>();
     projectiles.InitDirection((destination - user.transform.position).normalized);

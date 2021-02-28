@@ -32,7 +32,7 @@ AnimationClip:
       value: {fileID: 6905022669238604290, guid: e26c21ef0bc8e5e458bfc5ea381d59be,
         type: 3}
     - time: 0.33333334
-      value: {fileID: -8855172625600596557, guid: e26c21ef0bc8e5e458bfc5ea381d59be,
+      value: {fileID: -4532718976051390389, guid: e26c21ef0bc8e5e458bfc5ea381d59be,
         type: 3}
     - time: 0.41666666
       value: {fileID: 926661701970893639, guid: e26c21ef0bc8e5e458bfc5ea381d59be,
@@ -63,7 +63,7 @@ AnimationClip:
     - {fileID: -3133328796515831295, guid: e26c21ef0bc8e5e458bfc5ea381d59be, type: 3}
     - {fileID: 3182263702415513826, guid: e26c21ef0bc8e5e458bfc5ea381d59be, type: 3}
     - {fileID: 6905022669238604290, guid: e26c21ef0bc8e5e458bfc5ea381d59be, type: 3}
-    - {fileID: -8855172625600596557, guid: e26c21ef0bc8e5e458bfc5ea381d59be, type: 3}
+    - {fileID: -4532718976051390389, guid: e26c21ef0bc8e5e458bfc5ea381d59be, type: 3}
     - {fileID: 926661701970893639, guid: e26c21ef0bc8e5e458bfc5ea381d59be, type: 3}
     - {fileID: 3393654371058876887, guid: e26c21ef0bc8e5e458bfc5ea381d59be, type: 3}
   m_AnimationClipSettings:
@@ -90,4 +90,12 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.16666667
+    functionName: CastSkill
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 3520cd1ca6e94a84b988edcdea83c164,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

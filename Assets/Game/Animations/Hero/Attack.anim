@@ -95,3 +95,11 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.33333334
+    functionName: CastSkill
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 3520cd1ca6e94a84b988edcdea83c164,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

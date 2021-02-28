@@ -20,3 +20,6 @@ MonoBehaviour:
     - Player
   hitBoxHeight: 0.5
   hitBoxWidth: 0.5
+  hitEffect: {fileID: 4197748529095861617, guid: a64d0081f60b343438507e9613e59c6a,
+    type: 3}
+  hitSound: event:/SFX/WeaponImpact/SwordImpact
