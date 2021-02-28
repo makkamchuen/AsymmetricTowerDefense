@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class MapGenerator: MonoBehaviour
@@ -17,4 +15,19 @@ public abstract class MapGenerator: MonoBehaviour
     }
 
     public abstract void GenerateMap(int width, int height, System.Random pseudoRandom);
+
+    public virtual void SetStartRow(int row)
+    {
+        throw new NotImplementedException();
+    }
+    
+    public virtual Coordinate GetEndPoint()
+    {
+        throw new NotImplementedException();
+    }
+    
+    public virtual Coordinate GetStartPoint()
+    {
+        throw new NotImplementedException();
+    }
 }

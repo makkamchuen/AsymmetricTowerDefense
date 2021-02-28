@@ -1,18 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlaneBuilder : MonoBehaviour
 {
     [SerializeField] private GameObject plane;
-    [SerializeField] private int halfExtend;
-    
-    void Start()
+    [SerializeField] private int _halfExtend;
+    private Vector3 size;
+
+    private void Start()
     {
-        Vector3 size = plane.GetComponentInChildren<SpriteRenderer>().bounds.size;
-        for (float x = -size.x * halfExtend; x <= size.x * halfExtend; x += size.x)
+        size = plane.GetComponentInChildren<SpriteRenderer>().bounds.size;
+    }
+
+    public Vector3 GetSize()
+    {
+        return new Vector3(size.x * (_halfExtend * 2 + 1), 0, size.y * (_halfExtend * 2 + 1));
+    }
+
+    public void BuildPlane()
+    {
+        for (float x = -size.x * _halfExtend; x <= size.x * _halfExtend; x += size.x)
         {
-            for (float z = -size.z * halfExtend; z <= size.z * halfExtend; z += size.z)
+            for (float z = -size.z * _halfExtend; z <= size.z * _halfExtend; z += size.z)
             {
                 GameObject newPlane = Instantiate(plane, transform.position + new Vector3(x, 0, z), Quaternion.identity);
                 newPlane.transform.SetParent(transform);
