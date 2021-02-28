@@ -82,15 +82,8 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (hit.collider.CompareTag($"Treasure"))
-        {
-            _target.IncrementTreasureCollected();
-            PoolManager.Despawn(hit.collider.gameObject);
-        }
-        else
-        {
-            MoveTo(hit.point);
-        }
+        MoveTo(hit.point);
+
     }
 
     private void MoveTo(Vector3 position)

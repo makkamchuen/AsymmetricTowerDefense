@@ -6631,10 +6631,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e5f35318ae403eb4f99827f5cffe64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treasurePrefab: {fileID: 2199941390386381538, guid: 572367d66605fd14e91eb9151819d9cf,
-    type: 3}
-  numOfTotalTreasures: 5
-  treasureText: {fileID: 2038719452}
+  treasurePrefab: {fileID: 0}
+  rewardReqToWin: 40
+  rewardText: {fileID: 2038719452}
   player: {fileID: 660858896}
   gameStatusDisplay: {fileID: 162929651}
   gameStatusText: {fileID: 1085923504}
@@ -7413,8 +7412,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.73, y: -0.23}
-  m_SizeDelta: {x: 79.637375, y: 19.53778}
+  m_AnchoredPosition: {x: 10.4, y: -1.6}
+  m_SizeDelta: {x: 150.63737, y: 19.53778}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038719452
 MonoBehaviour:
@@ -7891,7 +7890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27.9, y: 0.6}
+  m_AnchoredPosition: {x: -64.5, y: -0.7}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4072313516561134910
@@ -7913,7 +7912,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300004, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
+  m_Sprite: {fileID: -8851566310641887263, guid: 7810966f0f690954c87305933cabf2b0,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

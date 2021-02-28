@@ -11,8 +11,8 @@ namespace Game.Scripts
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private GameObject treasurePrefab;
-        [SerializeField] private int numOfTotalTreasures;
-        [SerializeField] private TMP_Text treasureText;
+        [SerializeField] private int rewardReqToWin;
+        [SerializeField] private TMP_Text rewardText;
         [SerializeField] private Player player;
         [SerializeField] private GameObject gameStatusDisplay;
         [SerializeField] private TMP_Text gameStatusText;
@@ -24,7 +24,6 @@ namespace Game.Scripts
         {
             cooldown = new float[spawnContents.Length];
             player.gameObject.SetActive(true);
-            SpawnTreasure();
             playAgainButton.onClick.AddListener(StartGame);
             timer = GameObject.Find("Timer").GetComponent(typeof(Timer)) as Timer;
             timer.CountCompleted += () =>
@@ -33,18 +32,11 @@ namespace Game.Scripts
             };
         }
 
-        private void SpawnTreasure()
-        {
-            for (int i = 0; i < Math.Floor(numOfTotalTreasures * 1.5); i++)
-            {
-                PoolManager.Spawn(treasurePrefab, Utils.GetTreasureRandomPoint());
-            }
-        }
 
         private void Update()
         {
-            treasureText.SetText(player.GetNumOfTreasureCollected() + " / " + numOfTotalTreasures);
-            if (player.GetNumOfTreasureCollected() >= numOfTotalTreasures)
+            rewardText.SetText(player.GetRewardAmountCollected() + " / " + rewardReqToWin);
+            if (player.GetRewardAmountCollected() >= rewardReqToWin)
             {
                 EndGame("Victory!");
             }

@@ -6,13 +6,13 @@ public class Player : Actor
 {
     private Mover _mover;
     private Skill[] _skills;
-    private int _numOfTreasureCollected;
+    private int _rewardAmountCollected;
     
     protected override void Start()
     {
         base.Start();
         _mover = GetComponent<Mover>();
-        _numOfTreasureCollected = 0;
+        _rewardAmountCollected = 0;
     }
 
     public Mover GetMover()
@@ -20,18 +20,18 @@ public class Player : Actor
         return _mover;
     }
     
-    public void IncrementTreasureCollected()
+    public void IncrementRewardCollected(int amount)
     {
-        _numOfTreasureCollected += 1;
+        _rewardAmountCollected += amount;
     }
     
-    public void ResetTreasureCollected()
+    public void ResetRewardAmountCollected()
     {
-        _numOfTreasureCollected = 0;
+        _rewardAmountCollected = 0;
     }
 
-    public int GetNumOfTreasureCollected()
+    public int GetRewardAmountCollected()
     {
-        return _numOfTreasureCollected;
+        return _rewardAmountCollected;
     }
 }

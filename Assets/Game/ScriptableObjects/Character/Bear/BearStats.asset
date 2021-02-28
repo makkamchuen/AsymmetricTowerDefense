@@ -16,3 +16,5 @@ MonoBehaviour:
   healthRegenPerSecond: 2
   movementSpeed: 2
   attackDamage: 10
+  minRewardFromCorpse: 1
+  maxRewardFromCorpse: 2
