@@ -45,7 +45,7 @@ public class Skill: ActorActionComponent
     GetAnimator().SetTrigger(AnimationTrigger.attack);
     GetActor().SetIsFacingRight(destination.x > transform.position.x);
     GetActionScheduler().StartAction(this);
-    _cooldown = skillDataToUse.GetCoolDown();
+    _cooldown = skillDataToUse.GetCooldown();
   }
 
   public bool CanHit(Actor target)

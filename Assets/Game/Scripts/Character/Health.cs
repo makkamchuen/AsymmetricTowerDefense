@@ -21,7 +21,7 @@ public class Health : ActorActionComponent
   protected override void Start()
   {
     base.Start();
-    _currentHealth = GetActor().GetBaseStats().maxHealth;
+    _currentHealth = GetActor().GetBaseStats().MaxHealth;
     SetMaxHealth();
     _isDead = false;
   }
@@ -38,8 +38,8 @@ public class Health : ActorActionComponent
     {
       return;
     }
-    _currentHealth += GetActor().GetBaseStats().healthRegenPerSecond;
-    _currentHealth = Math.Min(_currentHealth, GetActor().GetBaseStats().maxHealth);
+    _currentHealth += GetActor().GetBaseStats().HealthRegenPerSecond;
+    _currentHealth = Math.Min(_currentHealth, GetActor().GetBaseStats().MaxHealth);
     UpdateHealthBar();
   }
 
@@ -68,9 +68,9 @@ public class Health : ActorActionComponent
   private void SpawnReward()
   {
     var baseStats = gameObject.GetComponent<Actor>().GetBaseStats();
-    if (baseStats.minRewardFromCorpse <= baseStats.maxRewardFromCorpse)
+    if (baseStats.MinRewardFromCorpse <= baseStats.MaxRewardFromCorpse)
     {
-      var rewardAmount = Random.Range(baseStats.minRewardFromCorpse, baseStats.maxRewardFromCorpse);
+      var rewardAmount = Random.Range(baseStats.MinRewardFromCorpse, baseStats.MaxRewardFromCorpse);
       if (rewardAmount > 0)
       {
         GameObject reward = Instantiate(rewardAfterDeath, this.transform.position, Quaternion.identity);
@@ -107,7 +107,7 @@ public class Health : ActorActionComponent
   {
     if (healthBar)
     {
-      healthBar.SetMaxHealth(GetActor().GetBaseStats().maxHealth);
+      healthBar.SetMaxHealth(GetActor().GetBaseStats().MaxHealth);
     }
   }
 }

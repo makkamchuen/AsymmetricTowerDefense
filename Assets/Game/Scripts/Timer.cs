@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.Assertions.Comparers;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public int startTimeInSecs;
+    [SerializeField] private int startTimeInSecs;
     private float timeRemaining;
     private bool timerIsRunning = false;
     private FMODUnity.StudioEventEmitter fmodEvent;
     private bool stopTimer = false;
+
+    public int StartTimeInSecs => startTimeInSecs;
+
+    public int TimeRemainingInSec => Convert.ToInt32(timeRemaining);
 
     private Text timerDisplay;
     private void Start()

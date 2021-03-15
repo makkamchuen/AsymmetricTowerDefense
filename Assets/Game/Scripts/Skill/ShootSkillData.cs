@@ -1,13 +1,16 @@
 using System;
+using System.Collections.Generic;
+using Cinemachine;
 using Game.Scripts;
 using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu (menuName = "Skill/Shoot")]
-public class ShootSkillData : SkillData
+public class ShootSkillData : AttackSkillData
 {
   [SerializeField] private GameObject _gameObject;
-  [SerializeField] private AttackInfo _attackInfo;
+  
+
   private Projectiles _projectiles;
 
   private void OnEnable()
@@ -21,8 +24,8 @@ public class ShootSkillData : SkillData
     GameObject gameObject = Instantiate(_gameObject, user.transform.position, Quaternion.identity);
     Projectiles projectiles = gameObject.GetComponent<Projectiles>();
     projectiles.InitDirection((destination - user.transform.position).normalized);
-    projectiles.SetTargets(_attackInfo.GetTargetSet());
-    projectiles.AddDamage(user.GetBaseStats().attackDamage + _attackInfo.GetDamage());
+    projectiles.SetTargets(GetTargetSet());
+    projectiles.AddDamage(user.GetBaseStats().AttackDamage + GetDamage());
   }
 
   public override bool CanApply(Actor user, Actor targetActor)

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Xml;
 using Microsoft.Win32.SafeHandles;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace Game.Scripts
 {
     public class GameManager : MonoBehaviour
     {
+        public static int currentLevel = 1;
         [SerializeField] private GameObject treasurePrefab;
         [SerializeField] private int rewardReqToWin;
         [SerializeField] private TMP_Text rewardText;
@@ -35,6 +37,9 @@ namespace Game.Scripts
 
         private void Update()
         {
+            currentLevel = timer.StartTimeInSecs - timer.TimeRemainingInSec + 1;
+            if (currentLevel > 100) currentLevel = 100; 
+            
             rewardText.SetText(player.GetRewardAmountCollected() + " / " + rewardReqToWin);
             if (player.GetRewardAmountCollected() >= rewardReqToWin)
             {

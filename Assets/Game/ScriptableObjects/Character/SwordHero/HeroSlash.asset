@@ -12,14 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9633cfe46c4ee0814b533f0bf5b0ac, type: 3}
   m_Name: HeroSlash
   m_EditorClassIdentifier: 
-  _cooldown: 0.5
-  _channelTime: 0.15
-  attackInfo:
-    damage: 0
-    _targetTags:
-    - Minion
-  hitBoxHeight: 0.5
-  hitBoxWidth: 0.5
+  skillDataAtLevel:
+  - level: 1
+    damage: 10
+    cooldown: 0.5
+  - level: 100
+    damage: 10
+    cooldown: 0.5
+  _targetTags:
+  - Minion
   hitEffect: {fileID: 4197748529095861617, guid: a64d0081f60b343438507e9613e59c6a,
     type: 3}
   hitSound: event:/SFX/WeaponImpact/SwordImpact
+  hitBoxHeight: 0.5
+  hitBoxWidth: 0.5

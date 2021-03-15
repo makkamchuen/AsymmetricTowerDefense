@@ -12,9 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d497aef48a924ef885e53ce6794bb99, type: 3}
   m_Name: TowerStats
   m_EditorClassIdentifier: 
-  maxHealth: 30
-  healthRegenPerSecond: 1
-  movementSpeed: 0
-  attackDamage: 5
-  minRewardFromCorpse: 2
-  maxRewardFromCorpse: 5
+  statsAtLevels:
+  - level: 1
+    maxHealth: 30
+    healthRegenPerSecond: 1
+    movementSpeed: 0
+    attackDamage: 5
+    minRewardFromCorpse: 2
+    maxRewardFromCorpse: 5
+  - level: 100
+    maxHealth: 60
+    healthRegenPerSecond: 2
+    movementSpeed: 0
+    attackDamage: 10
+    minRewardFromCorpse: 4
+    maxRewardFromCorpse: 10

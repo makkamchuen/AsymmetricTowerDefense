@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d497aef48a924ef885e53ce6794bb99, type: 3}
   m_Name: HeroStats
   m_EditorClassIdentifier: 
-  maxHealth: 150
-  healthRegenPerSecond: 5
-  movementSpeed: 2
-  attackDamage: 13
+  statsAtLevels:
+  - level: 1
+    maxHealth: 150
+    healthRegenPerSecond: 5
+    movementSpeed: 2
+    attackDamage: 13
+    minRewardFromCorpse: 0
+    maxRewardFromCorpse: 0
+  - level: 100
+    maxHealth: 150
+    healthRegenPerSecond: 5
+    movementSpeed: 2
+    attackDamage: 13
+    minRewardFromCorpse: 0
+    maxRewardFromCorpse: 0
