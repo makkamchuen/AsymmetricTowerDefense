@@ -12,9 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d497aef48a924ef885e53ce6794bb99, type: 3}
   m_Name: ThanatosStats
   m_EditorClassIdentifier: 
-  maxHealth: 30
-  healthRegenPerSecond: 0
-  movementSpeed: 1.5
-  attackDamage: 15
-  minRewardFromCorpse: 4
-  maxRewardFromCorpse: 7
+  statsAtLevels:
+  - level: 1
+    maxHealth: 30
+    healthRegenPerSecond: 0
+    movementSpeed: 1.5
+    attackDamage: 15
+    minRewardFromCorpse: 4
+    maxRewardFromCorpse: 7
+  - level: 100
+    maxHealth: 60
+    healthRegenPerSecond: 0
+    movementSpeed: 3
+    attackDamage: 30
+    minRewardFromCorpse: 8
+    maxRewardFromCorpse: 14

@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebacb745a1be425a85f141a5a4d0bbdb, type: 3}
   m_Name: TowerSkill
   m_EditorClassIdentifier: 
-  _cooldown: 1.5
-  _channelTime: 0.01
   _gameObject: {fileID: 8356662070351016534, guid: c36c38d9a7faf4fc190cd694385bc986,
     type: 3}
-  _attackInfo:
+  skillDataAtLevel:
+  - level: 1
     damage: 5
-    _targetTags:
-    - Player
+    cooldown: 1.5
+  - level: 100
+    damage: 10
+    cooldown: 0.75
+  _targetTags:
+  - Player

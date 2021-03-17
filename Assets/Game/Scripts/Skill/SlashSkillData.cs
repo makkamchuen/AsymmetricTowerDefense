@@ -1,17 +1,17 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Cinemachine;
+using Game.Scripts;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Skill/Slash")]
-public class SlashSkillData : SkillData
+public class SlashSkillData : AttackSkillData
 {
-  public AttackInfo attackInfo;
+
   public float hitBoxHeight;
   public float hitBoxWidth;
-
-  [SerializeField] GameObject hitEffect = null;
-  [SerializeField][FMODUnity.EventRef] string hitSound;
-
+  
   public override void Cast(Actor user)
   {
     float xOffset = hitBoxWidth / 2;
@@ -20,11 +20,11 @@ public class SlashSkillData : SkillData
       new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
     foreach (Collider collider in colliders)
     {
-      if (!attackInfo.IsTarget(collider.tag))
+      if (!IsTarget(collider.tag))
       {
         continue;
       }
-      collider.GetComponent<Health>().Hit(attackInfo.GetDamage() + user.GetBaseStats().attackDamage, hitEffect, hitSound);
+      collider.GetComponent<Health>().Hit(GetDamage() + user.GetBaseStats().AttackDamage, hitEffect, hitSound);
     }
   }
 
