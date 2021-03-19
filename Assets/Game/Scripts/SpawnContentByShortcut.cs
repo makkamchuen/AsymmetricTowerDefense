@@ -10,6 +10,7 @@ namespace Game.Scripts
         [SerializeField][FMODUnity.EventRef] private string spawnSound;
         [SerializeField] private string shortcut;
         [SerializeField] private GameObject prefab;
+        [SerializeField] private int rewardCost = 1;
         private Texture2D cursor;
 
         public Texture2D Cursor
@@ -26,5 +27,6 @@ namespace Game.Scripts
         public string Shortcut => shortcut;
         public GameObject Prefab => prefab;
 
+        public int RewardCost => rewardCost;
     }
 }

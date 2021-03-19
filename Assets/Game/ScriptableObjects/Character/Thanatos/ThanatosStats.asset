@@ -17,13 +17,13 @@ MonoBehaviour:
     maxHealth: 30
     healthRegenPerSecond: 0
     movementSpeed: 1.5
-    attackDamage: 15
+    attackDamage: 1
     minRewardFromCorpse: 4
     maxRewardFromCorpse: 7
   - level: 100
     maxHealth: 60
     healthRegenPerSecond: 0
     movementSpeed: 3
-    attackDamage: 30
+    attackDamage: 1
     minRewardFromCorpse: 8
     maxRewardFromCorpse: 14
