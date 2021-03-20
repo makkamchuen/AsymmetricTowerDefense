@@ -25,6 +25,12 @@ public class Player : Actor
         _rewardAmountCollected += amount;
     }
     
+    public void DecrementRewardCollected(int amount)
+    {
+        _rewardAmountCollected -= amount;
+    }
+
+    
     public void ResetRewardAmountCollected()
     {
         _rewardAmountCollected = 0;

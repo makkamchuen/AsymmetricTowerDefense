@@ -10,12 +10,6 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(menuName = "Character/Stats"), Serializable]
 public class Stats : ScriptableObject
 {
-  private float maxHealth;
-  private float healthRegenPerSecond;
-  private float movementSpeed;
-  private float attackDamage;
-  private int minRewardFromCorpse;
-  private int maxRewardFromCorpse;
   [SerializeField] private StatsAtLevel[] statsAtLevels;
 
   public float MaxHealth => this.CurrentStats.MaxHealth;
@@ -84,6 +78,8 @@ public class StatsAtLevel
     this.healthRegenPerSecond = healthRegenPerSecond;
     this.movementSpeed = movementSpeed;
     this.attackDamage = attackDamage;
+    this.minRewardFromCorpse = minRewardFromCorpse;
+    this.maxRewardFromCorpse = maxRewardFromCorpse;
   }
 
   public int Level => level;

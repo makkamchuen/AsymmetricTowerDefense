@@ -17,13 +17,13 @@ MonoBehaviour:
     damage: 1
     cooldown: 1
   - level: 30
-    damage: 30
+    damage: 1
     cooldown: 1
   - level: 50
-    damage: 80
+    damage: 1
     cooldown: 1
   - level: 100
-    damage: 100
+    damage: 1
     cooldown: 1
   _targetTags:
   - Player
