@@ -12,6 +12,6 @@ public class AttackAction : Action
 
   private void Attack(AI ai)
   {
-    ai.GetAttackSkill().PlayAttackAnimation(ai.GetTargetActor().transform.position);
+    ai.Skill.PlayAttackAnimation(ai.GetTargetActor().transform.position);
   }
 }

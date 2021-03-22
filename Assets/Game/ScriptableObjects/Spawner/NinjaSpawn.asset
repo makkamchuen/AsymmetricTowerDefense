@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c62d2ca45e34fe093b742d85904663, type: 3}
   m_Name: NinjaSpawn
   m_EditorClassIdentifier: 
-  _cooldown: 5
-  _channelTime: 0.1
+  _flyOrGround: -1
+  _targetTags:
+  - Player
   _gameObject: {fileID: 3898241103061954999, guid: 17b71caa6f848b54eaff79d3ca85a463,
     type: 3}
-  spawnSize: 3
   reachableDistance: 3
+  minDistToTarget: 0
+  maxDistToTarget: 0
+  skillDataAtLevel: []

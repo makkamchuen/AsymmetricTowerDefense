@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c62d2ca45e34fe093b742d85904663, type: 3}
   m_Name: BearSpawn
   m_EditorClassIdentifier: 
-  _cooldown: 2
-  _channelTime: 0.1
+  _flyOrGround: -1
+  _targetTags:
+  - Player
   _gameObject: {fileID: 8174531637764744893, guid: f4061a10a6672e146a8f2ceb90b33c3b,
     type: 3}
-  maxNumOfCast: 3
   reachableDistance: 3
+  minDistToTarget: 0
+  maxDistToTarget: 0
+  skillDataAtLevel: []

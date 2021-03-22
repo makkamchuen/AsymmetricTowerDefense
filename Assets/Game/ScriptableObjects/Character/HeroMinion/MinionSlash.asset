@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9633cfe46c4ee0814b533f0bf5b0ac, type: 3}
   m_Name: MinionSlash
   m_EditorClassIdentifier: 
-  _cooldown: 2
-  _channelTime: 0.3
-  attackInfo:
-    damage: 10
-    _targetTags:
-    - Player
+  _flyOrGround: -1
+  skillDataAtLevel: []
+  _targetTags: []
+  hitEffect: {fileID: 0}
+  hitSound: 
   hitBoxHeight: 0.5
   hitBoxWidth: 0.5

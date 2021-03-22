@@ -8,7 +8,6 @@ using UnityEngine;
 public abstract class AttackSkillData : SkillData
 {
   [SerializeField] protected SkillDataAtLevel[] skillDataAtLevel;
-  [TagField, SerializeField] protected string[] _targetTags;
   [SerializeField] protected GameObject hitEffect = null;
   [SerializeField][FMODUnity.EventRef] protected string hitSound;
 
@@ -52,28 +51,11 @@ public abstract class AttackSkillData : SkillData
   {
     return this.CurrentSkillData.Damage;
   }
-  
+
+
   public override float GetCooldown()
   {
     return this.CurrentSkillData.Cooldown;
   }
-
-  public bool IsTarget(string tag)
-  {
-    return Array.IndexOf(_targetTags, tag) > -1;
-  }
-
-  public HashSet<string> GetTargetSet()
-  {
-    HashSet<string> tagSet = new HashSet<string>();
-    foreach (string tag in _targetTags)
-    {
-      tagSet.Add(tag);
-    }
-
-    return tagSet;
-  }
-
-
-
+  
 }

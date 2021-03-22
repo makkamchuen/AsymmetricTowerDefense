@@ -20,7 +20,7 @@ public class SlashSkillData : AttackSkillData
       new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
     foreach (Collider collider in colliders)
     {
-      if (!IsTarget(collider.tag))
+      if (!IsTarget(collider.tag) || !CanTakeDownTarget(collider.GetComponent<Actor>()))
       {
         continue;
       }
@@ -30,6 +30,8 @@ public class SlashSkillData : AttackSkillData
 
   public override bool CanApply(Actor user, Actor targetActor)
   {
+    if (!CanTakeDownTarget(targetActor) || !IsTarget(targetActor.tag)) return false;
+
     float xOffset = hitBoxWidth / 2;
     Collider[] colliders = Physics.OverlapBox(
       user.transform.position + new Vector3(user.GetSpriteRender().flipX? xOffset * -1 : xOffset, 0, 0),

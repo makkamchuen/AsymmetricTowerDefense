@@ -111,5 +111,7 @@ public class Skill: ActorActionComponent
 
   }
 
+  public SkillData[] SkillDatas => skillDatas;
+
 }
 

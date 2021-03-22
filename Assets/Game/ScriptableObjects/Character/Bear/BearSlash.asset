@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9633cfe46c4ee0814b533f0bf5b0ac, type: 3}
   m_Name: BearSlash
   m_EditorClassIdentifier: 
+  _flyOrGround: -1
   skillDataAtLevel:
   - level: 1
     damage: 10
@@ -21,8 +22,8 @@ MonoBehaviour:
     cooldown: 1
   _targetTags:
   - Player
-  hitBoxHeight: 0.25
-  hitBoxWidth: 0.3
   hitEffect: {fileID: 4538413630352692415, guid: 674b247803e50594aa6d9789701ab81c,
     type: 3}
   hitSound: 
+  hitBoxHeight: 0.25
+  hitBoxWidth: 0.3

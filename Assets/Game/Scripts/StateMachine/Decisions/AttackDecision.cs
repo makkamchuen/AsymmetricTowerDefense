@@ -10,6 +10,6 @@ public class AttackDecision : Decision {
 
   private bool CanAttack(AI ai)
   {
-    return ai.GetAttackSkill().CanHit(ai.GetTargetActor());
+    return ai.Skill.CanHit(ai.GetTargetActor());
   }
 }

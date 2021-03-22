@@ -25,11 +25,14 @@ public class ShootSkillData : AttackSkillData
     Projectiles projectiles = gameObject.GetComponent<Projectiles>();
     projectiles.InitDirection((destination - user.transform.position).normalized);
     projectiles.SetTargets(GetTargetSet());
+    projectiles.SetFlyOrGround(_flyOrGround);
     projectiles.AddDamage(user.GetBaseStats().AttackDamage + GetDamage());
   }
 
   public override bool CanApply(Actor user, Actor targetActor)
   {
+    if (!CanTakeDownTarget(targetActor) || !IsTarget(targetActor.tag)) return false;
+
     var distance = Vector3.Distance(user.transform.position, targetActor.transform.position) + 1;
     return distance <= _projectiles.GetMaxDistance() && distance >= _projectiles.GetMinDistance();
   }

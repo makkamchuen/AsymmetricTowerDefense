@@ -12,6 +12,6 @@ public class FleeDecision : Decision {
   {
     var enemy = controller.target.GetTargetActor();
     var character = controller.target;
-    return !character.GetAttackSkill().CanHit(enemy) && character.GetAttackSkill().IsTooCloseToHit(character, enemy);
+    return !character.Skill.CanHit(enemy) && character.Skill.IsTooCloseToHit(character, enemy);
   }
 }

@@ -19,6 +19,7 @@ public class Stats : ScriptableObject
   public int MinRewardFromCorpse => this.CurrentStats.MinRewardFromCorpse;
   public int MaxRewardFromCorpse => this.CurrentStats.MaxRewardFromCorpse;
   private SortedDictionary<int, StatsAtLevel> statsLevelDictionary;
+  public FlyOrGround FlyOrGround = FlyOrGround.Ground;
 
   public StatsAtLevel CurrentStats
   {
