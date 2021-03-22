@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        _target.GetAttackSkill().PlayAttackAnimation(hit.point);
+        _target.Skill.PlayAttackAnimation(hit.point);
     }
 
     // private void CheckOnMobileTouch()

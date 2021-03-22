@@ -8,33 +8,25 @@ public class Sight: ScriptableObject
 {
   [SerializeField] private float radius;
   [SerializeField] private Priority priority;
-  [TagField, SerializeField] private string[] targetTags;
 
   public bool SearchTarget(AI ai)
   {
+    var skillDatas = ai.Skill.SkillDatas;
     bool found = false;
     bool sameTag = false;
     Collider[] colliders = Physics.OverlapSphere(ai.transform.position, radius);
     foreach (Collider collider in colliders)
     {
-      foreach (string tag in targetTags)
+      foreach (var skillData in skillDatas)
       {
-        if (collider.CompareTag(tag))
+        if (!skillData.IsTarget(collider.tag)) continue;
+        
+        Actor target = collider.GetComponent<Actor>();
+        if (ai.GetTargetActor() == ai || priority.Compare(ai, ai.GetTargetActor(), target))
         {
-          sameTag = true;
-          break;
+          ai.SetTargetActor(target);
+          found = true;
         }
-      }
-      if (!sameTag)
-      {
-        continue;
-      }
-      sameTag = false;
-      Actor target = collider.GetComponent<Actor>();
-      if (ai.GetTargetActor() == ai || priority.Compare(ai, ai.GetTargetActor(), target))
-      {
-        ai.SetTargetActor(target);
-        found = true;
       }
     }
     if (!found)

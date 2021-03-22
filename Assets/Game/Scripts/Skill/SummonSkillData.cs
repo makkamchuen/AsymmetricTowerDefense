@@ -60,6 +60,8 @@ public class SummonSkillData : SkillData, IMaxCastApply
 
     public override bool CanApply(Actor user, Actor targetActor)
     {
+        if (!CanTakeDownTarget(targetActor) || !IsTarget(targetActor.tag)) return false;
+
         return Vector3.Distance(user.transform.position, targetActor.transform.position) <= reachableDistance - 1;
     }
 

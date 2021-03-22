@@ -27,10 +27,7 @@ public class Actor : MonoBehaviour
     RestrictRotation();
   }
 
-  public Skill GetAttackSkill()
-  {
-    return attack;
-  }
+  public Skill Skill => attack;
 
   public Flee GetFlee()
   {

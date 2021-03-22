@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9633cfe46c4ee0814b533f0bf5b0ac, type: 3}
   m_Name: HeroSlash
   m_EditorClassIdentifier: 
+  _flyOrGround: -1
   skillDataAtLevel:
   - level: 1
     damage: 10
