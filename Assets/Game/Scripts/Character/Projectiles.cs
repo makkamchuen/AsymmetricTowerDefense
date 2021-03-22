@@ -20,6 +20,7 @@ public class Projectiles : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Vector3 direction;
     private HashSet<string> _targetTags;
+    private FlyOrGround _flyOrGround;
     private bool _isFacingRight = false;
 
     private void Start()
@@ -54,6 +55,11 @@ public class Projectiles : MonoBehaviour
     public void SetTargets(HashSet<string> targetTags)
     {
         _targetTags = targetTags;
+    }
+
+    public void SetFlyOrGround(FlyOrGround flyOrGround)
+    {
+        _flyOrGround = flyOrGround;
     }
     //
     // void initDirection(float x, float y, float z)
@@ -93,7 +99,7 @@ public class Projectiles : MonoBehaviour
         if (_targetTags.Contains(other.tag))
         {
             Actor otherActor = other.GetComponent<Actor>();
-            if (otherActor != null && !otherActor.GetHealth().GetIsDead())
+            if (otherActor != null && ((int) otherActor.GetBaseStats().FlyOrGround & (int) _flyOrGround) != 0 && !otherActor.GetHealth().GetIsDead())
             {
                 otherActor.GetHealth().Hit(damage, hitEffect, hitSound);
                 Destroy(this.gameObject);
