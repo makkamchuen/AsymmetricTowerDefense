@@ -33,6 +33,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillDatas:
+  - {fileID: 11400000, guid: 1b32d25af6c484308ae42f0cd22c8efa, type: 2}
   - {fileID: 11400000, guid: abfa271c26f674844b45e7ebc416757c, type: 2}
 --- !u!114 &4619298398501387367
 MonoBehaviour:
@@ -132,6 +133,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
+      propertyPath: m_Color.b
+      value: 0.5424528
+      objectReference: {fileID: 0}
+    - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5424528
+      objectReference: {fileID: 0}
+    - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -228,7 +244,7 @@ PrefabInstance:
     - target: {fileID: 3851265303932588811, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
       propertyPath: m_Name
-      value: 4_a2a1_Thanatos_Minion
+      value: 4_a2a1_Thanatos_mode2
       objectReference: {fileID: 0}
     - target: {fileID: 3851265303932588811, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}

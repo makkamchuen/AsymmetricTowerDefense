@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 public class Health : ActorActionComponent
 {
   [SerializeField] GameObject hitEffect = null;
-  [SerializeField] private GameObject rewardAfterDeath;
+  [SerializeField] private GameObject spawnAfterDeath;
   public bool healthBarFollowCharacter = true;
   public HealthBar healthBar;
 
@@ -60,12 +60,12 @@ public class Health : ActorActionComponent
       GetAnimator().SetBool(AnimationTrigger.dead, true);
       GetActor().GetCollider().enabled = false;
       GetActor().GetStatus().SetGameFinishStatus();
-      SpawnReward();
+      SpawnNewCharacter();
       _isDead = true;
     }
   }
 
-  private void SpawnReward()
+  private void SpawnNewCharacter()
   {
     var baseStats = gameObject.GetComponent<Actor>().GetBaseStats();
     if (baseStats.MinRewardFromCorpse <= baseStats.MaxRewardFromCorpse)
@@ -73,8 +73,8 @@ public class Health : ActorActionComponent
       var rewardAmount = Random.Range(baseStats.MinRewardFromCorpse, baseStats.MaxRewardFromCorpse);
       if (rewardAmount > 0)
       {
-        GameObject reward = Instantiate(rewardAfterDeath, this.transform.position, Quaternion.identity);
-        reward.GetComponent<Reward>().Amount = rewardAmount;
+        GameObject NewCharacter = Instantiate(spawnAfterDeath, this.transform.position, Quaternion.identity);
+        if(NewCharacter.tag == "Treasure") NewCharacter.GetComponent<Reward>().Amount = rewardAmount;
       }
     }
     

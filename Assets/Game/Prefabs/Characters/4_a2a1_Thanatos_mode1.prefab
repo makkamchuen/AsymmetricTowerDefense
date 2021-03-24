@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
-  spawnAfterDeath: {fileID: 6128704100475852113, guid: 09281f33178d94f48b6d32e7f66c7f39,
+  spawnAfterDeath: {fileID: 5921409440072016248, guid: 9ec86327b0085c740bc5d087cc6658bb,
     type: 3}
   healthBarFollowCharacter: 1
   healthBar: {fileID: 126746027211648495}
@@ -130,6 +130,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e9855418368b81d4bb31bb9b2c6dfcb6,
         type: 3}
+    - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.95224696
+      objectReference: {fileID: 0}
+    - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -228,7 +243,7 @@ PrefabInstance:
     - target: {fileID: 3851265303932588811, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
       propertyPath: m_Name
-      value: 4_a2a1_Thanatos_Minion
+      value: 4_a2a1_Thanatos_mode1
       objectReference: {fileID: 0}
     - target: {fileID: 3851265303932588811, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}

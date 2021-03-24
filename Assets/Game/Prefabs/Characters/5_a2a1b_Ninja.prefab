@@ -153,6 +153,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: 5_a2a1b_Ninja
       objectReference: {fileID: 0}
+    - target: {fileID: 5986260747263194861, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: spawnAfterDeath
+      value: 
+      objectReference: {fileID: 6128704100475852113, guid: 09281f33178d94f48b6d32e7f66c7f39,
+        type: 3}
     - target: {fileID: 7080770187652557506, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: weapon
