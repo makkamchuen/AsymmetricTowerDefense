@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: HeroSlash
   m_EditorClassIdentifier: 
   _flyOrGround: -1
+  _targetTags:
+  - Enemy
   skillDataAtLevel:
   - level: 1
     damage: 10
@@ -20,8 +22,6 @@ MonoBehaviour:
   - level: 100
     damage: 10
     cooldown: 0.5
-  _targetTags:
-  - Minion
   hitEffect: {fileID: 4197748529095861617, guid: a64d0081f60b343438507e9613e59c6a,
     type: 3}
   hitSound: event:/SFX/WeaponImpact/SwordImpact

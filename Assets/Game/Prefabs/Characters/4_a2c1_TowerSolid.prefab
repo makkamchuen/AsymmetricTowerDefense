@@ -82,8 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
-  spawnAfterDeath: {fileID: 6128704100475852113, guid: 09281f33178d94f48b6d32e7f66c7f39,
-    type: 3}
+  nextLevelCharacter: {fileID: 0}
+  rewardAfterDeath: {fileID: 0}
   healthBarFollowCharacter: 1
   healthBar: {fileID: 8485157211698207877}
 --- !u!114 &5252263633272455135
@@ -190,7 +190,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f768090441d1c0243a107302ae2c0486, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5917746333624728375, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_Size.x
@@ -309,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 8245503363102740900, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_TagString
-      value: Minion
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8391344195354361434, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}

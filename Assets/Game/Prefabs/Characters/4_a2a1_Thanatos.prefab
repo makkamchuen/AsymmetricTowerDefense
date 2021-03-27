@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 3851265303932588811, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
       propertyPath: m_TagString
-      value: Minion
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5270820424800089162, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}

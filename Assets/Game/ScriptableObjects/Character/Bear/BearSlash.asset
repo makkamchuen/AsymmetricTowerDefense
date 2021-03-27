@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: BearSlash
   m_EditorClassIdentifier: 
   _flyOrGround: -1
+  _targetTags:
+  - Enemy
   skillDataAtLevel:
   - level: 1
     damage: 10
@@ -20,8 +22,6 @@ MonoBehaviour:
   - level: 100
     damage: 20
     cooldown: 1
-  _targetTags:
-  - Player
   hitEffect: {fileID: 4538413630352692415, guid: 674b247803e50594aa6d9789701ab81c,
     type: 3}
   hitSound: 

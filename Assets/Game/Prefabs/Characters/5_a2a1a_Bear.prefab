@@ -152,6 +152,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 5_a2a1a_Bear
       objectReference: {fileID: 0}
+    - target: {fileID: 5921409440072016248, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Minion
+      objectReference: {fileID: 0}
     - target: {fileID: 5986260747263194861, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: spawnAfterDeath

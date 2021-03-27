@@ -80,10 +80,12 @@ namespace Game.Scripts
         private void EndGame(string statusText)
         {
             gameStatusDisplay.SetActive(true);
-            GameObject[] minions = GameObject.FindGameObjectsWithTag("Minion");
-            foreach (GameObject minion in minions)
+            var gameObjects = new List<GameObject>();
+            gameObjects.AddRange(GameObject.FindGameObjectsWithTag("Minion"));
+            gameObjects.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+            foreach (GameObject gameObject in gameObjects)
             {
-                minion.SetActive(false);
+                gameObject.SetActive(false);
             }
             player.GetStatus().SetGameFinishStatus();
             gameStatusText.SetText(statusText);
