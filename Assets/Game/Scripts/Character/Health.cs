@@ -6,7 +6,8 @@ using Random = UnityEngine.Random;
 public class Health : ActorActionComponent
 {
   [SerializeField] GameObject hitEffect = null;
-  [SerializeField] private GameObject spawnAfterDeath;
+  [SerializeField] private GameObject nextLevelCharacter;
+  [SerializeField] private GameObject rewardAfterDeath;
   public bool healthBarFollowCharacter = true;
   public HealthBar healthBar;
 
@@ -60,12 +61,18 @@ public class Health : ActorActionComponent
       GetAnimator().SetBool(AnimationTrigger.dead, true);
       GetActor().GetCollider().enabled = false;
       GetActor().GetStatus().SetGameFinishStatus();
-      SpawnNewCharacter();
+      SpawnNextLevelCharacter(); 
+      SpawnReward();
       _isDead = true;
     }
   }
 
-  private void SpawnNewCharacter()
+  private void SpawnNextLevelCharacter()
+   {
+        if(nextLevelCharacter != null) Instantiate(nextLevelCharacter, this.transform.position, Quaternion.identity);
+   }
+
+  private void SpawnReward()
   {
     var baseStats = gameObject.GetComponent<Actor>().GetBaseStats();
     if (baseStats.MinRewardFromCorpse <= baseStats.MaxRewardFromCorpse)
@@ -73,8 +80,8 @@ public class Health : ActorActionComponent
       var rewardAmount = Random.Range(baseStats.MinRewardFromCorpse, baseStats.MaxRewardFromCorpse);
       if (rewardAmount > 0)
       {
-        GameObject NewCharacter = Instantiate(spawnAfterDeath, this.transform.position, Quaternion.identity);
-        if(NewCharacter.tag == "Treasure") NewCharacter.GetComponent<Reward>().Amount = rewardAmount;
+        GameObject reward = Instantiate(rewardAfterDeath, this.transform.position, Quaternion.identity);
+        reward.GetComponent<Reward>().Amount = rewardAmount;
       }
     }
     

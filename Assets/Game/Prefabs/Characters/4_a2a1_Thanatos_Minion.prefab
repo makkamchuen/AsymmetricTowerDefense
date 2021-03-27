@@ -71,7 +71,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
-  spawnAfterDeath: {fileID: 6128704100475852113, guid: 09281f33178d94f48b6d32e7f66c7f39,
+  nextLevelCharacter: {fileID: 0}
+  rewardAfterDeath: {fileID: 6128704100475852113, guid: 09281f33178d94f48b6d32e7f66c7f39,
     type: 3}
   healthBarFollowCharacter: 1
   healthBar: {fileID: 126746027211648495}
