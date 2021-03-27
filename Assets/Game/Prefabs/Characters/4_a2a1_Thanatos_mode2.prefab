@@ -134,6 +134,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
+      propertyPath: m_Color.b
+      value: 0.5424528
+      objectReference: {fileID: 0}
+    - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5424528
+      objectReference: {fileID: 0}
+    - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 954727616519376107, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -230,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 3851265303932588811, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
       propertyPath: m_Name
-      value: 4_a2a1_Thanatos
+      value: 4_a2a1_Thanatos_mode2
       objectReference: {fileID: 0}
     - target: {fileID: 3851265303932588811, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}

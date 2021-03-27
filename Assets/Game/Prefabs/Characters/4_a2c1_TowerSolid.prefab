@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &5683709834389531277
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751151623452151826}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d7956404679a8a4eae0a2f46688144a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2569232058751389115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
-  rewardAfterDeath: {fileID: 6128704100475852113, guid: 09281f33178d94f48b6d32e7f66c7f39,
+  spawnAfterDeath: {fileID: 6128704100475852113, guid: 09281f33178d94f48b6d32e7f66c7f39,
     type: 3}
   healthBarFollowCharacter: 1
   healthBar: {fileID: 8485157211698207877}
@@ -79,25 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f6aed37f13e410a9fe8eda8ad13596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &5683709834389531277
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2751151623452151826}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6d7956404679a8a4eae0a2f46688144a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6071947737947816374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,6 +186,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5341347539726880324, guid: 83f2891dea593734dbb43289feab0007,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f768090441d1c0243a107302ae2c0486, type: 2}
     - target: {fileID: 5917746333624728375, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_Size.x
@@ -220,7 +225,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: e33b246bf369dea4caf6e5301e2a7896, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8245503363102740569, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_RootOrder

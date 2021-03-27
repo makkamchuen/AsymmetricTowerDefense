@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 public class Health : ActorActionComponent
 {
   [SerializeField] GameObject hitEffect = null;
+  [SerializeField] private GameObject nextLevelCharacter;
   [SerializeField] private GameObject rewardAfterDeath;
   public bool healthBarFollowCharacter = true;
   public HealthBar healthBar;
@@ -60,10 +61,16 @@ public class Health : ActorActionComponent
       GetAnimator().SetBool(AnimationTrigger.dead, true);
       GetActor().GetCollider().enabled = false;
       GetActor().GetStatus().SetGameFinishStatus();
+      SpawnNextLevelCharacter(); 
       SpawnReward();
       _isDead = true;
     }
   }
+
+  private void SpawnNextLevelCharacter()
+   {
+        if(nextLevelCharacter != null) Instantiate(nextLevelCharacter, this.transform.position, Quaternion.identity);
+   }
 
   private void SpawnReward()
   {
