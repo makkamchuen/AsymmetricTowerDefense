@@ -38,7 +38,7 @@ public class Actor : MonoBehaviour
   {
     return _status;
   }
-  
+
   public Stats GetBaseStats()
   {
     return baseStats;
@@ -48,12 +48,12 @@ public class Actor : MonoBehaviour
   {
     return _spriteRenderer;
   }
-  
+
   public Health GetHealth()
   {
     return _health;
   }
-  
+
   public Collider GetCollider()
   {
     return _collider;
@@ -63,15 +63,15 @@ public class Actor : MonoBehaviour
   {
     return weapon;
   }
-  
+
   public void SetIsFacingRight(bool isFacing)
   {
     _isFacingRight = isFacing;
   }
-  
+
   private void RestrictRotation()
   {
-    _spriteRenderer.flipX = faceRight? !_isFacingRight: _isFacingRight;
+    _spriteRenderer.flipX = faceRight? _isFacingRight: !_isFacingRight;
   }
 
 }
