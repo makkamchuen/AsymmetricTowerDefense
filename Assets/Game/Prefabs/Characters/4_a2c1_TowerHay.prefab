@@ -64,7 +64,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
   nextLevelCharacter: {fileID: 0}
-  rewardAfterDeath: {fileID: 0}
+  rewardAfterDeath: {fileID: 6128704100475852113, guid: 09281f33178d94f48b6d32e7f66c7f39,
+    type: 3}
   healthBarFollowCharacter: 1
   healthBar: {fileID: 8485157211698207877}
 --- !u!114 &5252263633272455135
@@ -160,7 +161,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b2563dfa96d8d9348817318b85d4979c,
+      objectReference: {fileID: 21300000, guid: 6d8666816405a19489c720f246a603ca,
         type: 3}
     - target: {fileID: 5341347539726880324, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
@@ -206,7 +207,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 6d7956404679a8a4eae0a2f46688144a, type: 2}
+      objectReference: {fileID: 9100000, guid: 42d6dd6053c5a9f498efd88cc2771f3f, type: 2}
     - target: {fileID: 8245503363102740569, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_RootOrder
@@ -280,7 +281,7 @@ PrefabInstance:
     - target: {fileID: 8245503363102740900, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_Name
-      value: 4_a2c1_TowerSolid
+      value: 4_a2c1_TowerHay
       objectReference: {fileID: 0}
     - target: {fileID: 8245503363102740900, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
