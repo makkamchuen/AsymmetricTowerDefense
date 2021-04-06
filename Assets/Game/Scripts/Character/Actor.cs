@@ -71,7 +71,14 @@ public class Actor : MonoBehaviour
 
   private void RestrictRotation()
   {
-    _spriteRenderer.flipX = faceRight? _isFacingRight: !_isFacingRight;
+    if (_spriteRenderer.sprite.name == "char_devil_sprite")
+    {
+      _spriteRenderer.flipY = faceRight? !_isFacingRight: _isFacingRight;
+    }
+    else
+    {
+      _spriteRenderer.flipX = faceRight? _isFacingRight: !_isFacingRight;
+    }
   }
 
 }
