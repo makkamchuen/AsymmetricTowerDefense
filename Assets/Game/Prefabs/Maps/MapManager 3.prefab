@@ -31,8 +31,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803612015275866331}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 50, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 77.30576, y: 0, z: -2.9983153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,16 +58,18 @@ MonoBehaviour:
   seed: 
   useRandomSeed: 1
   mapGenerator: {fileID: 1803612015275866307}
-  _destroyColliderCol: 0
-  _nextMapColliderCol: 0
+  _destroyColliderCol: 9
+  _nextMapColliderCol: 1
   _roadBlockCol: 0
-  _roadBlockHeight: 0
-  _colliderHeight: 0
-  _destroyCollider: {fileID: 0}
+  _roadBlockHeight: 20
+  _colliderHeight: 50
+  _destroyCollider: {fileID: 5719259104502226948, guid: 100b23c9bcd0948c5a5eafdef8e5618f,
+    type: 3}
   _nextMapCollider: {fileID: 6175044302971200455, guid: 49aba9d5142ec429091e5a9e36c4daa8,
     type: 3}
-  _roadBlock: {fileID: 0}
-  mapNumber: 0
+  _roadBlock: {fileID: 4134873573646573511, guid: f01951526860f4502aee0b7b1f8ff5c0,
+    type: 3}
+  mapNumber: 2
 --- !u!114 &1803612015275866307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,10 +82,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e75751aee4984a4b8e312301d05ace6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRow: 6
+  startRow: 5
   startCol: 1
   endCol: 9
-  endRow: 2
+  endRow: 5
   useRandomEndRow: 0
 --- !u!114 &1803612015275866306
 MonoBehaviour:

@@ -70,14 +70,14 @@ public class MapManager : MonoBehaviour
         return _planeBuilder.GetSize();
     }
 
-    public void DestroyPreviousMap()
-    {
-        PlaceRoadBlock();
-        if (mapNumber != 0)
+    /*     public void DestroyPreviousMap()
         {
-            Destroy(_previousMap.gameObject);
-        }
-    }
+            PlaceRoadBlock();
+            if (mapNumber != 0)
+            {
+                Destroy(_previousMap.gameObject);
+            }
+        } */
 
     public void SetPreviousMap(MapManager previousMap)
     {
@@ -107,12 +107,12 @@ public class MapManager : MonoBehaviour
         InitRoadBlock();
     }
 
-    private void InitDestroyCollider()
+    /* private void InitDestroyCollider()
     {
         BoxCollider boxCollider = _destroyCollider.GetComponent<BoxCollider>();
         boxCollider.isTrigger = true;
         boxCollider.size = new Vector3(unit, _colliderHeight, unit * height);
-    }
+    } */
 
     private void InitNextMapCollider()
     {
@@ -131,12 +131,12 @@ public class MapManager : MonoBehaviour
 
     private void PlaceColliders()
     {
-        GameObject newDestroyCollider = Instantiate(
-            _destroyCollider,
-            new Vector3((-width / 2 + _destroyColliderCol) * unit + transform.position.x, 0, 0),
-            Quaternion.identity,
-            transform
-        );
+        /*     GameObject newDestroyCollider = Instantiate(
+                _destroyCollider,
+                new Vector3((-width / 2 + _destroyColliderCol) * unit + transform.position.x, 0, 0),
+                Quaternion.identity,
+                transform
+            ); */
 
         GameObject newNextMapCollider = Instantiate(
             _nextMapCollider,

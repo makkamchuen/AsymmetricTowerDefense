@@ -14,7 +14,7 @@ public class DestroyCollider : MonoBehaviour
         if (other.CompareTag("Player") && _mapManager != null)
         {
             Destroy(gameObject);
-            _mapManager.DestroyPreviousMap();
+            // _mapManager.DestroyPreviousMap();
         }
     }
 }

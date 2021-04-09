@@ -19,8 +19,8 @@ public class NextMapCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
-            _mapManager.transform.position = location;
-            _mapManager.GenerateMap();
+            map.transform.position = location;
+            _mapManager.transform.parent.gameObject.GetComponentsInChildren<MapManager>();
         }
     }
 
