@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8808565258726084574}
   - component: {fileID: 6364327705415621246}
   m_Layer: 0
-  m_Name: NextMapCollider
+  m_Name: NextMapCollider_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 10, z: 390}
+  m_Size: {x: 0.5, y: 50, z: 27.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6364327705415621246
 MonoBehaviour:
@@ -57,4 +57,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af1588836f6c4fbdb20bdc0c5ea3e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 6302854082131134944, guid: f68b411cd302f4948888e864e26e4510, type: 3}
+  map: {fileID: 5194179591698239616, guid: 305c261817b7240479249b29b3e13da6, type: 3}

@@ -20,12 +20,12 @@ public class ArticulationPoint : MapGenerator
     {
         startRow = row / (1 + _mapManager.pathRadius * 2);
     }
-    
+
     public override Coordinate GetEndPoint()
     {
         return ScaledCoordinateToOriginal(new Coordinate(endCol, endRow));
     }
-    
+
     public override Coordinate GetStartPoint()
     {
         return ScaledCoordinateToOriginal(new Coordinate(startCol, startRow));
@@ -34,7 +34,7 @@ public class ArticulationPoint : MapGenerator
     public override void GenerateMap(int width, int height, Random pseudoRandom)
     {
         int pathWidth = 1 + _mapManager.pathRadius * 2;
-        _mapManager.map = new int[width,height];
+        _mapManager.map = new int[width, height];
         _mapManager.FillMap(1);
         height /= pathWidth;
         width /= pathWidth;
@@ -43,10 +43,10 @@ public class ArticulationPoint : MapGenerator
             endRow = -1;
         }
         Dictionary<Coordinate, Coordinate> dfsPath = new Dictionary<Coordinate, Coordinate>();
-        if (startRow < 0 || startRow >= height || 
-            endRow < -1 || endRow >= height || 
-            startCol < 0 || startCol >= width || 
-            endCol < 0 || endCol >= width || 
+        if (startRow < 0 || startRow >= height ||
+            endRow < -1 || endRow >= height ||
+            startCol < 0 || startCol >= width ||
+            endCol < 0 || endCol >= width ||
             endCol < startCol ||
             (endCol - startCol) % 2 != 0)
         {
@@ -72,7 +72,7 @@ public class ArticulationPoint : MapGenerator
         _mapManager.CreatePassage(ScaledCoordinateToOriginal(new Coordinate(-1, startRow)), ScaledCoordinateToOriginal(new Coordinate(startCol, startRow)));
         _mapManager.CreatePassage(ScaledCoordinateToOriginal(new Coordinate(width, endRow)), ScaledCoordinateToOriginal(new Coordinate(endCol, endRow)));
     }
-    
+
     private int GetPathLength(Coordinate current, Dictionary<Coordinate, Coordinate> dfsPath)
     {
         if (!dfsPath.ContainsKey(current))
@@ -104,7 +104,7 @@ public class ArticulationPoint : MapGenerator
         {
             return;
         }
-        Tuple<int, int>[] directions = {new Tuple<int, int>(0, 1), new Tuple<int, int>(1, 0), new Tuple<int, int>(0, -1), new Tuple<int, int>(-1, 0)};
+        Tuple<int, int>[] directions = { new Tuple<int, int>(0, 1), new Tuple<int, int>(1, 0), new Tuple<int, int>(0, -1), new Tuple<int, int>(-1, 0) };
         HashSet<int> indexSet = new HashSet<int>();
         while (indexSet.Count < 4)
         {
@@ -116,8 +116,8 @@ public class ArticulationPoint : MapGenerator
             indexSet.Add(randomIndex);
             Tuple<int, int> direction = directions[randomIndex];
             Coordinate next = new Coordinate(current.tileX + direction.Item1 * 2, current.tileY + direction.Item2 * 2);
-            if (next.tileX < startCol || next.tileX > endCol || 
-                next.tileY < 0 || next.tileY >= height || 
+            if (next.tileX < startCol || next.tileX > endCol ||
+                next.tileY < 0 || next.tileY >= height ||
                 dfsPath.ContainsKey(next))
             {
                 continue;
