@@ -148,7 +148,7 @@ public class MapManager : MonoBehaviour
 
     void Update()
     {
-        if (!_mapBuilt && (_mapSetted || mapNumber == 0))
+        if (!_mapBuilt)
         {
             _mapBuilt = true;
             GenerateMap();
