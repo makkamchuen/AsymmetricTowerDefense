@@ -152,6 +152,12 @@ public class MapManager : MonoBehaviour
         {
             _mapBuilt = true;
             GenerateMap();
+            RebakeNavMesh();
+        }
+
+        if (Input.GetKeyDown("g"))
+        {
+            RebakeNavMesh();
         }
     }
 
@@ -163,18 +169,17 @@ public class MapManager : MonoBehaviour
             seed = System.DateTime.Now.ToString();
         }
 
-        if (_previousMap != null)
+        if (mapNumber < 3)
         {
-            mapGenerator.SetStartRow(_previousMap.mapGenerator.GetEndPoint().tileY);
+            mapGenerator.GenerateMap(width, height, new System.Random(seed.GetHashCode()));
+            for (int i = 0; i < smoothness; i += 1)
+            {
+                SmoothMap();
+            }
+            meshGen.GenerateMesh(GetInversedMap(), unit);
         }
-        mapGenerator.GenerateMap(width, height, new System.Random(seed.GetHashCode()));
-        for (int i = 0; i < smoothness; i += 1)
-        {
-            SmoothMap();
-        }
-        meshGen.GenerateMesh(GetInversedMap(), unit);
-        _randomSprite.placeSprite();
-        RebakeNavMesh();
+        //_randomSprite.placeSprite();
+        // RebakeNavMesh();
         PlaceColliders();
     }
 
@@ -193,14 +198,7 @@ public class MapManager : MonoBehaviour
 
     public void RebakeNavMesh()
     {
-        if (_navMeshSurface.navMeshData == null)
-        {
-            _navMeshSurface.BuildNavMesh();
-        }
-        else
-        {
-            _navMeshSurface.UpdateNavMesh(_navMeshSurface.navMeshData);
-        }
+        _navMeshSurface.BuildNavMesh();
     }
 
     // public void DestroyColliders()
