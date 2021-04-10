@@ -2,15 +2,13 @@
 
 public class NextMapCollider : MonoBehaviour
 {
-    private MapManager _mapManager;
-    [SerializeField] private GameObject map;
-    private Vector3 location;
+    private MapManager mapManagerSelf;
+    MapManager[] mapManagerPool;
 
     // Start is called before the first frame update
     private void Start()
     {
-        _mapManager = GetComponentInParent<MapManager>();
-        location = _mapManager.transform.position + new Vector3(75, 0, 0);
+        mapManagerSelf = GetComponentInParent<MapManager>();
         // location = _mapManager.transform.position + new Vector3(_mapManager.GetSize().x, 0, 0);
     }
 
@@ -19,8 +17,23 @@ public class NextMapCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
-            map.transform.position = location;
-            _mapManager.transform.parent.gameObject.GetComponentsInChildren<MapManager>();
+            var parentMapObject = mapManagerSelf.transform.parent.gameObject;
+            mapManagerPool = parentMapObject.GetComponentsInChildren<MapManager>();
+
+            foreach (MapManager mapManager in mapManagerPool)
+            {
+                if (mapManager.mapNumber == mapManagerSelf.mapNumber - 2)
+                {
+                    mapManager.GenerateMap();
+                    mapManager.transform.position = mapManager.transform.position + new Vector3(76, 0, 0);
+                    mapManager.mapNumber += 3;
+                }
+            }
+
+            foreach (MapManager mapManager in mapManagerPool)
+            {
+                mapManager.RebakeNavMesh();
+            }
         }
     }
 
