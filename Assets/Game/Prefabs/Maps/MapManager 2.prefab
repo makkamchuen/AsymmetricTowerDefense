@@ -59,7 +59,7 @@ MonoBehaviour:
   useRandomSeed: 1
   mapGenerator: {fileID: 5194179591698239640}
   _destroyColliderCol: 9
-  _nextMapColliderCol: 1
+  _nextMapColliderCol: 81
   _roadBlockCol: 0
   _roadBlockHeight: 20
   _colliderHeight: 50
