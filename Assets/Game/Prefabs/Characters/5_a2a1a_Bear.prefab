@@ -87,6 +87,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.05000019
       objectReference: {fileID: 0}
+    - target: {fileID: 3826609103251196140, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: skillDatas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826609103251196140, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+        type: 3}
+      propertyPath: skillDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 99cb997a3c1014fdb81976a17d33d5ae,
+        type: 2}
     - target: {fileID: 4896544722103708045, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
         type: 3}
       propertyPath: m_Controller
