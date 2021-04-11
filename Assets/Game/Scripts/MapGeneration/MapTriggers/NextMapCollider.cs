@@ -16,7 +16,8 @@ public class NextMapCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
             var parentMapObject = mapManagerSelf.transform.parent.gameObject;
             mapManagerPool = parentMapObject.GetComponentsInChildren<MapManager>();
 
@@ -24,16 +25,14 @@ public class NextMapCollider : MonoBehaviour
             {
                 if (mapManager.mapNumber == mapManagerSelf.mapNumber - 2)
                 {
-                    mapManager.GenerateMap();
-                    mapManager.transform.position = mapManager.transform.position + new Vector3(76, 0, 0);
+                    mapManager.transform.position = mapManager.transform.position + new Vector3(75, 0, 0);
                     mapManager.mapNumber += 3;
+                    mapManager.GenerateMap();
+                    mapManager.RebakeNavMesh();
                 }
             }
 
-            foreach (MapManager mapManager in mapManagerPool)
-            {
-                mapManager.RebakeNavMesh();
-            }
+            
         }
     }
 
