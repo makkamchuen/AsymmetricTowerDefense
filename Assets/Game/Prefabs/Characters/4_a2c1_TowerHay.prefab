@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &2569232058751389115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2751151623452151826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65c423d03128c47538f4295ca5e5444f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillDatas:
-  - {fileID: 11400000, guid: f99fb83a1c7ea1e41ae985dbe9bdf321, type: 2}
 --- !u!114 &3175755023194602215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: f294c2134f90f4a478eb72f4bf8a08b0, type: 2}
-  attack: {fileID: 2569232058751389115}
+  attack: {fileID: 0}
   weapon: 
   faceRight: 1
   flee: {fileID: 0}
@@ -50,24 +36,6 @@ MonoBehaviour:
   remainInState: {fileID: 11400000, guid: 061da9034edb84c1287ca2f2e4112e91, type: 2}
   isEnable: 1
   stateTimeElapsed: 0
---- !u!114 &4908759769910666783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2751151623452151826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
-  nextLevelCharacter: {fileID: 0}
-  rewardAfterDeath: {fileID: 6128704100475852113, guid: 09281f33178d94f48b6d32e7f66c7f39,
-    type: 3}
-  healthBarFollowCharacter: 1
-  healthBar: {fileID: 8485157211698207877}
 --- !u!114 &5252263633272455135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,15 +279,3 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6071947737947816374}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8485157211698207877 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2414687836021218611, guid: 83f2891dea593734dbb43289feab0007,
-    type: 3}
-  m_PrefabInstance: {fileID: 6071947737947816374}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 309a1f2dce3f7411a801478fac81174f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
