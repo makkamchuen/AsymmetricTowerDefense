@@ -39,6 +39,10 @@ public class MapManager : MonoBehaviour
     private bool _mapSetted = false;
     private bool _mapBuilt = false;
 
+    public bool rebakeRequired = true;
+
+    public int rebakeCounter = 30;
+
     void Start()
     {
         GetComponents();
@@ -155,9 +159,13 @@ public class MapManager : MonoBehaviour
             RebakeNavMesh();
         }
 
-        if (Input.GetKeyDown("g"))
-        {
+        if (rebakeRequired && rebakeCounter == 0) {
+            rebakeRequired = false;
             RebakeNavMesh();
+        }
+
+        if (rebakeCounter != 0) {
+            rebakeCounter--;
         }
     }
 
@@ -166,19 +174,17 @@ public class MapManager : MonoBehaviour
         _planeBuilder.BuildPlane();
         if (useRandomSeed)
         {
-            seed = System.DateTime.Now.ToString();
+            seed = System.DateTime.Now.ToString() + GetMapNumber() * 5689;
         }
 
-        if (mapNumber < 3)
+        mapGenerator.GenerateMap(width, height, new System.Random(seed.GetHashCode()));
+        for (int i = 0; i < smoothness; i += 1)
         {
-            mapGenerator.GenerateMap(width, height, new System.Random(seed.GetHashCode()));
-            for (int i = 0; i < smoothness; i += 1)
-            {
-                SmoothMap();
-            }
-            meshGen.GenerateMesh(GetInversedMap(), unit);
+            SmoothMap();
         }
-        //_randomSprite.placeSprite();
+        meshGen.GenerateMesh(GetInversedMap(), unit);
+
+        _randomSprite.placeSprite();
         // RebakeNavMesh();
         PlaceColliders();
     }

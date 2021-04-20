@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using System.Collections;
 public class NextMapCollider : MonoBehaviour
 {
     private MapManager mapManagerSelf;
@@ -28,11 +28,14 @@ public class NextMapCollider : MonoBehaviour
                     mapManager.transform.position = mapManager.transform.position + new Vector3(75, 0, 0);
                     mapManager.mapNumber += 3;
                     mapManager.GenerateMap();
-                    mapManager.RebakeNavMesh();
                 }
             }
 
-            
+            foreach (MapManager mapManager in mapManagerPool)
+            {
+                mapManager.rebakeRequired = true;
+                mapManager.rebakeCounter = 30;
+            }
         }
     }
 
