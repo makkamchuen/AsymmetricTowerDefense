@@ -162,7 +162,7 @@ public class MapManager : MonoBehaviour
         {
             rebakeRequired = false;
             BakeNavMesh();
-            _randomSprite.UpdateSprite(GetComponent<RandomSprite>().spriteList.ToArray());
+            _randomSprite.UpdateSprite(GetComponent<RandomSprite>().spriteList);
         }
 
         if (rebakeCounter != 0)

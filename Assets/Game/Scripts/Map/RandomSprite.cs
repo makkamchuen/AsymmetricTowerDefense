@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -65,19 +66,20 @@ public class RandomSprite : MonoBehaviour
         }
     }
 
-    public void UpdateSprite(GameObject[] spriteList)
+    public void UpdateSprite(List<GameObject> spriteList)
     {
+        spriteList = spriteList.OrderBy(i => System.Guid.NewGuid()).ToList();
         // Loop through all the positions within our forest boundary.
         for (int x = 0; x < forestSizeX; x += elementSpacing)
         {
             for (int z = 0; z < forestSizeZ; z += elementSpacing)
             {
                 // For each position, loop through each element...
-                for (int i = 0; i < spriteList.Length; i++)
+                for (int i = 0; i < spriteList.Count; i++)
                 {
                     // Get the current element. 
 
-                    GameObject savedSprite = spriteList[Random.Range(0, spriteList.Length)];
+                    GameObject savedSprite = spriteList[i];
                     {
                         // Add random elements to element placement.
                         Vector3 position = new Vector3((forestSizeX / 2 + x) / generalDensity + transform.position.x + xOffset, 0f, (forestSizeZ / 2 + z) / generalDensity + transform.position.z + zOffset);
