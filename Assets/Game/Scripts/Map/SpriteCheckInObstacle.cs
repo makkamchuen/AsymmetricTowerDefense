@@ -8,6 +8,16 @@ public class SpriteCheckInObstacle : MonoBehaviour
 {
     void Start()
     {
-        if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 0.5f, NavMesh.AllAreas)) { Destroy(gameObject); }
+        CheckOnRoad();
+    }
+
+    public bool CheckOnRoad()
+    {
+        if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 0.5f, NavMesh.AllAreas))
+        {
+            GetComponentInChildren<SpriteRenderer>().enabled = false;
+            return true;
+        }
+        return false;
     }
 }

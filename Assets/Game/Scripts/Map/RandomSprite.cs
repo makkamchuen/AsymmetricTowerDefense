@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,48 +14,90 @@ public class RandomSprite : MonoBehaviour
     public int elementSpacing = 3; // The spacing between element placements. Basically grid size.
     [Range(0.1f, 3)]
     public float generalDensity = 1;
+    public List<GameObject> spriteList = new List<GameObject>();
 
     public Element[] elements;
     private bool flip = false;
 
+    private List<int> prefixSums = new List<int>();
+
     private void Start()
     {
-        
+        foreach (Element el in elements)
+        {
+            if (prefixSums.Count == 0)
+                prefixSums.Add(el.density);
+            else
+                prefixSums.Add(prefixSums[prefixSums.Count - 1] + el.density);
+        }
     }
 
-    public void placeSprite()
+    int pickIndex()
     {
+        // generate a random number in the range of [0, 1]
+        float target = Random.Range(0, prefixSums[prefixSums.Count - 1]);
+        // run a linear search to find the target zone
+        for (int i = 0; i < prefixSums.Count(); ++i)
+            if (target < prefixSums[i])
+                return i;
+        return prefixSums.Count() - 1;
+    }
+
+    public void PlaceSprite()
+    {
+        // GameObject[] spriteList = GetComponent<MapManager>().spriteList;
         // Loop through all the positions within our forest boundary.
         for (int x = 0; x < forestSizeX; x += elementSpacing)
         {
             for (int z = 0; z < forestSizeZ; z += elementSpacing)
             {
-                // For each position, loop through each element...
-                for (int i = 0; i < elements.Length; i++)
+                // Get the current element.
+                Element element = elements[pickIndex()];
+
+                // Add random elements to element placement.
+                Vector3 position = new Vector3((forestSizeX / 2 + x) / generalDensity + transform.position.x + xOffset, 0f, (forestSizeZ / 2 + z) / generalDensity + transform.position.z + zOffset);
+                Vector3 offset = new Vector3(Random.Range(-0.75f, 0.75f), 0f, Random.Range(-0.75f, 0.75f));
+                // Vector3 rotation = new Vector3(45f, Random.Range(0, 360f), Range(0, 1f));
+                Vector3 scale = transform.localScale * Random.Range(0.8f, 1.2f);
+
+                // Instantiate and place element in world.
+
+                // todo: put element into new array to keep track and re-place
+                GameObject newElement = Instantiate(element.GetRandom());
+                newElement.transform.SetParent(transform);
+                newElement.transform.position = position + offset;
+                newElement.transform.localScale = scale;
+                if (Random.value >.5f) { newElement.GetComponentInChildren<SpriteRenderer>().flipX = true; }
+                spriteList.Add(newElement);
+            }
+        }
+    }
+
+    public void UpdateSprite()
+    {
+        spriteList = spriteList.OrderBy(abc => System.Guid.NewGuid()).ToList();
+        // Loop through all the positions within our forest boundary.
+        int i = 0;
+        for (int x = 0; x < forestSizeX; x += elementSpacing)
+        {
+            for (int z = 0; z < forestSizeZ; z += elementSpacing)
+            {
+                //if (i >= spriteList.Count) return;
+
+                GameObject savedSprite = spriteList[i++];
+                // Add random elements to element placement.
+                Vector3 position = new Vector3((forestSizeX / 2 + x) / generalDensity + transform.position.x + xOffset, 0f, (forestSizeZ / 2 + z) / generalDensity + transform.position.z + zOffset);
+                Vector3 offset = new Vector3(Random.Range(-0.75f, 0.75f), 0f, Random.Range(-0.75f, 0.75f));
+                // Vector3 rotation = new Vector3(45f, Random.Range(0, 360f), Range(0, 1f));
+                Vector3 scale = transform.localScale * Random.Range(0.8f, 1.2f);
+
+                savedSprite.transform.position = position + offset;
+
+                if (savedSprite.GetComponent<SpriteCheckInObstacle>().CheckOnRoad() == false)
                 {
-                    // Get the current element.
-                    Element element = elements[i];
-                    {
-                        // Check if the element can be placed.
-                        if (element.CanPlace())
-                        {
-                            // Add random elements to element placement.
-                            Vector3 position = new Vector3((-(float)forestSizeX / 2 + x) / generalDensity + transform.position.x + xOffset, 0f, (-(float)forestSizeZ / 2 + z) / generalDensity + transform.position.z + zOffset);
-                            Vector3 offset = new Vector3(Random.Range(-0.75f, 0.75f), 0f, Random.Range(-0.75f, 0.75f));
-                            // Vector3 rotation = new Vector3(45f, Random.Range(0, 360f), Range(0, 1f));
-                            Vector3 scale = transform.localScale * Random.Range(0.8f, 1.2f);
-
-                            // Instantiate and place element in world.
-                            GameObject newElement = Instantiate(element.GetRandom());
-                            newElement.transform.SetParent(transform);
-                            newElement.transform.position = position + offset;
-                            newElement.transform.localScale = scale;
-                            if (Random.value >.5f) { newElement.GetComponentInChildren<SpriteRenderer>().flipX = true; }
-
-                            // Break out of this for loop to ensure we don't place another element at this position.
-                            break;
-                        }
-                    }
+                    savedSprite.GetComponentInChildren<SpriteRenderer>().enabled = true;
+                    savedSprite.transform.localScale = scale;
+                    if (Random.value >.5f) { savedSprite.GetComponentInChildren<SpriteRenderer>().flipX = true; }
                 }
             }
         }

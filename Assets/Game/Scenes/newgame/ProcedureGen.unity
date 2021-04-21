@@ -136,12 +136,12 @@ PrefabInstance:
     - target: {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673,
         type: 3}
       propertyPath: _offset.y
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5674900665288002811, guid: 82669b9a30b3e77479c2763b02fdb673,
         type: 3}
       propertyPath: _offset.z
-      value: -15
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 5674900665288002812, guid: 82669b9a30b3e77479c2763b02fdb673,
         type: 3}
@@ -217,6 +217,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapManager 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5194179591698239616, guid: 305c261817b7240479249b29b3e13da6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5194179591698239617, guid: 305c261817b7240479249b29b3e13da6,
         type: 3}
       propertyPath: m_RootOrder
@@ -276,6 +281,31 @@ PrefabInstance:
         type: 3}
       propertyPath: _nextMapColliderCol
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194179591698239644, guid: 305c261817b7240479249b29b3e13da6,
+        type: 3}
+      propertyPath: xOffset
+      value: -27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194179591698239644, guid: 305c261817b7240479249b29b3e13da6,
+        type: 3}
+      propertyPath: zOffset
+      value: -33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194179591698239644, guid: 305c261817b7240479249b29b3e13da6,
+        type: 3}
+      propertyPath: forestSizeX
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194179591698239644, guid: 305c261817b7240479249b29b3e13da6,
+        type: 3}
+      propertyPath: forestSizeZ
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194179591698239644, guid: 305c261817b7240479249b29b3e13da6,
+        type: 3}
+      propertyPath: generalDensity
+      value: 0.82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 305c261817b7240479249b29b3e13da6, type: 3}
@@ -856,6 +886,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2213536328421049322, guid: f97bd1b7db627d94ebc0b6614f6f91d0,
+        type: 3}
+      propertyPath: xOffset
+      value: -27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213536328421049322, guid: f97bd1b7db627d94ebc0b6614f6f91d0,
+        type: 3}
+      propertyPath: zOffset
+      value: -33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213536328421049322, guid: f97bd1b7db627d94ebc0b6614f6f91d0,
+        type: 3}
+      propertyPath: forestSizeX
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213536328421049322, guid: f97bd1b7db627d94ebc0b6614f6f91d0,
+        type: 3}
+      propertyPath: forestSizeZ
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213536328421049322, guid: f97bd1b7db627d94ebc0b6614f6f91d0,
+        type: 3}
+      propertyPath: generalDensity
+      value: 0.82
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f97bd1b7db627d94ebc0b6614f6f91d0, type: 3}
 --- !u!1 &1390830261
@@ -998,6 +1053,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapManager 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1803612015275866331, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1803612015275866332, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
         type: 3}
       propertyPath: m_RootOrder
@@ -1052,6 +1112,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803612015275866335, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
+        type: 3}
+      propertyPath: xOffset
+      value: -27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803612015275866335, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
+        type: 3}
+      propertyPath: zOffset
+      value: -33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803612015275866335, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
+        type: 3}
+      propertyPath: forestSizeX
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803612015275866335, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
+        type: 3}
+      propertyPath: forestSizeZ
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803612015275866335, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
+        type: 3}
+      propertyPath: generalDensity
+      value: 0.82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30a2e599a91492e4a8bb6d233e75b2e4, type: 3}
@@ -1162,6 +1247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305271025700432308, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.59
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5ce113d662375847963f9f42aedc089, type: 3}
