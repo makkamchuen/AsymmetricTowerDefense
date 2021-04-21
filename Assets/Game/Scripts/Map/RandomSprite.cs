@@ -13,6 +13,7 @@ public class RandomSprite : MonoBehaviour
     public int elementSpacing = 3; // The spacing between element placements. Basically grid size.
     [Range(0.1f, 3)]
     public float generalDensity = 1;
+    public List<GameObject> spriteList = new List<GameObject>();
 
     public Element[] elements;
     private bool flip = false;
@@ -22,8 +23,9 @@ public class RandomSprite : MonoBehaviour
 
     }
 
-    public void placeSprite()
+    public void PlaceSprite()
     {
+        // GameObject[] spriteList = GetComponent<MapManager>().spriteList;
         // Loop through all the positions within our forest boundary.
         for (int x = 0; x < forestSizeX; x += elementSpacing)
         {
@@ -52,10 +54,48 @@ public class RandomSprite : MonoBehaviour
                             newElement.transform.position = position + offset;
                             newElement.transform.localScale = scale;
                             if (Random.value >.5f) { newElement.GetComponentInChildren<SpriteRenderer>().flipX = true; }
+                            spriteList.Add(newElement);
 
                             // Break out of this for loop to ensure we don't place another element at this position.
                             break;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    public void UpdateSprite(GameObject[] spriteList)
+    {
+        // Loop through all the positions within our forest boundary.
+        for (int x = 0; x < forestSizeX; x += elementSpacing)
+        {
+            for (int z = 0; z < forestSizeZ; z += elementSpacing)
+            {
+                // For each position, loop through each element...
+                for (int i = 0; i < spriteList.Length; i++)
+                {
+                    // Get the current element. 
+
+                    GameObject savedSprite = spriteList[Random.Range(0, spriteList.Length)];
+                    {
+                        // Add random elements to element placement.
+                        Vector3 position = new Vector3((forestSizeX / 2 + x) / generalDensity + transform.position.x + xOffset, 0f, (forestSizeZ / 2 + z) / generalDensity + transform.position.z + zOffset);
+                        Vector3 offset = new Vector3(Random.Range(-0.75f, 0.75f), 0f, Random.Range(-0.75f, 0.75f));
+                        // Vector3 rotation = new Vector3(45f, Random.Range(0, 360f), Range(0, 1f));
+                        Vector3 scale = transform.localScale * Random.Range(0.8f, 1.2f);
+
+                        savedSprite.transform.position = position + offset;
+
+                        if (savedSprite.GetComponent<SpriteCheckInObstacle>().CheckOnRoad() == false)
+                        {
+                            savedSprite.GetComponentInChildren<SpriteRenderer>().enabled = true;
+                            savedSprite.transform.localScale = scale;
+                            if (Random.value >.5f) { savedSprite.GetComponentInChildren<SpriteRenderer>().flipX = true; }
+                        }
+
+                        break;
+
                     }
                 }
             }

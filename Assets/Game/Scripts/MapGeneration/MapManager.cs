@@ -16,8 +16,11 @@ public class MapManager : MonoBehaviour
 
     public string seed;
     public bool useRandomSeed;
-
     public MapGenerator mapGenerator;
+    public int mapNumber = 0;
+    public bool rebakeRequired = true;
+    public int rebakeCounter = 30;
+
     [SerializeField] private int _destroyColliderCol;
     [SerializeField] private int _nextMapColliderCol;
     [SerializeField] private int _roadBlockCol;
@@ -34,14 +37,9 @@ public class MapManager : MonoBehaviour
     [SerializeField] private GameObject _roadBlock;
     private bool _nextMapBuilt = false;
     private bool _roadBlockPlaced = false;
-    public int mapNumber = 0;
     private MapManager _previousMap = null;
     private bool _mapSetted = false;
     private bool _mapBuilt = false;
-
-    public bool rebakeRequired = true;
-
-    public int rebakeCounter = 30;
 
     void Start()
     {
@@ -156,13 +154,15 @@ public class MapManager : MonoBehaviour
         {
             _mapBuilt = true;
             GenerateMap();
-            RebakeNavMesh();
+            BakeNavMesh();
+            _randomSprite.PlaceSprite();
         }
 
         if (rebakeRequired && rebakeCounter == 0)
         {
             rebakeRequired = false;
-            RebakeNavMesh();
+            BakeNavMesh();
+            _randomSprite.UpdateSprite(GetComponent<RandomSprite>().spriteList.ToArray());
         }
 
         if (rebakeCounter != 0)
@@ -185,7 +185,6 @@ public class MapManager : MonoBehaviour
             SmoothMap();
         }
         meshGen.GenerateMesh(GetInversedMap(), unit);
-        // RebakeNavMesh();
         PlaceColliders();
     }
 
@@ -202,10 +201,9 @@ public class MapManager : MonoBehaviour
         return inversedMap;
     }
 
-    public void RebakeNavMesh()
+    public void BakeNavMesh()
     {
         _navMeshSurface.BuildNavMesh();
-        _randomSprite.placeSprite();
     }
 
     // public void DestroyColliders()
