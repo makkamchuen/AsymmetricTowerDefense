@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 public class NextMapCollider : MonoBehaviour
 {
     private MapManager mapManagerSelf;
@@ -27,6 +27,7 @@ public class NextMapCollider : MonoBehaviour
                 {
                     mapManager.transform.position = mapManager.transform.position + new Vector3(75, 0, 0);
                     mapManager.mapNumber += 3;
+                    mapManager.shouldUpdateSprite = true;
                     mapManager.GenerateMap();
                 }
             }

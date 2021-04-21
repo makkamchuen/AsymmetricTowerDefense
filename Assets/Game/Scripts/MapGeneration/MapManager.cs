@@ -20,6 +20,7 @@ public class MapManager : MonoBehaviour
     public int mapNumber = 0;
     public bool rebakeRequired = true;
     public int rebakeCounter = 30;
+    public bool shouldUpdateSprite = false;
 
     [SerializeField] private int _destroyColliderCol;
     [SerializeField] private int _nextMapColliderCol;
@@ -162,7 +163,11 @@ public class MapManager : MonoBehaviour
         {
             rebakeRequired = false;
             BakeNavMesh();
-            _randomSprite.UpdateSprite(GetComponent<RandomSprite>().spriteList);
+            if (shouldUpdateSprite)
+            {
+                shouldUpdateSprite = false;
+                _randomSprite.UpdateSprite();
+            }
         }
 
         if (rebakeCounter != 0)
@@ -204,6 +209,11 @@ public class MapManager : MonoBehaviour
     public void BakeNavMesh()
     {
         _navMeshSurface.BuildNavMesh();
+    }
+
+    public void UpdateSprite()
+    {
+        _randomSprite.UpdateSprite();
     }
 
     // public void DestroyColliders()
