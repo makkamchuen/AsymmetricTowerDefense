@@ -159,12 +159,14 @@ public class MapManager : MonoBehaviour
             RebakeNavMesh();
         }
 
-        if (rebakeRequired && rebakeCounter == 0) {
+        if (rebakeRequired && rebakeCounter == 0)
+        {
             rebakeRequired = false;
             RebakeNavMesh();
         }
 
-        if (rebakeCounter != 0) {
+        if (rebakeCounter != 0)
+        {
             rebakeCounter--;
         }
     }
@@ -183,8 +185,6 @@ public class MapManager : MonoBehaviour
             SmoothMap();
         }
         meshGen.GenerateMesh(GetInversedMap(), unit);
-
-        _randomSprite.placeSprite();
         // RebakeNavMesh();
         PlaceColliders();
     }
@@ -205,6 +205,7 @@ public class MapManager : MonoBehaviour
     public void RebakeNavMesh()
     {
         _navMeshSurface.BuildNavMesh();
+        _randomSprite.placeSprite();
     }
 
     // public void DestroyColliders()

@@ -19,7 +19,7 @@ public class RandomSprite : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
     public void placeSprite()
@@ -39,12 +39,14 @@ public class RandomSprite : MonoBehaviour
                         if (element.CanPlace())
                         {
                             // Add random elements to element placement.
-                            Vector3 position = new Vector3((-(float)forestSizeX / 2 + x) / generalDensity + transform.position.x + xOffset, 0f, (-(float)forestSizeZ / 2 + z) / generalDensity + transform.position.z + zOffset);
+                            Vector3 position = new Vector3((forestSizeX / 2 + x) / generalDensity + transform.position.x + xOffset, 0f, (forestSizeZ / 2 + z) / generalDensity + transform.position.z + zOffset);
                             Vector3 offset = new Vector3(Random.Range(-0.75f, 0.75f), 0f, Random.Range(-0.75f, 0.75f));
                             // Vector3 rotation = new Vector3(45f, Random.Range(0, 360f), Range(0, 1f));
                             Vector3 scale = transform.localScale * Random.Range(0.8f, 1.2f);
 
                             // Instantiate and place element in world.
+
+                            // todo: put element into new array to keep track and re-place
                             GameObject newElement = Instantiate(element.GetRandom());
                             newElement.transform.SetParent(transform);
                             newElement.transform.position = position + offset;
