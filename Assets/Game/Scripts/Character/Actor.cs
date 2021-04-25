@@ -9,6 +9,7 @@ public class Actor : MonoBehaviour
   [SerializeField] private bool faceRight = true;
   [SerializeField] private Flee flee;
   private SpriteRenderer _spriteRenderer;
+  private GameObject _positionOffset;
   private Collider _collider;
   private Health _health;
   private Status _status;
@@ -19,6 +20,7 @@ public class Actor : MonoBehaviour
     _status = new Status();
     _collider = GetComponent<Collider>();
     _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    _positionOffset = transform.GetChild(0).gameObject;
     _health = GetComponent<Health>();
   }
 
@@ -79,6 +81,9 @@ public class Actor : MonoBehaviour
     {
       _spriteRenderer.flipX = faceRight? _isFacingRight: !_isFacingRight;
     }
+    _positionOffset.transform.localPosition = new Vector3(_spriteRenderer.transform.localPosition.x * -1,
+      0, _spriteRenderer.transform.localPosition.z * -1);
+    transform.localPosition = new Vector3(transform.localPosition.x, 0, transform.localPosition.z);
   }
 
 }

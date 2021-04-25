@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1fd61ef7434432184f54830eedaa95a, type: 3}
-  m_Name: ThanatosPatrol
+  m_Script: {fileID: 11500000, guid: d6c4433ce84842ca913cb59da1d78785, type: 3}
+  m_Name: MinionRangedSight
   m_EditorClassIdentifier: 
-  minMoveDistance: 2
-  maxMoveDistance: 3
-  minIdleSec: 0
-  maxIdleSec: 0
+  radius: 3
+  priority: {fileID: 11400000, guid: 429d4ed4ea3bf457cb65b00a3c5055c5, type: 2}
