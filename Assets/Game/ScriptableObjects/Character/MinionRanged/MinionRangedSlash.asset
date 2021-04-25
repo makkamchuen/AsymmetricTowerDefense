@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9633cfe46c4ee0814b533f0bf5b0ac, type: 3}
+  m_Name: MinionRangedSlash
+  m_EditorClassIdentifier: 
+  _flyOrGround: -1
+  _targetTags:
+  - Player
+  skillDataAtLevel:
+  - level: 1
+    damage: 1
+    cooldown: 1
+  - level: 30
+    damage: 1
+    cooldown: 1
+  - level: 50
+    damage: 1
+    cooldown: 1
+  - level: 100
+    damage: 1
+    cooldown: 1
+  hitEffect: {fileID: 4197748529095861617, guid: a64d0081f60b343438507e9613e59c6a,
+    type: 3}
+  hitSound: event:/SFX/WeaponImpact/SwordImpact
+  hitBoxHeight: 0.5
+  hitBoxWidth: 0.5
