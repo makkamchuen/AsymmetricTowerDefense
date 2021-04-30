@@ -75,7 +75,17 @@ public class Actor : MonoBehaviour
   {
     if (_spriteRenderer.sprite.name == "char_devil_sprite")
     {
-      _spriteRenderer.flipY = faceRight? !_isFacingRight: _isFacingRight;
+      if (_isFacingRight)
+      {
+        transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        transform.GetChild(0).transform.eulerAngles = new Vector3(-45f, 180f, 0f);
+      }
+      else
+      {
+        transform.eulerAngles = new Vector3(0f, 0f, 0f);
+        transform.GetChild(0).transform.eulerAngles = new Vector3(45f, 0, 0f);
+      }
+      // _spriteRenderer.flipY = faceRight?!_isFacingRight : _isFacingRight;
     }
     else
     {

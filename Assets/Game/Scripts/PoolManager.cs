@@ -29,7 +29,6 @@ namespace Game.Scripts
                 instance.name = prefab.name + Time.time;
             }
 
-            instance.transform.position = position;
             MarkPrefabAsActive(instance, prefabId);
             return instance;
         }
@@ -38,7 +37,7 @@ namespace Game.Scripts
         {
             if (cachePanel == null)
             {
-                cachePanel = new GameObject {name = "CachePanel"};
+                cachePanel = new GameObject { name = "CachePanel" };
                 DontDestroyOnLoad(cachePanel);
             }
 

@@ -414,6 +414,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 8476217203972629314, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
+      propertyPath: faceRight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476217203972629314, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
       propertyPath: _patrolPattern
       value: 
       objectReference: {fileID: 11400000, guid: 93c08b7ee8b9b42e08215272f23c5a9b,
