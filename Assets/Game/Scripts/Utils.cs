@@ -29,21 +29,22 @@ namespace Game.Scripts
             }
             return Vector3.zero;
         }
-        
+
         public static Vector3 GetRandomPoint(Vector3 center, float minDist, float maxDist)
         {
+            NavMeshHit hit;
             for (int i = 0; i < 300; i++)
             {
                 Vector3 randomPoint = center + Random.insideUnitSphere * Random.Range(minDist, maxDist);
-                NavMeshHit hit;
-                if (NavMesh.SamplePosition(randomPoint, out hit, 0.01f, NavMesh.AllAreas))
+                if (NavMesh.SamplePosition(randomPoint, out hit, 20f, NavMesh.AllAreas))
                 {
                     return hit.position;
                 }
             }
-            return center;
+            Debug.Log("nothing");
+            return Vector3.zero;
         }
-        
+
         public static Vector3 GetTreasureRandomPoint()
         {
             for (int i = 0; i < 100; i++)
@@ -53,8 +54,8 @@ namespace Game.Scripts
                     0,
                     Random.Range(RangeZMin, RangeZMax)
                 );
-                if (NavMesh.SamplePosition(randomPoint, out NavMeshHit hit, 0.1f, NavMesh.AllAreas)
-                && !TooCloseWithOtherTreasures(hit.position))
+                if (NavMesh.SamplePosition(randomPoint, out NavMeshHit hit, 0.1f, NavMesh.AllAreas) &&
+                    !TooCloseWithOtherTreasures(hit.position))
                 {
                     return hit.position;
                 }

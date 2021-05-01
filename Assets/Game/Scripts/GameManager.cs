@@ -34,12 +34,11 @@ namespace Game.Scripts
             };
         }
 
-
         private void Update()
         {
             currentLevel = timer.StartTimeInSecs - timer.TimeRemainingInSec + 1;
-            if (currentLevel > 100) currentLevel = 100; 
-            
+            if (currentLevel > 100) currentLevel = 100;
+
             rewardText.SetText(player.GetRewardAmountCollected() + " / " + rewardReqToWin);
             if (player.GetRewardAmountCollected() >= rewardReqToWin)
             {
@@ -54,10 +53,10 @@ namespace Game.Scripts
             {
                 if (!spawnContents[i].enabled)
                     continue;
-                
+
                 if (cooldown[i] == 0)
                 {
-                    GameObject gameObject = PoolManager.Spawn(spawnContents[i].prefab, Utils.GetRandomPoint());
+                    GameObject gameObject = PoolManager.Spawn(spawnContents[i].prefab, Utils.GetRandomPoint(player.transform.position, 10f, 30f));
                     gameObject.transform.LookAt(Utils.GetRandomPoint());
                     cooldown[i] = spawnContents[i].cooldown;
                 }
@@ -99,6 +98,5 @@ namespace Game.Scripts
         }
 
     }
-    
-    
+
 }
