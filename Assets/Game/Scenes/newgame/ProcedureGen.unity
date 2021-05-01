@@ -437,11 +437,11 @@ MonoBehaviour:
   gameStatusText: {fileID: 498113491}
   playAgainButton: {fileID: 1569484143}
   spawnContents:
-  - prefab: {fileID: 8174531637764744893, guid: f4061a10a6672e146a8f2ceb90b33c3b,
+  - prefab: {fileID: 5921409440072016248, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
       type: 3}
     cooldown: 5
-    enabled: 0
-  - prefab: {fileID: 5921409440072016248, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
+    enabled: 1
+  - prefab: {fileID: 2751151623452151826, guid: c26cb3d4d54158641888bfc9a52371d5,
       type: 3}
     cooldown: 5
     enabled: 1
@@ -449,7 +449,11 @@ MonoBehaviour:
       type: 3}
     cooldown: 5
     enabled: 1
-  - prefab: {fileID: 2751151623452151826, guid: c26cb3d4d54158641888bfc9a52371d5,
+  - prefab: {fileID: 5921409440072016248, guid: f0f7b51b50ce547dfb3e84bc0451acd5,
+      type: 3}
+    cooldown: 5
+    enabled: 1
+  - prefab: {fileID: 7155914395970087737, guid: 855c9ad4221d6c54cb36b3873f6271a8,
       type: 3}
     cooldown: 5
     enabled: 1

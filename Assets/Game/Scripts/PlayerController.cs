@@ -8,7 +8,7 @@ using TouchPhase = UnityEngine.TouchPhase;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private LayerMask layerMask;
-    
+
     private Player _target;
     private int _numOTreasuresCollected;
 
@@ -29,9 +29,7 @@ public class PlayerController : MonoBehaviour
         {
             CheckControl();
         }
-        else if (Input.GetKeyDown(KeyCode.X))
-        {
-        }
+        else if (Input.GetKeyDown(KeyCode.X)) { }
     }
 
     private void CheckControl()
@@ -77,7 +75,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
+        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore))
         {
             return;
         }
