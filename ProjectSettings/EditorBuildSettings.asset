@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scenes/newgame/menu.unity
     guid: 55c14daf27ef0403b84187514c42b440
   - enabled: 1
-    path: Assets/Game/Scenes/newgame/newgame.unity
-    guid: 7d4a3cd747eeb6048992a48ad5f9954e
+    path: Assets/Game/Scenes/newgame/ProcedureGen.unity
+    guid: 93e3045cfd8664007bbde204fdc3fba7
   m_configObjects: {}
