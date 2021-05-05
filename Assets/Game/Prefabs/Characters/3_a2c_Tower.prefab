@@ -130,6 +130,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 881621471687846829, guid: f770baff5e532774cab03c3de0e01ba0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Minion
+      objectReference: {fileID: 0}
     - target: {fileID: 3202553557632598334, guid: f770baff5e532774cab03c3de0e01ba0,
         type: 3}
       propertyPath: m_Size.x
