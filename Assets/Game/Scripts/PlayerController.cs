@@ -22,9 +22,10 @@ public class PlayerController : MonoBehaviour
         _numOTreasuresCollected = 0;
     }
 
+#if UNITY_STANDALONE
+
     private void Update()
     {
-        // CheckOnMobileTouch();
         if (_target.GetStatus().Controllable())
         {
             CheckControl();
@@ -41,32 +42,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Attack()
-    {
-        Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
-        {
-            return;
-        }
-        _target.Skill.PlayAttackAnimation(hit.point);
-    }
-
-    // private void CheckOnMobileTouch()
-    // {
-    //     if (Input.touchCount <= 0 || Input.touches[0].phase != TouchPhase.Began)
-    //     {
-    //         return;
-    //     }
-    //
-    //     Ray ray = _mainCamera.ScreenPointToRay(Input.touches[0].position);
-    //     if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
-    //     {
-    //         return;
-    //     }
-    //
-    //     MoveTo(hit.point);
-    // }
-
     private void CheckOnRightClick()
     {
         if (!Mouse.current.rightButton.wasPressedThisFrame)
@@ -81,7 +56,45 @@ public class PlayerController : MonoBehaviour
         }
 
         MoveTo(hit.point);
+    }
 
+#elif UNITY_ANDROID
+
+    private void Update()
+    {
+        if (_target.GetStatus().Controllable())
+        {
+            CheckOnMobileTouch();
+        }
+        else if (Input.GetKeyDown(KeyCode.X)) { }
+    }
+
+    private void CheckOnMobileTouch()
+    {
+        if (Input.touchCount <= 0 || Input.touches[0].phase != TouchPhase.Began)
+        {
+            return;
+        }
+
+        Ray ray = _mainCamera.ScreenPointToRay(Input.touches[0].position);
+        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
+        {
+            return;
+        }
+
+        MoveTo(hit.point);
+    }
+
+#endif
+
+    private void Attack()
+    {
+        Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
+        {
+            return;
+        }
+        _target.Skill.PlayAttackAnimation(hit.point);
     }
 
     private void MoveTo(Vector3 position)
