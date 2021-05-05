@@ -415,6 +415,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2b7c9f4aa841c4e8ab3eaf0235f3983a,
         type: 2}
+    - target: {fileID: 3695741997308100751, guid: 0322d5a34e922e14baea7fc94c5640ea,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695741997308100751, guid: 0322d5a34e922e14baea7fc94c5640ea,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695741998856405303, guid: 0322d5a34e922e14baea7fc94c5640ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4730124536433261376, guid: 0322d5a34e922e14baea7fc94c5640ea,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -500,6 +515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 4_a2b1_Minion_Ranged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6964449105855860134, guid: 0322d5a34e922e14baea7fc94c5640ea,
+        type: 3}
+      propertyPath: m_TagString
+      value: Minion
       objectReference: {fileID: 0}
     - target: {fileID: 8178438414274544979, guid: 0322d5a34e922e14baea7fc94c5640ea,
         type: 3}
