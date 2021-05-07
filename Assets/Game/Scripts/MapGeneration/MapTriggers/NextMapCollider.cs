@@ -25,10 +25,13 @@ public class NextMapCollider : MonoBehaviour
             {
                 if (mapManager.mapNumber == mapManagerSelf.mapNumber - 2)
                 {
-                    mapManager.transform.position = mapManager.transform.position + new Vector3(75, 0, 0);
+                    mapManager.transform.position += new Vector3(75, 0, 0);
                     mapManager.mapNumber += 3;
                     mapManager.shouldUpdateSprite = true;
                     mapManager.GenerateMap();
+                    parentMapObject.transform.Find("WorldBoundary").position += new Vector3(25, 0, 0);
+
+                    // position.x += 25f;
                 }
             }
 

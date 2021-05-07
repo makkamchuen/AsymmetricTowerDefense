@@ -52,7 +52,7 @@ public class Health : ActorActionComponent
     UpdateHealthBar();
     if (hitEffect != null)
     {
-      Instantiate(hitEffect, transform.position, transform.rotation);
+      Instantiate(hitEffect, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 0.5f), transform.rotation);
       FMODUnity.RuntimeManager.PlayOneShotAttached(hitSound, gameObject);
     }
     GetAnimator().SetTrigger(AnimationTrigger.hurt);
@@ -61,16 +61,16 @@ public class Health : ActorActionComponent
       GetAnimator().SetBool(AnimationTrigger.dead, true);
       GetActor().GetCollider().enabled = false;
       GetActor().GetStatus().SetGameFinishStatus();
-      SpawnNextLevelCharacter(); 
+      SpawnNextLevelCharacter();
       SpawnReward();
       _isDead = true;
     }
   }
 
   private void SpawnNextLevelCharacter()
-   {
-        if(nextLevelCharacter != null) Instantiate(nextLevelCharacter, this.transform.position, Quaternion.identity);
-   }
+  {
+    if (nextLevelCharacter != null) Instantiate(nextLevelCharacter, this.transform.position, Quaternion.identity);
+  }
 
   private void SpawnReward()
   {
@@ -84,7 +84,7 @@ public class Health : ActorActionComponent
         reward.GetComponent<Reward>().Amount = rewardAmount;
       }
     }
-    
+
   }
 
   public float GetCurrentHealth()
