@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Game.Scripts;
 using UnityEngine;
 public class NextMapCollider : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class NextMapCollider : MonoBehaviour
                 {
                     mapManager.transform.position += new Vector3(75, 0, 0);
                     mapManager.mapNumber += 3;
+                    GameManager.IncrementCurrentLevel();
                     mapManager.shouldUpdateSprite = true;
                     mapManager.GenerateMap();
                     parentMapObject.transform.Find("WorldBoundary").position += new Vector3(25, 0, 0);

@@ -43,7 +43,7 @@ public abstract class AttackSkillData : SkillData
         }
       }
 
-      return this.skillDataAtLevelDictionary[GameManager.currentLevel];
+      return this.skillDataAtLevelDictionary[GameManager.CurrentLevel];
     }
   }
   

@@ -81,13 +81,7 @@ public class MapManager : MonoBehaviour
                 Destroy(_previousMap.gameObject);
             }
         } */
-
-    public void SetPreviousMap(MapManager previousMap)
-    {
-        _previousMap = previousMap;
-        mapNumber = previousMap.GetMapNumber() + 1;
-        _mapSetted = true;
-    }
+    
 
     public void PlaceRoadBlock()
     {
