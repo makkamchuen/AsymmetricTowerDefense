@@ -11,7 +11,7 @@ namespace Game.Scripts
 {
     public class GameManager : MonoBehaviour
     {
-        public static int currentLevel = 1;
+        private static int currentLevel = 1;
         [SerializeField] private GameObject treasurePrefab;
         [SerializeField] private int rewardReqToWin;
         [SerializeField] private TMP_Text rewardText;
@@ -34,10 +34,16 @@ namespace Game.Scripts
             };
         }
 
+        public static void IncrementCurrentLevel()
+        {
+            currentLevel++;
+            if (currentLevel > 100) currentLevel = 100;
+        }
+
+        public static int CurrentLevel => currentLevel;
+
         private void Update()
         {
-            currentLevel = timer.StartTimeInSecs - timer.TimeRemainingInSec + 1;
-            if (currentLevel > 100) currentLevel = 100;
 
             rewardText.SetText(player.GetRewardAmountCollected() + " / " + rewardReqToWin);
             if (player.GetRewardAmountCollected() >= rewardReqToWin)

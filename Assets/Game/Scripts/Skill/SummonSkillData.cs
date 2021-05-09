@@ -45,7 +45,7 @@ public class SummonSkillData : SkillData, IMaxCastApply
                 }
             }
 
-            return skillDataAtLevelDictionary[GameManager.currentLevel];
+            return skillDataAtLevelDictionary[GameManager.CurrentLevel];
         }
     }
 
