@@ -35,8 +35,9 @@ namespace Game.Scripts
             NavMeshHit hit;
             for (int i = 0; i < 300; i++)
             {
-                Vector3 randomPoint = center + Random.insideUnitSphere * Random.Range(minDist, maxDist);
-                if (NavMesh.SamplePosition(randomPoint, out hit, 20f, NavMesh.AllAreas))
+                Vector3 randInSphere = Random.insideUnitSphere;
+                Vector3 randPointToRight = center + new Vector3(Mathf.Abs(randInSphere.x), randInSphere.y, randInSphere.z) * Random.Range(minDist, maxDist);
+                if (NavMesh.SamplePosition(randPointToRight, out hit, 20f, NavMesh.AllAreas))
                 {
                     return hit.position;
                 }
