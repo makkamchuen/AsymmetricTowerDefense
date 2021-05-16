@@ -10,6 +10,7 @@ TagManager:
   - Obstacles
   - Environment
   - FxTemporaire
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bf53c4dc75a441686a278e879c6367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStats: {fileID: 11400000, guid: f294c2134f90f4a478eb72f4bf8a08b0, type: 2}
-  attack: {fileID: 0}
+  baseStats: {fileID: 11400000, guid: 317bd1098fc864b7d892c9bcbd119d9b, type: 2}
+  attack: {fileID: 4691000271225600390}
   weapon: 
   faceRight: 1
   flee: {fileID: 0}
   sights:
-  - {fileID: 11400000, guid: 11008631076124b4bbbedd97aa1b8d7f, type: 2}
+  - {fileID: 11400000, guid: 43bdd29049fe947d08058bbbb0342795, type: 2}
 --- !u!114 &3561563449645674234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,6 +85,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.412
       objectReference: {fileID: 0}
+    - target: {fileID: 1538581429455452208, guid: 83f2891dea593734dbb43289feab0007,
+        type: 3}
+      propertyPath: skillDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9956df0b7209b41d1ba54d5045092bb1,
+        type: 2}
     - target: {fileID: 2414687836021218613, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_IsActive
@@ -279,3 +285,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6071947737947816374}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4691000271225600390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1538581429455452208, guid: 83f2891dea593734dbb43289feab0007,
+    type: 3}
+  m_PrefabInstance: {fileID: 6071947737947816374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751151623452151826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c423d03128c47538f4295ca5e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
