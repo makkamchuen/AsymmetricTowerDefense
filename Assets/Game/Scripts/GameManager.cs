@@ -20,6 +20,8 @@ namespace Game.Scripts
         [SerializeField] private TMP_Text gameStatusText;
         [SerializeField] private Button playAgainButton;
         [SerializeField] private SpawnContent[] spawnContents;
+        [SerializeField] private int minSpawnDistanceFromPlayer = 20;
+        [SerializeField] private int maxSpawnDistanceFromPlayer = 40;
         private float[] cooldown;
         private Timer timer;
         private void Start()
@@ -57,14 +59,15 @@ namespace Game.Scripts
 
             for (int i = 0; i < cooldown.Length; i += 1)
             {
-                if (!spawnContents[i].enabled)
+                if (!spawnContents[i].enabled || spawnContents[i].spawnedCountDoNotTouch >= spawnContents[i].maxNumber)
                     continue;
 
                 if (cooldown[i] == 0)
                 {
-                    GameObject gameObject = PoolManager.Spawn(spawnContents[i].prefab, Utils.GetRandomPoint(player.transform.position, 10f, 30f));
+                    GameObject gameObject = PoolManager.Spawn(spawnContents[i].prefab, Utils.GetRandomPoint(player.transform.position, minSpawnDistanceFromPlayer, maxSpawnDistanceFromPlayer));
                     gameObject.transform.LookAt(Utils.GetRandomPoint());
                     cooldown[i] = spawnContents[i].cooldown;
+                    spawnContents[i].spawnedCountDoNotTouch += 1;
                 }
                 else
                 {
@@ -100,9 +103,10 @@ namespace Game.Scripts
         {
             public GameObject prefab;
             public int cooldown;
+            [Range(1, 100)]
+            public int maxNumber = 1;
             public bool enabled;
+            public int spawnedCountDoNotTouch = 0;
         }
-
     }
-
 }
