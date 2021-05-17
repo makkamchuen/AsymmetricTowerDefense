@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19c62d2ca45e34fe093b742d85904663, type: 3}
-  m_Name: DevilSpawn
+  m_Name: MeleeSpawn
   m_EditorClassIdentifier: 
-  _flyOrGround: -1
+  _flyOrGround: 2
   _targetTags:
   - Player
   _gameObject: {fileID: 5921409440072016248, guid: f0f7b51b50ce547dfb3e84bc0451acd5,
     type: 3}
-  reachableDistance: 3
-  minDistToTarget: 0.3
-  maxDistToTarget: 1
+  reachableDistance: 2
+  minDistToTarget: 0
+  maxDistToTarget: 0.2
   skillDataAtLevel:
   - level: 1
-    cooldown: 3
-    maxNumOfCast: 3
+    cooldown: 2
+    maxNumOfCast: 1
   - level: 100
     cooldown: 2
-    maxNumOfCast: 6
+    maxNumOfCast: 10

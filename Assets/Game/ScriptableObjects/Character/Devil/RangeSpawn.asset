@@ -9,22 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a9633cfe46c4ee0814b533f0bf5b0ac, type: 3}
-  m_Name: BearSlash
+  m_Script: {fileID: 11500000, guid: 19c62d2ca45e34fe093b742d85904663, type: 3}
+  m_Name: RangeSpawn
   m_EditorClassIdentifier: 
-  _flyOrGround: -1
+  _flyOrGround: 2
   _targetTags:
   - Player
-  - Minion
+  _gameObject: {fileID: 7155914395970087737, guid: 855c9ad4221d6c54cb36b3873f6271a8,
+    type: 3}
+  reachableDistance: 5
+  minDistToTarget: 1
+  maxDistToTarget: 2
   skillDataAtLevel:
   - level: 1
-    damage: 10
     cooldown: 2
+    maxNumOfCast: 1
   - level: 100
-    damage: 20
-    cooldown: 1
-  hitEffect: {fileID: 4538413630352692415, guid: 674b247803e50594aa6d9789701ab81c,
-    type: 3}
-  hitSound: 
-  hitBoxHeight: 0.25
-  hitBoxWidth: 0.3
+    cooldown: 2
+    maxNumOfCast: 10

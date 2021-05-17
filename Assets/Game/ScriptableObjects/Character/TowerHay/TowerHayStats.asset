@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d497aef48a924ef885e53ce6794bb99, type: 3}
-  m_Name: TowerStats
+  m_Name: TowerHayStats
   m_EditorClassIdentifier: 
   statsAtLevels:
   - level: 1
@@ -27,3 +27,4 @@ MonoBehaviour:
     attackDamage: 10
     minRewardFromCorpse: 4
     maxRewardFromCorpse: 10
+  FlyOrGround: 2

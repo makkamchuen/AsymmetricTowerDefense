@@ -9,21 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a9633cfe46c4ee0814b533f0bf5b0ac, type: 3}
-  m_Name: HeroSlash
+  m_Script: {fileID: 11500000, guid: ebacb745a1be425a85f141a5a4d0bbdb, type: 3}
+  m_Name: TowerHaySkill
   m_EditorClassIdentifier: 
-  _flyOrGround: -1
+  _flyOrGround: 2
   _targetTags:
   - Enemy
   skillDataAtLevel:
   - level: 1
-    damage: 10
-    cooldown: 0.5
+    damage: 5
+    cooldown: 1.5
   - level: 100
     damage: 10
-    cooldown: 0.5
-  hitEffect: {fileID: 4197748529095861617, guid: a64d0081f60b343438507e9613e59c6a,
+    cooldown: 0.75
+  hitEffect: {fileID: 0}
+  hitSound: 
+  _gameObject: {fileID: 8356662070351016534, guid: c36c38d9a7faf4fc190cd694385bc986,
     type: 3}
-  hitSound: event:/SFX/WeaponImpact/SwordImpact
-  hitBoxHeight: 0.5
-  hitBoxWidth: 0.5

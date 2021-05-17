@@ -15,6 +15,7 @@ MonoBehaviour:
   _flyOrGround: -1
   _targetTags:
   - Player
+  - Minion
   skillDataAtLevel:
   - level: 1
     damage: 1

@@ -521,25 +521,25 @@ MonoBehaviour:
       type: 3}
     cooldown: 5
     maxNumber: 20
-    enabled: 1
+    enabled: 0
     spawnedCountDoNotTouch: 0
   - prefab: {fileID: 7155914395970087737, guid: 855c9ad4221d6c54cb36b3873f6271a8,
       type: 3}
     cooldown: 5
     maxNumber: 44
-    enabled: 1
+    enabled: 0
     spawnedCountDoNotTouch: 0
   - prefab: {fileID: 2751151623452151826, guid: 45b903535c5d4594fb65d04fa73c4f35,
       type: 3}
     cooldown: 5
     maxNumber: 42
-    enabled: 1
+    enabled: 0
     spawnedCountDoNotTouch: 0
   - prefab: {fileID: 2751151623452151826, guid: c26cb3d4d54158641888bfc9a52371d5,
       type: 3}
     cooldown: 5
     maxNumber: 38
-    enabled: 1
+    enabled: 0
     spawnedCountDoNotTouch: 0
   minSpawnDistanceFromPlayer: 20
   maxSpawnDistanceFromPlayer: 35
