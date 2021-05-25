@@ -164,14 +164,12 @@ PrefabInstance:
         type: 3}
       propertyPath: baseStats
       value: 
-      objectReference: {fileID: 11400000, guid: f294c2134f90f4a478eb72f4bf8a08b0,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5543867156869422052, guid: f770baff5e532774cab03c3de0e01ba0,
         type: 3}
       propertyPath: sights.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 11008631076124b4bbbedd97aa1b8d7f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 7713518518355673657, guid: f770baff5e532774cab03c3de0e01ba0,
         type: 3}
       propertyPath: skillDatas.Array.size
@@ -181,13 +179,13 @@ PrefabInstance:
         type: 3}
       propertyPath: skillDatas.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: f99fb83a1c7ea1e41ae985dbe9bdf321,
-        type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 731206602348643411, guid: f770baff5e532774cab03c3de0e01ba0, type: 3}
     - {fileID: 731206602449698893, guid: f770baff5e532774cab03c3de0e01ba0, type: 3}
     - {fileID: 5161520750957948646, guid: f770baff5e532774cab03c3de0e01ba0, type: 3}
     - {fileID: 423584048812276398, guid: f770baff5e532774cab03c3de0e01ba0, type: 3}
+    - {fileID: 5543867156869422052, guid: f770baff5e532774cab03c3de0e01ba0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f770baff5e532774cab03c3de0e01ba0, type: 3}
 --- !u!1 &8245503363102740900 stripped
 GameObject:

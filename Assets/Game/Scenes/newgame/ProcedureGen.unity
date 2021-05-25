@@ -470,6 +470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 411637827}
   - component: {fileID: 411637828}
+  - component: {fileID: 411637829}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -543,6 +544,32 @@ MonoBehaviour:
     spawnedCountDoNotTouch: 0
   minSpawnDistanceFromPlayer: 20
   maxSpawnDistanceFromPlayer: 35
+--- !u!114 &411637829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411637826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41961041cf85d4522a897205426670da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 464510124}
+  spawnContents:
+  - sprite: {fileID: 0}
+    spawnSound: 
+    shortcut: h
+    prefab: {fileID: 2751151623452151826, guid: c26cb3d4d54158641888bfc9a52371d5,
+      type: 3}
+    rewardCost: 0
+  - sprite: {fileID: 0}
+    spawnSound: 
+    shortcut: s
+    prefab: {fileID: 2751151623452151826, guid: 45b903535c5d4594fb65d04fa73c4f35,
+      type: 3}
+    rewardCost: 0
 --- !u!1 &464510121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
@@ -1038,6 +1065,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+<<<<<<< HEAD
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1128141889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 689130686}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128141890}
+  m_Layer: 0
+  m_Name: branch (1) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1128141890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 689130686}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128141889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+>>>>>>> dev
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172248725 stripped
 GameObject:
