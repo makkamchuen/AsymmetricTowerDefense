@@ -9,6 +9,8 @@ public class Health : ActorActionComponent
   [SerializeField] private GameObject nextLevelCharacter;
   [SerializeField] private GameObject rewardAfterDeath;
   public bool healthBarFollowCharacter = true;
+  public bool hideHealBarWhenEmpty = true;
+  public bool hideHealBarWhenFull = true;
   public HealthBar healthBar;
 
   private float _currentHealth;
@@ -24,6 +26,7 @@ public class Health : ActorActionComponent
     base.Start();
     _currentHealth = GetActor().GetBaseStats().MaxHealth;
     SetMaxHealth();
+    UpdateHealthBar();
     _isDead = false;
   }
 
@@ -108,6 +111,12 @@ public class Health : ActorActionComponent
     {
       healthBar.SetHealth(_currentHealth);
     }
+    if (hideHealBarWhenEmpty && _currentHealth == 0)
+      healthBar.gameObject.SetActive(false);
+    else if (hideHealBarWhenFull && _currentHealth == GetActor().GetBaseStats().MaxHealth)
+      healthBar.gameObject.SetActive(false);
+    else
+      healthBar.gameObject.SetActive(true);
   }
 
   private void SetMaxHealth()
