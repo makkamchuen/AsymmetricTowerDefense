@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 1340493621}
   - component: {fileID: 1340493620}
   m_Layer: 5
-  m_Name: Timer Canvas
+  m_Name: Core Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2038,6 +2038,56 @@ PrefabInstance:
     - target: {fileID: 4049925517926955027, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452140354269660986, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: hideHealBarWhenFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452140354269660986, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: hideHealBarWhenEmpty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452140354269660986, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: healthBarFollowCharacter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367579970597899, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367580200256099, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367580200256099, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 290
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367580200256099, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367580200256100, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367581470950364, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367581470950364, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
