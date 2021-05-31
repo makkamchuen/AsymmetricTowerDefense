@@ -30,7 +30,7 @@ public class SlashSkillData : AttackSkillData
 
   public override bool CanApply(Actor user, Actor targetActor)
   {
-    if (!CanTakeDownTarget(targetActor) || !IsTarget(targetActor.tag)) return false;
+    if (!targetActor || !CanTakeDownTarget(targetActor) || !IsTarget(targetActor.tag)) return false;
 
     float xOffset = hitBoxWidth / 2;
     Collider[] colliders = Physics.OverlapBox(

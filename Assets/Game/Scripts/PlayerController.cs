@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using Game.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,7 +11,10 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private LayerMask layerMask;
 
-    private Player _target;
+    private Player _player;
+    private Skill _skill;
+    private bool _attackWhenStop = false;
+    private NavMeshAgent _agent;
     private int _numOTreasuresCollected;
 
     private Camera _mainCamera;
@@ -17,32 +22,28 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        _target = GetComponent<Player>();
+        _player = GetComponent<Player>();
+        _skill = GetComponent<Skill>();
+        _agent = GetComponent<NavMeshAgent>();
         _mainCamera = Camera.main;
         _numOTreasuresCollected = 0;
     }
+    
+    
 
 #if UNITY_STANDALONE
 
     private void Update()
     {
-        if (_target.GetStatus().Controllable())
+        if (_player.GetStatus().Controllable())
         {
             CheckControl();
         }
         else if (Input.GetKeyDown(KeyCode.X)) { }
     }
 
-    private void CheckControl()
-    {
-        CheckOnRightClick();
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Attack();
-        }
-    }
 
-    private void CheckOnRightClick()
+    private void ConditionallyMove()
     {
         if (!Mouse.current.rightButton.wasPressedThisFrame)
         {
@@ -55,21 +56,26 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        MoveTo(hit.point);
+        if (!IsCloseToCurrentPosition(hit.point))
+        {
+            _player.GetMover().MoveTo(hit.point);
+        }
+        _attackWhenStop = true;
+
     }
+
 
 #elif UNITY_ANDROID
 
     private void Update()
     {
-        if (_target.GetStatus().Controllable())
+        if (_player.GetStatus().Controllable())
         {
-            CheckOnMobileTouch();
+            CheckControl();
         }
-        else if (Input.GetKeyDown(KeyCode.X)) { }
     }
 
-    private void CheckOnMobileTouch()
+    private void ConditionallyMove()
     {
         if (Input.touchCount <= 0 || Input.touches[0].phase != TouchPhase.Began)
         {
@@ -82,10 +88,33 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        MoveTo(hit.point);
+        if (!IsCloseToCurrentPosition(hit.point))
+        {
+            _player.GetMover().MoveTo(hit.point);
+        }
+        _attackWhenStop = true;
     }
 
 #endif
+    
+    
+    private void CheckControl()
+    {
+        ConditionallyMove();
+
+        if (Input.GetKeyDown(KeyCode.R) || (_attackWhenStop && _agent.isStopped))
+        {
+            if (IsTargetInCollider())
+                Attack();
+            _attackWhenStop = false;
+        }
+    }
+    
+    private bool IsCloseToCurrentPosition(Vector3 point)
+    {
+        return Vector3.Distance(gameObject.transform.position, point) < 0.7f;
+    }
+
 
     private void Attack()
     {
@@ -94,11 +123,30 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        _target.Skill.PlayAttackAnimation(hit.point);
+        _player.Skill.PlayAttackAnimation(hit.point);
+    }
+    
+    private bool IsTargetInCollider()
+    {
+
+        SlashSkillData slashSkillData = (_skill.SkillDataToUse as SlashSkillData);
+        var hitBoxWidth = slashSkillData.hitBoxWidth;
+        var hitBoxHeight = slashSkillData.hitBoxHeight;
+        float xOffset = hitBoxWidth / 2;
+
+        Collider[] colliders = Physics.OverlapBox(
+            _player.transform.position + new Vector3(_player.GetSpriteRender().flipX? xOffset * -1 : xOffset, 0, 0),
+            new Vector3(hitBoxWidth, _player.transform.localScale.y, hitBoxHeight));
+        foreach (Collider collider in colliders)
+        {
+            Actor target = collider.GetComponent<Actor>();
+
+            if (_skill.SkillDataToUse.CanApply(_player, target))
+                return true;
+        }
+
+        return false;
     }
 
-    private void MoveTo(Vector3 position)
-    {
-        _target.GetMover().MoveTo(position);
-    }
+    
 }
