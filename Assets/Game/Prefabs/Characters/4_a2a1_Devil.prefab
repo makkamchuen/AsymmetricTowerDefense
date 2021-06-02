@@ -5264,8 +5264,8 @@ MonoBehaviour:
   - {fileID: 1725022378048469964}
   - {fileID: 6337808657756150156}
   m_Bounds:
-    m_Center: {x: 1.6106964, y: -0.17101932, z: -0.0000000399585}
-    m_Extent: {x: 1.2536695, y: 0.8901261, z: 0.000000059623495}
+    m_Center: {x: 0.3332839, y: 1.0405602, z: -0.000000021413328}
+    m_Extent: {x: 3.113183, y: 1.2308755, z: 0.00000005121565}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1001 &7448782126135341683
@@ -5449,7 +5449,7 @@ PrefabInstance:
     - target: {fileID: 5270820424800089162, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5270820424800089162, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
@@ -5532,7 +5532,12 @@ PrefabInstance:
     - target: {fileID: 7706818672227102378, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706818672227102378, guid: 4f913cdc97a97134292323c656a8e60c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7706818672227102378, guid: 4f913cdc97a97134292323c656a8e60c,
         type: 3}
