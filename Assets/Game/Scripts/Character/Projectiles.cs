@@ -21,11 +21,13 @@ public class Projectiles : MonoBehaviour
     private Vector3 direction;
     private HashSet<string> _targetTags;
     private FlyOrGround _flyOrGround;
+    private Transform fx;
     private bool _isFacingRight = false;
 
     private void Start()
     {
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _spriteRenderer = transform.Find("arrow").GetComponent<SpriteRenderer>();
+        fx = transform.Find("FX");
     }
 
     public void InitDirection(Vector3 v3)
@@ -34,6 +36,11 @@ public class Projectiles : MonoBehaviour
         if (direction.x > 0)
         {
             _isFacingRight = true;
+            Debug.Log("Right");
+        }
+        if (direction.x < 0)
+        {
+            Debug.Log("Left");
         }
     }
 
@@ -61,14 +68,7 @@ public class Projectiles : MonoBehaviour
     {
         _flyOrGround = flyOrGround;
     }
-    //
-    // void initDirection(float x, float y, float z)
-    // {
-    //     direction = new Vector3(x, y, z);
-    //
-    // }
 
-    // Update is called once per frame
     void Update()
     {
         // should it follow moving object?
@@ -83,8 +83,8 @@ public class Projectiles : MonoBehaviour
             distanceTravelled += speed * Time.deltaTime;
         }
 
+        FaceTarget();
         RestrictRotation();
-
     }
 
     // public void SetTarget(GameObject target)
@@ -133,8 +133,30 @@ public class Projectiles : MonoBehaviour
     //    Destroy(this.gameObject);
     //}
 
+    private void FaceTarget()
+    {
+        if (_isFacingRight)
+        {
+            _spriteRenderer.flipY = false;
+            fx.localPosition = new Vector3(-0.3f, fx.localPosition.y, fx.localPosition.z);
+            fx.eulerAngles = new Vector3(180f, 90f, 45f);
+        }
+        else
+        {
+            _spriteRenderer.flipY = true;
+            fx.localPosition = new Vector3(1f, fx.localPosition.y, fx.localPosition.z);
+            fx.eulerAngles = new Vector3(180f, -90f, -45f);
+        }
+    }
+
     private void RestrictRotation()
     {
-        _spriteRenderer.flipX = faceRight?!_isFacingRight : _isFacingRight;
+        Quaternion newTransformRotation = transform.rotation;
+        transform.rotation = new Quaternion(
+            newTransformRotation.x,
+            0f,
+            newTransformRotation.z,
+            newTransformRotation.w
+        );
     }
 }

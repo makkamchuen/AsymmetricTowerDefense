@@ -84,8 +84,8 @@ MonoBehaviour:
   - {fileID: 4523540526727431689}
   - {fileID: 6781343664805180838}
   m_Bounds:
-    m_Center: {x: -0.21500087, y: -0.3922354, z: -0.00000027348713}
-    m_Extent: {x: 3.0450006, y: 0.76223505, z: 0.00000030656767}
+    m_Center: {x: -0.21500063, y: -0.39223492, z: -0.000000020167391}
+    m_Extent: {x: 3.0450006, y: 0.76223505, z: 0.00000008305027}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1253379779739649046
@@ -191,6 +191,8 @@ MonoBehaviour:
   nextLevelCharacter: {fileID: 0}
   rewardAfterDeath: {fileID: 0}
   healthBarFollowCharacter: 1
+  hideHealBarWhenEmpty: 1
+  hideHealBarWhenFull: 1
   healthBar: {fileID: 5393367580200256098}
 --- !u!114 &4968707543312438198
 MonoBehaviour:
@@ -378,6 +380,21 @@ PrefabInstance:
       propertyPath: weaponSound
       value: event:/SFX/Attack/SwordWoosh
       objectReference: {fileID: 0}
+    - target: {fileID: 2180779348600347367, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180779348600347367, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180779348600347367, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.54
+      objectReference: {fileID: 0}
     - target: {fileID: 3747370998263778104, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: mover
@@ -435,8 +452,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4436615989780561927, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436615989780561927, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436615989780561927, guid: e2888dd6ff85a8f4bac047de292bdaa0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
@@ -446,7 +473,7 @@ PrefabInstance:
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
@@ -456,7 +483,7 @@ PrefabInstance:
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4739405972078143163, guid: e2888dd6ff85a8f4bac047de292bdaa0,
         type: 3}
