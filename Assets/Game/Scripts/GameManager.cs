@@ -23,17 +23,11 @@ namespace Game.Scripts
         [SerializeField] private int minSpawnDistanceFromPlayer = 20;
         [SerializeField] private int maxSpawnDistanceFromPlayer = 40;
         private float[] cooldown;
-        private Timer timer;
         private void Start()
         {
             cooldown = new float[spawnContents.Length];
             player.gameObject.SetActive(true);
             playAgainButton.onClick.AddListener(StartGame);
-            timer = GameObject.Find("Timer").GetComponent(typeof(Timer)) as Timer;
-            timer.CountCompleted += () =>
-            {
-                EndGame("Time's up!");
-            };
         }
 
         public static void IncrementCurrentLevel()
@@ -97,7 +91,6 @@ namespace Game.Scripts
             }
             player.GetStatus().SetGameFinishStatus();
             gameStatusText.SetText(statusText);
-            timer.StopTimer();
         }
 
         [Serializable]
