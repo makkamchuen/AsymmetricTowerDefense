@@ -75,15 +75,18 @@ public class Actor : MonoBehaviour
   {
     if (_spriteRenderer.sprite.name == "char_devil_sprite")
     {
+      Transform devil = transform.GetChild(0).transform;
       if (_isFacingRight)
       {
         transform.eulerAngles = new Vector3(0f, 180f, 0f);
-        transform.GetChild(0).transform.eulerAngles = new Vector3(-45f, 180f, 0f);
+        devil.eulerAngles = new Vector3(-45f, 180f, 0f);
+        devil.localPosition = new Vector3(devil.localPosition.x, -0.4f, 0.6f);
       }
       else
       {
         transform.eulerAngles = new Vector3(0f, 0f, 0f);
-        transform.GetChild(0).transform.eulerAngles = new Vector3(45f, 0, 0f);
+        devil.transform.eulerAngles = new Vector3(45f, 0, 0f);
+        devil.localPosition = new Vector3(devil.localPosition.x, -0.4f, -0.45f);
       }
       // _spriteRenderer.flipY = faceRight?!_isFacingRight : _isFacingRight;
     }
@@ -91,9 +94,6 @@ public class Actor : MonoBehaviour
     {
       _spriteRenderer.flipX = faceRight? _isFacingRight: !_isFacingRight;
     }
-    _positionOffset.transform.localPosition = new Vector3(_spriteRenderer.transform.localPosition.x * -1,
-      0, _spriteRenderer.transform.localPosition.z * -1);
-    transform.localPosition = new Vector3(transform.localPosition.x, 0, transform.localPosition.z);
   }
 
 }
