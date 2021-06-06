@@ -276,7 +276,7 @@ MonoBehaviour:
   baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
   attack: {fileID: 1575240131399358537}
   weapon: 
-  faceRight: 1
+  faceRight: 0
   flee: {fileID: 0}
 --- !u!114 &6352508521684343308
 MonoBehaviour:

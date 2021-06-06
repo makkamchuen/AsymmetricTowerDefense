@@ -15,9 +15,7 @@ public class SlashSkillData : AttackSkillData
   public override void Cast(Actor user)
   {
     float xOffset = hitBoxWidth / 2;
-    Collider[] colliders = Physics.OverlapBox(
-      user.transform.position + new Vector3(user.GetSpriteRender().flipX? xOffset * -1 : xOffset, 0, 0),
-      new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
+    Collider[] colliders = GetCollidersInHitBox(user);
     foreach (Collider collider in colliders)
     {
       if (!IsTarget(collider.tag) || !CanTakeDownTarget(collider.GetComponent<Actor>()))
@@ -32,10 +30,14 @@ public class SlashSkillData : AttackSkillData
   {
     if (!CanTakeDownTarget(targetActor) || !IsTarget(targetActor.tag)) return false;
 
-    float xOffset = hitBoxWidth / 2;
-    Collider[] colliders = Physics.OverlapBox(
-      user.transform.position + new Vector3(user.GetSpriteRender().flipX? xOffset * -1 : xOffset, 0, 0),
-      new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
+    Collider[] colliders = GetCollidersInHitBox(user);
     return colliders.Contains(targetActor.GetCollider());
+  }
+
+  private Collider[] GetCollidersInHitBox(Actor user)
+  {
+    return Physics.OverlapBox(
+      user.transform.position + new Vector3( hitBoxWidth / 2 * (user.IsFacingRight == user.FaceRightByDefault? -1 : 1), 0, 0), 
+      new Vector3(hitBoxWidth, user.transform.localScale.y, hitBoxHeight));
   }
 }

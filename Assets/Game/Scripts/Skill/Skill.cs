@@ -12,6 +12,7 @@ public class Skill: ActorActionComponent
   private SkillData skillDataToUse;
   private int[] castCount;
   private float minimunSkillDistance;
+  private Actor _actor;
   
   protected override void Start()
   {
@@ -21,6 +22,7 @@ public class Skill: ActorActionComponent
     skillDataList.AddRange(skillDatas);
     castCount = new int[skillDatas.Length];
     minimunSkillDistance = skillDataList.Min(skillData => skillData.GetMinDistance());
+    _actor = GetComponent <Actor>();
   }
 
   private void Update()
@@ -86,8 +88,16 @@ public class Skill: ActorActionComponent
   void OnDrawGizmos()
   { 
     Gizmos.color = Color.red;
-    Gizmos.DrawWireCube( transform.position + new Vector3(GetComponentInChildren<SpriteRenderer>().flipX? 0.25f * -1 : 0.25f, 0, 0), 
-      new Vector3(0.5f, transform.localScale.y, 0.5f));
+    var skill = _actor.Skill.skillDataToUse;
+    if (skill is SlashSkillData)
+    {
+      var hitBoxWidth = (skill as SlashSkillData).hitBoxWidth;
+      var hitBoxHeight = (skill as SlashSkillData).hitBoxHeight;
+      
+      Gizmos.DrawWireCube( transform.position + new Vector3( hitBoxWidth / 2 * (_actor.IsFacingRight == _actor.FaceRightByDefault? -1 : 1), 0, 0), 
+      new Vector3(hitBoxWidth, transform.localScale.y, hitBoxHeight));
+      
+    }
   }
 
 
