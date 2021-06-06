@@ -61,33 +61,6 @@ Transform:
   m_Father: {fileID: 4523540526727431689}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4380143355556057433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249244711083005147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RootBone: {fileID: 1525884735167796703}
-  m_BoneTransforms:
-  - {fileID: 1525884735167796703}
-  - {fileID: 2495766307705005917}
-  - {fileID: 5753243639576033779}
-  - {fileID: 7453682649897093660}
-  - {fileID: 8758501880644934921}
-  - {fileID: 5045166943882331014}
-  - {fileID: 4523540526727431689}
-  - {fileID: 6781343664805180838}
-  m_Bounds:
-    m_Center: {x: -0.21500063, y: -0.39223492, z: -0.000000020167391}
-    m_Extent: {x: 3.0450006, y: 0.76223505, z: 0.00000008305027}
-  m_UseBatching: 1
-  m_AlwaysUpdate: 1
 --- !u!1 &1253379779739649046
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,95 +122,6 @@ Transform:
   m_Father: {fileID: 7305271025700432308}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1575240131399358537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816726814051438325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65c423d03128c47538f4295ca5e5444f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillDatas:
-  - {fileID: 11400000, guid: 2b403f3c8f6ad4032b881d21a8dc909e, type: 2}
---- !u!114 &4344467541829664777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816726814051438325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72f6aed37f13e410a9fe8eda8ad13596, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4452140354269660986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816726814051438325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
-  nextLevelCharacter: {fileID: 0}
-  rewardAfterDeath: {fileID: 0}
-  healthBarFollowCharacter: 1
-  hideHealBarWhenEmpty: 1
-  hideHealBarWhenFull: 1
-  healthBar: {fileID: 5393367580200256098}
---- !u!114 &4968707543312438198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816726814051438325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 529faf33545c042ed8b0592948970079, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
-  attack: {fileID: 1575240131399358537}
-  weapon: 
-  faceRight: 1
-  flee: {fileID: 0}
---- !u!114 &6352508521684343308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816726814051438325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8884f6bba80d404baf218629ae7bf4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7562706388555565644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816726814051438325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fa8118508704839974d8f321960b0a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &2763207182591879272
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +216,122 @@ Transform:
   m_Father: {fileID: 2495766307705005917}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1575240131399358537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816726814051438325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c423d03128c47538f4295ca5e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillDatas:
+  - {fileID: 11400000, guid: 2b403f3c8f6ad4032b881d21a8dc909e, type: 2}
+--- !u!114 &4344467541829664777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816726814051438325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f6aed37f13e410a9fe8eda8ad13596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4452140354269660986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816726814051438325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4861a19d6ea84a27916b3c16564d73ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 0}
+  nextLevelCharacter: {fileID: 0}
+  rewardAfterDeath: {fileID: 0}
+  healthBarFollowCharacter: 1
+  hideHealBarWhenEmpty: 1
+  hideHealBarWhenFull: 1
+  healthBar: {fileID: 5393367580200256098}
+--- !u!114 &4968707543312438198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816726814051438325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529faf33545c042ed8b0592948970079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats: {fileID: 11400000, guid: 4eff1c8eec9b34b9ebd37e8f762073ca, type: 2}
+  attack: {fileID: 1575240131399358537}
+  weapon: 
+  faceRight: 1
+  flee: {fileID: 0}
+--- !u!114 &6352508521684343308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816726814051438325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8884f6bba80d404baf218629ae7bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7562706388555565644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816726814051438325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa8118508704839974d8f321960b0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &4380143355556057433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249244711083005147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RootBone: {fileID: 1525884735167796703}
+  m_BoneTransforms:
+  - {fileID: 1525884735167796703}
+  - {fileID: 2495766307705005917}
+  - {fileID: 5753243639576033779}
+  - {fileID: 7453682649897093660}
+  - {fileID: 8758501880644934921}
+  - {fileID: 5045166943882331014}
+  - {fileID: 4523540526727431689}
+  - {fileID: 6781343664805180838}
+  m_Bounds:
+    m_Center: {x: -0.21500063, y: -0.39223492, z: -0.000000057034498}
+    m_Extent: {x: 3.0450006, y: 0.76223505, z: 0.00000008345722}
+  m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &8201059702097929641
 GameObject:
   m_ObjectHideFlags: 0
