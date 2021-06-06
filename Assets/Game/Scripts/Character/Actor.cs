@@ -6,7 +6,7 @@ public class Actor : MonoBehaviour
   [SerializeField] private Stats baseStats;
   [SerializeField] private Skill attack;
   [SerializeField] private string weapon;
-  [SerializeField] private bool faceRight = true;
+  [SerializeField] private bool faceRightByDefault = false;
   [SerializeField] private Flee flee;
   private SpriteRenderer _spriteRenderer;
   private GameObject _positionOffset;
@@ -92,8 +92,11 @@ public class Actor : MonoBehaviour
     }
     else
     {
-      _spriteRenderer.flipX = faceRight? _isFacingRight: !_isFacingRight;
+      _spriteRenderer.flipX = faceRightByDefault != _isFacingRight;
     }
   }
 
+  public bool IsFacingRight => _isFacingRight;
+
+  public bool FaceRightByDefault => faceRightByDefault;
 }
