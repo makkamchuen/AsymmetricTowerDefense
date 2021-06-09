@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsAtLevels:
   - level: 1
-    maxHealth: 500000
+    maxHealth: 50
     healthRegenPerSecond: 5
     movementSpeed: 5
     attackDamage: 13
