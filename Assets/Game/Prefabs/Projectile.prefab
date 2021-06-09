@@ -127,8 +127,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.2, z: 0.2}
-  m_Center: {x: -0.3, y: 0, z: 0}
+  m_Size: {x: 1.1, y: 0.5, z: 1.02}
+  m_Center: {x: -0.03, y: 0.06, z: 0.15}
 --- !u!114 &6275281358125317601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   maxDistance: 4
   minDistance: 2
   faceRight: 1
-  speed: 0.5
+  speed: 500
   hitEffect: {fileID: 2101981354061728712, guid: 7db453d4635b41e4ab2cab303edcd845,
     type: 3}
   hitSound: event:/SFX/WeaponImpact/ArrowImpact

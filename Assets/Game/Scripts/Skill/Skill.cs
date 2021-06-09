@@ -4,7 +4,7 @@ using Game.Scripts.Skill;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Skill: ActorActionComponent
+public class Skill : ActorActionComponent
 {
   [SerializeField] private SkillData[] skillDatas;
   private List<SkillData> skillDataList;
@@ -13,7 +13,7 @@ public class Skill: ActorActionComponent
   private int[] castCount;
   private float minimunSkillDistance;
   private Actor _actor;
-  
+
   protected override void Start()
   {
     base.Start();
@@ -22,7 +22,7 @@ public class Skill: ActorActionComponent
     skillDataList.AddRange(skillDatas);
     castCount = new int[skillDatas.Length];
     minimunSkillDistance = skillDataList.Min(skillData => skillData.GetMinDistance());
-    _actor = GetComponent <Actor>();
+    _actor = GetComponent<Actor>();
   }
 
   private void Update()
@@ -44,7 +44,15 @@ public class Skill: ActorActionComponent
     {
       return;
     }
-    GetAnimator().SetTrigger(AnimationTrigger.attack);
+    if (skillDataToUse.name == "MeleeSpawn" || skillDataToUse.name == "RangeSpawn")
+    {
+      GetAnimator().SetTrigger(AnimationTrigger.spawn);
+    }
+    else
+    {
+      GetAnimator().SetTrigger(AnimationTrigger.attack);
+    }
+
     GetActor().SetIsFacingRight(destination.x > transform.position.x);
     GetActionScheduler().StartAction(this);
     _cooldown = skillDataToUse.GetCooldown();
@@ -52,7 +60,7 @@ public class Skill: ActorActionComponent
 
   public bool CanHit(Actor target)
   {
-    
+
     if (CanHitTarget(target) && !ReachSkillMaxCount()) return true;
     foreach (var skillData in skillDatas)
     {
@@ -63,7 +71,7 @@ public class Skill: ActorActionComponent
     skillDataToUse = skillDataList[0];
     return false;
   }
-  
+
   private bool ReachSkillMaxCount()
   {
     if (skillDataToUse is IMaxCastApply)
@@ -79,27 +87,26 @@ public class Skill: ActorActionComponent
 
   }
 
-
   public override void Cancel()
   {
     GetAnimator().SetBool(AnimationTrigger.attack, false);
+    // GetAnimator().SetBool(AnimationTrigger.spawn, false);
   }
 
   void OnDrawGizmos()
-  { 
+  {
     Gizmos.color = Color.red;
     var skill = _actor.Skill.skillDataToUse;
     if (skill is SlashSkillData)
     {
       var hitBoxWidth = (skill as SlashSkillData).hitBoxWidth;
       var hitBoxHeight = (skill as SlashSkillData).hitBoxHeight;
-      
-      Gizmos.DrawWireCube( transform.position + new Vector3( hitBoxWidth / 2 * (_actor.IsFacingRight == _actor.FaceRightByDefault? -1 : 1), 0, 0), 
-      new Vector3(hitBoxWidth, transform.localScale.y, hitBoxHeight));
-      
+
+      Gizmos.DrawWireCube(transform.position + new Vector3(hitBoxWidth / 2 * (_actor.IsFacingRight == _actor.FaceRightByDefault? - 1 : 1), 0, 0),
+        new Vector3(hitBoxWidth, transform.localScale.y, hitBoxHeight));
+
     }
   }
-
 
   private bool CanHitTarget(Actor target)
   {
@@ -124,4 +131,3 @@ public class Skill: ActorActionComponent
   public SkillData[] SkillDatas => skillDatas;
 
 }
-
