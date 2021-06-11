@@ -27,4 +27,4 @@ MonoBehaviour:
     attackDamage: 10
     minRewardFromCorpse: 4
     maxRewardFromCorpse: 10
-  FlyOrGround: 2
+  FlyOrGround: 1

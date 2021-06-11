@@ -406,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 8653668978282752066, guid: 99f89fcf1285c2948b6872f38db021ff,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8653668978282752066, guid: 99f89fcf1285c2948b6872f38db021ff,
         type: 3}
@@ -490,7 +490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 971714904}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &411637828
 MonoBehaviour:
@@ -505,12 +505,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treasurePrefab: {fileID: 0}
-  rewardReqToWin: 40
   rewardText: {fileID: 925624681}
+  maxReward: 40
   player: {fileID: 464510124}
   gameStatusDisplay: {fileID: 849731908}
   gameStatusText: {fileID: 498113491}
   playAgainButton: {fileID: 1569484143}
+  minSpawnDistanceFromPlayer: 20
+  maxSpawnDistanceFromPlayer: 35
   spawnContents:
   - prefab: {fileID: 5921409440072016248, guid: 9d33d969a2dafe042a1bf0fc0c8a35fe,
       type: 3}
@@ -542,8 +544,6 @@ MonoBehaviour:
     maxNumber: 38
     enabled: 0
     spawnedCountDoNotTouch: 0
-  minSpawnDistanceFromPlayer: 20
-  maxSpawnDistanceFromPlayer: 35
 --- !u!114 &411637829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,7 +949,6 @@ Transform:
   - {fileID: 189328708}
   - {fileID: 849731909}
   - {fileID: 949727634}
-  - {fileID: 1340493619}
   - {fileID: 411637827}
   - {fileID: 629110201}
   m_Father: {fileID: 0}
@@ -1224,8 +1223,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1862789574}
-  m_Father: {fileID: 971714904}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1415,36 +1414,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1314963395}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1651579005
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1651579006}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1651579006
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651579005}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6627945, y: 3.7524476, z: -7.2579784}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808995267 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3397822273449255362, guid: ef8885f740d864f5ba8b44fe1469f601,
@@ -1470,7 +1439,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 359da32f5a8e7e745ab38fdea28e9753, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c724fc7cd4e43784e8507d84cc937b4d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1814,7 +1783,7 @@ PrefabInstance:
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1816726814051438344, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
@@ -2060,6 +2029,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VictorySprite
       objectReference: {fileID: 0}
+    - target: {fileID: 3397822273449255362, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4880708814478069235, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -2166,6 +2140,26 @@ PrefabInstance:
       value: 'Play Again
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424918257055936, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424918257055937, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424918257055939, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424918257055942, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5795424918384018316, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}

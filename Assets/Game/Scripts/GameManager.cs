@@ -11,20 +11,25 @@ namespace Game.Scripts
 {
     public class GameManager : MonoBehaviour
     {
+
+        private float[] cooldown;
         private static int currentLevel = 1;
         [SerializeField] private GameObject treasurePrefab;
-        [SerializeField] private int rewardReqToWin;
         [SerializeField] private TMP_Text rewardText;
+        [SerializeField] public int maxReward = 40;
         [SerializeField] private Player player;
         [SerializeField] private GameObject gameStatusDisplay;
         [SerializeField] private TMP_Text gameStatusText;
         [SerializeField] private Button playAgainButton;
-        [SerializeField] private SpawnContent[] spawnContents;
         [SerializeField] private int minSpawnDistanceFromPlayer = 20;
         [SerializeField] private int maxSpawnDistanceFromPlayer = 40;
-        private float[] cooldown;
+        [SerializeField] private SpawnContent[] spawnContents;
+
+        public static GameManager Instance;
+
         private void Start()
         {
+            Instance = this;
             cooldown = new float[spawnContents.Length];
             player.gameObject.SetActive(true);
             playAgainButton.onClick.AddListener(StartGame);
@@ -41,15 +46,19 @@ namespace Game.Scripts
         private void Update()
         {
 
-            rewardText.SetText(player.GetRewardAmountCollected() + " / " + rewardReqToWin);
-            if (player.GetRewardAmountCollected() >= rewardReqToWin)
+            rewardText.SetText(player.GetRewardAmountCollected() + " / " + maxReward);
+            if (player.GetHealth().GetIsDead())
+            {
+                EndGame("Game Over!");
+            }
+            /* if (player.GetRewardAmountCollected() >= maxReward)
             {
                 EndGame("Victory!");
             }
             else if (player.GetHealth().GetIsDead())
             {
                 EndGame("Game Over!");
-            }
+            } */
 
             for (int i = 0; i < cooldown.Length; i += 1)
             {
