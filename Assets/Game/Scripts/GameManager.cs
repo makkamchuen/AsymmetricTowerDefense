@@ -13,7 +13,7 @@ namespace Game.Scripts
     {
         private static int currentLevel = 1;
         [SerializeField] private GameObject treasurePrefab;
-        [SerializeField] private int rewardReqToWin;
+        [SerializeField] private int rewardAmountMax;
         [SerializeField] private TMP_Text rewardText;
         [SerializeField] private Player player;
         [SerializeField] private GameObject gameStatusDisplay;
@@ -27,6 +27,7 @@ namespace Game.Scripts
         {
             cooldown = new float[spawnContents.Length];
             player.gameObject.SetActive(true);
+            player.RewardAmountMax = rewardAmountMax;
             playAgainButton.onClick.AddListener(StartGame);
         }
 
@@ -38,15 +39,13 @@ namespace Game.Scripts
 
         public static int CurrentLevel => currentLevel;
 
+        public int RewardAmountMax => rewardAmountMax;
+
         private void Update()
         {
 
-            rewardText.SetText(player.GetRewardAmountCollected() + " / " + rewardReqToWin);
-            if (player.GetRewardAmountCollected() >= rewardReqToWin)
-            {
-                EndGame("Victory!");
-            }
-            else if (player.GetHealth().GetIsDead())
+            rewardText.SetText(player.GetRewardAmountCollected() + " / " + rewardAmountMax);
+            if (player.GetHealth().GetIsDead())
             {
                 EndGame("Game Over!");
             }
