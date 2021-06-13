@@ -16,7 +16,7 @@ namespace Game.Scripts
 
         public void StartGame()
         {
-            SceneManager.LoadScene("newgame");
+            SceneManager.LoadScene("ProcedureGen");
         }
     }
 }
