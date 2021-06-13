@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
 using Microsoft.Win32.SafeHandles;
 using TMPro;
@@ -11,13 +12,12 @@ namespace Game.Scripts
 {
     public class GameManager : MonoBehaviour
     {
-        private static int currentLevel = 1;
         [SerializeField] private GameObject treasurePrefab;
         [SerializeField] private int rewardAmountMax;
         [SerializeField] private TMP_Text rewardText;
         [SerializeField] private Player player;
         [SerializeField] private GameObject gameStatusDisplay;
-        [SerializeField] private TMP_Text gameStatusText;
+        [SerializeField] private TMP_Text gameResultText;
         [SerializeField] private Button playAgainButton;
         [SerializeField] private SpawnContent[] spawnContents;
         [SerializeField] private int minSpawnDistanceFromPlayer = 20;
@@ -29,15 +29,9 @@ namespace Game.Scripts
             player.gameObject.SetActive(true);
             player.RewardAmountMax = rewardAmountMax;
             playAgainButton.onClick.AddListener(StartGame);
+            Statistic.Reset(player);
         }
-
-        public static void IncrementCurrentLevel()
-        {
-            currentLevel++;
-            if (currentLevel > 100) currentLevel = 100;
-        }
-
-        public static int CurrentLevel => currentLevel;
+        
 
         public int RewardAmountMax => rewardAmountMax;
 
@@ -47,7 +41,7 @@ namespace Game.Scripts
             rewardText.SetText(player.GetRewardAmountCollected() + " / " + rewardAmountMax);
             if (player.GetHealth().GetIsDead())
             {
-                EndGame("Game Over!");
+                EndGame();
             }
 
             for (int i = 0; i < cooldown.Length; i += 1)
@@ -76,20 +70,39 @@ namespace Game.Scripts
         private void StartGame()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Statistic.Reset(player);
         }
 
-        private void EndGame(string statusText)
+        private void EndGame()
         {
-            gameStatusDisplay.SetActive(true);
-            var gameObjects = new List<GameObject>();
-            gameObjects.AddRange(GameObject.FindGameObjectsWithTag("Minion"));
-            gameObjects.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
-            foreach (GameObject gameObject in gameObjects)
+            if (!gameStatusDisplay.activeSelf)
             {
-                gameObject.SetActive(false);
+                gameStatusDisplay.SetActive(true);
+                var gameObjects = new List<GameObject>();
+                gameObjects.AddRange(GameObject.FindGameObjectsWithTag("Minion"));
+                gameObjects.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+                foreach (GameObject gameObject in gameObjects)
+                {
+                    gameObject.SetActive(false);
+                }
+                player.GetStatus().SetGameFinishStatus();
+                SetGameResultLabel();
             }
-            player.GetStatus().SetGameFinishStatus();
-            gameStatusText.SetText(statusText);
+        }
+
+        private void SetGameResultLabel()
+        {
+            TimeSpan playTimeSpan = DateTime.Now.Subtract(Statistic.PlayStartTime);
+            string playTime = "";
+            if (playTimeSpan.Hours > 0)
+                playTime += playTimeSpan.Hours + "h ";
+            if (playTimeSpan.Hours > 0 || playTimeSpan.Minutes > 0)
+                playTime += playTimeSpan.Minutes + "m ";
+            playTime += playTimeSpan.Seconds + "s";
+
+            int xDistance = Convert.ToInt32((player.gameObject.transform.position.x - Statistic.StartPosition.x) /2);
+            string gameResult = String.Format("{0}\n{1}m\n{2}", playTime, xDistance, Statistic.EnemyKilled);
+            gameResultText.SetText(gameResult);
         }
 
         [Serializable]

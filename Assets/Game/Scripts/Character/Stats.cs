@@ -55,7 +55,7 @@ public class Stats : ScriptableObject
         }
       }
 
-      return this.statsLevelDictionary[GameManager.CurrentLevel];
+      return this.statsLevelDictionary[Statistic.CurrentLevel];
     }
   }
 }

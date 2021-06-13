@@ -67,6 +67,10 @@ public class Health : ActorActionComponent
       SpawnNextLevelCharacter();
       SpawnReward();
       _isDead = true;
+      if (GetActor().tag.Equals("Enemy"))
+      {
+        Statistic.IncrementEnemyKilled();
+      }
     }
   }
 
