@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebacb745a1be425a85f141a5a4d0bbdb, type: 3}
   m_Name: TowerSolidSkill
   m_EditorClassIdentifier: 
-  _flyOrGround: 1
+  _flyOrGround: -1
   _targetTags:
   - Enemy
   skillDataAtLevel:
