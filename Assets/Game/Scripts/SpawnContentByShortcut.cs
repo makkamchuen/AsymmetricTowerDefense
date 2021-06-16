@@ -9,6 +9,7 @@ namespace Game.Scripts
         [SerializeField] private Sprite sprite;
         [SerializeField][FMODUnity.EventRef] private string spawnSound;
         [SerializeField] private string shortcut;
+        [SerializeField] private float cooldown;
         [SerializeField] private GameObject prefab;
         [SerializeField] private int rewardCost = 1;
         private Texture2D cursor;
@@ -25,8 +26,10 @@ namespace Game.Scripts
 
         public string SpawnSound => spawnSound;
         public string Shortcut => shortcut;
+        public float CoolDown => cooldown;
         public GameObject Prefab => prefab;
 
         public int RewardCost => rewardCost;
+        public float timePassedDoNotTouch;
     }
 }
