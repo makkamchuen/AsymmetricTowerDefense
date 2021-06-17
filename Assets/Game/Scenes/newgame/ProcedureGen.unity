@@ -560,16 +560,20 @@ MonoBehaviour:
   spawnContents:
   - sprite: {fileID: 0}
     spawnSound: 
-    shortcut: h
+    shortcut: d
+    cooldown: 2
     prefab: {fileID: 2751151623452151826, guid: c26cb3d4d54158641888bfc9a52371d5,
       type: 3}
-    rewardCost: 0
+    rewardCost: 2
+    timePassedDoNotTouch: 0
   - sprite: {fileID: 0}
     spawnSound: 
     shortcut: s
+    cooldown: 2
     prefab: {fileID: 2751151623452151826, guid: 45b903535c5d4594fb65d04fa73c4f35,
       type: 3}
-    rewardCost: 0
+    rewardCost: 2
+    timePassedDoNotTouch: 0
 --- !u!1 &464510121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1816726814051438325, guid: c5ce113d662375847963f9f42aedc089,
@@ -1601,7 +1605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c724fc7cd4e43784e8507d84cc937b4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc724b77618d2a74f8ad1f8bcf851c37, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2224,7 +2228,7 @@ PrefabInstance:
     - target: {fileID: 4880708814478069235, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 255
+      value: 258.1
       objectReference: {fileID: 0}
     - target: {fileID: 4880708814478069235, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
@@ -2241,6 +2245,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -130
       objectReference: {fileID: 0}
+    - target: {fileID: 5795424916277142587, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424916277142587, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5402412272178277761, guid: 99650ff17c29dc349a14cc43233cf404,
+        type: 3}
     - target: {fileID: 5795424916277142590, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
       propertyPath: m_Name
@@ -2374,7 +2389,7 @@ PrefabInstance:
     - target: {fileID: 5795424917060968795, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5795424918098441148, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
