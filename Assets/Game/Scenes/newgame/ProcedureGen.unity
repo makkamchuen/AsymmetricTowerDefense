@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1348,7 +1348,7 @@ RectTransform:
   m_GameObject: {fileID: 1540719178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2781, y: 1.2781, z: 1.2781}
   m_Children: []
   m_Father: {fileID: 1862789574}
   m_RootOrder: 0
@@ -1833,7 +1833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -78.799805, y: -80}
+  m_AnchoredPosition: {x: -100.6, y: -73.7}
   m_SizeDelta: {x: 50.037476, y: 6.816986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862789575
@@ -2011,6 +2011,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4448470777677463001, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4452140354269660986, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
       propertyPath: hideHealBarWhenFull
@@ -2025,6 +2030,26 @@ PrefabInstance:
         type: 3}
       propertyPath: healthBarFollowCharacter
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367579970597898, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367579970597898, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367579970597898, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367579970597898, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -46.64
       objectReference: {fileID: 0}
     - target: {fileID: 5393367579970597899, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
@@ -2050,6 +2075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393367580200256099, guid: c5ce113d662375847963f9f42aedc089,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 81.09
       objectReference: {fileID: 0}
     - target: {fileID: 5393367580200256099, guid: c5ce113d662375847963f9f42aedc089,
         type: 3}
