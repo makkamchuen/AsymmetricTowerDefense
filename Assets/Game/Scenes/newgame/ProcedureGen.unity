@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -556,7 +556,7 @@ MonoBehaviour:
   - sprite: {fileID: 0}
     spawnSound: 
     shortcut: d
-    cooldown: 2
+    cooldown: 5
     prefab: {fileID: 2751151623452151826, guid: c26cb3d4d54158641888bfc9a52371d5,
       type: 3}
     rewardCost: 2
@@ -564,7 +564,7 @@ MonoBehaviour:
   - sprite: {fileID: 0}
     spawnSound: 
     shortcut: s
-    cooldown: 2
+    cooldown: 3
     prefab: {fileID: 2751151623452151826, guid: 45b903535c5d4594fb65d04fa73c4f35,
       type: 3}
     rewardCost: 2
