@@ -26,6 +26,8 @@ public class NextMapCollider : MonoBehaviour
             {
                 if (mapManager.mapNumber == mapManagerSelf.mapNumber - 2)
                 {
+                    // When moving old map to new position, destroy the generated road block so nav mesh won't bake it into new connection
+                    Destroy(mapManager.transform.Find("RoadBlock(Clone)").gameObject);
                     mapManager.transform.position += new Vector3(75, 0, 0);
                     mapManager.mapNumber += 3;
                     Statistic.IncrementCurrentLevel();

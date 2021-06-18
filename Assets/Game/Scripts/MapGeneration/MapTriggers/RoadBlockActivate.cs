@@ -22,6 +22,6 @@ public class RoadBlockActivate : MonoBehaviour
 
     public void RoadBlockEnable()
     {
-        GetComponent<NavMeshObstacle>().enabled = true;
+        GetComponent<NavMeshObstacle>().carving = true;
     }
 }
