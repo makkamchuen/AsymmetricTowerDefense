@@ -31,6 +31,7 @@ public class NextMapCollider : MonoBehaviour
                     Statistic.IncrementCurrentLevel();
                     mapManager.shouldUpdateSprite = true;
                     mapManager.GenerateMap();
+                    mapManager.PlaceRoadBlock();
                     parentMapObject.transform.Find("WorldBoundary").position += new Vector3(25, 0, 0);
 
                     // position.x += 25f;

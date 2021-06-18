@@ -73,16 +73,6 @@ public class MapManager : MonoBehaviour
         return _planeBuilder.GetSize();
     }
 
-    /*     public void DestroyPreviousMap()
-        {
-            PlaceRoadBlock();
-            if (mapNumber != 0)
-            {
-                Destroy(_previousMap.gameObject);
-            }
-        } */
-    
-
     public void PlaceRoadBlock()
     {
         if (!_roadBlockPlaced)
@@ -128,16 +118,23 @@ public class MapManager : MonoBehaviour
 
     private void PlaceColliders()
     {
-        /*     GameObject newDestroyCollider = Instantiate(
-                _destroyCollider,
-                new Vector3((-width / 2 + _destroyColliderCol) * unit + transform.position.x, 0, 0),
-                Quaternion.identity,
-                transform
-            ); */
+        GameObject newDestroyCollider = Instantiate(
+            _destroyCollider,
+            new Vector3((-width / 2 + _destroyColliderCol) * unit + transform.position.x, 0, 0),
+            Quaternion.identity,
+            transform
+        );
 
         GameObject newNextMapCollider = Instantiate(
             _nextMapCollider,
             new Vector3((-width / 2 + _nextMapColliderCol) * unit + transform.position.x, 0, 0),
+            Quaternion.identity,
+            transform
+        );
+
+        GameObject newRoadBlock = Instantiate(
+            _roadBlock,
+            new Vector3((-width / 2 + _roadBlockCol) * unit + transform.position.x, 0, (-height / 2 + mapGenerator.GetStartPoint().tileY) * unit + transform.position.z),
             Quaternion.identity,
             transform
         );

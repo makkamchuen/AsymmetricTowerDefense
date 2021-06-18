@@ -16,10 +16,11 @@ public class Health : ActorActionComponent
   private float _currentHealth;
   private bool _isDead;
 
-  private void Awake()
-  {
-    InvokeRepeating(nameof(RegenerateHealth), 0.0f, 1.0f);
-  }
+  // // This will regen health starting at awake, repeated every 1 sec
+  // private void Awake()
+  // {
+  //   InvokeRepeating(nameof(RegenerateHealth), 0.0f, 1.0f);
+  // }
 
   protected override void Start()
   {
@@ -32,8 +33,8 @@ public class Health : ActorActionComponent
 
   private void Update()
   {
-    if (healthBarFollowCharacter)
-      healthBar.transform.position = Camera.main.WorldToScreenPoint(GetActor().transform.position);
+    if (healthBarFollowCharacter) { healthBar.transform.position = Camera.main.WorldToScreenPoint(GetActor().transform.position); }
+    RegenerateHealth();
   }
 
   private void RegenerateHealth()
@@ -42,7 +43,7 @@ public class Health : ActorActionComponent
     {
       return;
     }
-    _currentHealth += GetActor().GetBaseStats().HealthRegenPerSecond;
+    _currentHealth += (GetActor().GetBaseStats().HealthRegenPerSecond * Time.deltaTime);
     _currentHealth = Math.Min(_currentHealth, GetActor().GetBaseStats().MaxHealth);
     UpdateHealthBar();
   }
