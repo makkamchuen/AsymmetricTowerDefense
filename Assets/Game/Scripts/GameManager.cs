@@ -31,7 +31,6 @@ namespace Game.Scripts
             playAgainButton.onClick.AddListener(StartGame);
             Statistic.Reset(player);
         }
-        
 
         public int RewardAmountMax => rewardAmountMax;
 
@@ -46,7 +45,7 @@ namespace Game.Scripts
 
             for (int i = 0; i < cooldown.Length; i += 1)
             {
-                if (!spawnContents[i].enabled || spawnContents[i].spawnedCountDoNotTouch >= spawnContents[i].maxNumber)
+                if (!spawnContents[i].enabled /*|| spawnContents[i].spawnedCountDoNotTouch >= spawnContents[i].maxNumber*/ )
                     continue;
 
                 if (cooldown[i] == 0)
@@ -54,7 +53,7 @@ namespace Game.Scripts
                     GameObject gameObject = PoolManager.Spawn(spawnContents[i].prefab, Utils.GetRandomPoint(player.transform.position, minSpawnDistanceFromPlayer, maxSpawnDistanceFromPlayer));
                     gameObject.transform.LookAt(Utils.GetRandomPoint());
                     cooldown[i] = spawnContents[i].cooldown;
-                    spawnContents[i].spawnedCountDoNotTouch += 1;
+                    // spawnContents[i].spawnedCountDoNotTouch += 1;
                 }
                 else
                 {
@@ -100,7 +99,7 @@ namespace Game.Scripts
                 playTime += playTimeSpan.Minutes + "m ";
             playTime += playTimeSpan.Seconds + "s";
 
-            int xDistance = Convert.ToInt32((player.gameObject.transform.position.x - Statistic.StartPosition.x) /2);
+            int xDistance = Convert.ToInt32((player.gameObject.transform.position.x - Statistic.StartPosition.x) / 2);
             string gameResult = String.Format("{0}\n{1}m\n{2}", playTime, xDistance, Statistic.EnemyKilled);
             gameResultText.SetText(gameResult);
         }
@@ -111,9 +110,9 @@ namespace Game.Scripts
             public GameObject prefab;
             public int cooldown;
             [Range(1, 100)]
-            public int maxNumber = 1;
+            // public int maxNumber = 1;
             public bool enabled;
-            public int spawnedCountDoNotTouch = 0;
+            // public int spawnedCountDoNotTouch = 0;
         }
     }
 }
