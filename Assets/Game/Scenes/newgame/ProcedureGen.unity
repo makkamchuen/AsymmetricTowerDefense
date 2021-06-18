@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2543,6 +2543,31 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 5795424918257055936, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424918257055936, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424918257055936, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424918257055936, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424918257055939, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5795424918257055942, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2551,7 +2576,12 @@ PrefabInstance:
     - target: {fileID: 5795424918384018316, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1500
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795424918384018316, guid: ef8885f740d864f5ba8b44fe1469f601,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 9999
       objectReference: {fileID: 0}
     - target: {fileID: 5795424918384018319, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
