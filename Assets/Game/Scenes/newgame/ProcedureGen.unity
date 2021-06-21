@@ -289,18 +289,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5194179591698239641, guid: 305c261817b7240479249b29b3e13da6,
         type: 3}
-      propertyPath: pathRadius
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5194179591698239641, guid: 305c261817b7240479249b29b3e13da6,
-        type: 3}
       propertyPath: _roadBlockCol
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5194179591698239641, guid: 305c261817b7240479249b29b3e13da6,
-        type: 3}
-      propertyPath: _nextMapColliderCol
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5194179591698239644, guid: 305c261817b7240479249b29b3e13da6,
         type: 3}
@@ -1041,13 +1031,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2213536328421049312, guid: f97bd1b7db627d94ebc0b6614f6f91d0,
         type: 3}
-      propertyPath: pathRadius
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2213536328421049312, guid: f97bd1b7db627d94ebc0b6614f6f91d0,
-        type: 3}
       propertyPath: _roadBlockCol
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2213536328421049313, guid: f97bd1b7db627d94ebc0b6614f6f91d0,
         type: 3}
@@ -1637,13 +1622,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1803612015275866308, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
         type: 3}
-      propertyPath: pathRadius
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1803612015275866308, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
-        type: 3}
       propertyPath: _roadBlockCol
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1803612015275866331, guid: 30a2e599a91492e4a8bb6d233e75b2e4,
         type: 3}

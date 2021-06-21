@@ -58,6 +58,10 @@ MonoBehaviour:
   seed: 
   useRandomSeed: 1
   mapGenerator: {fileID: 2213536328421049319}
+  mapNumber: 0
+  rebakeRequired: 1
+  rebakeCounter: 30
+  shouldUpdateSprite: 0
   _destroyColliderCol: 9
   _nextMapColliderCol: 8
   _roadBlockCol: 0
@@ -69,7 +73,6 @@ MonoBehaviour:
     type: 3}
   _roadBlock: {fileID: 4134873573646573511, guid: f01951526860f4502aee0b7b1f8ff5c0,
     type: 3}
-  mapNumber: 0
 --- !u!114 &2213536328421049319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +168,7 @@ MonoBehaviour:
   zOffset: -12
   elementSpacing: 1
   generalDensity: 0.38
+  spriteList: []
   elements:
   - name: Grass
     density: 51

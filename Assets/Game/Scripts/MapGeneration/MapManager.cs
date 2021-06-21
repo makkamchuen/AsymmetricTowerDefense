@@ -45,7 +45,8 @@ public class MapManager : MonoBehaviour
     void Start()
     {
         GetComponents();
-        InitGameObjects();
+        // Remove because changed to check condition on update() to gen
+        // InitGameObjects();
     }
 
     private void GetComponents()
