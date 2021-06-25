@@ -4,6 +4,7 @@ using UnityEngine.AI;
 public class Mover : ActorActionComponent
 {
     private NavMeshAgent navMeshAgent;
+    private float prevPositionX;
     
     protected override void Start()
     {
@@ -11,12 +12,18 @@ public class Mover : ActorActionComponent
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.speed = GetActor().GetBaseStats().MovementSpeed;
         GetAnimator().SetBool(AnimationTrigger.run, false);
+        prevPositionX = transform.position.x;
     }
 
     private void Update()
     {
         UpdateAction();
         navMeshAgent.enabled = GetActor().GetHealth().GetCurrentHealth() > 0;
+        if (transform.position.x != prevPositionX)
+        {
+            GetActor().SetIsFacingRight(transform.position.x > prevPositionX);
+        }
+        prevPositionX = transform.position.x;
     }
 
     public NavMeshAgent GetNavMeshAgent()
@@ -36,7 +43,6 @@ public class Mover : ActorActionComponent
             return;
         }
         GetAnimator().SetBool(AnimationTrigger.run, true);
-        GetActor().SetIsFacingRight(hit.position.x > transform.position.x);
         navMeshAgent.destination = hit.position;
         navMeshAgent.isStopped = false;
         GetActionScheduler().StartAction(this);
