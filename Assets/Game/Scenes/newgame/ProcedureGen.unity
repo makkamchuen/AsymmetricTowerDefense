@@ -546,7 +546,8 @@ MonoBehaviour:
   spawnContents:
   - sprite: {fileID: 0}
     spawnSound: 
-    shortcut: d
+    playerPrefKey: 0
+    defaultKeyStroke: 100
     cooldown: 5
     prefab: {fileID: 2751151623452151826, guid: c26cb3d4d54158641888bfc9a52371d5,
       type: 3}
@@ -554,7 +555,8 @@ MonoBehaviour:
     timePassedDoNotTouch: 0
   - sprite: {fileID: 0}
     spawnSound: 
-    shortcut: s
+    playerPrefKey: 1
+    defaultKeyStroke: 115
     cooldown: 3
     prefab: {fileID: 2751151623452151826, guid: 45b903535c5d4594fb65d04fa73c4f35,
       type: 3}
