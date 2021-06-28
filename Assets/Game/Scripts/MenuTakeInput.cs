@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,19 +13,20 @@ public class MenuTakeInput : MonoBehaviour
     private Color32 defaultColor = new Color32(70, 70, 70, 134);
     private Color32 editColor = new Color32(40, 150, 40, 210);
     private Button thisbutton;
-    private string spwanKey;
+    [SerializeField] private DefaultKeyStroke defaultKeyStroke;
+    [SerializeField] private PlayerPrefKey playerPrefKey;
+    private string currentKeyStroke;
+    private static bool activated = false;
     
     void Start()
     {
         thisbutton = this.GetComponent<Button>();
         thisbutton.onClick.AddListener(TaskOnClick);
-
-        spwanKey = this.transform.Find("Button").GetComponentInChildren<TMP_Text>().text;
-
+        currentKeyStroke = KeyStrokeUtil.GetKeyStrokeChar(playerPrefKey, defaultKeyStroke).ToString();
+        this.transform.Find("Button").GetComponentInChildren<TMP_Text>().text = currentKeyStroke;
+            
         inputPanel = this.transform.Find("input").gameObject;
-
         inputField = inputPanel.GetComponentInChildren<InputField>(); 
-        inputField.text = spwanKey; 
         inputField.characterLimit = 1;
         inputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
@@ -34,15 +36,19 @@ public class MenuTakeInput : MonoBehaviour
         //Debug.Log(spwanKey + " / " + this.name);
         if (!edit)
         {
-            edit = true;
-            this.GetComponent<Image>().color = editColor;
-            inputPanel.SetActive(true);
+            if (!activated)
+            {
+                inputField.text = currentKeyStroke; 
+                edit = true;
+                this.GetComponent<Image>().color = editColor;
+                activated = true;
+                inputPanel.SetActive(true);
+                inputField.ActivateInputField();
+            }
         }
         else
         {
-            edit = false;
-            this.GetComponent<Image>().color = defaultColor;
-            inputPanel.SetActive(false);
+            Deactivate();
         }
     }
 
@@ -51,9 +57,22 @@ public class MenuTakeInput : MonoBehaviour
         //Debug.Log("Value Changed -- " + inputField.text);
         if(inputField.text != "")
         {
-            spwanKey = inputField.text.ToUpper();
-            this.transform.Find("Button").GetComponentInChildren<TMP_Text>().text = spwanKey; 
+            var input = inputField.text.ToLower();
+            this.transform.Find("Button").GetComponentInChildren<TMP_Text>().text = input;
+            PlayerPrefs.SetInt(playerPrefKey.ToString(), Convert.ToInt32(input[0]));
+            Deactivate();
         }
+
     }
+
+    private void Deactivate()
+    {
+        edit = false;
+        this.GetComponent<Image>().color = defaultColor;
+        inputPanel.SetActive(false);
+        activated = false;
+    }
+
+
 
 }
