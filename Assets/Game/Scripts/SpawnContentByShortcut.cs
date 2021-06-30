@@ -8,7 +8,8 @@ namespace Game.Scripts
     {
         [SerializeField] private Sprite sprite;
         [SerializeField][FMODUnity.EventRef] private string spawnSound;
-        [SerializeField] private string shortcut;
+        [SerializeField] private PlayerPrefKey playerPrefKey;
+        [SerializeField] private DefaultKeyStroke defaultKeyStroke;
         [SerializeField] private float cooldown;
         [SerializeField] private GameObject prefab;
         [SerializeField] private int rewardCost = 1;
@@ -25,7 +26,8 @@ namespace Game.Scripts
         }
 
         public string SpawnSound => spawnSound;
-        public string Shortcut => shortcut;
+        public PlayerPrefKey PlayerPrefKey => playerPrefKey;
+        public DefaultKeyStroke DefaultKeyStroke => defaultKeyStroke;
         public float CoolDown => cooldown;
         public GameObject Prefab => prefab;
 

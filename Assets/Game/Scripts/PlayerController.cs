@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     private void CheckControl()
     {
         CheckOnRightClick();
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyStrokeUtil.GetKeyStroke(PlayerPrefKey.AttackKeyStroke, DefaultKeyStroke.Attack)))
         {
             Attack();
         }

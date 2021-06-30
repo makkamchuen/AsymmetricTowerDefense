@@ -15,7 +15,7 @@ public class SpawnByShortcut : MonoBehaviour
     void Update()
     {
 
-        if (contentToSpawn != null && !Input.GetKeyDown(contentToSpawn.Shortcut))
+        if (contentToSpawn != null && !Input.GetKeyDown(KeyStrokeUtil.GetKeyStroke(contentToSpawn.PlayerPrefKey, contentToSpawn.DefaultKeyStroke)))
         {
             contentToSpawn = null;
         }
@@ -25,7 +25,7 @@ public class SpawnByShortcut : MonoBehaviour
             foreach (SpawnContentByShortcut spawnContent in spawnContents)
             {
                 spawnContent.timePassedDoNotTouch -= Time.deltaTime;
-                if (Input.GetKeyDown(spawnContent.Shortcut) && player.GetRewardAmountCollected() >= spawnContent.RewardCost && spawnContent.timePassedDoNotTouch <= 0f)
+                if (Input.GetKeyDown(KeyStrokeUtil.GetKeyStroke(spawnContent.PlayerPrefKey, spawnContent.DefaultKeyStroke)) && player.GetRewardAmountCollected() >= spawnContent.RewardCost && spawnContent.timePassedDoNotTouch <= 0f)
                 {
                     contentToSpawn = spawnContent;
                     spawnContent.timePassedDoNotTouch = spawnContent.CoolDown;
