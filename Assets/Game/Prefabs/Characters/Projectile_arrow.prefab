@@ -4813,11 +4813,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf9b06f7cdbcf54d97d971963a294de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 0
   maxDistance: 4
   minDistance: 2
   faceRight: 1
-  speed: 0.5
+  speed: 0.1
   hitEffect: {fileID: 2101981354061728712, guid: 7db453d4635b41e4ab2cab303edcd845,
     type: 3}
   hitSound: event:/SFX/WeaponImpact/ArrowImpact
