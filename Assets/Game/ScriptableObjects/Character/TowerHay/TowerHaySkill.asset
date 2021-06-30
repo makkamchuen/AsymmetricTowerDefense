@@ -17,11 +17,11 @@ MonoBehaviour:
   - Enemy
   skillDataAtLevel:
   - level: 1
-    damage: 5
-    cooldown: 1.5
+    damage: 1
+    cooldown: 0.5
   - level: 100
-    damage: 10
-    cooldown: 0.75
+    damage: 5
+    cooldown: 0.5
   hitEffect: {fileID: 0}
   hitSound: 
   _gameObject: {fileID: 8356662070351016534, guid: 7b67fcac0942e604faa6f4ad19172de2,

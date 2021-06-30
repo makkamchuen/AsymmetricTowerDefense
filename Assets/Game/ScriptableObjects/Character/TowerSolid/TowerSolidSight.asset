@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c4433ce84842ca913cb59da1d78785, type: 3}
   m_Name: TowerSolidSight
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 5
   priority: {fileID: 11400000, guid: 429d4ed4ea3bf457cb65b00a3c5055c5, type: 2}
