@@ -9,6 +9,10 @@ public class NextMapCollider : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        if (this.transform.name == "NextMapCollider 0")
+        {
+            Destroy(this.gameObject);
+        }
         mapManagerSelf = GetComponentInParent<MapManager>();
         // location = _mapManager.transform.position + new Vector3(_mapManager.GetSize().x, 0, 0);
     }
@@ -27,13 +31,17 @@ public class NextMapCollider : MonoBehaviour
                 if (mapManager.mapNumber == mapManagerSelf.mapNumber - 2)
                 {
                     // When moving old map to new position, destroy the generated road block so nav mesh won't bake it into new connection
-                    Destroy(mapManager.transform.Find("RoadBlock(Clone)").gameObject);
+                    var roadBlockObject = mapManager.transform.Find("RoadBlock " + mapManager.mapNumber.ToString());
+                    if (roadBlockObject != null)
+                    {
+                        Destroy(roadBlockObject.gameObject);
+                    }
                     mapManager.transform.position += new Vector3(75, 0, 0);
                     mapManager.mapNumber += 3;
                     Statistic.IncrementCurrentLevel();
                     mapManager.shouldUpdateSprite = true;
                     mapManager.GenerateMap();
-                    mapManager.PlaceRoadBlock();
+                    // mapManager.PlaceRoadBlock(mapManager.mapNumber);
                     parentMapObject.transform.Find("WorldBoundary").position += new Vector3(25, 0, 0);
 
                     // position.x += 25f;
