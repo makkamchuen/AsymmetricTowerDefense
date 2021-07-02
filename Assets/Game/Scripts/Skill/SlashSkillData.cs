@@ -18,7 +18,8 @@ public class SlashSkillData : AttackSkillData
     Collider[] colliders = GetCollidersInHitBox(user);
     foreach (Collider collider in colliders)
     {
-      if (!IsTarget(collider.tag) || !CanTakeDownTarget(collider.GetComponent<Actor>()))
+      var actor = collider.GetComponent<Actor>();
+      if (actor == null || !CanTakeDownTarget(actor))
       {
         continue;
       }
@@ -28,7 +29,7 @@ public class SlashSkillData : AttackSkillData
 
   public override bool CanApply(Actor user, Actor targetActor)
   {
-    if (!CanTakeDownTarget(targetActor) || !IsTarget(targetActor.tag)) return false;
+    if (!CanTakeDownTarget(targetActor)) return false;
 
     Collider[] colliders = GetCollidersInHitBox(user);
     return colliders.Contains(targetActor.GetCollider());

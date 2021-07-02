@@ -36,7 +36,9 @@ public abstract class SkillData : ScriptableObject
 
     public bool CanTakeDownTarget(Actor targetActor)
     {
-        return ((int) targetActor.GetBaseStats().FlyOrGround & (int) FlyOrGround) != 0;
+        return ((int) targetActor.GetBaseStats().FlyOrGround & (int) FlyOrGround) != 0 && 
+               !targetActor.GetHealth().GetIsDead() && 
+               IsTarget(targetActor.tag);
     }
 
     public abstract float GetCooldown();

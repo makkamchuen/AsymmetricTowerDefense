@@ -12,6 +12,7 @@ public class ShootSkillData : AttackSkillData
   
 
   private Projectiles _projectiles;
+  private Vector3 nextDestinationToProject;
 
   private void OnEnable()
   {
@@ -20,10 +21,9 @@ public class ShootSkillData : AttackSkillData
 
   public override void Cast(Actor user)
   {
-    var destination = user.GetComponent<AI>().GetTargetActor().transform.position;
     GameObject gameObject = Instantiate(_gameObject, user.transform.position, Quaternion.identity);
     Projectiles projectiles = gameObject.GetComponent<Projectiles>();
-    projectiles.InitDirection((destination - user.transform.position).normalized);
+    projectiles.InitDirection((nextDestinationToProject - user.transform.position).normalized);
     projectiles.SetTargets(GetTargetSet());
     projectiles.SetFlyOrGround(_flyOrGround);
     projectiles.AddDamage(user.GetBaseStats().AttackDamage + GetDamage());
@@ -31,9 +31,10 @@ public class ShootSkillData : AttackSkillData
 
   public override bool CanApply(Actor user, Actor targetActor)
   {
-    if (!CanTakeDownTarget(targetActor) || !IsTarget(targetActor.tag)) return false;
+    if (!CanTakeDownTarget(targetActor)) return false;
 
-    var distance = Vector3.Distance(user.transform.position, targetActor.transform.position) + 1;
+    nextDestinationToProject = targetActor.transform.position;
+    var distance = Vector3.Distance(user.transform.position, nextDestinationToProject) + 1;
     return distance <= _projectiles.GetMaxDistance() && distance >= _projectiles.GetMinDistance();
   }
   
