@@ -33,6 +33,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private float _colliderHeight;
     private NavMeshSurface _navMeshSurface;
     private PlaneBuilder _planeBuilder;
+    private NumberExample signNumber;
     [SerializeField] private GameObject _destroyCollider;
     [SerializeField] private GameObject _nextMapCollider;
     [SerializeField] private GameObject _roadBlock;
@@ -54,6 +55,7 @@ public class MapManager : MonoBehaviour
         meshGen = GetComponent<MeshGenerator>();
         _randomSprite = GetComponent<RandomSprite>();
         _planeBuilder = GetComponent<PlaneBuilder>();
+        signNumber = GetComponent<NumberExample>();
         _navMeshSurface = GetComponentInParent<NavMeshSurface>();
     }
 
@@ -143,6 +145,7 @@ public class MapManager : MonoBehaviour
         }
         meshGen.GenerateMesh(GetInversedMap(), unit);
         PlaceColliders();
+        signNumber.RefreshSign();
     }
 
     private int[, ] GetInversedMap()
