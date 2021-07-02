@@ -98,9 +98,8 @@ namespace Game.Scripts
             if (playTimeSpan.Hours > 0 || playTimeSpan.Minutes > 0)
                 playTime += playTimeSpan.Minutes + "m ";
             playTime += playTimeSpan.Seconds + "s";
-
-            int xDistance = Convert.ToInt32((player.gameObject.transform.position.x - Statistic.StartPosition.x) / 2);
-            string gameResult = String.Format("{0}\n{1}m\n{2}", playTime, xDistance, Statistic.EnemyKilled);
+            
+            string gameResult = String.Format("{0}\n{1}\n{2}", playTime, Statistic.CurrentLevel, Statistic.EnemyKilled);
             gameResultText.SetText(gameResult);
         }
 
