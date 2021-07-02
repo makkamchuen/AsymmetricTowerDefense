@@ -1634,7 +1634,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '{time}
 
-    {distance}
+    {deadOnLevel}
 
     {killed}'
   m_isRightToLeft: 0
@@ -2537,7 +2537,7 @@ PrefabInstance:
     - target: {fileID: 5795424916857338573, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
       propertyPath: m_text
-      value: "Time played: \nDistance traveled:\nEnemy killed:"
+      value: "Time played: \nDead on level:\nEnemy killed:"
       objectReference: {fileID: 0}
     - target: {fileID: 5795424916857338573, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
@@ -2662,7 +2662,7 @@ PrefabInstance:
     - target: {fileID: 5795424917060968795, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5795424918098441148, guid: ef8885f740d864f5ba8b44fe1469f601,
         type: 3}
