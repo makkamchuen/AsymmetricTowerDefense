@@ -33,6 +33,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private float _colliderHeight;
     private NavMeshSurface _navMeshSurface;
     private PlaneBuilder _planeBuilder;
+    private NumberExample signNumber;
     [SerializeField] private GameObject _destroyCollider;
     [SerializeField] private GameObject _nextMapCollider;
     [SerializeField] private GameObject _roadBlock;
@@ -54,6 +55,7 @@ public class MapManager : MonoBehaviour
         meshGen = GetComponent<MeshGenerator>();
         _randomSprite = GetComponent<RandomSprite>();
         _planeBuilder = GetComponent<PlaneBuilder>();
+        signNumber = GetComponent<NumberExample>();
         _navMeshSurface = GetComponentInParent<NavMeshSurface>();
     }
 
@@ -74,49 +76,6 @@ public class MapManager : MonoBehaviour
         return _planeBuilder.GetSize();
     }
 
-    public void PlaceRoadBlock()
-    {
-        if (!_roadBlockPlaced)
-        {
-            _roadBlockPlaced = true;
-            GameObject newRoadBlock = Instantiate(
-                _roadBlock,
-                new Vector3((-width / 2 + _roadBlockCol) * unit + transform.position.x, 0, (-height / 2 + mapGenerator.GetStartPoint().tileY) * unit + transform.position.z),
-                Quaternion.identity,
-                transform
-            );
-        }
-    }
-
-    private void InitGameObjects()
-    {
-        // InitDestroyCollider();
-        InitNextMapCollider();
-        InitRoadBlock();
-    }
-
-    /* private void InitDestroyCollider()
-    {
-        BoxCollider boxCollider = _destroyCollider.GetComponent<BoxCollider>();
-        boxCollider.isTrigger = true;
-        boxCollider.size = new Vector3(unit, _colliderHeight, unit * height);
-    } */
-
-    private void InitNextMapCollider()
-    {
-        BoxCollider boxCollider = _nextMapCollider.GetComponent<BoxCollider>();
-        boxCollider.isTrigger = true;
-        boxCollider.size = new Vector3(unit, _colliderHeight, unit * height);
-    }
-
-    private void InitRoadBlock()
-    {
-        NavMeshObstacle navMeshObstacle = _roadBlock.GetComponent<NavMeshObstacle>();
-        navMeshObstacle.carving = true;
-        navMeshObstacle.carveOnlyStationary = true;
-        navMeshObstacle.size = new Vector3(unit, _roadBlockHeight, unit * (pathRadius * 2 + 1));
-    }
-
     private void PlaceColliders()
     {
         GameObject newDestroyCollider = Instantiate(
@@ -125,6 +84,7 @@ public class MapManager : MonoBehaviour
             Quaternion.identity,
             transform
         );
+        newDestroyCollider.name = "DestroyCollider " + mapNumber.ToString();
 
         GameObject newNextMapCollider = Instantiate(
             _nextMapCollider,
@@ -132,6 +92,7 @@ public class MapManager : MonoBehaviour
             Quaternion.identity,
             transform
         );
+        newNextMapCollider.name = "NextMapCollider " + mapNumber.ToString();
 
         GameObject newRoadBlock = Instantiate(
             _roadBlock,
@@ -139,6 +100,7 @@ public class MapManager : MonoBehaviour
             Quaternion.identity,
             transform
         );
+        newRoadBlock.name = "RoadBlock " + mapNumber.ToString();
     }
 
     void Update()
@@ -183,6 +145,7 @@ public class MapManager : MonoBehaviour
         }
         meshGen.GenerateMesh(GetInversedMap(), unit);
         PlaceColliders();
+        signNumber.RefreshSign();
     }
 
     private int[, ] GetInversedMap()
@@ -207,35 +170,6 @@ public class MapManager : MonoBehaviour
     {
         _randomSprite.UpdateSprite();
     }
-
-    // public void DestroyColliders()
-    // {
-    //     foreach (GameObject filler in _fillers)
-    //     {
-    //         Destroy(filler);
-    //     }
-    // }
-
-    // private void SetUpColliders()
-    // {
-    //     if (map != null) 
-    //     {
-    //         for (int x = 0; x < width; x ++) 
-    //         {
-    //             for (int y = 0; y < height; y ++) 
-    //             {
-    //                 if (map[x, y] == 1)
-    //                 {
-    //                     Vector3 pos = new Vector3((-width / 2 + x) * unit, 0, (-height / 2 + y) * unit);
-    //                     GameObject filler = Instantiate(_filler, transform.position + pos, Quaternion.identity);
-    //                     filler.transform.SetParent(transform);
-    //                     _fillers.Add(filler);
-    //                     GameObjectUtility.SetNavMeshArea(filler, 1);
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 
     void SmoothMap() // O(nm)
     {
@@ -394,8 +328,79 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    // public void GatherRegion()
-    // {
-    //     
-    // }
+    /* 
+        public void PlaceRoadBlock(int newMapNumber)
+        {
+            if (!_roadBlockPlaced)
+            {
+                _roadBlockPlaced = true;
+                GameObject newRoadBlock = Instantiate(
+                    _roadBlock,
+                    new Vector3((-width / 2 + _roadBlockCol) * unit + transform.position.x, 0, (-height / 2 + mapGenerator.GetStartPoint().tileY) * unit + transform.position.z),
+                    Quaternion.identity,
+                    transform
+                );
+                newRoadBlock.name = "RoadBlock " + newMapNumber.ToString();
+            }
+        }
+
+        private void InitGameObjects()
+        {
+            // InitDestroyCollider();
+            InitNextMapCollider();
+            InitRoadBlock();
+        }
+
+        private void InitDestroyCollider()
+        {
+            BoxCollider boxCollider = _destroyCollider.GetComponent<BoxCollider>();
+            boxCollider.isTrigger = true;
+            boxCollider.size = new Vector3(unit, _colliderHeight, unit * height);
+        }
+
+        private void InitNextMapCollider()
+        {
+            BoxCollider boxCollider = _nextMapCollider.GetComponent<BoxCollider>();
+            boxCollider.isTrigger = true;
+            boxCollider.size = new Vector3(unit, _colliderHeight, unit * height);
+        }
+
+
+        private void InitRoadBlock()
+        {
+            NavMeshObstacle navMeshObstacle = _roadBlock.GetComponent<NavMeshObstacle>();
+            navMeshObstacle.carving = true;
+            navMeshObstacle.carveOnlyStationary = true;
+            navMeshObstacle.size = new Vector3(unit, _roadBlockHeight, unit * (pathRadius * 2 + 1));
+        }
+
+        public void DestroyColliders()
+        {
+            foreach (GameObject filler in _fillers)
+            {
+                Destroy(filler);
+            }
+        }
+
+        private void SetUpColliders()
+        {
+            if (map != null) 
+            {
+                for (int x = 0; x < width; x ++) 
+                {
+                    for (int y = 0; y < height; y ++) 
+                    {
+                        if (map[x, y] == 1)
+                        {
+                            Vector3 pos = new Vector3((-width / 2 + x) * unit, 0, (-height / 2 + y) * unit);
+                            GameObject filler = Instantiate(_filler, transform.position + pos, Quaternion.identity);
+                            filler.transform.SetParent(transform);
+                            _fillers.Add(filler);
+                            GameObjectUtility.SetNavMeshArea(filler, 1);
+                        }
+                    }
+                }
+            }
+        }
+    */
 }
