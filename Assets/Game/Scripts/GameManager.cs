@@ -18,10 +18,12 @@ namespace Game.Scripts
         [SerializeField] private Player player;
         [SerializeField] private GameObject gameStatusDisplay;
         [SerializeField] private TMP_Text gameResultText;
-        [SerializeField] private Button playAgainButton;
+        [SerializeField] private Button playAgainButton;        
+        [SerializeField] private GameObject pauseDisplay;
         [SerializeField] private SpawnContent[] spawnContents;
         [SerializeField] private int minSpawnDistanceFromPlayer = 20;
         [SerializeField] private int maxSpawnDistanceFromPlayer = 40;
+
         private float[] cooldown;
         private void Start()
         {
@@ -64,6 +66,15 @@ namespace Game.Scripts
                     }
                 }
             }
+
+            if (PauseControl.gameIsPaused)
+            {
+                pauseDisplay.SetActive(true);
+            }
+            else
+            {
+                pauseDisplay.SetActive(false);
+            }
         }
 
         private void StartGame()
@@ -87,6 +98,11 @@ namespace Game.Scripts
                 player.GetStatus().SetGameFinishStatus();
                 SetGameResultLabel();
             }
+        }
+
+        public void exitGame()
+        {
+            Application.Quit();
         }
 
         private void SetGameResultLabel()
