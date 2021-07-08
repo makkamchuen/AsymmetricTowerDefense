@@ -3,7 +3,6 @@ name: Unity CICD Actions 😎
 on:
   push: 
     branches:
-      - dev
       - main
 
 env:
