@@ -15,7 +15,7 @@ MonoBehaviour:
   baseStats: {fileID: 11400000, guid: 317bd1098fc864b7d892c9bcbd119d9b, type: 2}
   attack: {fileID: 4691000271225600390}
   weapon: 
-  faceRight: 1
+  faceRightByDefault: 0
   flee: {fileID: 0}
   sights:
   - {fileID: 11400000, guid: 43bdd29049fe947d08058bbbb0342795, type: 2}
@@ -73,7 +73,7 @@ PrefabInstance:
     - target: {fileID: 1025184353029879525, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000050727357
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1025184353029879525, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
@@ -83,7 +83,7 @@ PrefabInstance:
     - target: {fileID: 1025184353029879525, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.412
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1538581429455452208, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
@@ -205,7 +205,7 @@ PrefabInstance:
     - target: {fileID: 8245503363102740569, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.30434537
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8245503363102740569, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
@@ -215,7 +215,7 @@ PrefabInstance:
     - target: {fileID: 8245503363102740569, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.0014768
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8245503363102740569, guid: 83f2891dea593734dbb43289feab0007,
         type: 3}
