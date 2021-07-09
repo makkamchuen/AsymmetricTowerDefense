@@ -56,7 +56,7 @@ public class Health : ActorActionComponent
     UpdateHealthBar();
     if (hitEffect != null)
     {
-      Instantiate(hitEffect, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 0.5f), transform.rotation);
+      Instantiate(hitEffect, new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z - 0.5f), transform.rotation);
       FMODUnity.RuntimeManager.PlayOneShotAttached(hitSound, gameObject);
     }
     GetAnimator().SetTrigger(AnimationTrigger.hurt);
