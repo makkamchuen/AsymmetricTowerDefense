@@ -5,11 +5,11 @@ using Game.Scripts;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "Skill/Shoot")]
+[CreateAssetMenu(menuName = "Skill/Shoot")]
 public class ShootSkillData : AttackSkillData
 {
   [SerializeField] private GameObject _gameObject;
-  
+  [SerializeField] private Vector3 _spawnOffset;
 
   private Projectiles _projectiles;
   private Vector3 nextDestinationToProject;
@@ -21,7 +21,7 @@ public class ShootSkillData : AttackSkillData
 
   public override void Cast(Actor user)
   {
-    GameObject gameObject = Instantiate(_gameObject, user.transform.position, Quaternion.identity);
+    GameObject gameObject = Instantiate(_gameObject, user.transform.position + _spawnOffset, Quaternion.identity);
     Projectiles projectiles = gameObject.GetComponent<Projectiles>();
     projectiles.InitDirection((nextDestinationToProject - user.transform.position).normalized);
     projectiles.SetTargets(GetTargetSet());
@@ -37,7 +37,6 @@ public class ShootSkillData : AttackSkillData
     var distance = Vector3.Distance(user.transform.position, nextDestinationToProject) + 1;
     return distance <= _projectiles.GetMaxDistance() && distance >= _projectiles.GetMinDistance();
   }
-  
 
   public override float GetMinDistance()
   {
