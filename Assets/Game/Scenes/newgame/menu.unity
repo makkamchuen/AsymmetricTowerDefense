@@ -413,6 +413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultKeyStroke: 100
   playerPrefKey: 0
+  diffFromKey1: {fileID: 2011267524}
+  diffFromKey2: {fileID: 1936315535}
 --- !u!1 &109076493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,6 +1710,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultKeyStroke: 115
   playerPrefKey: 1
+  diffFromKey1: {fileID: 2006292488}
+  diffFromKey2: {fileID: 1936315535}
 --- !u!1 &1089400508
 GameObject:
   m_ObjectHideFlags: 0
@@ -3933,6 +3937,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultKeyStroke: 102
   playerPrefKey: 2
+  diffFromKey1: {fileID: 2006292488}
+  diffFromKey2: {fileID: 2011267524}
 --- !u!114 &2019755935
 MonoBehaviour:
   m_ObjectHideFlags: 0
