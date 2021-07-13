@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckOnRightClick()
     {
-        if (!Mouse.current.rightButton.wasPressedThisFrame)
+        if (!Mouse.current.leftButton.wasPressedThisFrame) //!Mouse.current.rightButton.wasPressedThisFrame)
         {
             return;
         }

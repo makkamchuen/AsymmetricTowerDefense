@@ -9,7 +9,6 @@ public class MenuTakeInput : MonoBehaviour
 {
     private GameObject inputPanel; //GameObject that contains an InputField 
     private InputField inputField;
-    private bool edit = false;
     private Color32 defaultColor = new Color32(70, 70, 70, 134);
     private Color32 editColor = new Color32(40, 150, 40, 210);
     private Button thisbutton;
@@ -17,7 +16,9 @@ public class MenuTakeInput : MonoBehaviour
     [SerializeField] private PlayerPrefKey playerPrefKey;
     private string currentKeyStroke;
     private static bool activated = false;
-    
+    [SerializeField] private TMP_Text diffFromKey1;
+    [SerializeField] private TMP_Text diffFromKey2;
+
     void Start()
     {
         thisbutton = this.GetComponent<Button>();
@@ -34,17 +35,13 @@ public class MenuTakeInput : MonoBehaviour
     void TaskOnClick()
     {
         //Debug.Log(spwanKey + " / " + this.name);
-        if (!edit)
+        if (!activated)
         {
-            if (!activated)
-            {
-                inputField.text = currentKeyStroke; 
-                edit = true;
-                this.GetComponent<Image>().color = editColor;
-                activated = true;
-                inputPanel.SetActive(true);
-                inputField.ActivateInputField();
-            }
+            inputField.text = currentKeyStroke;
+            this.GetComponent<Image>().color = editColor;
+            activated = true;
+            inputPanel.SetActive(true);
+            inputField.ActivateInputField();
         }
         else
         {
@@ -55,7 +52,7 @@ public class MenuTakeInput : MonoBehaviour
     public void ValueChangeCheck()
     {
         //Debug.Log("Value Changed -- " + inputField.text);
-        if(inputField.text != "")
+        if(inputField.text != "" & inputField.text != diffFromKey1.text & inputField.text != diffFromKey2.text)
         {
             var input = inputField.text.ToLower();
             this.transform.Find("Button").GetComponentInChildren<TMP_Text>().text = input;
@@ -67,7 +64,6 @@ public class MenuTakeInput : MonoBehaviour
 
     private void Deactivate()
     {
-        edit = false;
         this.GetComponent<Image>().color = defaultColor;
         inputPanel.SetActive(false);
         activated = false;
