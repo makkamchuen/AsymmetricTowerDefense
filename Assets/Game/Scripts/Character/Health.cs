@@ -13,8 +13,8 @@ public class Health : ActorActionComponent
   public bool hideHealBarWhenFull = true;
   public HealthBar healthBar;
 
-  private float _currentHealth;
-  private bool _isDead;
+  public float _currentHealth;
+  public bool _isDead;
 
   // // This will regen health starting at awake, repeated every 1 sec
   // private void Awake()

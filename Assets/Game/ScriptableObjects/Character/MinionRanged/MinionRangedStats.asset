@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsAtLevels:
   - level: 1
-    maxHealth: 30
+    maxHealth: 1
     healthRegenPerSecond: 0
     movementSpeed: 1.5
     attackDamage: 1
-    minRewardFromCorpse: 4
-    maxRewardFromCorpse: 7
+    minRewardFromCorpse: 5
+    maxRewardFromCorpse: 10
   - level: 100
-    maxHealth: 60
+    maxHealth: 100
     healthRegenPerSecond: 0
     movementSpeed: 3
-    attackDamage: 1
-    minRewardFromCorpse: 8
-    maxRewardFromCorpse: 14
+    attackDamage: 5
+    minRewardFromCorpse: 1
+    maxRewardFromCorpse: 1
   FlyOrGround: 2

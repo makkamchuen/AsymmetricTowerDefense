@@ -18,13 +18,13 @@ MonoBehaviour:
     healthRegenPerSecond: 2
     movementSpeed: 2
     attackDamage: 5
-    minRewardFromCorpse: 2
-    maxRewardFromCorpse: 3
+    minRewardFromCorpse: 4
+    maxRewardFromCorpse: 6
   - level: 100
     maxHealth: 36
     healthRegenPerSecond: 4
     movementSpeed: 4
     attackDamage: 10
-    minRewardFromCorpse: 4
-    maxRewardFromCorpse: 6
+    minRewardFromCorpse: 2
+    maxRewardFromCorpse: 3
   FlyOrGround: 2
